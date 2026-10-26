@@ -1,0 +1,4982 @@
+{
+  "version": 1,
+  "verifiedAt": "2026-10-27",
+  "sources": [
+    {
+      "id": "apple-mac",
+      "title": "Apple：Mac 键盘快捷键",
+      "url": "https://support.apple.com/zh-cn/102650",
+      "checkedAt": "2026-10-26"
+    },
+    {
+      "id": "apple-safari",
+      "title": "Apple：Safari 浏览器键盘快捷键和手势",
+      "url": "https://support.apple.com/zh-cn/guide/safari/cpsh003/mac",
+      "checkedAt": "2026-10-26"
+    },
+    {
+      "id": "google-chrome",
+      "title": "Google：Chrome 键盘快捷键（Mac）",
+      "url": "https://support.google.com/chrome/answer/157179?hl=zh-Hans",
+      "checkedAt": "2026-10-26"
+    },
+    {
+      "id": "apple-rename",
+      "title": "Apple：给文件、文件夹和磁盘重新命名",
+      "url": "https://support.apple.com/zh-cn/guide/mac-help/mchlp1144/mac",
+      "checkedAt": "2026-10-26"
+    },
+    {
+      "id": "apple-screenshot",
+      "title": "Apple：在 Mac 上截屏",
+      "url": "https://support.apple.com/zh-cn/102646",
+      "checkedAt": "2026-10-26"
+    },
+    {
+      "id": "apple-web",
+      "title": "Apple：在 Mac 上浏览网页",
+      "url": "https://support.apple.com/zh-cn/guide/mac-help/mchlgtd_web01/mac",
+      "checkedAt": "2026-10-26"
+    },
+    {
+      "id": "google-devtools",
+      "title": "Google：Chrome DevTools 键盘快捷键",
+      "url": "https://developer.chrome.com/docs/devtools/shortcuts",
+      "checkedAt": "2026-10-26"
+    },
+    {
+      "id": "apple-keyboard-intro",
+      "title": "Apple：Mac 键盘快捷键介绍",
+      "url": "https://support.apple.com/zh-cn/guide/mac-help/mchld6b9e240/mac",
+      "checkedAt": "2026-10-26"
+    },
+    {
+      "id": "apple-download-apps",
+      "title": "Apple：在 Mac 上下载应用（含 Safari 下载列表快捷键）",
+      "url": "https://support.apple.com/en-gb/guide/mac-help/mchlgtd_apps01/mac",
+      "checkedAt": "2026-10-26"
+    },
+    {
+      "id": "apple-function-keys",
+      "title": "Apple：在 Mac 上使用键盘功能键",
+      "url": "https://support.apple.com/zh-cn/guide/mac-help/mchlp2596/mac",
+      "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "apple-keyboard-current",
+      "title": "Apple：较新 MacBook Air 妙控键盘的顶行功能",
+      "url": "https://support.apple.com/zh-cn/guide/macbook-air/apdab672d5e9/mac",
+      "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "apple-keyboard-legacy",
+      "title": "Apple：2019 款 MacBook Air 键盘布局",
+      "url": "https://support.apple.com/zh-cn/guide/macbook-air/apdab672d5e9/2019/mac/10.15",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "shortcuts": [
+    {
+      "id": "system-spotlight",
+      "scope": "system",
+      "title": "打开系统搜索",
+      "keys": [
+        "⌘",
+        "Space"
+      ],
+      "englishKeys": "Command + Space",
+      "summary": "呼出 Spotlight，搜索应用、文件和其他内容。",
+      "section": "日常操作",
+      "prerequisite": "先确认系统的 Spotlight 快捷键仍为默认绑定。",
+      "steps": [
+        "先确认系统的 Spotlight 快捷键仍为默认绑定。",
+        "亲手按下 Command + Space。",
+        "Spotlight 搜索框出现；按 Esc 可退出。 观察预期现象即可。"
+      ],
+      "expectedResult": "Spotlight 搜索框出现；按 Esc 可退出。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "输入法或自定义设置可能占用同一组合键。请在系统设置的键盘快捷键中核对 Spotlight 绑定。"
+      ],
+      "aliases": [
+        "聚焦",
+        "搜索",
+        "启动应用",
+        "空格"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-switch-app",
+      "scope": "system",
+      "title": "切换应用",
+      "keys": [
+        "⌘",
+        "Tab"
+      ],
+      "englishKeys": "Command + Tab",
+      "summary": "在已经运行的应用之间切换。",
+      "section": "日常操作",
+      "prerequisite": "先打开至少两个应用。",
+      "steps": [
+        "先打开两个应用，并让其中一个位于前台。",
+        "按住 Command，点按 Tab 选择另一个应用。",
+        "松开 Command，观察前台应用发生切换。"
+      ],
+      "expectedResult": "应用切换器出现，松开 Command 后进入选中的应用。",
+      "windowsEquivalent": "Alt + Tab",
+      "practice": "observation",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
+      ],
+      "aliases": [
+        "程序切换",
+        "应用切换"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-switch-window",
+      "scope": "system",
+      "title": "切换同一应用的窗口",
+      "keys": [
+        "⌘",
+        "`"
+      ],
+      "englishKeys": "Command + `",
+      "summary": "在当前应用的多个窗口之间切换。",
+      "section": "日常操作",
+      "prerequisite": "让一个已打开两个窗口的应用位于前台。",
+      "steps": [
+        "让一个已打开两个窗口的应用位于前台。",
+        "亲手按下 Command + `。",
+        "焦点转到同一应用的另一个窗口。 观察预期现象即可。"
+      ],
+      "expectedResult": "焦点转到同一应用的另一个窗口。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "重音符键通常位于 Tab 上方。不同语言和键盘布局可能使用其他按键，请查看“窗口”菜单。"
+      ],
+      "aliases": [
+        "窗口切换",
+        "反引号"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-screenshot-full",
+      "scope": "system",
+      "title": "截取整个屏幕",
+      "keys": [
+        "⇧",
+        "⌘",
+        "3"
+      ],
+      "englishKeys": "Shift + Command + 3",
+      "summary": "拍下当前整个屏幕的内容。",
+      "section": "截屏与搜索",
+      "prerequisite": "先整理好要截取的画面；截图会保存到系统当前指定的位置。",
+      "steps": [
+        "先整理好要截取的画面；截图会保存到系统当前指定的位置。",
+        "亲手按下 Shift + Command + 3。",
+        "屏幕角落出现截图缩略图，随后生成截图文件。 观察预期现象即可。"
+      ],
+      "expectedResult": "屏幕角落出现截图缩略图，随后生成截图文件。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "默认保存到桌面，保存位置可在截屏工具的“选项”中更改。截屏绑定也可在系统设置中修改。"
+      ],
+      "aliases": [
+        "全屏截图",
+        "截屏",
+        "截图"
+      ],
+      "sourceIDs": [
+        "apple-screenshot"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-screenshot-region",
+      "scope": "system",
+      "title": "截取选定区域",
+      "keys": [
+        "⇧",
+        "⌘",
+        "4"
+      ],
+      "englishKeys": "Shift + Command + 4",
+      "summary": "拖出一个区域，只截取屏幕的一部分。",
+      "section": "截屏与搜索",
+      "prerequisite": "准备好画面；按 Esc 可以取消本次截屏。",
+      "steps": [
+        "准备画面，记住可以按 Esc 取消。",
+        "按 Shift + Command + 4，再拖动十字线选择区域。",
+        "松开鼠标或触控板按钮，观察截图缩略图出现。"
+      ],
+      "expectedResult": "指针变为十字线，拖动并松开后生成区域截图。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
+      ],
+      "aliases": [
+        "区域截图",
+        "部分截屏",
+        "截图"
+      ],
+      "sourceIDs": [
+        "apple-screenshot"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-screenshot-tools",
+      "scope": "system",
+      "title": "打开截屏与录屏工具",
+      "keys": [
+        "⇧",
+        "⌘",
+        "5"
+      ],
+      "englishKeys": "Shift + Command + 5",
+      "summary": "集中选择截屏范围、录屏方式和保存位置。",
+      "section": "截屏与搜索",
+      "prerequisite": "先准备好画面；此次可以只查看工具栏，不启动录制。",
+      "steps": [
+        "先准备好画面；此次可以只查看工具栏，不启动录制。",
+        "亲手按下 Shift + Command + 5。",
+        "屏幕下方出现截屏工具栏；按 Esc 可退出。 观察预期现象即可。"
+      ],
+      "expectedResult": "屏幕下方出现截屏工具栏；按 Esc 可退出。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "录屏需由你在工具栏中开始。工具不会代按录制按钮。"
+      ],
+      "aliases": [
+        "截图",
+        "录屏",
+        "屏幕录制"
+      ],
+      "sourceIDs": [
+        "apple-screenshot"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-lock-screen",
+      "scope": "system",
+      "title": "锁定屏幕",
+      "keys": [
+        "⌃",
+        "⌘",
+        "Q"
+      ],
+      "englishKeys": "Control + Command + Q",
+      "summary": "立即锁定 Mac，保留当前登录会话。",
+      "section": "窗口与应用",
+      "prerequisite": "先确认自己知道解锁密码，或能使用 Touch ID。",
+      "steps": [
+        "先确认自己知道解锁密码，或能使用 Touch ID。",
+        "亲手按下 Control + Command + Q。",
+        "Mac 进入锁定界面；解锁后可回到原来的窗口。 观察预期现象即可。"
+      ],
+      "expectedResult": "Mac 进入锁定界面；解锁后可回到原来的窗口。",
+      "windowsEquivalent": "Windows + L",
+      "practice": "observation",
+      "notes": [
+        "此操作会暂时离开教学页。使用账户密码或 Touch ID 解锁后继续。"
+      ],
+      "aliases": [
+        "锁屏"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-mission-control",
+      "scope": "system",
+      "title": "打开调度中心",
+      "keys": [
+        "⌃",
+        "↑"
+      ],
+      "englishKeys": "Control + Up Arrow",
+      "summary": "总览当前桌面的窗口与空间。",
+      "section": "窗口与应用",
+      "prerequisite": "先打开几个窗口，并核对系统当前的调度中心绑定。",
+      "steps": [
+        "先打开几个窗口，并核对系统当前的调度中心绑定。",
+        "亲手按下 Control + Up Arrow。",
+        "窗口展开显示，点击一个窗口或按 Esc 可返回。 观察预期现象即可。"
+      ],
+      "expectedResult": "窗口展开显示，点击一个窗口或按 Esc 可返回。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
+      ],
+      "aliases": [
+        "Mission Control",
+        "窗口总览"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-app-windows",
+      "scope": "system",
+      "title": "显示当前应用的所有窗口",
+      "keys": [
+        "⌃",
+        "↓"
+      ],
+      "englishKeys": "Control + Down Arrow",
+      "summary": "集中查看当前应用打开的窗口。",
+      "section": "窗口与应用",
+      "prerequisite": "让一个有多个窗口的应用位于前台。",
+      "steps": [
+        "让一个有多个窗口的应用位于前台。",
+        "亲手按下 Control + Down Arrow。",
+        "当前应用的窗口被集中展示，点击任一窗口即可进入。 观察预期现象即可。"
+      ],
+      "expectedResult": "当前应用的窗口被集中展示，点击任一窗口即可进入。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
+      ],
+      "aliases": [
+        "App Exposé",
+        "应用窗口"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-toggle-dock",
+      "scope": "system",
+      "title": "显示或隐藏 Dock",
+      "keys": [
+        "⌥",
+        "⌘",
+        "D"
+      ],
+      "englishKeys": "Option + Command + D",
+      "summary": "切换 Dock 的自动隐藏状态。",
+      "section": "窗口与应用",
+      "prerequisite": "先观察 Dock 当前是否一直显示。",
+      "steps": [
+        "先观察 Dock 当前是否一直显示。",
+        "亲手按下 Option + Command + D。",
+        "Dock 的显示方式改变；再次按相同组合键可切回。 观察预期现象即可。"
+      ],
+      "expectedResult": "Dock 的显示方式改变；再次按相同组合键可切回。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
+      ],
+      "aliases": [
+        "程序坞",
+        "隐藏Dock"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-full-screen",
+      "scope": "system",
+      "title": "进入或退出全屏",
+      "keys": [
+        "⌃",
+        "⌘",
+        "F"
+      ],
+      "englishKeys": "Control + Command + F",
+      "summary": "将支持全屏的应用窗口切换为全屏。",
+      "section": "窗口与应用",
+      "prerequisite": "先让支持全屏的应用窗口位于前台。",
+      "steps": [
+        "先让支持全屏的应用窗口位于前台。",
+        "亲手按下 Control + Command + F。",
+        "窗口进入全屏，再按同一组合键可退出。 观察预期现象即可。"
+      ],
+      "expectedResult": "窗口进入全屏，再按同一组合键可退出。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "并非所有窗口都支持全屏。也可将指针移到顶部，使用绿色窗口按钮退出。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-emoji",
+      "scope": "system",
+      "title": "打开表情与符号",
+      "keys": [
+        "⌃",
+        "⌘",
+        "Space"
+      ],
+      "englishKeys": "Control + Command + Space",
+      "summary": "打开字符检视器，选择表情或特殊符号。",
+      "section": "日常操作",
+      "prerequisite": "先点击一个可编辑文本框，让插入点可见。",
+      "steps": [
+        "先点击一个可编辑文本框，让插入点可见。",
+        "亲手按下 Control + Command + Space。",
+        "字符面板出现，选择字符后会插入到文本框。 观察预期现象即可。"
+      ],
+      "expectedResult": "字符面板出现，选择字符后会插入到文本框。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
+      ],
+      "aliases": [
+        "Emoji",
+        "字符检视器",
+        "表情符号",
+        "空格"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-previous-input-source",
+      "scope": "system",
+      "title": "切换到上一个输入法",
+      "keys": [
+        "⌃",
+        "Space"
+      ],
+      "englishKeys": "Control + Space",
+      "summary": "在已启用的输入源之间切换。",
+      "section": "日常操作",
+      "prerequisite": "先在系统设置中启用至少两个输入源，并核对输入源快捷键。",
+      "steps": [
+        "先在系统设置中启用至少两个输入源，并核对输入源快捷键。",
+        "亲手按下 Control + Space。",
+        "菜单栏的输入源指示改变，后续文字使用新的输入源。 观察预期现象即可。"
+      ],
+      "expectedResult": "菜单栏的输入源指示改变，后续文字使用新的输入源。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "多个输入源和默认绑定是此操作的前提。输入法软件可能会覆盖这项快捷键。"
+      ],
+      "aliases": [
+        "输入法",
+        "中英文",
+        "输入源"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-next-input-source",
+      "scope": "system",
+      "title": "切换到下一个输入法",
+      "keys": [
+        "⌃",
+        "⌥",
+        "Space"
+      ],
+      "englishKeys": "Control + Option + Space",
+      "summary": "依次选择已启用的下一个输入源。",
+      "section": "日常操作",
+      "prerequisite": "先启用多个输入源，并核对系统的输入源快捷键。",
+      "steps": [
+        "先启用多个输入源，并核对系统的输入源快捷键。",
+        "亲手按下 Control + Option + Space。",
+        "输入源指示切换到下一个可用选项。 观察预期现象即可。"
+      ],
+      "expectedResult": "输入源指示切换到下一个可用选项。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
+      ],
+      "aliases": [
+        "输入法",
+        "输入源"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-copy",
+      "scope": "system",
+      "title": "复制文本",
+      "keys": [
+        "⌘",
+        "C"
+      ],
+      "englishKeys": "Command + C",
+      "summary": "将选中的文字放入剪贴板，原文保留。",
+      "section": "文本编辑",
+      "prerequisite": "先在练习文本框中选中一段文字。",
+      "steps": [
+        "先在练习文本框中选中一段文字。",
+        "亲手按下 Command + C。",
+        "粘贴到目标文本框后，出现与选区相同的文字。 页面会根据实际文本、选区或字体属性变化反馈结果。"
+      ],
+      "expectedResult": "粘贴到目标文本框后，出现与选区相同的文字。",
+      "windowsEquivalent": "Ctrl + C",
+      "practice": "textEditing",
+      "notes": [
+        "这是文本框中的操作；如果焦点在目录、列表或其他应用，行为会不同。"
+      ],
+      "aliases": [
+        "拷贝",
+        "剪贴板"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-paste",
+      "scope": "system",
+      "title": "粘贴文本",
+      "keys": [
+        "⌘",
+        "V"
+      ],
+      "englishKeys": "Command + V",
+      "summary": "把剪贴板中的文字插入当前位置。",
+      "section": "文本编辑",
+      "prerequisite": "先复制练习文本，再点击粘贴目标文本框。",
+      "steps": [
+        "先复制练习文本，再点击粘贴目标文本框。",
+        "亲手按下 Command + V。",
+        "剪贴板中的文字出现在目标文本框。 页面会根据实际文本、选区或字体属性变化反馈结果。"
+      ],
+      "expectedResult": "剪贴板中的文字出现在目标文本框。",
+      "windowsEquivalent": "Ctrl + V",
+      "practice": "textEditing",
+      "notes": [
+        "这是文本框中的操作；如果焦点在目录、列表或其他应用，行为会不同。"
+      ],
+      "aliases": [
+        "粘贴",
+        "剪贴板"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-cut",
+      "scope": "system",
+      "title": "剪切文本",
+      "keys": [
+        "⌘",
+        "X"
+      ],
+      "englishKeys": "Command + X",
+      "summary": "将选中的文字移到剪贴板。",
+      "section": "文本编辑",
+      "prerequisite": "在练习文本框里选中文字，避免操作自己的重要文稿。",
+      "steps": [
+        "在练习文本框里选中文字，避免操作自己的重要文稿。",
+        "亲手按下 Command + X。",
+        "选中文字从原处移除，并能粘贴到另一处。 页面会根据实际文本、选区或字体属性变化反馈结果。"
+      ],
+      "expectedResult": "选中文字从原处移除，并能粘贴到另一处。",
+      "windowsEquivalent": "Ctrl + X",
+      "practice": "textEditing",
+      "notes": [
+        "这是文本框中的操作；如果焦点在目录、列表或其他应用，行为会不同。"
+      ],
+      "aliases": [
+        "剪切",
+        "移动文字"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-select-all",
+      "scope": "system",
+      "title": "全选文本",
+      "keys": [
+        "⌘",
+        "A"
+      ],
+      "englishKeys": "Command + A",
+      "summary": "选中当前文本框中的全部文字。",
+      "section": "文本编辑",
+      "prerequisite": "先点击练习文本框，让键盘焦点位于文字中。",
+      "steps": [
+        "先点击练习文本框，让键盘焦点位于文字中。",
+        "亲手按下 Command + A。",
+        "当前文本框的全部文字高亮显示。 页面会根据实际文本、选区或字体属性变化反馈结果。"
+      ],
+      "expectedResult": "当前文本框的全部文字高亮显示。",
+      "windowsEquivalent": "Ctrl + A",
+      "practice": "textEditing",
+      "notes": [
+        "这是文本框中的操作；如果焦点在目录、列表或其他应用，行为会不同。"
+      ],
+      "aliases": [
+        "选择全部"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-undo",
+      "scope": "system",
+      "title": "撤销上一步编辑",
+      "keys": [
+        "⌘",
+        "Z"
+      ],
+      "englishKeys": "Command + Z",
+      "summary": "回退最近一次可撤销的文本编辑。",
+      "section": "文本编辑",
+      "prerequisite": "先在练习文本框中输入几个字或删除一段文字。",
+      "steps": [
+        "先在练习文本框中输入几个字或删除一段文字。",
+        "亲手按下 Command + Z。",
+        "刚才的编辑被撤销，文本恢复到编辑前的状态。 页面会根据实际文本、选区或字体属性变化反馈结果。"
+      ],
+      "expectedResult": "刚才的编辑被撤销，文本恢复到编辑前的状态。",
+      "windowsEquivalent": "Ctrl + Z",
+      "practice": "textEditing",
+      "notes": [
+        "这是文本框中的操作；如果焦点在目录、列表或其他应用，行为会不同。"
+      ],
+      "aliases": [
+        "撤回",
+        "复原"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-redo",
+      "scope": "system",
+      "title": "重做上一步编辑",
+      "keys": [
+        "⇧",
+        "⌘",
+        "Z"
+      ],
+      "englishKeys": "Shift + Command + Z",
+      "summary": "重新执行刚刚撤销的编辑。",
+      "section": "文本编辑",
+      "prerequisite": "先修改练习文字，再按 Command + Z 撤销一次。",
+      "steps": [
+        "先修改练习文字，再按 Command + Z 撤销一次。",
+        "亲手按下 Shift + Command + Z。",
+        "被撤销的那次编辑重新生效。 页面会根据实际文本、选区或字体属性变化反馈结果。"
+      ],
+      "expectedResult": "被撤销的那次编辑重新生效。",
+      "windowsEquivalent": null,
+      "practice": "textEditing",
+      "notes": [
+        "这是文本框中的操作；如果焦点在目录、列表或其他应用，行为会不同。"
+      ],
+      "aliases": [
+        "恢复撤销",
+        "重做"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-document-start",
+      "scope": "system",
+      "title": "光标移到文稿开头",
+      "keys": [
+        "⌘",
+        "↑"
+      ],
+      "englishKeys": "Command + Up Arrow",
+      "summary": "将插入点直接移到整段文稿的开头。",
+      "section": "文本编辑",
+      "prerequisite": "点击练习文本中部，确保有可见的插入点。",
+      "steps": [
+        "点击练习文本中部，确保有可见的插入点。",
+        "亲手按下 Command + Up Arrow。",
+        "插入点跳到文本的最开头。 页面会根据实际文本、选区或字体属性变化反馈结果。"
+      ],
+      "expectedResult": "插入点跳到文本的最开头。",
+      "windowsEquivalent": null,
+      "practice": "textEditing",
+      "notes": [
+        "这是文本框中的操作；如果焦点在目录、列表或其他应用，行为会不同。"
+      ],
+      "aliases": [
+        "文首",
+        "光标",
+        "开头"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-document-end",
+      "scope": "system",
+      "title": "光标移到文稿末尾",
+      "keys": [
+        "⌘",
+        "↓"
+      ],
+      "englishKeys": "Command + Down Arrow",
+      "summary": "将插入点直接移到整段文稿的末尾。",
+      "section": "文本编辑",
+      "prerequisite": "点击练习文本的前半部分。",
+      "steps": [
+        "点击练习文本的前半部分。",
+        "亲手按下 Command + Down Arrow。",
+        "插入点跳到文本的最后。 页面会根据实际文本、选区或字体属性变化反馈结果。"
+      ],
+      "expectedResult": "插入点跳到文本的最后。",
+      "windowsEquivalent": null,
+      "practice": "textEditing",
+      "notes": [
+        "这是文本框中的操作；如果焦点在目录、列表或其他应用，行为会不同。"
+      ],
+      "aliases": [
+        "文末",
+        "光标",
+        "末尾"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-line-start",
+      "scope": "system",
+      "title": "光标移到行首",
+      "keys": [
+        "⌘",
+        "←"
+      ],
+      "englishKeys": "Command + Left Arrow",
+      "summary": "将插入点移到当前显示行的开头。",
+      "section": "文本编辑",
+      "prerequisite": "点击练习文本某一行的中间位置。",
+      "steps": [
+        "点击练习文本某一行的中间位置。",
+        "亲手按下 Command + Left Arrow。",
+        "插入点移动到当前行的左端。 页面会根据实际文本、选区或字体属性变化反馈结果。"
+      ],
+      "expectedResult": "插入点移动到当前行的左端。",
+      "windowsEquivalent": null,
+      "practice": "textEditing",
+      "notes": [
+        "这是文本框中的操作；如果焦点在目录、列表或其他应用，行为会不同。"
+      ],
+      "aliases": [
+        "行首",
+        "光标"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-line-end",
+      "scope": "system",
+      "title": "光标移到行尾",
+      "keys": [
+        "⌘",
+        "→"
+      ],
+      "englishKeys": "Command + Right Arrow",
+      "summary": "将插入点移到当前显示行的末尾。",
+      "section": "文本编辑",
+      "prerequisite": "点击练习文本某一行的中间位置。",
+      "steps": [
+        "点击练习文本某一行的中间位置。",
+        "亲手按下 Command + Right Arrow。",
+        "插入点移动到当前行的右端。 页面会根据实际文本、选区或字体属性变化反馈结果。"
+      ],
+      "expectedResult": "插入点移动到当前行的右端。",
+      "windowsEquivalent": null,
+      "practice": "textEditing",
+      "notes": [
+        "这是文本框中的操作；如果焦点在目录、列表或其他应用，行为会不同。"
+      ],
+      "aliases": [
+        "行尾",
+        "光标"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-previous-word",
+      "scope": "system",
+      "title": "光标向前移动一个词",
+      "keys": [
+        "⌥",
+        "←"
+      ],
+      "englishKeys": "Option + Left Arrow",
+      "summary": "按词而不是逐字向前移动插入点。",
+      "section": "文本编辑",
+      "prerequisite": "在英文示例文本的一个单词后面点击。",
+      "steps": [
+        "在英文示例文本的一个单词后面点击。",
+        "亲手按下 Option + Left Arrow。",
+        "插入点跳到前一个词的起始位置。 页面会根据实际文本、选区或字体属性变化反馈结果。"
+      ],
+      "expectedResult": "插入点跳到前一个词的起始位置。",
+      "windowsEquivalent": null,
+      "practice": "textEditing",
+      "notes": [
+        "这是文本框中的操作；如果焦点在目录、列表或其他应用，行为会不同。",
+        "中文分词与英文空格分词的移动范围可能不同，建议先使用英文示例观察。"
+      ],
+      "aliases": [
+        "上一个词",
+        "光标",
+        "单词"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-next-word",
+      "scope": "system",
+      "title": "光标向后移动一个词",
+      "keys": [
+        "⌥",
+        "→"
+      ],
+      "englishKeys": "Option + Right Arrow",
+      "summary": "按词而不是逐字向后移动插入点。",
+      "section": "文本编辑",
+      "prerequisite": "在英文示例文本的一个单词前面点击。",
+      "steps": [
+        "在英文示例文本的一个单词前面点击。",
+        "亲手按下 Option + Right Arrow。",
+        "插入点跳到后一个词的结束位置。 页面会根据实际文本、选区或字体属性变化反馈结果。"
+      ],
+      "expectedResult": "插入点跳到后一个词的结束位置。",
+      "windowsEquivalent": null,
+      "practice": "textEditing",
+      "notes": [
+        "这是文本框中的操作；如果焦点在目录、列表或其他应用，行为会不同。",
+        "中文分词与英文空格分词的移动范围可能不同，建议先使用英文示例观察。"
+      ],
+      "aliases": [
+        "下一个词",
+        "光标",
+        "单词"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-delete-word",
+      "scope": "system",
+      "title": "删除前一个词",
+      "keys": [
+        "⌥",
+        "⌫"
+      ],
+      "englishKeys": "Option + Delete",
+      "summary": "移除插入点左侧的一个词或词段。",
+      "section": "文本编辑",
+      "prerequisite": "点击练习英文句子的一个单词后面。",
+      "steps": [
+        "点击练习英文句子的一个单词后面。",
+        "亲手按下 Option + Delete。",
+        "插入点左侧的一段文字被删除，可按 Command + Z 恢复。 页面会根据实际文本、选区或字体属性变化反馈结果。"
+      ],
+      "expectedResult": "插入点左侧的一段文字被删除，可按 Command + Z 恢复。",
+      "windowsEquivalent": null,
+      "practice": "textEditing",
+      "notes": [
+        "这是文本框中的操作；如果焦点在目录、列表或其他应用，行为会不同。",
+        "中文分词与英文空格分词的移动范围可能不同，建议先使用英文示例观察。"
+      ],
+      "aliases": [
+        "删除单词",
+        "退格"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-forward-delete",
+      "scope": "system",
+      "title": "向前删除字符",
+      "keys": [
+        "Fn",
+        "⌫"
+      ],
+      "englishKeys": "Fn + Delete",
+      "summary": "删除插入点右侧的字符。",
+      "section": "文本编辑",
+      "prerequisite": "将插入点放在练习文本的两个字符之间。",
+      "steps": [
+        "将插入点放在练习文本的两个字符之间。",
+        "亲手按下 Fn + Delete。",
+        "右侧相邻字符被删除，可按 Command + Z 恢复。 页面会根据实际文本、选区或字体属性变化反馈结果。"
+      ],
+      "expectedResult": "右侧相邻字符被删除，可按 Command + Z 恢复。",
+      "windowsEquivalent": null,
+      "practice": "textEditing",
+      "notes": [
+        "这是文本框中的操作；如果焦点在目录、列表或其他应用，行为会不同。"
+      ],
+      "aliases": [
+        "Delete",
+        "向右删除"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-select-to-line-end",
+      "scope": "system",
+      "title": "选中到行尾",
+      "keys": [
+        "⇧",
+        "⌘",
+        "→"
+      ],
+      "englishKeys": "Shift + Command + Right Arrow",
+      "summary": "选中插入点到当前行末尾之间的文字。",
+      "section": "文本编辑",
+      "prerequisite": "点击练习文本某一行的中部。",
+      "steps": [
+        "点击练习文本某一行的中部。",
+        "亲手按下 Shift + Command + Right Arrow。",
+        "插入点右侧直到行尾的文字高亮显示。 页面会根据实际文本、选区或字体属性变化反馈结果。"
+      ],
+      "expectedResult": "插入点右侧直到行尾的文字高亮显示。",
+      "windowsEquivalent": null,
+      "practice": "textEditing",
+      "notes": [
+        "这是文本框中的操作；如果焦点在目录、列表或其他应用，行为会不同。"
+      ],
+      "aliases": [
+        "选择行尾",
+        "文本选区"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-find",
+      "scope": "system",
+      "title": "查找当前文稿",
+      "keys": [
+        "⌘",
+        "F"
+      ],
+      "englishKeys": "Command + F",
+      "summary": "在当前应用或文稿中打开查找。",
+      "section": "通用文稿",
+      "prerequisite": "先让一个支持查找的文稿窗口位于前台。",
+      "steps": [
+        "先让一个支持查找的文稿窗口位于前台。",
+        "亲手按下 Command + F。",
+        "查找栏或查找面板出现，可以输入关键词。 观察预期现象即可。"
+      ],
+      "expectedResult": "查找栏或查找面板出现，可以输入关键词。",
+      "windowsEquivalent": "Ctrl + F",
+      "practice": "observation",
+      "notes": [
+        "查找功能由当前应用提供。在浏览器中会搜索当前网页，在 Finder 中会搜索文件。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-find-next",
+      "scope": "system",
+      "title": "查找下一个匹配项",
+      "keys": [
+        "⌘",
+        "G"
+      ],
+      "englishKeys": "Command + G",
+      "summary": "继续定位已输入关键词的下一个结果。",
+      "section": "通用文稿",
+      "prerequisite": "先打开一个支持查找的文稿，搜索一个重复出现的词。",
+      "steps": [
+        "先打开一个支持查找的文稿，搜索一个重复出现的词。",
+        "亲手按下 Command + G。",
+        "选中或滚动到下一处匹配结果。 观察预期现象即可。"
+      ],
+      "expectedResult": "选中或滚动到下一处匹配结果。",
+      "windowsEquivalent": "Ctrl + G",
+      "practice": "observation",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-find-previous",
+      "scope": "system",
+      "title": "查找上一个匹配项",
+      "keys": [
+        "⇧",
+        "⌘",
+        "G"
+      ],
+      "englishKeys": "Shift + Command + G",
+      "summary": "反向定位上一个匹配结果。",
+      "section": "通用文稿",
+      "prerequisite": "先在支持查找的文稿中搜索一个出现多次的词。",
+      "steps": [
+        "先在支持查找的文稿中搜索一个出现多次的词。",
+        "亲手按下 Shift + Command + G。",
+        "选中或滚动到上一处匹配结果。 观察预期现象即可。"
+      ],
+      "expectedResult": "选中或滚动到上一处匹配结果。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-minimize",
+      "scope": "system",
+      "title": "最小化窗口",
+      "keys": [
+        "⌘",
+        "M"
+      ],
+      "englishKeys": "Command + M",
+      "summary": "将当前练习窗口收起到 Dock。",
+      "section": "窗口与应用",
+      "prerequisite": "打开独立练习窗口，并让它位于前台。",
+      "steps": [
+        "打开独立练习窗口，并让它位于前台。",
+        "亲手按下 Command + M。",
+        "练习窗口缩入 Dock；点击窗口缩略图可以恢复。 观察预期现象即可。"
+      ],
+      "expectedResult": "练习窗口缩入 Dock；点击窗口缩略图可以恢复。",
+      "windowsEquivalent": null,
+      "practice": "minimizeWindow",
+      "notes": [
+        "教学主窗口会保留。可以点击 Dock 中的练习窗口缩略图恢复，或使用页面中的恢复入口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-close-window",
+      "scope": "system",
+      "title": "关闭窗口",
+      "keys": [
+        "⌘",
+        "W"
+      ],
+      "englishKeys": "Command + W",
+      "summary": "关闭当前窗口或标签页。",
+      "section": "窗口与应用",
+      "prerequisite": "使用独立练习窗口，先保存自己的其他文稿。",
+      "steps": [
+        "使用独立练习窗口，先保存自己的其他文稿。",
+        "亲手按下 Command + W。",
+        "独立练习窗口关闭，教学主窗口仍可使用。 观察预期现象即可。"
+      ],
+      "expectedResult": "独立练习窗口关闭，教学主窗口仍可使用。",
+      "windowsEquivalent": null,
+      "practice": "closeWindow",
+      "notes": [
+        "窗口关闭不等于退出应用。在多标签应用中，通常先关闭当前标签页。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-hide",
+      "scope": "system",
+      "title": "隐藏当前应用",
+      "keys": [
+        "⌘",
+        "H"
+      ],
+      "englishKeys": "Command + H",
+      "summary": "暂时隐藏当前应用的所有窗口。",
+      "section": "窗口与应用",
+      "prerequisite": "先记住返回方法：点击 Dock 中的“快捷”图标。",
+      "steps": [
+        "先记住返回方法：点击 Dock 中的“快捷”图标。",
+        "亲手按下 Command + H。",
+        "当前应用窗口隐藏，点击 Dock 图标后重新出现。 观察预期现象即可。"
+      ],
+      "expectedResult": "当前应用窗口隐藏，点击 Dock 图标后重新出现。",
+      "windowsEquivalent": null,
+      "practice": "hideApp",
+      "notes": [
+        "隐藏后应用仍然运行。点击 Dock 中的应用图标即可返回。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-hide-others",
+      "scope": "system",
+      "title": "隐藏其他应用",
+      "keys": [
+        "⌥",
+        "⌘",
+        "H"
+      ],
+      "englishKeys": "Option + Command + H",
+      "summary": "保留当前应用，暂时隐藏其他应用的窗口。",
+      "section": "窗口与应用",
+      "prerequisite": "先打开两个应用，并让准备保留的那个应用位于前台。",
+      "steps": [
+        "先打开两个应用，并让准备保留的那个应用位于前台。",
+        "亲手按下 Option + Command + H。",
+        "其他应用的窗口隐藏，当前应用仍显示。 观察预期现象即可。"
+      ],
+      "expectedResult": "其他应用的窗口隐藏，当前应用仍显示。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "点击 Dock 中其他应用的图标即可重新显示它们。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-quit",
+      "scope": "system",
+      "title": "退出当前应用",
+      "keys": [
+        "⌘",
+        "Q"
+      ],
+      "englishKeys": "Command + Q",
+      "summary": "结束当前应用的运行。",
+      "section": "窗口与应用",
+      "prerequisite": "先保存待退出应用中的文稿，避免选择教学应用本身。",
+      "steps": [
+        "先保存待退出应用中的文稿，避免选择教学应用本身。",
+        "亲手按下 Command + Q。",
+        "目标应用退出；可从 Dock 或 Spotlight 重新打开。 观察预期现象即可。"
+      ],
+      "expectedResult": "目标应用退出；可从 Dock 或 Spotlight 重新打开。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "这是退出应用，不只是关闭窗口。不要用未保存的重要文稿练习。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-force-quit",
+      "scope": "system",
+      "title": "打开强制退出面板",
+      "keys": [
+        "⌥",
+        "⌘",
+        "Esc"
+      ],
+      "englishKeys": "Option + Command + Escape",
+      "summary": "查看运行中的应用，处理无响应的应用。",
+      "section": "窗口与应用",
+      "prerequisite": "此次只查看面板，无需真正强制退出任何应用。",
+      "steps": [
+        "此次只查看面板，无需真正强制退出任何应用。",
+        "亲手按下 Option + Command + Escape。",
+        "强制退出应用面板出现；按 Esc 可关闭。 观察预期现象即可。"
+      ],
+      "expectedResult": "强制退出应用面板出现；按 Esc 可关闭。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "强制退出可能丢失未保存的更改。学习组合键时只打开面板并取消即可。"
+      ],
+      "aliases": [
+        "卡死",
+        "无响应"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-save",
+      "scope": "system",
+      "title": "保存当前文稿",
+      "keys": [
+        "⌘",
+        "S"
+      ],
+      "englishKeys": "Command + S",
+      "summary": "将当前文稿中的更改写入文件。",
+      "section": "通用文稿",
+      "prerequisite": "使用自己新建的测试文稿，并让文稿应用位于前台。",
+      "steps": [
+        "使用自己新建的测试文稿，并让文稿应用位于前台。",
+        "亲手按下 Command + S。",
+        "文稿被保存；首次保存时可能出现名称和位置对话框。 观察预期现象即可。"
+      ],
+      "expectedResult": "文稿被保存；首次保存时可能出现名称和位置对话框。",
+      "windowsEquivalent": "Ctrl + S",
+      "practice": "observation",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-print",
+      "scope": "system",
+      "title": "打开打印面板",
+      "keys": [
+        "⌘",
+        "P"
+      ],
+      "englishKeys": "Command + P",
+      "summary": "查看当前文稿的打印选项。",
+      "section": "通用文稿",
+      "prerequisite": "打开可打印的测试文稿，练习时无需连接打印机。",
+      "steps": [
+        "打开可打印的测试文稿，练习时无需连接打印机。",
+        "亲手按下 Command + P。",
+        "打印面板出现；点取消或按 Esc 返回，不会自动打印。 观察预期现象即可。"
+      ],
+      "expectedResult": "打印面板出现；点取消或按 Esc 返回，不会自动打印。",
+      "windowsEquivalent": "Ctrl + P",
+      "practice": "observation",
+      "notes": [
+        "快捷键只打开打印设置。可以取消，不需要提交打印任务。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-bold",
+      "scope": "system",
+      "title": "将文字设为粗体",
+      "keys": [
+        "⌘",
+        "B"
+      ],
+      "englishKeys": "Command + B",
+      "summary": "切换所选文字的粗体格式。",
+      "section": "文本格式",
+      "prerequisite": "先在下方原生练习文本框中选中一段文字。",
+      "steps": [
+        "先在下方原生练习文本框中选中一段文字。",
+        "亲手按下 Command + B。",
+        "所选文字显示为粗体，或从粗体恢复为普通字重。 页面会根据实际字体属性变化反馈结果。"
+      ],
+      "expectedResult": "所选文字显示为粗体，或从粗体恢复为普通字重。",
+      "windowsEquivalent": "Ctrl + B",
+      "practice": "textEditing",
+      "notes": [
+        "选区需要位于练习文本框中。页面会根据实际字体或下划线属性变化反馈结果。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-italic",
+      "scope": "system",
+      "title": "将文字设为斜体",
+      "keys": [
+        "⌘",
+        "I"
+      ],
+      "englishKeys": "Command + I",
+      "summary": "切换所选文字的斜体格式。",
+      "section": "文本格式",
+      "prerequisite": "先在下方原生练习文本框中选中一段文字。",
+      "steps": [
+        "先在下方原生练习文本框中选中一段文字。",
+        "亲手按下 Command + I。",
+        "所选文字显示为斜体，或取消已有斜体。 页面会根据实际字体属性变化反馈结果。"
+      ],
+      "expectedResult": "所选文字显示为斜体，或取消已有斜体。",
+      "windowsEquivalent": "Ctrl + I",
+      "practice": "textEditing",
+      "notes": [
+        "选区需要位于练习文本框中。页面会根据实际字体或下划线属性变化反馈结果。",
+        "所用字体没有斜体字形时，视觉变化可能不明显，可换用支持斜体的字体观察。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-underline",
+      "scope": "system",
+      "title": "为文字添加下划线",
+      "keys": [
+        "⌘",
+        "U"
+      ],
+      "englishKeys": "Command + U",
+      "summary": "切换所选文字的下划线格式。",
+      "section": "文本格式",
+      "prerequisite": "先在下方原生练习文本框中选中一段文字。",
+      "steps": [
+        "先在下方原生练习文本框中选中一段文字。",
+        "亲手按下 Command + U。",
+        "所选文字下方出现横线，或移除已有下划线。 页面会根据实际字体属性变化反馈结果。"
+      ],
+      "expectedResult": "所选文字下方出现横线，或移除已有下划线。",
+      "windowsEquivalent": "Ctrl + U",
+      "practice": "textEditing",
+      "notes": [
+        "选区需要位于练习文本框中。页面会根据实际字体或下划线属性变化反馈结果。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-f1",
+      "scope": "system",
+      "title": "F1 · 调低屏幕亮度",
+      "keys": [
+        "F1"
+      ],
+      "englishKeys": "F1",
+      "summary": "降低支持键盘亮度调节的显示屏亮度。",
+      "section": "功能键 F1–F12",
+      "prerequisite": "按键帽图标与本机 Fn 设置操作；开启“标准功能键”后，媒体功能通常需配合 Fn。",
+      "steps": [
+        "按键帽图标与本机 Fn 设置操作；开启“标准功能键”后，媒体功能通常需配合 Fn。",
+        "亲手按下标为 F1 的对应图标键；若处于标准功能键模式，再配合 Fn。",
+        "屏幕亮度降低，或亮度指示出现。"
+      ],
+      "expectedResult": "屏幕亮度降低，或亮度指示出现。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "外接显示器可能不支持通过此键调节；请以显示器自身控制为准。",
+        "“系统设置 → 键盘 → 键盘快捷键 → 功能键”可切换“将 F1、F2 等键用作标准功能键”。",
+        "此页说明常见 Apple 键盘顶行系统功能；标准 F 键本身的用途由当前应用或自定义绑定决定。",
+        "Touch Bar 机型可按住 Fn 显示 F1–F12；第三方键盘的图标和 Fn 锁定方式可能不同。"
+      ],
+      "aliases": [
+        "f1",
+        "功能键1",
+        "调低屏幕亮度",
+        "Fn",
+        "媒体键",
+        "顶行按键"
+      ],
+      "sourceIDs": [
+        "apple-function-keys",
+        "apple-keyboard-current",
+        "apple-keyboard-legacy"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-f2",
+      "scope": "system",
+      "title": "F2 · 调高屏幕亮度",
+      "keys": [
+        "F2"
+      ],
+      "englishKeys": "F2",
+      "summary": "提高支持键盘亮度调节的显示屏亮度。",
+      "section": "功能键 F1–F12",
+      "prerequisite": "按键帽图标与本机 Fn 设置操作；开启“标准功能键”后，媒体功能通常需配合 Fn。",
+      "steps": [
+        "按键帽图标与本机 Fn 设置操作；开启“标准功能键”后，媒体功能通常需配合 Fn。",
+        "亲手按下标为 F2 的对应图标键；若处于标准功能键模式，再配合 Fn。",
+        "屏幕亮度提高，或亮度指示出现。"
+      ],
+      "expectedResult": "屏幕亮度提高，或亮度指示出现。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "亮度已到上限时不会继续增加；部分外接显示器不受此键控制。",
+        "“系统设置 → 键盘 → 键盘快捷键 → 功能键”可切换“将 F1、F2 等键用作标准功能键”。",
+        "此页说明常见 Apple 键盘顶行系统功能；标准 F 键本身的用途由当前应用或自定义绑定决定。",
+        "Touch Bar 机型可按住 Fn 显示 F1–F12；第三方键盘的图标和 Fn 锁定方式可能不同。"
+      ],
+      "aliases": [
+        "f2",
+        "功能键2",
+        "调高屏幕亮度",
+        "Fn",
+        "媒体键",
+        "顶行按键"
+      ],
+      "sourceIDs": [
+        "apple-function-keys",
+        "apple-keyboard-current",
+        "apple-keyboard-legacy"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-f3",
+      "scope": "system",
+      "title": "F3 · 打开调度中心",
+      "keys": [
+        "F3"
+      ],
+      "englishKeys": "F3",
+      "summary": "查看当前打开的窗口和桌面空间。",
+      "section": "功能键 F1–F12",
+      "prerequisite": "按键帽图标与本机 Fn 设置操作；开启“标准功能键”后，媒体功能通常需配合 Fn。",
+      "steps": [
+        "按键帽图标与本机 Fn 设置操作；开启“标准功能键”后，媒体功能通常需配合 Fn。",
+        "亲手按下标为 F3 的对应图标键；若处于标准功能键模式，再配合 Fn。",
+        "调度中心展开；按 Esc 或再次按对应功能键返回。"
+      ],
+      "expectedResult": "调度中心展开；按 Esc 或再次按对应功能键返回。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "调度中心绑定可在系统键盘快捷键设置中调整。",
+        "“系统设置 → 键盘 → 键盘快捷键 → 功能键”可切换“将 F1、F2 等键用作标准功能键”。",
+        "此页说明常见 Apple 键盘顶行系统功能；标准 F 键本身的用途由当前应用或自定义绑定决定。",
+        "Touch Bar 机型可按住 Fn 显示 F1–F12；第三方键盘的图标和 Fn 锁定方式可能不同。"
+      ],
+      "aliases": [
+        "f3",
+        "功能键3",
+        "打开调度中心",
+        "Fn",
+        "媒体键",
+        "顶行按键"
+      ],
+      "sourceIDs": [
+        "apple-function-keys",
+        "apple-keyboard-current",
+        "apple-keyboard-legacy"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-f4",
+      "scope": "system",
+      "title": "F4 · 搜索或启动台",
+      "keys": [
+        "F4"
+      ],
+      "englishKeys": "F4",
+      "summary": "带放大镜图标的新款键盘通常打开 Spotlight 搜索。",
+      "section": "功能键 F1–F12",
+      "prerequisite": "按键帽图标与本机 Fn 设置操作；开启“标准功能键”后，媒体功能通常需配合 Fn。",
+      "steps": [
+        "按键帽图标与本机 Fn 设置操作；开启“标准功能键”后，媒体功能通常需配合 Fn。",
+        "亲手按下标为 F4 的对应图标键；若处于标准功能键模式，再配合 Fn。",
+        "放大镜键帽打开搜索；旧款九宫格键帽可能打开启动台。"
+      ],
+      "expectedResult": "放大镜键帽打开搜索；旧款九宫格键帽可能打开启动台。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "较新 Apple 键盘 F4 常为 Spotlight；部分旧款 F4 为启动台，不能只按 F4 名称推断功能。",
+        "“系统设置 → 键盘 → 键盘快捷键 → 功能键”可切换“将 F1、F2 等键用作标准功能键”。",
+        "此页说明常见 Apple 键盘顶行系统功能；标准 F 键本身的用途由当前应用或自定义绑定决定。",
+        "Touch Bar 机型可按住 Fn 显示 F1–F12；第三方键盘的图标和 Fn 锁定方式可能不同。"
+      ],
+      "aliases": [
+        "f4",
+        "功能键4",
+        "搜索或启动台",
+        "Fn",
+        "媒体键",
+        "顶行按键"
+      ],
+      "sourceIDs": [
+        "apple-function-keys",
+        "apple-keyboard-current",
+        "apple-keyboard-legacy"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-f5",
+      "scope": "system",
+      "title": "F5 · 听写或键盘背光",
+      "keys": [
+        "F5"
+      ],
+      "englishKeys": "F5",
+      "summary": "麦克风图标常用于听写，旧款背光图标可能调低键盘照明。",
+      "section": "功能键 F1–F12",
+      "prerequisite": "先将光标放在可编辑文本中；按麦克风图标键，是否配合 Fn 取决于功能键设置。",
+      "steps": [
+        "先将光标放在可编辑文本中；按麦克风图标键，是否配合 Fn 取决于功能键设置。",
+        "亲手按下标为 F5 的对应图标键；若处于标准功能键模式，再配合 Fn。",
+        "麦克风键帽可打开听写；旧款背光键帽可能降低键盘亮度。"
+      ],
+      "expectedResult": "麦克风键帽可打开听写；旧款背光键帽可能降低键盘亮度。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "听写需要先启用，并将光标放在文本输入位置；部分旧款键盘 F5 是降低键盘背光。长按麦克风键的行为还取决于 Siri 与机型设置。",
+        "“系统设置 → 键盘 → 键盘快捷键 → 功能键”可切换“将 F1、F2 等键用作标准功能键”。",
+        "此页说明常见 Apple 键盘顶行系统功能；标准 F 键本身的用途由当前应用或自定义绑定决定。",
+        "Touch Bar 机型可按住 Fn 显示 F1–F12；第三方键盘的图标和 Fn 锁定方式可能不同。"
+      ],
+      "aliases": [
+        "f5",
+        "功能键5",
+        "听写或键盘背光",
+        "Fn",
+        "媒体键",
+        "顶行按键"
+      ],
+      "sourceIDs": [
+        "apple-function-keys",
+        "apple-keyboard-current",
+        "apple-keyboard-legacy"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-f6",
+      "scope": "system",
+      "title": "F6 · 勿扰或键盘背光",
+      "keys": [
+        "F6"
+      ],
+      "englishKeys": "F6",
+      "summary": "月亮图标常用于勿扰模式，旧款背光图标可能调高键盘照明。",
+      "section": "功能键 F1–F12",
+      "prerequisite": "按键帽图标与本机 Fn 设置操作；开启“标准功能键”后，媒体功能通常需配合 Fn。",
+      "steps": [
+        "按键帽图标与本机 Fn 设置操作；开启“标准功能键”后，媒体功能通常需配合 Fn。",
+        "亲手按下标为 F6 的对应图标键；若处于标准功能键模式，再配合 Fn。",
+        "月亮键帽切换勿扰状态；旧款背光键帽可能提高键盘亮度。"
+      ],
+      "expectedResult": "月亮键帽切换勿扰状态；旧款背光键帽可能提高键盘亮度。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "部分旧款键盘 F6 是提高键盘背光。请观察键帽图标，不要假定所有 F6 都开启勿扰。",
+        "“系统设置 → 键盘 → 键盘快捷键 → 功能键”可切换“将 F1、F2 等键用作标准功能键”。",
+        "此页说明常见 Apple 键盘顶行系统功能；标准 F 键本身的用途由当前应用或自定义绑定决定。",
+        "Touch Bar 机型可按住 Fn 显示 F1–F12；第三方键盘的图标和 Fn 锁定方式可能不同。"
+      ],
+      "aliases": [
+        "f6",
+        "功能键6",
+        "勿扰或键盘背光",
+        "Fn",
+        "媒体键",
+        "顶行按键"
+      ],
+      "sourceIDs": [
+        "apple-function-keys",
+        "apple-keyboard-current",
+        "apple-keyboard-legacy"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-f7",
+      "scope": "system",
+      "title": "F7 · 上一曲或倒回",
+      "keys": [
+        "F7"
+      ],
+      "englishKeys": "F7",
+      "summary": "控制当前媒体应用的上一项或倒回。",
+      "section": "功能键 F1–F12",
+      "prerequisite": "先准备可播放的媒体；按媒体图标键，是否配合 Fn 取决于功能键设置。",
+      "steps": [
+        "先准备可播放的媒体；按媒体图标键，是否配合 Fn 取决于功能键设置。",
+        "亲手按下标为 F7 的对应图标键；若处于标准功能键模式，再配合 Fn。",
+        "支持的媒体应用返回上一项或倒回；具体行为由播放器决定。"
+      ],
+      "expectedResult": "支持的媒体应用返回上一项或倒回；具体行为由播放器决定。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "先打开可控制的音频、视频或幻灯片。没有活动播放器时，此键可能没有可见响应。",
+        "“系统设置 → 键盘 → 键盘快捷键 → 功能键”可切换“将 F1、F2 等键用作标准功能键”。",
+        "此页说明常见 Apple 键盘顶行系统功能；标准 F 键本身的用途由当前应用或自定义绑定决定。",
+        "Touch Bar 机型可按住 Fn 显示 F1–F12；第三方键盘的图标和 Fn 锁定方式可能不同。"
+      ],
+      "aliases": [
+        "f7",
+        "功能键7",
+        "上一曲或倒回",
+        "Fn",
+        "媒体键",
+        "顶行按键"
+      ],
+      "sourceIDs": [
+        "apple-function-keys",
+        "apple-keyboard-current",
+        "apple-keyboard-legacy"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-f8",
+      "scope": "system",
+      "title": "F8 · 播放或暂停",
+      "keys": [
+        "F8"
+      ],
+      "englishKeys": "F8",
+      "summary": "切换当前媒体的播放与暂停状态。",
+      "section": "功能键 F1–F12",
+      "prerequisite": "先准备可播放的媒体；按媒体图标键，是否配合 Fn 取决于功能键设置。",
+      "steps": [
+        "先准备可播放的媒体；按媒体图标键，是否配合 Fn 取决于功能键设置。",
+        "亲手按下标为 F8 的对应图标键；若处于标准功能键模式，再配合 Fn。",
+        "支持的媒体应用实际开始播放或暂停。"
+      ],
+      "expectedResult": "支持的媒体应用实际开始播放或暂停。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "需要有可控制的媒体内容；当前媒体目标由系统和播放器共同决定。",
+        "“系统设置 → 键盘 → 键盘快捷键 → 功能键”可切换“将 F1、F2 等键用作标准功能键”。",
+        "此页说明常见 Apple 键盘顶行系统功能；标准 F 键本身的用途由当前应用或自定义绑定决定。",
+        "Touch Bar 机型可按住 Fn 显示 F1–F12；第三方键盘的图标和 Fn 锁定方式可能不同。"
+      ],
+      "aliases": [
+        "f8",
+        "功能键8",
+        "播放或暂停",
+        "Fn",
+        "媒体键",
+        "顶行按键"
+      ],
+      "sourceIDs": [
+        "apple-function-keys",
+        "apple-keyboard-current",
+        "apple-keyboard-legacy"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-f9",
+      "scope": "system",
+      "title": "F9 · 下一曲或快进",
+      "keys": [
+        "F9"
+      ],
+      "englishKeys": "F9",
+      "summary": "控制当前媒体应用的下一项或快进。",
+      "section": "功能键 F1–F12",
+      "prerequisite": "先准备可播放的媒体；按媒体图标键，是否配合 Fn 取决于功能键设置。",
+      "steps": [
+        "先准备可播放的媒体；按媒体图标键，是否配合 Fn 取决于功能键设置。",
+        "亲手按下标为 F9 的对应图标键；若处于标准功能键模式，再配合 Fn。",
+        "支持的媒体应用跳到下一项或快进；具体行为由播放器决定。"
+      ],
+      "expectedResult": "支持的媒体应用跳到下一项或快进；具体行为由播放器决定。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "请先准备包含多个项目的播放列表；按下和长按的表现可能因播放器而异。",
+        "“系统设置 → 键盘 → 键盘快捷键 → 功能键”可切换“将 F1、F2 等键用作标准功能键”。",
+        "此页说明常见 Apple 键盘顶行系统功能；标准 F 键本身的用途由当前应用或自定义绑定决定。",
+        "Touch Bar 机型可按住 Fn 显示 F1–F12；第三方键盘的图标和 Fn 锁定方式可能不同。"
+      ],
+      "aliases": [
+        "f9",
+        "功能键9",
+        "下一曲或快进",
+        "Fn",
+        "媒体键",
+        "顶行按键"
+      ],
+      "sourceIDs": [
+        "apple-function-keys",
+        "apple-keyboard-current",
+        "apple-keyboard-legacy"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-f10",
+      "scope": "system",
+      "title": "F10 · 静音或取消静音",
+      "keys": [
+        "F10"
+      ],
+      "englishKeys": "F10",
+      "summary": "切换当前可控音频输出的静音状态。",
+      "section": "功能键 F1–F12",
+      "prerequisite": "按键帽图标与本机 Fn 设置操作；开启“标准功能键”后，媒体功能通常需配合 Fn。",
+      "steps": [
+        "按键帽图标与本机 Fn 设置操作；开启“标准功能键”后，媒体功能通常需配合 Fn。",
+        "亲手按下标为 F10 的对应图标键；若处于标准功能键模式，再配合 Fn。",
+        "声音静音状态改变，或系统音量指示出现。"
+      ],
+      "expectedResult": "声音静音状态改变，或系统音量指示出现。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "部分数字音频设备、显示器音频或外部接口不支持系统键盘音量控制。",
+        "“系统设置 → 键盘 → 键盘快捷键 → 功能键”可切换“将 F1、F2 等键用作标准功能键”。",
+        "此页说明常见 Apple 键盘顶行系统功能；标准 F 键本身的用途由当前应用或自定义绑定决定。",
+        "Touch Bar 机型可按住 Fn 显示 F1–F12；第三方键盘的图标和 Fn 锁定方式可能不同。"
+      ],
+      "aliases": [
+        "f10",
+        "功能键10",
+        "静音或取消静音",
+        "Fn",
+        "媒体键",
+        "顶行按键"
+      ],
+      "sourceIDs": [
+        "apple-function-keys",
+        "apple-keyboard-current",
+        "apple-keyboard-legacy"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-f11",
+      "scope": "system",
+      "title": "F11 · 调低音量",
+      "keys": [
+        "F11"
+      ],
+      "englishKeys": "F11",
+      "summary": "在媒体键模式下调低当前音频输出音量。",
+      "section": "功能键 F1–F12",
+      "prerequisite": "按键帽图标与本机 Fn 设置操作；开启“标准功能键”后，媒体功能通常需配合 Fn。",
+      "steps": [
+        "按键帽图标与本机 Fn 设置操作；开启“标准功能键”后，媒体功能通常需配合 Fn。",
+        "亲手按下标为 F11 的对应图标键；若处于标准功能键模式，再配合 Fn。",
+        "可控音频输出的音量降低。"
+      ],
+      "expectedResult": "可控音频输出的音量降低。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "标准功能键模式中的 F11 也可能绑定“显示桌面”；这与扬声器图标的音量功能是不同操作。",
+        "“系统设置 → 键盘 → 键盘快捷键 → 功能键”可切换“将 F1、F2 等键用作标准功能键”。",
+        "此页说明常见 Apple 键盘顶行系统功能；标准 F 键本身的用途由当前应用或自定义绑定决定。",
+        "Touch Bar 机型可按住 Fn 显示 F1–F12；第三方键盘的图标和 Fn 锁定方式可能不同。"
+      ],
+      "aliases": [
+        "f11",
+        "功能键11",
+        "调低音量",
+        "Fn",
+        "媒体键",
+        "顶行按键"
+      ],
+      "sourceIDs": [
+        "apple-function-keys",
+        "apple-keyboard-current",
+        "apple-keyboard-legacy"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-f12",
+      "scope": "system",
+      "title": "F12 · 调高音量",
+      "keys": [
+        "F12"
+      ],
+      "englishKeys": "F12",
+      "summary": "在媒体键模式下调高当前音频输出音量。",
+      "section": "功能键 F1–F12",
+      "prerequisite": "按键帽图标与本机 Fn 设置操作；开启“标准功能键”后，媒体功能通常需配合 Fn。",
+      "steps": [
+        "按键帽图标与本机 Fn 设置操作；开启“标准功能键”后，媒体功能通常需配合 Fn。",
+        "亲手按下标为 F12 的对应图标键；若处于标准功能键模式，再配合 Fn。",
+        "可控音频输出的音量提高。"
+      ],
+      "expectedResult": "可控音频输出的音量提高。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "标准 F12 的快捷键用途由系统或当前应用设置决定，不能假定它始终调高音量。",
+        "“系统设置 → 键盘 → 键盘快捷键 → 功能键”可切换“将 F1、F2 等键用作标准功能键”。",
+        "此页说明常见 Apple 键盘顶行系统功能；标准 F 键本身的用途由当前应用或自定义绑定决定。",
+        "Touch Bar 机型可按住 Fn 显示 F1–F12；第三方键盘的图标和 Fn 锁定方式可能不同。"
+      ],
+      "aliases": [
+        "f12",
+        "功能键12",
+        "调高音量",
+        "Fn",
+        "媒体键",
+        "顶行按键"
+      ],
+      "sourceIDs": [
+        "apple-function-keys",
+        "apple-keyboard-current",
+        "apple-keyboard-legacy"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "finder-new-folder",
+      "scope": "finder",
+      "title": "新建文件夹",
+      "keys": [
+        "⇧",
+        "⌘",
+        "N"
+      ],
+      "englishKeys": "Shift + Command + N",
+      "summary": "在当前 Finder 位置创建一个空文件夹。",
+      "section": "文件与文件夹",
+      "prerequisite": "打开专用练习目录，并让 Finder 位于前台。",
+      "steps": [
+        "点击“打开练习文件夹”，让 Finder 显示专用练习目录。",
+        "在 Finder 中亲手按 Shift + Command + N。",
+        "输入文件夹名称并按 Return，回到教学页查看实际目录变化。"
+      ],
+      "expectedResult": "练习目录中出现新文件夹，输入名称后可按 Return 确认。",
+      "windowsEquivalent": "Ctrl + Shift + N",
+      "practice": "newFolder",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
+      ],
+      "aliases": [
+        "新建目录",
+        "创建文件夹"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-rename",
+      "scope": "finder",
+      "title": "重命名文件",
+      "keys": [
+        "↩"
+      ],
+      "englishKeys": "Return",
+      "summary": "更改选中的文件或文件夹的名称。",
+      "section": "文件与文件夹",
+      "prerequisite": "在专用练习目录中单击选中样例文件。",
+      "steps": [
+        "点击“准备样例文件”，确认 Finder 中已经选中该文件。",
+        "按 Return，输入新名称，并保留原来的文件扩展名。",
+        "再次按 Return 确认，回到教学页查看检测到的新名称。"
+      ],
+      "expectedResult": "样例文件进入名称编辑，确认后名称真实改变。",
+      "windowsEquivalent": "F2",
+      "practice": "renameFile",
+      "notes": [
+        "不要更改文件扩展名。请先单击选中文件，再按 Return；双击会打开文件。"
+      ],
+      "aliases": [
+        "重新命名",
+        "文件名",
+        "改名"
+      ],
+      "sourceIDs": [
+        "apple-rename"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-duplicate",
+      "scope": "finder",
+      "title": "制作文件副本",
+      "keys": [
+        "⌘",
+        "D"
+      ],
+      "englishKeys": "Command + D",
+      "summary": "在同一位置复制选中的文件。",
+      "section": "文件与文件夹",
+      "prerequisite": "在专用练习目录中选中样例文件。",
+      "steps": [
+        "在专用练习目录中选中样例文件。",
+        "亲手按下 Command + D。",
+        "同一目录出现一个副本，原始文件仍保留。 返回教学页查看练习目录的实际变化。"
+      ],
+      "expectedResult": "同一目录出现一个副本，原始文件仍保留。",
+      "windowsEquivalent": null,
+      "practice": "duplicateFile",
+      "notes": [
+        "副本名称由 Finder 和系统语言决定，可能包含“副本”或数字后缀。"
+      ],
+      "aliases": [
+        "复制文件",
+        "副本"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-trash",
+      "scope": "finder",
+      "title": "移到废纸篓",
+      "keys": [
+        "⌘",
+        "⌫"
+      ],
+      "englishKeys": "Command + Delete",
+      "summary": "将选中的样例文件送入废纸篓。",
+      "section": "文件与文件夹",
+      "prerequisite": "只选中工具准备的样例文件，先核对文件名。",
+      "steps": [
+        "只选中工具准备的样例文件，先核对文件名。",
+        "亲手按下 Command + Delete。",
+        "样例文件从练习目录消失，可在 Finder 中按 Command + Z 撤销。 返回教学页查看练习目录的实际变化。"
+      ],
+      "expectedResult": "样例文件从练习目录消失，可在 Finder 中按 Command + Z 撤销。",
+      "windowsEquivalent": "Delete",
+      "practice": "trashFile",
+      "notes": [
+        "此练习只使用工具创建的样例文件。不要清倒废纸篓；移入后仍可使用撤销或“放回原处”恢复。"
+      ],
+      "aliases": [
+        "删除文件",
+        "废纸篓",
+        "垃圾桶"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-quick-look",
+      "scope": "finder",
+      "title": "快速查看文件",
+      "keys": [
+        "Space"
+      ],
+      "englishKeys": "Space",
+      "summary": "直接预览选中的文件，无需先打开对应应用。",
+      "section": "文件与文件夹",
+      "prerequisite": "在 Finder 中选中工具准备的样例文件。",
+      "steps": [
+        "在 Finder 中选中工具准备的样例文件。",
+        "亲手按下 Space。",
+        "快速查看窗口出现，按 Space 或 Esc 退出。 观察预期现象即可。"
+      ],
+      "expectedResult": "快速查看窗口出现，按 Space 或 Esc 退出。",
+      "windowsEquivalent": null,
+      "practice": "quickLook",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
+      ],
+      "aliases": [
+        "预览",
+        "空格"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-info",
+      "scope": "finder",
+      "title": "显示文件简介",
+      "keys": [
+        "⌘",
+        "I"
+      ],
+      "englishKeys": "Command + I",
+      "summary": "查看所选文件的大小、位置和类型。",
+      "section": "文件与文件夹",
+      "prerequisite": "先选中专用练习目录中的样例文件。",
+      "steps": [
+        "先选中专用练习目录中的样例文件。",
+        "亲手按下 Command + I。",
+        "显示简介窗口打开，展示所选文件的信息。 观察预期现象即可。"
+      ],
+      "expectedResult": "显示简介窗口打开，展示所选文件的信息。",
+      "windowsEquivalent": null,
+      "practice": "fileInfo",
+      "notes": [
+        "简介窗口是单独的窗口。查看后点击关闭按钮，不会删除文件。"
+      ],
+      "aliases": [
+        "文件信息",
+        "显示简介",
+        "大小"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-open",
+      "scope": "finder",
+      "title": "打开所选文件",
+      "keys": [
+        "⌘",
+        "↓"
+      ],
+      "englishKeys": "Command + Down Arrow",
+      "summary": "使用默认应用打开当前选中的项目。",
+      "section": "文件与文件夹",
+      "prerequisite": "在 Finder 中选中工具准备的文本样例文件。",
+      "steps": [
+        "在 Finder 中选中工具准备的文本样例文件。",
+        "亲手按下 Command + Down Arrow。",
+        "默认应用打开样例文件；完成后可切回教学页。 观察预期现象即可。"
+      ],
+      "expectedResult": "默认应用打开样例文件；完成后可切回教学页。",
+      "windowsEquivalent": null,
+      "practice": "openFile",
+      "notes": [
+        "Return 在 Finder 中通常用于重命名。打开文件可使用 Command + 下箭头或 Command + O。"
+      ],
+      "aliases": [
+        "打开文件"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-copy",
+      "scope": "finder",
+      "title": "复制选中文件",
+      "keys": [
+        "⌘",
+        "C"
+      ],
+      "englishKeys": "Command + C",
+      "summary": "将文件引用复制到剪贴板，原文件保留。",
+      "section": "文件与文件夹",
+      "prerequisite": "选中专用练习目录中的样例文件。",
+      "steps": [
+        "选中专用练习目录中的样例文件。",
+        "亲手按下 Command + C。",
+        "在另一个练习子文件夹中按 Command + V 可得到文件副本。 观察预期现象即可。"
+      ],
+      "expectedResult": "在另一个练习子文件夹中按 Command + V 可得到文件副本。",
+      "windowsEquivalent": "Ctrl + C",
+      "practice": "observation",
+      "notes": [
+        "这不是复制文件内容的文字。复制文件后需要到目标目录粘贴，才会创建实际副本。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-paste",
+      "scope": "finder",
+      "title": "粘贴文件副本",
+      "keys": [
+        "⌘",
+        "V"
+      ],
+      "englishKeys": "Command + V",
+      "summary": "把刚复制的文件复制到当前文件夹。",
+      "section": "文件与文件夹",
+      "prerequisite": "先复制样例文件，再打开另一个练习子文件夹。",
+      "steps": [
+        "先复制样例文件，再打开另一个练习子文件夹。",
+        "亲手按下 Command + V。",
+        "当前目标目录出现所复制文件的副本。 观察预期现象即可。"
+      ],
+      "expectedResult": "当前目标目录出现所复制文件的副本。",
+      "windowsEquivalent": "Ctrl + V",
+      "practice": "observation",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-move-copied",
+      "scope": "finder",
+      "title": "移动已复制的文件",
+      "keys": [
+        "⌥",
+        "⌘",
+        "V"
+      ],
+      "englishKeys": "Option + Command + V",
+      "summary": "将刚复制的文件移到当前目录。",
+      "section": "文件与文件夹",
+      "prerequisite": "先用 Command + C 复制样例文件，再打开另一个练习子文件夹。",
+      "steps": [
+        "先用 Command + C 复制样例文件，再打开另一个练习子文件夹。",
+        "亲手按下 Option + Command + V。",
+        "样例文件从原练习位置移动到当前目录。 观察预期现象即可。"
+      ],
+      "expectedResult": "样例文件从原练习位置移动到当前目录。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "Finder 的文件移动方式是先复制，再用 Option + Command + V 移动；不是对文件直接使用 Command + X。"
+      ],
+      "aliases": [
+        "剪切文件",
+        "移动文件"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-new-window",
+      "scope": "finder",
+      "title": "打开新的 Finder 窗口",
+      "keys": [
+        "⌘",
+        "N"
+      ],
+      "englishKeys": "Command + N",
+      "summary": "新开一个 Finder 窗口。",
+      "section": "窗口与导航",
+      "prerequisite": "先让 Finder 位于前台。",
+      "steps": [
+        "先让 Finder 位于前台。",
+        "亲手按下 Command + N。",
+        "一个新的 Finder 窗口出现，原窗口保留。 观察预期现象即可。"
+      ],
+      "expectedResult": "一个新的 Finder 窗口出现，原窗口保留。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-search",
+      "scope": "finder",
+      "title": "查找文件",
+      "keys": [
+        "⌘",
+        "F"
+      ],
+      "englishKeys": "Command + F",
+      "summary": "在 Finder 中开始搜索文件。",
+      "section": "窗口与导航",
+      "prerequisite": "先打开练习文件夹，让 Finder 位于前台。",
+      "steps": [
+        "先打开练习文件夹，让 Finder 位于前台。",
+        "亲手按下 Command + F。",
+        "Finder 显示搜索输入和搜索范围选项。 观察预期现象即可。"
+      ],
+      "expectedResult": "Finder 显示搜索输入和搜索范围选项。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "留意“这台 Mac”和当前文件夹的搜索范围差异。"
+      ],
+      "aliases": [
+        "搜索文件",
+        "聚焦"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-go-folder",
+      "scope": "finder",
+      "title": "前往指定文件夹",
+      "keys": [
+        "⇧",
+        "⌘",
+        "G"
+      ],
+      "englishKeys": "Shift + Command + G",
+      "summary": "输入路径，直接前往一个文件夹。",
+      "section": "窗口与导航",
+      "prerequisite": "先让 Finder 位于前台；可使用 ~/Downloads 作为例子。",
+      "steps": [
+        "先让 Finder 位于前台；可使用 ~/Downloads 作为例子。",
+        "亲手按下 Shift + Command + G。",
+        "路径输入面板出现，输入有效路径并回车后进入目标目录。 观察预期现象即可。"
+      ],
+      "expectedResult": "路径输入面板出现，输入有效路径并回车后进入目标目录。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "~ 表示当前用户的个人文件夹。按 Esc 可以取消路径输入。"
+      ],
+      "aliases": [
+        "路径",
+        "前往文件夹"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-parent",
+      "scope": "finder",
+      "title": "打开上一级文件夹",
+      "keys": [
+        "⌘",
+        "↑"
+      ],
+      "englishKeys": "Command + Up Arrow",
+      "summary": "前往当前文件夹的父级目录。",
+      "section": "窗口与导航",
+      "prerequisite": "先在 Finder 中打开一个练习子文件夹。",
+      "steps": [
+        "先在 Finder 中打开一个练习子文件夹。",
+        "亲手按下 Command + Up Arrow。",
+        "Finder 显示包含该子文件夹的上一层目录。 观察预期现象即可。"
+      ],
+      "expectedResult": "Finder 显示包含该子文件夹的上一层目录。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
+      ],
+      "aliases": [
+        "父目录",
+        "上级目录"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-back",
+      "scope": "finder",
+      "title": "返回上一个位置",
+      "keys": [
+        "⌘",
+        "["
+      ],
+      "englishKeys": "Command + [",
+      "summary": "回到当前 Finder 窗口之前浏览的位置。",
+      "section": "窗口与导航",
+      "prerequisite": "先在同一个 Finder 窗口中依次打开两个文件夹。",
+      "steps": [
+        "先在同一个 Finder 窗口中依次打开两个文件夹。",
+        "亲手按下 Command + [。",
+        "窗口返回刚才访问过的前一个位置。 观察预期现象即可。"
+      ],
+      "expectedResult": "窗口返回刚才访问过的前一个位置。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-forward",
+      "scope": "finder",
+      "title": "前往下一个位置",
+      "keys": [
+        "⌘",
+        "]"
+      ],
+      "englishKeys": "Command + ]",
+      "summary": "在返回之后再次前往刚才的位置。",
+      "section": "窗口与导航",
+      "prerequisite": "先浏览两个目录，再用 Command + [ 返回一次。",
+      "steps": [
+        "先浏览两个目录，再用 Command + [ 返回一次。",
+        "亲手按下 Command + ]。",
+        "窗口重新显示返回之前浏览的位置。 观察预期现象即可。"
+      ],
+      "expectedResult": "窗口重新显示返回之前浏览的位置。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-icon-view",
+      "scope": "finder",
+      "title": "切换为图标视图",
+      "keys": [
+        "⌘",
+        "1"
+      ],
+      "englishKeys": "Command + 1",
+      "summary": "更改当前 Finder 窗口的文件展示方式。",
+      "section": "视图与显示",
+      "prerequisite": "先在 Finder 中打开专用练习目录。",
+      "steps": [
+        "先在 Finder 中打开专用练习目录。",
+        "亲手按下 Command + 1。",
+        "文件按图标排列。 观察预期现象即可。"
+      ],
+      "expectedResult": "文件按图标排列。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-list-view",
+      "scope": "finder",
+      "title": "切换为列表视图",
+      "keys": [
+        "⌘",
+        "2"
+      ],
+      "englishKeys": "Command + 2",
+      "summary": "更改当前 Finder 窗口的文件展示方式。",
+      "section": "视图与显示",
+      "prerequisite": "先在 Finder 中打开专用练习目录。",
+      "steps": [
+        "先在 Finder 中打开专用练习目录。",
+        "亲手按下 Command + 2。",
+        "文件按带有名称等列的列表排列。 观察预期现象即可。"
+      ],
+      "expectedResult": "文件按带有名称等列的列表排列。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-column-view",
+      "scope": "finder",
+      "title": "切换为分栏视图",
+      "keys": [
+        "⌘",
+        "3"
+      ],
+      "englishKeys": "Command + 3",
+      "summary": "更改当前 Finder 窗口的文件展示方式。",
+      "section": "视图与显示",
+      "prerequisite": "先在 Finder 中打开专用练习目录。",
+      "steps": [
+        "先在 Finder 中打开专用练习目录。",
+        "亲手按下 Command + 3。",
+        "文件夹层级以多栏方式展开。 观察预期现象即可。"
+      ],
+      "expectedResult": "文件夹层级以多栏方式展开。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-gallery-view",
+      "scope": "finder",
+      "title": "切换为画廊视图",
+      "keys": [
+        "⌘",
+        "4"
+      ],
+      "englishKeys": "Command + 4",
+      "summary": "更改当前 Finder 窗口的文件展示方式。",
+      "section": "视图与显示",
+      "prerequisite": "先在 Finder 中打开专用练习目录。",
+      "steps": [
+        "先在 Finder 中打开专用练习目录。",
+        "亲手按下 Command + 4。",
+        "选中文件以较大的预览方式显示。 观察预期现象即可。"
+      ],
+      "expectedResult": "选中文件以较大的预览方式显示。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-preview-panel",
+      "scope": "finder",
+      "title": "显示或隐藏预览面板",
+      "keys": [
+        "⇧",
+        "⌘",
+        "P"
+      ],
+      "englishKeys": "Shift + Command + P",
+      "summary": "在窗口侧面预览所选文件。",
+      "section": "视图与显示",
+      "prerequisite": "先让一个 Finder 窗口位于前台。",
+      "steps": [
+        "先让一个 Finder 窗口位于前台。",
+        "亲手按下 Shift + Command + P。",
+        "Finder 右侧的预览区域出现或收起。 观察预期现象即可。"
+      ],
+      "expectedResult": "Finder 右侧的预览区域出现或收起。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "显示方式会影响当前窗口的外观；对可切换的显示项，再按同一组合键即可恢复。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-path-bar",
+      "scope": "finder",
+      "title": "显示或隐藏路径栏",
+      "keys": [
+        "⌥",
+        "⌘",
+        "P"
+      ],
+      "englishKeys": "Option + Command + P",
+      "summary": "在窗口底部查看当前位置的层级路径。",
+      "section": "视图与显示",
+      "prerequisite": "先让一个 Finder 窗口位于前台。",
+      "steps": [
+        "先让一个 Finder 窗口位于前台。",
+        "亲手按下 Option + Command + P。",
+        "Finder 底部的文件夹路径出现或收起。 观察预期现象即可。"
+      ],
+      "expectedResult": "Finder 底部的文件夹路径出现或收起。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "显示方式会影响当前窗口的外观；对可切换的显示项，再按同一组合键即可恢复。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-sidebar",
+      "scope": "finder",
+      "title": "显示或隐藏边栏",
+      "keys": [
+        "⌥",
+        "⌘",
+        "S"
+      ],
+      "englishKeys": "Option + Command + S",
+      "summary": "切换 Finder 左侧常用位置的边栏。",
+      "section": "视图与显示",
+      "prerequisite": "先让一个 Finder 窗口位于前台。",
+      "steps": [
+        "先让一个 Finder 窗口位于前台。",
+        "亲手按下 Option + Command + S。",
+        "左侧边栏出现或收起。 观察预期现象即可。"
+      ],
+      "expectedResult": "左侧边栏出现或收起。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "显示方式会影响当前窗口的外观；对可切换的显示项，再按同一组合键即可恢复。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-status-bar",
+      "scope": "finder",
+      "title": "显示或隐藏状态栏",
+      "keys": [
+        "⌘",
+        "/"
+      ],
+      "englishKeys": "Command + /",
+      "summary": "在底部查看项目数量等状态信息。",
+      "section": "视图与显示",
+      "prerequisite": "先让一个 Finder 窗口位于前台。",
+      "steps": [
+        "先让一个 Finder 窗口位于前台。",
+        "亲手按下 Command + /。",
+        "窗口底部的状态信息出现或收起。 观察预期现象即可。"
+      ],
+      "expectedResult": "窗口底部的状态信息出现或收起。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "显示方式会影响当前窗口的外观；对可切换的显示项，再按同一组合键即可恢复。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-view-options",
+      "scope": "finder",
+      "title": "打开显示选项",
+      "keys": [
+        "⌘",
+        "J"
+      ],
+      "englishKeys": "Command + J",
+      "summary": "调整当前目录的图标、列表等显示设置。",
+      "section": "视图与显示",
+      "prerequisite": "先让一个 Finder 窗口位于前台。",
+      "steps": [
+        "先让一个 Finder 窗口位于前台。",
+        "亲手按下 Command + J。",
+        "显示选项面板出现。 观察预期现象即可。"
+      ],
+      "expectedResult": "显示选项面板出现。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "显示方式会影响当前窗口的外观；对可切换的显示项，再按同一组合键即可恢复。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-connect-server",
+      "scope": "finder",
+      "title": "连接服务器",
+      "keys": [
+        "⌘",
+        "K"
+      ],
+      "englishKeys": "Command + K",
+      "summary": "打开输入网络服务器地址的面板。",
+      "section": "窗口与导航",
+      "prerequisite": "先让 Finder 位于前台；本次可以只查看面板。",
+      "steps": [
+        "先让 Finder 位于前台；本次可以只查看面板。",
+        "亲手按下 Command + K。",
+        "连接服务器面板出现；按 Esc 或点取消可关闭。 观察预期现象即可。"
+      ],
+      "expectedResult": "连接服务器面板出现；按 Esc 或点取消可关闭。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "不需要输入凭据或连接真实服务器即可学习这个快捷键。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-home",
+      "scope": "finder",
+      "title": "打开个人文件夹",
+      "keys": [
+        "⇧",
+        "⌘",
+        "H"
+      ],
+      "englishKeys": "Shift + Command + H",
+      "summary": "快速前往当前账户的个人文件夹。",
+      "section": "常用位置",
+      "prerequisite": "先让 Finder 位于前台。",
+      "steps": [
+        "先让 Finder 位于前台。",
+        "亲手按下 Shift + Command + H。",
+        "Finder 切换到当前账户的个人文件夹。 观察预期现象即可。"
+      ],
+      "expectedResult": "Finder 切换到当前账户的个人文件夹。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "这是位置导航，不会更改其中的文件。个别位置取决于 iCloud 登录、硬件或系统设置。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-desktop",
+      "scope": "finder",
+      "title": "打开桌面文件夹",
+      "keys": [
+        "⇧",
+        "⌘",
+        "D"
+      ],
+      "englishKeys": "Shift + Command + D",
+      "summary": "快速前往桌面文件夹。",
+      "section": "常用位置",
+      "prerequisite": "先让 Finder 位于前台。",
+      "steps": [
+        "先让 Finder 位于前台。",
+        "亲手按下 Shift + Command + D。",
+        "Finder 切换到桌面文件夹。 观察预期现象即可。"
+      ],
+      "expectedResult": "Finder 切换到桌面文件夹。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "这是位置导航，不会更改其中的文件。个别位置取决于 iCloud 登录、硬件或系统设置。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-downloads",
+      "scope": "finder",
+      "title": "打开下载文件夹",
+      "keys": [
+        "⌥",
+        "⌘",
+        "L"
+      ],
+      "englishKeys": "Option + Command + L",
+      "summary": "快速前往下载文件夹。",
+      "section": "常用位置",
+      "prerequisite": "先让 Finder 位于前台。",
+      "steps": [
+        "先让 Finder 位于前台。",
+        "亲手按下 Option + Command + L。",
+        "Finder 切换到下载文件夹。 观察预期现象即可。"
+      ],
+      "expectedResult": "Finder 切换到下载文件夹。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "这是位置导航，不会更改其中的文件。个别位置取决于 iCloud 登录、硬件或系统设置。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-documents",
+      "scope": "finder",
+      "title": "打开文稿文件夹",
+      "keys": [
+        "⇧",
+        "⌘",
+        "O"
+      ],
+      "englishKeys": "Shift + Command + O",
+      "summary": "快速前往文稿文件夹。",
+      "section": "常用位置",
+      "prerequisite": "先让 Finder 位于前台。",
+      "steps": [
+        "先让 Finder 位于前台。",
+        "亲手按下 Shift + Command + O。",
+        "Finder 切换到文稿文件夹。 观察预期现象即可。"
+      ],
+      "expectedResult": "Finder 切换到文稿文件夹。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "这是位置导航，不会更改其中的文件。个别位置取决于 iCloud 登录、硬件或系统设置。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-utilities",
+      "scope": "finder",
+      "title": "打开实用工具文件夹",
+      "keys": [
+        "⇧",
+        "⌘",
+        "U"
+      ],
+      "englishKeys": "Shift + Command + U",
+      "summary": "快速前往应用程序中的实用工具文件夹。",
+      "section": "常用位置",
+      "prerequisite": "先让 Finder 位于前台。",
+      "steps": [
+        "先让 Finder 位于前台。",
+        "亲手按下 Shift + Command + U。",
+        "Finder 切换到应用程序中的实用工具文件夹。 观察预期现象即可。"
+      ],
+      "expectedResult": "Finder 切换到应用程序中的实用工具文件夹。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "这是位置导航，不会更改其中的文件。个别位置取决于 iCloud 登录、硬件或系统设置。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-icloud",
+      "scope": "finder",
+      "title": "打开 iCloud 云盘",
+      "keys": [
+        "⇧",
+        "⌘",
+        "I"
+      ],
+      "englishKeys": "Shift + Command + I",
+      "summary": "快速前往iCloud 云盘位置。",
+      "section": "常用位置",
+      "prerequisite": "先让 Finder 位于前台。",
+      "steps": [
+        "先让 Finder 位于前台。",
+        "亲手按下 Shift + Command + I。",
+        "Finder 切换到iCloud 云盘位置。 观察预期现象即可。"
+      ],
+      "expectedResult": "Finder 切换到iCloud 云盘位置。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "这是位置导航，不会更改其中的文件。个别位置取决于 iCloud 登录、硬件或系统设置。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-recents",
+      "scope": "finder",
+      "title": "打开最近使用",
+      "keys": [
+        "⇧",
+        "⌘",
+        "F"
+      ],
+      "englishKeys": "Shift + Command + F",
+      "summary": "快速前往最近访问或修改项目的集合。",
+      "section": "常用位置",
+      "prerequisite": "先让 Finder 位于前台。",
+      "steps": [
+        "先让 Finder 位于前台。",
+        "亲手按下 Shift + Command + F。",
+        "Finder 切换到最近访问或修改项目的集合。 观察预期现象即可。"
+      ],
+      "expectedResult": "Finder 切换到最近访问或修改项目的集合。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "这是位置导航，不会更改其中的文件。个别位置取决于 iCloud 登录、硬件或系统设置。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-computer",
+      "scope": "finder",
+      "title": "打开电脑位置",
+      "keys": [
+        "⇧",
+        "⌘",
+        "C"
+      ],
+      "englishKeys": "Shift + Command + C",
+      "summary": "快速前往电脑和已连接存储设备的位置。",
+      "section": "常用位置",
+      "prerequisite": "先让 Finder 位于前台。",
+      "steps": [
+        "先让 Finder 位于前台。",
+        "亲手按下 Shift + Command + C。",
+        "Finder 切换到电脑和已连接存储设备的位置。 观察预期现象即可。"
+      ],
+      "expectedResult": "Finder 切换到电脑和已连接存储设备的位置。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "这是位置导航，不会更改其中的文件。个别位置取决于 iCloud 登录、硬件或系统设置。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-airdrop",
+      "scope": "finder",
+      "title": "打开隔空投送",
+      "keys": [
+        "⇧",
+        "⌘",
+        "R"
+      ],
+      "englishKeys": "Shift + Command + R",
+      "summary": "快速前往隔空投送界面。",
+      "section": "常用位置",
+      "prerequisite": "先让 Finder 位于前台。",
+      "steps": [
+        "先让 Finder 位于前台。",
+        "亲手按下 Shift + Command + R。",
+        "Finder 切换到隔空投送界面。 观察预期现象即可。"
+      ],
+      "expectedResult": "Finder 切换到隔空投送界面。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "这是位置导航，不会更改其中的文件。个别位置取决于 iCloud 登录、硬件或系统设置。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-new-tab",
+      "scope": "finder",
+      "title": "新建 Finder 标签页",
+      "keys": [
+        "⌘",
+        "T"
+      ],
+      "englishKeys": "Command + T",
+      "summary": "在当前 Finder 窗口中增加一个标签页。",
+      "section": "窗口与导航",
+      "prerequisite": "让 Finder 的普通文件夹窗口位于前台。",
+      "steps": [
+        "让 Finder 的普通文件夹窗口位于前台。",
+        "亲手按下 Command + T。",
+        "当前 Finder 窗口出现一个新的标签页。 观察预期现象即可。"
+      ],
+      "expectedResult": "当前 Finder 窗口出现一个新的标签页。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "新标签页与新窗口不同。若本机菜单显示其他绑定，请以 Finder 的“文件”菜单为准。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-keyboard-intro"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-close-window",
+      "scope": "finder",
+      "title": "关闭 Finder 窗口或标签页",
+      "keys": [
+        "⌘",
+        "W"
+      ],
+      "englishKeys": "Command + W",
+      "summary": "关闭当前 Finder 标签页或窗口。",
+      "section": "窗口与导航",
+      "prerequisite": "先打开专用练习目录，确认前台应用为 Finder。",
+      "steps": [
+        "先打开专用练习目录，确认前台应用为 Finder。",
+        "亲手按下 Command + W。",
+        "当前标签页关闭；若只剩一个标签页，窗口随之关闭。 观察预期现象即可。"
+      ],
+      "expectedResult": "当前标签页关闭；若只剩一个标签页，窗口随之关闭。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "这不会删除目录中的文件。点击 Dock 中的 Finder 图标可以重新打开窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-select-all",
+      "scope": "finder",
+      "title": "全选当前目录中的项目",
+      "keys": [
+        "⌘",
+        "A"
+      ],
+      "englishKeys": "Command + A",
+      "summary": "选中当前 Finder 位置里显示的所有项目。",
+      "section": "文件与文件夹",
+      "prerequisite": "先在 Finder 中打开只含样例文件的专用练习目录。",
+      "steps": [
+        "先在 Finder 中打开只含样例文件的专用练习目录。",
+        "亲手按下 Command + A。",
+        "当前目录中可选的项目全部处于选中状态。 观察预期现象即可。"
+      ],
+      "expectedResult": "当前目录中可选的项目全部处于选中状态。",
+      "windowsEquivalent": "Ctrl + A",
+      "practice": "observation",
+      "notes": [
+        "先点击文件区域，避免在搜索框或名称编辑框中全选文字。只选择，不会删除或移动文件。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-toolbar",
+      "scope": "finder",
+      "title": "显示或隐藏工具栏",
+      "keys": [
+        "⌥",
+        "⌘",
+        "T"
+      ],
+      "englishKeys": "Option + Command + T",
+      "summary": "切换 Finder 窗口顶部工具栏的显示。",
+      "section": "视图与显示",
+      "prerequisite": "让只有一个标签页的 Finder 窗口位于前台。",
+      "steps": [
+        "让只有一个标签页的 Finder 窗口位于前台。",
+        "亲手按下 Option + Command + T。",
+        "顶部工具栏收起或重新显示，再按一次可以切回。 观察预期现象即可。"
+      ],
+      "expectedResult": "顶部工具栏收起或重新显示，再按一次可以切回。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "官方参考将此命令的前提限定为只有一个标签页的 Finder 窗口。实际可用状态以“显示”菜单为准。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-address",
+      "scope": "safari",
+      "title": "聚焦地址栏",
+      "keys": [
+        "⌘",
+        "L"
+      ],
+      "englishKeys": "Command + L",
+      "summary": "选中地址栏，直接输入网址或搜索词。",
+      "section": "浏览网页",
+      "prerequisite": "先打开工具提供的 Safari 样例标签页，并让 Safari 位于前台。",
+      "steps": [
+        "先打开工具提供的 Safari 样例标签页，并让 Safari 位于前台。",
+        "亲手按下 Command + L。",
+        "地址栏获得焦点，当前地址被选中。 观察预期现象即可。"
+      ],
+      "expectedResult": "地址栏获得焦点，当前地址被选中。",
+      "windowsEquivalent": "Ctrl + L",
+      "practice": "browserAddress",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [
+        "网址",
+        "URL",
+        "智能搜索栏"
+      ],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-new-tab",
+      "scope": "safari",
+      "title": "新建标签页",
+      "keys": [
+        "⌘",
+        "T"
+      ],
+      "englishKeys": "Command + T",
+      "summary": "在当前 Safari 窗口中增加一个标签页。",
+      "section": "标签页与窗口",
+      "prerequisite": "先打开工具提供的 Safari 样例标签页。",
+      "steps": [
+        "先打开工具提供的 Safari 样例标签页。",
+        "亲手按下 Command + T。",
+        "当前窗口出现新的标签页。 观察预期现象即可。"
+      ],
+      "expectedResult": "当前窗口出现新的标签页。",
+      "windowsEquivalent": "Ctrl + T",
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-web"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-new-window",
+      "scope": "safari",
+      "title": "新建浏览器窗口",
+      "keys": [
+        "⌘",
+        "N"
+      ],
+      "englishKeys": "Command + N",
+      "summary": "打开一个新的 Safari 窗口。",
+      "section": "标签页与窗口",
+      "prerequisite": "先让 Safari 位于前台。",
+      "steps": [
+        "先让 Safari 位于前台。",
+        "亲手按下 Command + N。",
+        "新的 Safari 窗口打开，原窗口仍保留。 观察预期现象即可。"
+      ],
+      "expectedResult": "新的 Safari 窗口打开，原窗口仍保留。",
+      "windowsEquivalent": null,
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-web"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-close-tab",
+      "scope": "safari",
+      "title": "关闭当前标签页",
+      "keys": [
+        "⌘",
+        "W"
+      ],
+      "englishKeys": "Command + W",
+      "summary": "关闭当前浏览的 Safari 标签页。",
+      "section": "标签页与窗口",
+      "prerequisite": "先手动新建专用 Safari 窗口，只在其中的样例或空白标签页上操作。",
+      "steps": [
+        "先手动新建专用 Safari 窗口，只在其中的样例或空白标签页上操作。",
+        "亲手按下 Command + W。",
+        "当前标签页关闭；最后一个标签页关闭时，窗口也可能关闭。 观察预期现象即可。"
+      ],
+      "expectedResult": "当前标签页关闭；最后一个标签页关闭时，窗口也可能关闭。",
+      "windowsEquivalent": "Ctrl + W",
+      "practice": "observation",
+      "notes": [
+        "如误关页面，可按 Shift + Command + T 重新打开。教学应用窗口会保留。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-reopen-tab",
+      "scope": "safari",
+      "title": "重新打开关闭的标签页",
+      "keys": [
+        "⇧",
+        "⌘",
+        "T"
+      ],
+      "englishKeys": "Shift + Command + T",
+      "summary": "恢复最近一次关闭的标签页。",
+      "section": "标签页与窗口",
+      "prerequisite": "先手动新建专用 Safari 窗口，在其中打开并关闭一个样例标签页。",
+      "steps": [
+        "先手动新建专用 Safari 窗口，在其中打开并关闭一个样例标签页。",
+        "亲手按下 Shift + Command + T。",
+        "最近关闭的标签页重新出现。 观察预期现象即可。"
+      ],
+      "expectedResult": "最近关闭的标签页重新出现。",
+      "windowsEquivalent": "Ctrl + Shift + T",
+      "practice": "browserPage",
+      "notes": [
+        "关闭的窗口也可能通过此命令恢复。无痕浏览中的关闭记录不一定可恢复。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-next-tab",
+      "scope": "safari",
+      "title": "切换到下一个标签页",
+      "keys": [
+        "⌃",
+        "Tab"
+      ],
+      "englishKeys": "Control + Tab",
+      "summary": "按标签顺序前往后一个标签页。",
+      "section": "标签页与窗口",
+      "prerequisite": "在 Safari 样例标签页所在窗口打开至少两个标签页。",
+      "steps": [
+        "在 Safari 样例标签页所在窗口打开至少两个标签页。",
+        "亲手按下 Control + Tab。",
+        "活跃标签页向后切换一次。 观察预期现象即可。"
+      ],
+      "expectedResult": "活跃标签页向后切换一次。",
+      "windowsEquivalent": "Ctrl + Tab",
+      "practice": "browserPage",
+      "notes": [
+        "Safari 也支持 Shift + Command + ]；此页使用 Control + Tab 作为主要组合键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-previous-tab",
+      "scope": "safari",
+      "title": "切换到上一个标签页",
+      "keys": [
+        "⌃",
+        "⇧",
+        "Tab"
+      ],
+      "englishKeys": "Control + Shift + Tab",
+      "summary": "按标签顺序返回前一个标签页。",
+      "section": "标签页与窗口",
+      "prerequisite": "在 Safari 样例标签页所在窗口打开至少两个标签页。",
+      "steps": [
+        "在 Safari 样例标签页所在窗口打开至少两个标签页。",
+        "亲手按下 Control + Shift + Tab。",
+        "活跃标签页向前切换一次。 观察预期现象即可。"
+      ],
+      "expectedResult": "活跃标签页向前切换一次。",
+      "windowsEquivalent": "Ctrl + Shift + Tab",
+      "practice": "browserPage",
+      "notes": [
+        "Safari 也支持 Shift + Command + [。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-last-tab",
+      "scope": "safari",
+      "title": "切换到最后一个标签页",
+      "keys": [
+        "⌘",
+        "9"
+      ],
+      "englishKeys": "Command + 9",
+      "summary": "直接定位到窗口最右侧的标签页。",
+      "section": "标签页与窗口",
+      "prerequisite": "在样例标签页所在窗口打开几个标签页，先选中靠左的一个。",
+      "steps": [
+        "在样例标签页所在窗口打开几个标签页，先选中靠左的一个。",
+        "亲手按下 Command + 9。",
+        "最右侧的标签页成为活跃标签页。 观察预期现象即可。"
+      ],
+      "expectedResult": "最右侧的标签页成为活跃标签页。",
+      "windowsEquivalent": "Ctrl + 9",
+      "practice": "browserPage",
+      "notes": [
+        "Command + 1 至 Command + 8 可选择前八个标签页；Command + 9 表示最后一个。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-tab-overview",
+      "scope": "safari",
+      "title": "显示标签页概览",
+      "keys": [
+        "⇧",
+        "⌘",
+        "\\"
+      ],
+      "englishKeys": "Shift + Command + \\",
+      "summary": "查看当前窗口内标签页的概览。",
+      "section": "标签页与窗口",
+      "prerequisite": "先在 Safari 样例标签页所在窗口打开几个标签页。",
+      "steps": [
+        "先在 Safari 样例标签页所在窗口打开几个标签页。",
+        "亲手按下 Shift + Command + \\。",
+        "标签页以概览方式显示，可点选一个返回。 观察预期现象即可。"
+      ],
+      "expectedResult": "标签页以概览方式显示，可点选一个返回。",
+      "windowsEquivalent": null,
+      "practice": "browserPage",
+      "notes": [
+        "最后一个按键是反斜杠 \\，不同键盘布局的位置可能不同。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-back",
+      "scope": "safari",
+      "title": "返回上一个网页",
+      "keys": [
+        "⌘",
+        "["
+      ],
+      "englishKeys": "Command + [",
+      "summary": "回到当前标签页浏览历史中的上一页。",
+      "section": "浏览网页",
+      "prerequisite": "在同一个 Safari 练习标签页中先浏览两个页面。",
+      "steps": [
+        "在同一个 Safari 练习标签页中先浏览两个页面。",
+        "亲手按下 Command + [。",
+        "当前标签页显示前一个页面。 观察预期现象即可。"
+      ],
+      "expectedResult": "当前标签页显示前一个页面。",
+      "windowsEquivalent": "Alt + Left Arrow",
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-forward",
+      "scope": "safari",
+      "title": "前往下一个网页",
+      "keys": [
+        "⌘",
+        "]"
+      ],
+      "englishKeys": "Command + ]",
+      "summary": "在返回之后再次显示后一个页面。",
+      "section": "浏览网页",
+      "prerequisite": "先浏览两个页面，再返回一次。",
+      "steps": [
+        "先浏览两个页面，再返回一次。",
+        "亲手按下 Command + ]。",
+        "当前标签页显示刚才返回之前的页面。 观察预期现象即可。"
+      ],
+      "expectedResult": "当前标签页显示刚才返回之前的页面。",
+      "windowsEquivalent": "Alt + Right Arrow",
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-reload",
+      "scope": "safari",
+      "title": "重新载入网页",
+      "keys": [
+        "⌘",
+        "R"
+      ],
+      "englishKeys": "Command + R",
+      "summary": "重新获取当前页面。",
+      "section": "浏览网页",
+      "prerequisite": "先打开 Safari 的样例练习页面。",
+      "steps": [
+        "先打开 Safari 的样例练习页面。",
+        "亲手按下 Command + R。",
+        "当前页面重新加载。 观察预期现象即可。"
+      ],
+      "expectedResult": "当前页面重新加载。",
+      "windowsEquivalent": "Ctrl + R",
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [
+        "刷新",
+        "重新加载"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-find",
+      "scope": "safari",
+      "title": "查找网页内容",
+      "keys": [
+        "⌘",
+        "F"
+      ],
+      "englishKeys": "Command + F",
+      "summary": "在当前网页中搜索词语。",
+      "section": "浏览网页",
+      "prerequisite": "打开包含文字的 Safari 练习页面。",
+      "steps": [
+        "打开包含文字的 Safari 练习页面。",
+        "亲手按下 Command + F。",
+        "网页查找栏出现，输入关键词后匹配内容被标记。 观察预期现象即可。"
+      ],
+      "expectedResult": "网页查找栏出现，输入关键词后匹配内容被标记。",
+      "windowsEquivalent": "Ctrl + F",
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-zoom-in",
+      "scope": "safari",
+      "title": "放大网页",
+      "keys": [
+        "⌘",
+        "+"
+      ],
+      "englishKeys": "Command + +",
+      "summary": "增加当前网站内容的显示比例。",
+      "section": "浏览网页",
+      "prerequisite": "打开 Safari 练习页，并确保焦点不在页面输入框。",
+      "steps": [
+        "打开 Safari 练习页，并确保焦点不在页面输入框。",
+        "亲手按下 Command + +。",
+        "网页内容显示得更大。 观察预期现象即可。"
+      ],
+      "expectedResult": "网页内容显示得更大。",
+      "windowsEquivalent": "Ctrl + +",
+      "practice": "browserPage",
+      "notes": [
+        "加号通常与等号共用按键，是否需要 Shift 取决于键盘布局。可用“显示”菜单核对。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-zoom-out",
+      "scope": "safari",
+      "title": "缩小网页",
+      "keys": [
+        "⌘",
+        "-"
+      ],
+      "englishKeys": "Command + -",
+      "summary": "减小当前网站内容的显示比例。",
+      "section": "浏览网页",
+      "prerequisite": "打开 Safari 练习页，并确保焦点不在页面输入框。",
+      "steps": [
+        "打开 Safari 练习页，并确保焦点不在页面输入框。",
+        "亲手按下 Command + -。",
+        "网页内容显示得更小。 观察预期现象即可。"
+      ],
+      "expectedResult": "网页内容显示得更小。",
+      "windowsEquivalent": "Ctrl + -",
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-page-down",
+      "scope": "safari",
+      "title": "向下滚动一屏",
+      "keys": [
+        "Space"
+      ],
+      "englishKeys": "Space",
+      "summary": "将页面向下滚动约一个屏幕。",
+      "section": "滚动与阅读",
+      "prerequisite": "点击有足够长内容的网页空白区域，避免输入框获得焦点。",
+      "steps": [
+        "点击有足够长内容的网页空白区域，避免输入框获得焦点。",
+        "亲手按下 Space。",
+        "页面向下移动一屏左右。 观察预期现象即可。"
+      ],
+      "expectedResult": "页面向下移动一屏左右。",
+      "windowsEquivalent": "Space",
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [
+        "空格",
+        "向下翻页"
+      ],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-page-up",
+      "scope": "safari",
+      "title": "向上滚动一屏",
+      "keys": [
+        "⇧",
+        "Space"
+      ],
+      "englishKeys": "Shift + Space",
+      "summary": "将页面向上滚动约一个屏幕。",
+      "section": "滚动与阅读",
+      "prerequisite": "先向下滚动长页面，再点击网页空白区域。",
+      "steps": [
+        "先向下滚动长页面，再点击网页空白区域。",
+        "亲手按下 Shift + Space。",
+        "页面向上移动一屏左右。 观察预期现象即可。"
+      ],
+      "expectedResult": "页面向上移动一屏左右。",
+      "windowsEquivalent": "Shift + Space",
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-page-top",
+      "scope": "safari",
+      "title": "回到网页顶部",
+      "keys": [
+        "⌘",
+        "↑"
+      ],
+      "englishKeys": "Command + Up Arrow",
+      "summary": "直接滚动到网页最上方。",
+      "section": "滚动与阅读",
+      "prerequisite": "先向下滚动练习页面，确保焦点在网页内容。",
+      "steps": [
+        "先向下滚动练习页面，确保焦点在网页内容。",
+        "亲手按下 Command + Up Arrow。",
+        "页面回到顶部。 观察预期现象即可。"
+      ],
+      "expectedResult": "页面回到顶部。",
+      "windowsEquivalent": null,
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-page-bottom",
+      "scope": "safari",
+      "title": "前往网页底部",
+      "keys": [
+        "⌘",
+        "↓"
+      ],
+      "englishKeys": "Command + Down Arrow",
+      "summary": "直接滚动到网页最下方。",
+      "section": "滚动与阅读",
+      "prerequisite": "打开长练习页面，确保焦点在网页内容。",
+      "steps": [
+        "打开长练习页面，确保焦点在网页内容。",
+        "亲手按下 Command + Down Arrow。",
+        "页面滚动到底部。 观察预期现象即可。"
+      ],
+      "expectedResult": "页面滚动到底部。",
+      "windowsEquivalent": null,
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-reading-list",
+      "scope": "safari",
+      "title": "显示或隐藏阅读列表",
+      "keys": [
+        "⌃",
+        "⌘",
+        "2"
+      ],
+      "englishKeys": "Control + Command + 2",
+      "summary": "打开保存待阅读网页的边栏。",
+      "section": "滚动与阅读",
+      "prerequisite": "让 Safari 样例标签页所在窗口位于前台。",
+      "steps": [
+        "让 Safari 样例标签页所在窗口位于前台。",
+        "亲手按下 Control + Command + 2。",
+        "阅读列表边栏出现或收起。 观察预期现象即可。"
+      ],
+      "expectedResult": "阅读列表边栏出现或收起。",
+      "windowsEquivalent": null,
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-add-reading-list",
+      "scope": "safari",
+      "title": "添加到阅读列表",
+      "keys": [
+        "⇧",
+        "⌘",
+        "D"
+      ],
+      "englishKeys": "Shift + Command + D",
+      "summary": "把当前页面放入阅读列表，供之后查看。",
+      "section": "滚动与阅读",
+      "prerequisite": "打开一张愿意加入阅读列表的样例页面。",
+      "steps": [
+        "打开一张愿意加入阅读列表的样例页面。",
+        "亲手按下 Shift + Command + D。",
+        "当前页面出现在阅读列表中。 观察预期现象即可。"
+      ],
+      "expectedResult": "当前页面出现在阅读列表中。",
+      "windowsEquivalent": null,
+      "practice": "browserPage",
+      "notes": [
+        "这会修改 Safari 的阅读列表。练习后可在边栏中移除该样例条目。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-reader",
+      "scope": "safari",
+      "title": "打开阅读器",
+      "keys": [
+        "⇧",
+        "⌘",
+        "R"
+      ],
+      "englishKeys": "Shift + Command + R",
+      "summary": "用简洁排版阅读支持阅读器的文章页。",
+      "section": "滚动与阅读",
+      "prerequisite": "先在 Safari 中打开一篇支持阅读器的文章。",
+      "steps": [
+        "先在 Safari 中打开一篇支持阅读器的文章。",
+        "亲手按下 Shift + Command + R。",
+        "页面进入阅读器版式；按 Esc 可退出。 观察预期现象即可。"
+      ],
+      "expectedResult": "页面进入阅读器版式；按 Esc 可退出。",
+      "windowsEquivalent": null,
+      "practice": "browserPage",
+      "notes": [
+        "并非所有网页都支持阅读器。若按钮不可用，请换一篇正文内容清晰的文章。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-bookmarks-sidebar",
+      "scope": "safari",
+      "title": "显示或隐藏书签边栏",
+      "keys": [
+        "⌃",
+        "⌘",
+        "1"
+      ],
+      "englishKeys": "Control + Command + 1",
+      "summary": "查看 Safari 已保存的书签。",
+      "section": "书签与设置",
+      "prerequisite": "让 Safari 位于前台。",
+      "steps": [
+        "让 Safari 位于前台。",
+        "亲手按下 Control + Command + 1。",
+        "书签边栏出现或收起。 观察预期现象即可。"
+      ],
+      "expectedResult": "书签边栏出现或收起。",
+      "windowsEquivalent": null,
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-settings",
+      "scope": "safari",
+      "title": "打开 Safari 设置",
+      "keys": [
+        "⌘",
+        ","
+      ],
+      "englishKeys": "Command + ,",
+      "summary": "查看 Safari 的浏览、标签页和其他设置。",
+      "section": "书签与设置",
+      "prerequisite": "先让 Safari 位于前台，此次只打开设置窗口。",
+      "steps": [
+        "先让 Safari 位于前台，此次只打开设置窗口。",
+        "亲手按下 Command + ,。",
+        "Safari 设置窗口出现，关闭窗口可回到网页。 观察预期现象即可。"
+      ],
+      "expectedResult": "Safari 设置窗口出现，关闭窗口可回到网页。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "不需要修改任何设置即可完成观察。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-print",
+      "scope": "safari",
+      "title": "打开网页打印面板",
+      "keys": [
+        "⌘",
+        "P"
+      ],
+      "englishKeys": "Command + P",
+      "summary": "预览当前网页的打印选项。",
+      "section": "书签与设置",
+      "prerequisite": "打开一张 Safari 样例页面。",
+      "steps": [
+        "打开一张 Safari 样例页面。",
+        "亲手按下 Command + P。",
+        "打印面板出现；点取消可以返回，不提交打印。 观察预期现象即可。"
+      ],
+      "expectedResult": "打印面板出现；点取消可以返回，不提交打印。",
+      "windowsEquivalent": "Ctrl + P",
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-bookmark",
+      "scope": "safari",
+      "title": "为当前网页添加书签",
+      "keys": [
+        "⌘",
+        "D"
+      ],
+      "englishKeys": "Command + D",
+      "summary": "打开保存当前网页为书签的面板。",
+      "section": "书签与设置",
+      "prerequisite": "先打开工具提供的 Safari 样例标签页。",
+      "steps": [
+        "先打开工具提供的 Safari 样例标签页。",
+        "亲手按下 Command + D。",
+        "添加书签面板出现，可以修改名称、确认保存或取消。 观察预期现象即可。"
+      ],
+      "expectedResult": "添加书签面板出现，可以修改名称、确认保存或取消。",
+      "windowsEquivalent": null,
+      "practice": "browserPage",
+      "notes": [
+        "按取消可不保存书签。若保存了样例条目，之后可在书签边栏中移除。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-web"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-homepage",
+      "scope": "safari",
+      "title": "前往主页",
+      "keys": [
+        "⇧",
+        "⌘",
+        "H"
+      ],
+      "englishKeys": "Shift + Command + H",
+      "summary": "打开 Safari 设置中配置的主页。",
+      "section": "浏览网页",
+      "prerequisite": "让 Safari 的样例标签页位于前台，并先确认已设置主页。",
+      "steps": [
+        "让 Safari 的样例标签页位于前台，并先确认已设置主页。",
+        "亲手按下 Shift + Command + H。",
+        "当前标签页显示 Safari 的主页。 观察预期现象即可。"
+      ],
+      "expectedResult": "当前标签页显示 Safari 的主页。",
+      "windowsEquivalent": null,
+      "practice": "browserPage",
+      "notes": [
+        "主页由 Safari 设置决定。如果没有配置预期主页，请先在 Safari 设置中查看“主页”字段。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-numbered-tab",
+      "scope": "safari",
+      "title": "切换到指定标签页（1–8）",
+      "keys": [
+        "⌘",
+        "1–8"
+      ],
+      "englishKeys": "Command + 1 through Command + 8",
+      "summary": "用数字直接选择窗口中的前八个标签页。",
+      "section": "标签页与窗口",
+      "prerequisite": "先手动新建专用 Safari 窗口，并打开至少两个样例标签页。",
+      "steps": [
+        "先在专用 Safari 窗口中打开至少两个样例标签页。",
+        "按 Command + 1 选择第一个；也可将数字换成 2 至 8。",
+        "观察当前标签页与所按数字对应；Command + 9 始终表示最后一个。"
+      ],
+      "expectedResult": "与数字位置对应的标签页成为当前标签页。",
+      "windowsEquivalent": "Ctrl + 1 至 Ctrl + 8",
+      "practice": "browserPage",
+      "notes": [
+        "数字指窗口中标签页的位置，不是网页标题里的编号。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [
+        "Command + 1",
+        "Command + 2",
+        "Command + 3",
+        "Command + 4",
+        "Command + 5",
+        "Command + 6",
+        "Command + 7",
+        "Command + 8"
+      ],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-downloads",
+      "scope": "safari",
+      "title": "打开下载列表",
+      "keys": [
+        "⌥",
+        "⌘",
+        "L"
+      ],
+      "englishKeys": "Option + Command + L",
+      "summary": "查看 Safari 的下载项目列表。",
+      "section": "书签与设置",
+      "prerequisite": "让 Safari 位于前台；有下载记录时更容易观察列表。",
+      "steps": [
+        "让 Safari 位于前台；有下载记录时更容易观察列表。",
+        "亲手按下 Option + Command + L。",
+        "Safari 工具栏的下载列表展开，可查看已有下载项目。 观察预期现象即可。"
+      ],
+      "expectedResult": "Safari 工具栏的下载列表展开，可查看已有下载项目。",
+      "windowsEquivalent": null,
+      "practice": "browserPage",
+      "notes": [
+        "没有下载记录时，可用状态和显示方式可能不同。无需为练习下载新的文件。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "apple-download-apps"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-address",
+      "scope": "chrome",
+      "title": "聚焦地址栏",
+      "keys": [
+        "⌘",
+        "L"
+      ],
+      "englishKeys": "Command + L",
+      "summary": "选中地址栏，直接输入网址或搜索词。",
+      "section": "浏览网页",
+      "prerequisite": "先打开工具提供的 Chrome 样例标签页，让 Chrome 位于前台。",
+      "steps": [
+        "先打开工具提供的 Chrome 样例标签页，让 Chrome 位于前台。",
+        "亲手按下 Command + L。",
+        "地址栏获得焦点，当前地址被选中。 观察预期现象即可。"
+      ],
+      "expectedResult": "地址栏获得焦点，当前地址被选中。",
+      "windowsEquivalent": "Ctrl + L",
+      "practice": "browserAddress",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [
+        "网址",
+        "URL",
+        "地址栏"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-new-window",
+      "scope": "chrome",
+      "title": "新建浏览器窗口",
+      "keys": [
+        "⌘",
+        "N"
+      ],
+      "englishKeys": "Command + N",
+      "summary": "打开一个新的 Chrome 窗口。",
+      "section": "标签页与窗口",
+      "prerequisite": "先让 Chrome 位于前台。",
+      "steps": [
+        "先让 Chrome 位于前台。",
+        "亲手按下 Command + N。",
+        "新的 Chrome 窗口出现，原窗口保留。 观察预期现象即可。"
+      ],
+      "expectedResult": "新的 Chrome 窗口出现，原窗口保留。",
+      "windowsEquivalent": "Ctrl + N",
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-new-tab",
+      "scope": "chrome",
+      "title": "新建标签页",
+      "keys": [
+        "⌘",
+        "T"
+      ],
+      "englishKeys": "Command + T",
+      "summary": "在当前 Chrome 窗口中增加标签页。",
+      "section": "标签页与窗口",
+      "prerequisite": "先打开工具提供的 Chrome 样例标签页。",
+      "steps": [
+        "先打开工具提供的 Chrome 样例标签页。",
+        "亲手按下 Command + T。",
+        "新的标签页出现，并成为当前标签页。 观察预期现象即可。"
+      ],
+      "expectedResult": "新的标签页出现，并成为当前标签页。",
+      "windowsEquivalent": "Ctrl + T",
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-incognito",
+      "scope": "chrome",
+      "title": "新建无痕浏览窗口",
+      "keys": [
+        "⇧",
+        "⌘",
+        "N"
+      ],
+      "englishKeys": "Shift + Command + N",
+      "summary": "打开不保留本地浏览会话记录的无痕窗口。",
+      "section": "标签页与窗口",
+      "prerequisite": "先让 Chrome 位于前台，并阅读无痕窗口中的说明。",
+      "steps": [
+        "先让 Chrome 位于前台，并阅读无痕窗口中的说明。",
+        "亲手按下 Shift + Command + N。",
+        "一个带有无痕标识的独立窗口出现。 观察预期现象即可。"
+      ],
+      "expectedResult": "一个带有无痕标识的独立窗口出现。",
+      "windowsEquivalent": "Ctrl + Shift + N",
+      "practice": "observation",
+      "notes": [
+        "无痕浏览不提供网络匿名性。关闭该练习无痕窗口后即可回到原来的普通窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-close-tab",
+      "scope": "chrome",
+      "title": "关闭当前标签页",
+      "keys": [
+        "⌘",
+        "W"
+      ],
+      "englishKeys": "Command + W",
+      "summary": "关闭当前标签页或弹出窗口。",
+      "section": "标签页与窗口",
+      "prerequisite": "先手动新建专用 Chrome 窗口，只关闭其中的样例或空白标签页。",
+      "steps": [
+        "先手动新建专用 Chrome 窗口，只关闭其中的样例或空白标签页。",
+        "亲手按下 Command + W。",
+        "当前标签页关闭；可用 Shift + Command + T 恢复。 观察预期现象即可。"
+      ],
+      "expectedResult": "当前标签页关闭；可用 Shift + Command + T 恢复。",
+      "windowsEquivalent": "Ctrl + W",
+      "practice": "observation",
+      "notes": [
+        "关闭最后一个标签页时，当前窗口也会关闭。教学主窗口会保留。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-reopen-tab",
+      "scope": "chrome",
+      "title": "重新打开关闭的标签页",
+      "keys": [
+        "⇧",
+        "⌘",
+        "T"
+      ],
+      "englishKeys": "Shift + Command + T",
+      "summary": "按关闭顺序恢复最近的标签页。",
+      "section": "标签页与窗口",
+      "prerequisite": "先在样例标签页所在窗口打开并关闭一个样例标签页。",
+      "steps": [
+        "先在样例标签页所在窗口打开并关闭一个样例标签页。",
+        "亲手按下 Shift + Command + T。",
+        "最近关闭的标签页重新出现。 观察预期现象即可。"
+      ],
+      "expectedResult": "最近关闭的标签页重新出现。",
+      "windowsEquivalent": "Ctrl + Shift + T",
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-next-tab",
+      "scope": "chrome",
+      "title": "切换到下一个标签页",
+      "keys": [
+        "⌥",
+        "⌘",
+        "→"
+      ],
+      "englishKeys": "Option + Command + Right Arrow",
+      "summary": "定位到后一个已打开的标签页。",
+      "section": "标签页与窗口",
+      "prerequisite": "在 Chrome 样例标签页所在窗口打开至少两个标签页。",
+      "steps": [
+        "在 Chrome 样例标签页所在窗口打开至少两个标签页。",
+        "亲手按下 Option + Command + Right Arrow。",
+        "右侧的下一个标签页成为当前标签页。 观察预期现象即可。"
+      ],
+      "expectedResult": "右侧的下一个标签页成为当前标签页。",
+      "windowsEquivalent": "Ctrl + Tab",
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-previous-tab",
+      "scope": "chrome",
+      "title": "切换到上一个标签页",
+      "keys": [
+        "⌥",
+        "⌘",
+        "←"
+      ],
+      "englishKeys": "Option + Command + Left Arrow",
+      "summary": "定位到前一个已打开的标签页。",
+      "section": "标签页与窗口",
+      "prerequisite": "在 Chrome 样例标签页所在窗口打开至少两个标签页。",
+      "steps": [
+        "在 Chrome 样例标签页所在窗口打开至少两个标签页。",
+        "亲手按下 Option + Command + Left Arrow。",
+        "左侧的前一个标签页成为当前标签页。 观察预期现象即可。"
+      ],
+      "expectedResult": "左侧的前一个标签页成为当前标签页。",
+      "windowsEquivalent": "Ctrl + Shift + Tab",
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-last-tab",
+      "scope": "chrome",
+      "title": "切换到最后一个标签页",
+      "keys": [
+        "⌘",
+        "9"
+      ],
+      "englishKeys": "Command + 9",
+      "summary": "直接选择最右侧的标签页。",
+      "section": "标签页与窗口",
+      "prerequisite": "在样例标签页所在窗口打开几个标签页，先选择左侧标签页。",
+      "steps": [
+        "在样例标签页所在窗口打开几个标签页，先选择左侧标签页。",
+        "亲手按下 Command + 9。",
+        "最右侧标签页成为当前标签页。 观察预期现象即可。"
+      ],
+      "expectedResult": "最右侧标签页成为当前标签页。",
+      "windowsEquivalent": "Ctrl + 9",
+      "practice": "browserPage",
+      "notes": [
+        "Command + 1 至 Command + 8 选择前八个标签页，Command + 9 总是选择最后一个。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-back",
+      "scope": "chrome",
+      "title": "返回上一个网页",
+      "keys": [
+        "⌘",
+        "["
+      ],
+      "englishKeys": "Command + [",
+      "summary": "回到当前标签页历史中的上一页。",
+      "section": "浏览网页",
+      "prerequisite": "先在同一个 Chrome 标签页中浏览两个页面。",
+      "steps": [
+        "先在同一个 Chrome 标签页中浏览两个页面。",
+        "亲手按下 Command + [。",
+        "当前标签页显示前一个网页。 观察预期现象即可。"
+      ],
+      "expectedResult": "当前标签页显示前一个网页。",
+      "windowsEquivalent": "Alt + Left Arrow",
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-forward",
+      "scope": "chrome",
+      "title": "前往下一个网页",
+      "keys": [
+        "⌘",
+        "]"
+      ],
+      "englishKeys": "Command + ]",
+      "summary": "在后退之后再次前进到刚才的页面。",
+      "section": "浏览网页",
+      "prerequisite": "先访问两个页面，再返回一次。",
+      "steps": [
+        "先访问两个页面，再返回一次。",
+        "亲手按下 Command + ]。",
+        "显示刚才后退之前的页面。 观察预期现象即可。"
+      ],
+      "expectedResult": "显示刚才后退之前的页面。",
+      "windowsEquivalent": "Alt + Right Arrow",
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-find",
+      "scope": "chrome",
+      "title": "查找网页内容",
+      "keys": [
+        "⌘",
+        "F"
+      ],
+      "englishKeys": "Command + F",
+      "summary": "打开页内搜索，定位关键词。",
+      "section": "浏览网页",
+      "prerequisite": "打开包含重复词语的 Chrome 练习页。",
+      "steps": [
+        "打开包含重复词语的 Chrome 练习页。",
+        "亲手按下 Command + F。",
+        "网页查找栏出现，关键词匹配项被高亮。 观察预期现象即可。"
+      ],
+      "expectedResult": "网页查找栏出现，关键词匹配项被高亮。",
+      "windowsEquivalent": "Ctrl + F",
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-find-next",
+      "scope": "chrome",
+      "title": "查找下一个匹配项",
+      "keys": [
+        "⌘",
+        "G"
+      ],
+      "englishKeys": "Command + G",
+      "summary": "跳到页内搜索的下一处结果。",
+      "section": "浏览网页",
+      "prerequisite": "先按 Command + F，搜索一个出现多次的词。",
+      "steps": [
+        "先按 Command + F，搜索一个出现多次的词。",
+        "亲手按下 Command + G。",
+        "搜索定位到下一处匹配。 观察预期现象即可。"
+      ],
+      "expectedResult": "搜索定位到下一处匹配。",
+      "windowsEquivalent": "Ctrl + G",
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-find-previous",
+      "scope": "chrome",
+      "title": "查找上一个匹配项",
+      "keys": [
+        "⇧",
+        "⌘",
+        "G"
+      ],
+      "englishKeys": "Shift + Command + G",
+      "summary": "跳到页内搜索的上一处结果。",
+      "section": "浏览网页",
+      "prerequisite": "先在页内查找中输入一个出现多次的词。",
+      "steps": [
+        "先在页内查找中输入一个出现多次的词。",
+        "亲手按下 Shift + Command + G。",
+        "搜索定位到上一处匹配。 观察预期现象即可。"
+      ],
+      "expectedResult": "搜索定位到上一处匹配。",
+      "windowsEquivalent": "Ctrl + Shift + G",
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-hard-reload",
+      "scope": "chrome",
+      "title": "忽略缓存重新加载",
+      "keys": [
+        "⇧",
+        "⌘",
+        "R"
+      ],
+      "englishKeys": "Shift + Command + R",
+      "summary": "重新获取当前网页，忽略已有缓存。",
+      "section": "浏览网页",
+      "prerequisite": "在 Chrome 中打开工具提供的样例标签页。",
+      "steps": [
+        "在 Chrome 中打开工具提供的样例标签页。",
+        "亲手按下 Shift + Command + R。",
+        "当前网页发起新的加载；静态页面的外观可能保持相同。 观察预期现象即可。"
+      ],
+      "expectedResult": "当前网页发起新的加载；静态页面的外观可能保持相同。",
+      "windowsEquivalent": "Ctrl + Shift + R",
+      "practice": "browserPage",
+      "notes": [
+        "页面外观相同并不代表没有加载。可以观察标签页加载指示；本工具不据此自动判断成功。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [
+        "强制刷新",
+        "刷新",
+        "重新加载"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-bookmark",
+      "scope": "chrome",
+      "title": "为当前网页添加书签",
+      "keys": [
+        "⌘",
+        "D"
+      ],
+      "englishKeys": "Command + D",
+      "summary": "打开保存当前网页为书签的对话框。",
+      "section": "书签与设置",
+      "prerequisite": "打开一张样例网页；练习时可以取消保存。",
+      "steps": [
+        "打开一张样例网页；练习时可以取消保存。",
+        "亲手按下 Command + D。",
+        "书签编辑对话框出现，可修改名称和保存位置。 观察预期现象即可。"
+      ],
+      "expectedResult": "书签编辑对话框出现，可修改名称和保存位置。",
+      "windowsEquivalent": "Ctrl + D",
+      "practice": "browserPage",
+      "notes": [
+        "点取消可以不保存。若保存了练习书签，之后可在书签管理器中删除。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-bookmarks-bar",
+      "scope": "chrome",
+      "title": "显示或隐藏书签栏",
+      "keys": [
+        "⇧",
+        "⌘",
+        "B"
+      ],
+      "englishKeys": "Shift + Command + B",
+      "summary": "切换地址栏下方书签栏的显示。",
+      "section": "书签与设置",
+      "prerequisite": "让 Chrome 样例标签页所在窗口位于前台。",
+      "steps": [
+        "让 Chrome 样例标签页所在窗口位于前台。",
+        "亲手按下 Shift + Command + B。",
+        "书签栏出现或收起，再按一次可以切回。 观察预期现象即可。"
+      ],
+      "expectedResult": "书签栏出现或收起，再按一次可以切回。",
+      "windowsEquivalent": "Ctrl + Shift + B",
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-bookmark-manager",
+      "scope": "chrome",
+      "title": "打开书签管理器",
+      "keys": [
+        "⌥",
+        "⌘",
+        "B"
+      ],
+      "englishKeys": "Option + Command + B",
+      "summary": "在专用页面中查看和整理书签。",
+      "section": "书签与设置",
+      "prerequisite": "让 Chrome 位于前台。",
+      "steps": [
+        "让 Chrome 位于前台。",
+        "亲手按下 Option + Command + B。",
+        "书签管理器标签页打开。 观察预期现象即可。"
+      ],
+      "expectedResult": "书签管理器标签页打开。",
+      "windowsEquivalent": "Ctrl + Shift + O",
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-history",
+      "scope": "chrome",
+      "title": "打开浏览历史",
+      "keys": [
+        "⌘",
+        "Y"
+      ],
+      "englishKeys": "Command + Y",
+      "summary": "查看 Chrome 记录的访问历史。",
+      "section": "书签与设置",
+      "prerequisite": "让 Chrome 位于前台，练习时无需清除历史。",
+      "steps": [
+        "让 Chrome 位于前台，练习时无需清除历史。",
+        "亲手按下 Command + Y。",
+        "历史记录标签页打开。 观察预期现象即可。"
+      ],
+      "expectedResult": "历史记录标签页打开。",
+      "windowsEquivalent": "Ctrl + H",
+      "practice": "browserPage",
+      "notes": [
+        "这只打开历史记录页面；不会清除任何记录。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-downloads",
+      "scope": "chrome",
+      "title": "打开下载记录",
+      "keys": [
+        "⇧",
+        "⌘",
+        "J"
+      ],
+      "englishKeys": "Shift + Command + J",
+      "summary": "查看浏览器中的下载项目和状态。",
+      "section": "书签与设置",
+      "prerequisite": "让 Chrome 位于前台。",
+      "steps": [
+        "让 Chrome 位于前台。",
+        "亲手按下 Shift + Command + J。",
+        "下载内容标签页打开。 观察预期现象即可。"
+      ],
+      "expectedResult": "下载内容标签页打开。",
+      "windowsEquivalent": "Ctrl + J",
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-settings",
+      "scope": "chrome",
+      "title": "打开 Chrome 设置",
+      "keys": [
+        "⌘",
+        ","
+      ],
+      "englishKeys": "Command + ,",
+      "summary": "在新标签页中打开浏览器设置。",
+      "section": "书签与设置",
+      "prerequisite": "让 Chrome 位于前台，本次只查看设置页面。",
+      "steps": [
+        "让 Chrome 位于前台，本次只查看设置页面。",
+        "亲手按下 Command + ,。",
+        "设置标签页打开。 观察预期现象即可。"
+      ],
+      "expectedResult": "设置标签页打开。",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "不需要修改账号、隐私或同步设置即可完成练习。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-print",
+      "scope": "chrome",
+      "title": "打开网页打印面板",
+      "keys": [
+        "⌘",
+        "P"
+      ],
+      "englishKeys": "Command + P",
+      "summary": "查看当前页面的打印预览和选项。",
+      "section": "浏览网页",
+      "prerequisite": "打开一个 Chrome 样例页面。",
+      "steps": [
+        "打开一个 Chrome 样例页面。",
+        "亲手按下 Command + P。",
+        "打印预览出现；点取消返回，不提交打印。 观察预期现象即可。"
+      ],
+      "expectedResult": "打印预览出现；点取消返回，不提交打印。",
+      "windowsEquivalent": "Ctrl + P",
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-save-page",
+      "scope": "chrome",
+      "title": "保存网页",
+      "keys": [
+        "⌘",
+        "S"
+      ],
+      "englishKeys": "Command + S",
+      "summary": "打开将当前网页保存到本地的对话框。",
+      "section": "浏览网页",
+      "prerequisite": "在 Chrome 中打开练习页，选择专用练习目录作为保存位置。",
+      "steps": [
+        "在 Chrome 中打开练习页，选择专用练习目录作为保存位置。",
+        "亲手按下 Command + S。",
+        "保存对话框出现，可以确认或取消。 观察预期现象即可。"
+      ],
+      "expectedResult": "保存对话框出现，可以确认或取消。",
+      "windowsEquivalent": "Ctrl + S",
+      "practice": "browserPage",
+      "notes": [
+        "实际保存只会在你确认对话框后进行。可取消对话框来完成观察。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-zoom-in",
+      "scope": "chrome",
+      "title": "放大网页",
+      "keys": [
+        "⌘",
+        "+"
+      ],
+      "englishKeys": "Command + +",
+      "summary": "提高当前网页的显示比例。",
+      "section": "缩放与滚动",
+      "prerequisite": "点击练习页面的空白区域，确保焦点不在输入框。",
+      "steps": [
+        "点击练习页面的空白区域，确保焦点不在输入框。",
+        "亲手按下 Command + +。",
+        "页面显示得更大。 观察预期现象即可。"
+      ],
+      "expectedResult": "页面显示得更大。",
+      "windowsEquivalent": "Ctrl + +",
+      "practice": "browserPage",
+      "notes": [
+        "加号键可能需要配合 Shift，取决于键盘布局；可查看 Chrome 菜单中的实际绑定。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-zoom-out",
+      "scope": "chrome",
+      "title": "缩小网页",
+      "keys": [
+        "⌘",
+        "-"
+      ],
+      "englishKeys": "Command + -",
+      "summary": "降低当前网页的显示比例。",
+      "section": "缩放与滚动",
+      "prerequisite": "让 Chrome 练习页面位于前台。",
+      "steps": [
+        "让 Chrome 练习页面位于前台。",
+        "亲手按下 Command + -。",
+        "页面显示得更小。 观察预期现象即可。"
+      ],
+      "expectedResult": "页面显示得更小。",
+      "windowsEquivalent": "Ctrl + -",
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-zoom-reset",
+      "scope": "chrome",
+      "title": "恢复默认缩放",
+      "keys": [
+        "⌘",
+        "0"
+      ],
+      "englishKeys": "Command + 0",
+      "summary": "把当前网站恢复为默认的显示比例。",
+      "section": "缩放与滚动",
+      "prerequisite": "先对 Chrome 练习页面做一次放大或缩小。",
+      "steps": [
+        "先对 Chrome 练习页面做一次放大或缩小。",
+        "亲手按下 Command + 0。",
+        "页面恢复到默认缩放比例。 观察预期现象即可。"
+      ],
+      "expectedResult": "页面恢复到默认缩放比例。",
+      "windowsEquivalent": "Ctrl + 0",
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-page-down",
+      "scope": "chrome",
+      "title": "向下滚动一屏",
+      "keys": [
+        "Space"
+      ],
+      "englishKeys": "Space",
+      "summary": "向下浏览约一个屏幕的内容。",
+      "section": "缩放与滚动",
+      "prerequisite": "打开长练习页，点击页面空白区域。",
+      "steps": [
+        "打开长练习页，点击页面空白区域。",
+        "亲手按下 Space。",
+        "页面向下移动一屏左右。 观察预期现象即可。"
+      ],
+      "expectedResult": "页面向下移动一屏左右。",
+      "windowsEquivalent": "Space",
+      "practice": "browserPage",
+      "notes": [
+        "焦点在输入框时会输入空格。请先点击网页正文或空白处。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-page-up",
+      "scope": "chrome",
+      "title": "向上滚动一屏",
+      "keys": [
+        "⇧",
+        "Space"
+      ],
+      "englishKeys": "Shift + Space",
+      "summary": "向上浏览约一个屏幕的内容。",
+      "section": "缩放与滚动",
+      "prerequisite": "先向下滚动长练习页，并确保焦点不在输入框。",
+      "steps": [
+        "先向下滚动长练习页，并确保焦点不在输入框。",
+        "亲手按下 Shift + Space。",
+        "页面向上移动一屏左右。 观察预期现象即可。"
+      ],
+      "expectedResult": "页面向上移动一屏左右。",
+      "windowsEquivalent": "Shift + Space",
+      "practice": "browserPage",
+      "notes": [
+        "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-reload",
+      "scope": "chrome",
+      "title": "重新加载网页",
+      "keys": [
+        "⌘",
+        "R"
+      ],
+      "englishKeys": "Command + R",
+      "summary": "重新读取当前标签页中的网页。",
+      "section": "浏览网页",
+      "prerequisite": "在 Chrome 中打开工具提供的样例标签页。",
+      "steps": [
+        "打开工具提供的 Chrome 样例页面，让 Chrome 位于前台。",
+        "亲手按下 Command + R。",
+        "观察标签页的加载状态；静态页面重新加载后外观可能相同。"
+      ],
+      "expectedResult": "当前网页重新加载，标签页可能短暂显示加载指示。",
+      "windowsEquivalent": "Ctrl + R",
+      "practice": "browserPage",
+      "notes": [
+        "静态页面刷新后外观可能不变。观察标签页的实际加载状态即可。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [
+        "刷新",
+        "重新载入"
+      ],
+      "sourceIDs": [
+        "google-devtools"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-developer-tools",
+      "scope": "chrome",
+      "title": "打开开发者工具",
+      "keys": [
+        "⌥",
+        "⌘",
+        "I"
+      ],
+      "englishKeys": "Option + Command + I",
+      "summary": "打开浏览器的页面检查面板。",
+      "section": "开发与检查",
+      "prerequisite": "打开 Chrome 练习页，本次只观察面板。",
+      "steps": [
+        "打开 Chrome 练习页，本次只观察面板。",
+        "亲手按下 Option + Command + I。",
+        "开发者工具面板出现；可点击其关闭按钮退出。 观察预期现象即可。"
+      ],
+      "expectedResult": "开发者工具面板出现；可点击其关闭按钮退出。",
+      "windowsEquivalent": "Ctrl + Shift + I 或 F12",
+      "practice": "browserPage",
+      "notes": [
+        "此组合键打开上次使用的开发者工具面板。本练习不需要在控制台输入或执行代码。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "google-devtools"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-close-window",
+      "scope": "chrome",
+      "title": "关闭当前 Chrome 窗口",
+      "keys": [
+        "⇧",
+        "⌘",
+        "W"
+      ],
+      "englishKeys": "Shift + Command + W",
+      "summary": "关闭当前 Chrome 窗口及其中的标签页。",
+      "section": "标签页与窗口",
+      "prerequisite": "先手动新建只包含空白或样例标签页的专用 Chrome 窗口。",
+      "steps": [
+        "先手动新建只包含空白或样例标签页的专用 Chrome 窗口。",
+        "亲手按下 Shift + Command + W。",
+        "该专用 Chrome 窗口关闭；其他窗口和教学应用保留。 观察预期现象即可。"
+      ],
+      "expectedResult": "该专用 Chrome 窗口关闭；其他窗口和教学应用保留。",
+      "windowsEquivalent": "Ctrl + Shift + W",
+      "practice": "observation",
+      "notes": [
+        "先核对当前窗口中的标签页，避免关闭自己正在使用的页面。关闭后可点击 Dock 中的 Chrome 图标返回。"
+      ],
+      "aliases": [],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-numbered-tab",
+      "scope": "chrome",
+      "title": "切换到指定标签页（1–8）",
+      "keys": [
+        "⌘",
+        "1–8"
+      ],
+      "englishKeys": "Command + 1 through Command + 8",
+      "summary": "用数字直接定位前八个已打开的标签页。",
+      "section": "标签页与窗口",
+      "prerequisite": "先手动新建专用 Chrome 窗口，并打开至少两个样例标签页。",
+      "steps": [
+        "先在专用 Chrome 窗口中打开至少两个样例标签页。",
+        "按 Command + 1 选择第一个；也可将数字换成 2 至 8。",
+        "观察活跃标签页切换到相应位置；Command + 9 表示最后一个标签页。"
+      ],
+      "expectedResult": "所按数字对应位置的标签页成为当前标签页。",
+      "windowsEquivalent": "Ctrl + 1 至 Ctrl + 8",
+      "practice": "browserPage",
+      "notes": [
+        "编号从窗口最左侧的标签页开始计算。",
+        "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
+      ],
+      "aliases": [
+        "Command + 1",
+        "Command + 2",
+        "Command + 3",
+        "Command + 4",
+        "Command + 5",
+        "Command + 6",
+        "Command + 7",
+        "Command + 8"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    }
+  ]
+}
