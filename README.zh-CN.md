@@ -4,7 +4,15 @@
 
 原生 macOS 快捷键手册，支持动手练习。使用 SwiftUI 和 AppKit 构建。
 
-![QuickKey](docs/images/navigation.png)
+## 界面预览
+
+### 快捷键查阅
+
+![快捷键查阅](docs/images/navigation.png)
+
+### 文本编辑练习
+
+![文本编辑练习](docs/images/practice.png)
 
 ## 功能
 

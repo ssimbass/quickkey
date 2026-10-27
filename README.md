@@ -4,7 +4,15 @@ English | [简体中文](README.zh-CN.md)
 
 A native macOS keyboard shortcut reference with hands-on practice. Built with SwiftUI and AppKit.
 
-![QuickKey](docs/images/navigation.png)
+## Screenshots
+
+### Shortcut reference
+
+![Shortcut reference](docs/images/navigation.png)
+
+### Text editing practice
+
+![Text editing practice](docs/images/practice.png)
 
 ## Features
 
