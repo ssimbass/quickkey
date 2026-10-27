@@ -55,7 +55,7 @@ struct SidebarNavigation: View {
                         ForEach(scopes) { app in
                             let matches = entries.filter { $0.scope == app }
                             if !matches.isEmpty {
-                                Text(label(for: app)).font(.system(size: 11)).foregroundStyle(.secondary)
+                                Text(label(for: app)).font(.system(size: 12, weight: .semibold)).foregroundStyle(.primary)
                                     .padding(.horizontal, 14).padding(.top, 9)
                                 ForEach(matches) { shortcut in shortcutButton(shortcut) }
                             }
@@ -156,6 +156,7 @@ struct SidebarNavigation: View {
                 VStack(spacing: 3) {
                     ForEach(list) { shortcut in shortcutButton(shortcut) }
                 }
+                .padding(.leading, 6)
                 .transition(.asymmetric(insertion: .opacity.combined(with: .offset(y: -3)), removal: .opacity))
             }
         }
@@ -229,15 +230,17 @@ private struct DrawerHeader: View {
     var body: some View {
         Button(action: action) {
             HStack(spacing: 9) {
-                Text(title).font(.system(size: 12, weight: .medium))
+                Text(title).font(.system(size: 13, weight: .semibold)).foregroundStyle(.primary)
                 Spacer(minLength: 0)
-                Text("\(count)").font(.system(size: 10)).foregroundStyle(.tertiary)
+                Text("\(count)").font(.system(size: 11)).foregroundStyle(.secondary)
                 Image(systemName: "chevron.right").font(.system(size: 10, weight: .medium))
+                    .foregroundStyle(.secondary)
                     .rotationEffect(.degrees(expanded ? 90 : 0))
             }
-            .foregroundStyle(.secondary).padding(.horizontal, 12)
-            .frame(maxWidth: .infinity).frame(height: 45)
-            .background(hovered ? Color.primary.opacity(0.045) : Color.clear, in: RoundedRectangle(cornerRadius: 12))
+            .padding(.horizontal, 12)
+            .frame(maxWidth: .infinity).frame(height: 48)
+            .background(Color.primary.opacity(hovered ? 0.09 : (expanded ? 0.07 : 0.05)),
+                        in: RoundedRectangle(cornerRadius: 12))
             .contentShape(RoundedRectangle(cornerRadius: 12))
         }
         .buttonStyle(NavigationPressStyle()).onHover { hovered = $0 }

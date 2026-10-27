@@ -64,8 +64,9 @@ struct ShortcutDetailView: View {
                         Link(destination: source.url) { Label(source.title, systemImage: "arrow.up.right.square") }
                     }
                 }.font(.system(size: 11)).frame(maxWidth: .infinity, alignment: .leading).padding(.top, 8)
-            }.font(.system(size: 11)).foregroundStyle(.secondary).padding(.top, 13)
+            }.font(.system(size: 11)).foregroundStyle(.secondary)
         }
+        .disclosureGroupStyle(DetailDisclosureStyle())
         .accessibilityIdentifier("shortcut-content-" + shortcut.id)
     }
 
@@ -185,4 +186,31 @@ struct ShortcutDetailView: View {
     }
 
     private func showHint() { practice.showFloatingHint(for: shortcut, onReturn: {}) }
+}
+
+private struct DetailDisclosureStyle: DisclosureGroupStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        VStack(alignment: .leading, spacing: 0) {
+            Button {
+                configuration.isExpanded.toggle()
+            } label: {
+                HStack(spacing: 9) {
+                    Image(systemName: "chevron.right")
+                        .font(.system(size: 10, weight: .medium))
+                        .rotationEffect(.degrees(configuration.isExpanded ? 90 : 0))
+                        .accessibilityHidden(true)
+                    configuration.label
+                    Spacer(minLength: 0)
+                }
+                .frame(maxWidth: .infinity, minHeight: 48, alignment: .leading)
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .accessibilityValue(configuration.isExpanded ? L10n.text("已展开") : L10n.text("已收起"))
+
+            if configuration.isExpanded {
+                configuration.content
+            }
+        }
+    }
 }

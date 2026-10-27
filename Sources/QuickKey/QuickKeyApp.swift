@@ -57,6 +57,18 @@ struct QuickKeyApp: App {
 
 @MainActor
 final class QuickKeyAppDelegate: NSObject, NSApplicationDelegate {
+    private var checkingLastWindowClose = false
+
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        true
+    }
+
+    func applicationWillTerminate(_ notification: Notification) {
+        if checkingLastWindowClose {
+            print("窗口生命周期检查通过：关闭最后一个窗口后应用自动退出。")
+        }
+    }
+
     func applicationDidFinishLaunching(_ notification: Notification) {
         NSApp.setActivationPolicy(.regular)
         NSApp.activate(ignoringOtherApps: true)
@@ -67,7 +79,17 @@ final class QuickKeyAppDelegate: NSObject, NSApplicationDelegate {
                     let catalog = try ShortcutCatalog.load()
                     print(try await PracticeIntegrationChecks.run(catalog: catalog))
                     print(try await NavigationGeometryChecks.run())
-                    NSApp.terminate(nil)
+                    let windows = NSApp.windows.filter { $0.isVisible || $0.isMiniaturized }
+                    guard !windows.isEmpty else {
+                        fputs("INTEGRATION CHECK FAILED: no window available to close\n", stderr)
+                        exit(1)
+                    }
+                    checkingLastWindowClose = true
+                    for window in windows { window.performClose(nil) }
+                    // Success must come from AppKit's last-window termination, not the test itself.
+                    try await Task.sleep(for: .seconds(2))
+                    fputs("INTEGRATION CHECK FAILED: closing the last window left the application running\n", stderr)
+                    exit(1)
                 } catch {
                     fputs("INTEGRATION CHECK FAILED: \(error.localizedDescription)\n", stderr)
                     exit(1)
