@@ -8,14 +8,15 @@ A native macOS keyboard shortcut reference with hands-on practice. Built with Sw
 
 ### Shortcut reference
 
-![Shortcut reference](docs/images/navigation.png)
+![Shortcut reference](docs/images/navigation.en.png)
 
 ### Text editing practice
 
-![Text editing practice](docs/images/practice.png)
+![Text editing practice](docs/images/practice.en.png)
 
 ## Features
 
+- English and Simplified Chinese. Follows your system language; switch in Settings.
 - Browse shortcuts for macOS, Finder, Safari, and Chrome by category.
 - Practice text editing, file operations, and window controls with feedback where supported.
 - Works offline. No third-party runtime dependencies or Accessibility permission required.

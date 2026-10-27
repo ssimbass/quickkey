@@ -1,0 +1,5542 @@
+{
+  "version": 1,
+  "verifiedAt": "2026-10-27",
+  "sources": [
+    {
+      "id": "apple-mac",
+      "title": "Apple: Mac keyboard shortcuts",
+      "url": "https://support.apple.com/en-us/102650",
+      "checkedAt": "2026-10-26"
+    },
+    {
+      "id": "apple-safari",
+      "title": "Apple: Safari keyboard shortcuts and gestures",
+      "url": "https://support.apple.com/en-us/guide/safari/cpsh003/mac",
+      "checkedAt": "2026-10-26"
+    },
+    {
+      "id": "google-chrome",
+      "title": "Google: Chrome keyboard shortcuts (Mac)",
+      "url": "https://support.google.com/chrome/answer/157179?hl=en",
+      "checkedAt": "2026-10-26"
+    },
+    {
+      "id": "apple-rename",
+      "title": "Apple: Rename files, folders, and disks",
+      "url": "https://support.apple.com/en-us/guide/mac-help/mchlp1144/mac",
+      "checkedAt": "2026-10-26"
+    },
+    {
+      "id": "apple-screenshot",
+      "title": "Apple: Take a screenshot on Mac",
+      "url": "https://support.apple.com/en-us/102646",
+      "checkedAt": "2026-10-26"
+    },
+    {
+      "id": "apple-web",
+      "title": "Apple: Browse the web on Mac",
+      "url": "https://support.apple.com/en-us/guide/mac-help/mchlgtd_web01/mac",
+      "checkedAt": "2026-10-26"
+    },
+    {
+      "id": "google-devtools",
+      "title": "Google: Chrome DevTools keyboard shortcuts",
+      "url": "https://developer.chrome.com/docs/devtools/shortcuts",
+      "checkedAt": "2026-10-26"
+    },
+    {
+      "id": "apple-keyboard-intro",
+      "title": "Apple: Introduction to Mac keyboard shortcuts",
+      "url": "https://support.apple.com/en-us/guide/mac-help/mchld6b9e240/mac",
+      "checkedAt": "2026-10-26"
+    },
+    {
+      "id": "apple-download-apps",
+      "title": "Apple: Download apps on Mac",
+      "url": "https://support.apple.com/en-gb/guide/mac-help/mchlgtd_apps01/mac",
+      "checkedAt": "2026-10-26"
+    },
+    {
+      "id": "apple-function-keys",
+      "title": "Apple: Use keyboard function keys on Mac",
+      "url": "https://support.apple.com/en-us/guide/mac-help/mchlp2596/mac",
+      "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "apple-keyboard-current",
+      "title": "Apple: MacBook Air Magic Keyboard top-row functions",
+      "url": "https://support.apple.com/en-us/guide/macbook-air/apdab672d5e9/mac",
+      "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "apple-keyboard-legacy",
+      "title": "Apple: 2019 MacBook Air keyboard layout",
+      "url": "https://support.apple.com/en-us/guide/macbook-air/apdab672d5e9/2019/mac/10.15",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "shortcuts": [
+    {
+      "id": "system-spotlight",
+      "scope": "system",
+      "title": "Open Spotlight",
+      "keys": [
+        "⌘",
+        "Space"
+      ],
+      "englishKeys": "Command + Space",
+      "summary": "Search for apps, files, and more with Spotlight.",
+      "section": "Everyday",
+      "prerequisite": "Check that Spotlight still uses the default shortcut in System Settings.",
+      "steps": [
+        "Check that Spotlight still uses the default shortcut in System Settings.",
+        "Press Command + Space.",
+        "The Spotlight search field appears. Press Esc to dismiss it."
+      ],
+      "expectedResult": "The Spotlight search field appears. Press Esc to dismiss it.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "Input sources or custom settings may use the same shortcut. Check the Spotlight binding in System Settings → Keyboard → Keyboard Shortcuts."
+      ],
+      "aliases": [
+        "打开系统搜索",
+        "日常操作",
+        "聚焦",
+        "搜索",
+        "启动应用",
+        "空格",
+        "system spotlight"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-switch-app",
+      "scope": "system",
+      "title": "Switch apps",
+      "keys": [
+        "⌘",
+        "Tab"
+      ],
+      "englishKeys": "Command + Tab",
+      "summary": "Switch between running apps.",
+      "section": "Everyday",
+      "prerequisite": "Open at least two apps.",
+      "steps": [
+        "Open at least two apps.",
+        "Hold Command and press Tab to choose another app, then release Command.",
+        "The app switcher appears. Release Command to switch to the selected app."
+      ],
+      "expectedResult": "The app switcher appears. Release Command to switch to the selected app.",
+      "windowsEquivalent": "Alt + Tab",
+      "practice": "observation",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar."
+      ],
+      "aliases": [
+        "切换应用",
+        "日常操作",
+        "程序切换",
+        "应用切换",
+        "system switch app"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-switch-window",
+      "scope": "system",
+      "title": "Switch windows in an app",
+      "keys": [
+        "⌘",
+        "`"
+      ],
+      "englishKeys": "Command + `",
+      "summary": "Cycle through windows in the current app.",
+      "section": "Everyday",
+      "prerequisite": "Bring an app with at least two windows to the front.",
+      "steps": [
+        "Bring an app with at least two windows to the front.",
+        "Press Command + `.",
+        "Focus moves to another window in the same app."
+      ],
+      "expectedResult": "Focus moves to another window in the same app.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "The grave-accent key is usually above Tab. Other languages and keyboard layouts may use a different key; check the Window menu."
+      ],
+      "aliases": [
+        "切换同一应用的窗口",
+        "日常操作",
+        "窗口切换",
+        "反引号",
+        "system switch window"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-screenshot-full",
+      "scope": "system",
+      "title": "Capture the entire screen",
+      "keys": [
+        "⇧",
+        "⌘",
+        "3"
+      ],
+      "englishKeys": "Shift + Command + 3",
+      "summary": "Take a screenshot of the whole screen.",
+      "section": "Screenshots & Search",
+      "prerequisite": "Arrange the screen first. Screenshots use your current save location.",
+      "steps": [
+        "Arrange the screen first. Screenshots use your current save location.",
+        "Press Shift + Command + 3.",
+        "A screenshot thumbnail appears in a corner, followed by the saved image."
+      ],
+      "expectedResult": "A screenshot thumbnail appears in a corner, followed by the saved image.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "Screenshots save to the Desktop by default. Change the location in Screenshot → Options. Capture shortcuts can also be changed in System Settings."
+      ],
+      "aliases": [
+        "截取整个屏幕",
+        "截屏与搜索",
+        "全屏截图",
+        "截屏",
+        "截图",
+        "system screenshot full"
+      ],
+      "sourceIDs": [
+        "apple-screenshot"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-screenshot-region",
+      "scope": "system",
+      "title": "Capture a selected area",
+      "keys": [
+        "⇧",
+        "⌘",
+        "4"
+      ],
+      "englishKeys": "Shift + Command + 4",
+      "summary": "Drag to capture part of the screen.",
+      "section": "Screenshots & Search",
+      "prerequisite": "Prepare the content you want to capture. Press Esc to cancel.",
+      "steps": [
+        "Prepare the content you want to capture. Press Esc to cancel.",
+        "Press Shift + Command + 4, then drag to select an area and release.",
+        "The pointer becomes a crosshair. Drag and release to capture the area."
+      ],
+      "expectedResult": "The pointer becomes a crosshair. Drag and release to capture the area.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar."
+      ],
+      "aliases": [
+        "截取选定区域",
+        "截屏与搜索",
+        "区域截图",
+        "部分截屏",
+        "截图",
+        "system screenshot region"
+      ],
+      "sourceIDs": [
+        "apple-screenshot"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-screenshot-tools",
+      "scope": "system",
+      "title": "Open Screenshot tools",
+      "keys": [
+        "⇧",
+        "⌘",
+        "5"
+      ],
+      "englishKeys": "Shift + Command + 5",
+      "summary": "Choose a capture area, recording mode, and save location.",
+      "section": "Screenshots & Search",
+      "prerequisite": "Prepare your screen. You can inspect the toolbar without starting a recording.",
+      "steps": [
+        "Prepare your screen. You can inspect the toolbar without starting a recording.",
+        "Press Shift + Command + 5.",
+        "The Screenshot toolbar appears near the bottom of the screen. Press Esc to close it."
+      ],
+      "expectedResult": "The Screenshot toolbar appears near the bottom of the screen. Press Esc to close it.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "Start a screen recording yourself from the toolbar. QuickKey does not press the Record button for you."
+      ],
+      "aliases": [
+        "打开截屏与录屏工具",
+        "截屏与搜索",
+        "截图",
+        "录屏",
+        "屏幕录制",
+        "system screenshot tools"
+      ],
+      "sourceIDs": [
+        "apple-screenshot"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-lock-screen",
+      "scope": "system",
+      "title": "Lock the screen",
+      "keys": [
+        "⌃",
+        "⌘",
+        "Q"
+      ],
+      "englishKeys": "Control + Command + Q",
+      "summary": "Lock your Mac while keeping your session open.",
+      "section": "Windows & Apps",
+      "prerequisite": "Make sure you can unlock your Mac with your password or Touch ID.",
+      "steps": [
+        "Make sure you can unlock your Mac with your password or Touch ID.",
+        "Press Control + Command + Q.",
+        "The lock screen appears. Unlock to return to your windows."
+      ],
+      "expectedResult": "The lock screen appears. Unlock to return to your windows.",
+      "windowsEquivalent": "Windows + L",
+      "practice": "observation",
+      "notes": [
+        "This temporarily leaves QuickKey. Unlock with your account password or Touch ID to continue."
+      ],
+      "aliases": [
+        "锁定屏幕",
+        "窗口与应用",
+        "锁屏",
+        "system lock screen"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-mission-control",
+      "scope": "system",
+      "title": "Open Mission Control",
+      "keys": [
+        "⌃",
+        "↑"
+      ],
+      "englishKeys": "Control + Up Arrow",
+      "summary": "See windows and desktop spaces at a glance.",
+      "section": "Windows & Apps",
+      "prerequisite": "Open a few windows and check the Mission Control shortcut in System Settings.",
+      "steps": [
+        "Open a few windows and check the Mission Control shortcut in System Settings.",
+        "Press Control + Up Arrow.",
+        "Windows spread out. Click a window or press Esc to return."
+      ],
+      "expectedResult": "Windows spread out. Click a window or press Esc to return.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar."
+      ],
+      "aliases": [
+        "打开调度中心",
+        "窗口与应用",
+        "Mission Control",
+        "窗口总览",
+        "system mission control"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-app-windows",
+      "scope": "system",
+      "title": "Show an app's windows",
+      "keys": [
+        "⌃",
+        "↓"
+      ],
+      "englishKeys": "Control + Down Arrow",
+      "summary": "See all open windows in the current app.",
+      "section": "Windows & Apps",
+      "prerequisite": "Bring an app with multiple windows to the front.",
+      "steps": [
+        "Bring an app with multiple windows to the front.",
+        "Press Control + Down Arrow.",
+        "The app's windows are displayed together. Click one to select it."
+      ],
+      "expectedResult": "The app's windows are displayed together. Click one to select it.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar."
+      ],
+      "aliases": [
+        "显示当前应用的所有窗口",
+        "窗口与应用",
+        "App Exposé",
+        "应用窗口",
+        "system app windows"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-toggle-dock",
+      "scope": "system",
+      "title": "Show or hide the Dock",
+      "keys": [
+        "⌥",
+        "⌘",
+        "D"
+      ],
+      "englishKeys": "Option + Command + D",
+      "summary": "Toggle automatic hiding of the Dock.",
+      "section": "Windows & Apps",
+      "prerequisite": "Note whether the Dock is currently always visible.",
+      "steps": [
+        "Note whether the Dock is currently always visible.",
+        "Press Option + Command + D.",
+        "Dock visibility changes. Press the shortcut again to switch back."
+      ],
+      "expectedResult": "Dock visibility changes. Press the shortcut again to switch back.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar."
+      ],
+      "aliases": [
+        "显示或隐藏 Dock",
+        "窗口与应用",
+        "程序坞",
+        "隐藏Dock",
+        "system toggle dock"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-full-screen",
+      "scope": "system",
+      "title": "Enter or exit full screen",
+      "keys": [
+        "⌃",
+        "⌘",
+        "F"
+      ],
+      "englishKeys": "Control + Command + F",
+      "summary": "Toggle full screen in apps that support it.",
+      "section": "Windows & Apps",
+      "prerequisite": "Bring a window that supports full screen to the front.",
+      "steps": [
+        "Bring a window that supports full screen to the front.",
+        "Press Control + Command + F.",
+        "The window enters full screen. Press the shortcut again to exit."
+      ],
+      "expectedResult": "The window enters full screen. Press the shortcut again to exit.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "Not all windows support full screen. You can also move the pointer to the top and use the green window button to exit."
+      ],
+      "aliases": [
+        "进入或退出全屏",
+        "窗口与应用",
+        "system full screen"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-emoji",
+      "scope": "system",
+      "title": "Open Emoji & Symbols",
+      "keys": [
+        "⌃",
+        "⌘",
+        "Space"
+      ],
+      "englishKeys": "Control + Command + Space",
+      "summary": "Open the Character Viewer to insert emoji or symbols.",
+      "section": "Everyday",
+      "prerequisite": "Click an editable text field so the insertion point is visible.",
+      "steps": [
+        "Click an editable text field so the insertion point is visible.",
+        "Press Control + Command + Space.",
+        "The character panel appears. Choosing a character inserts it into the text field."
+      ],
+      "expectedResult": "The character panel appears. Choosing a character inserts it into the text field.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar."
+      ],
+      "aliases": [
+        "打开表情与符号",
+        "日常操作",
+        "Emoji",
+        "字符检视器",
+        "表情符号",
+        "空格",
+        "system emoji"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-previous-input-source",
+      "scope": "system",
+      "title": "Previous input source",
+      "keys": [
+        "⌃",
+        "Space"
+      ],
+      "englishKeys": "Control + Space",
+      "summary": "Switch between enabled input sources.",
+      "section": "Everyday",
+      "prerequisite": "Enable at least two input sources and check their shortcuts in System Settings.",
+      "steps": [
+        "Enable at least two input sources and check their shortcuts in System Settings.",
+        "Press Control + Space.",
+        "The input source indicator changes. New text uses the selected input source."
+      ],
+      "expectedResult": "The input source indicator changes. New text uses the selected input source.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "This requires multiple input sources and the default bindings. Input-method software may override the shortcut."
+      ],
+      "aliases": [
+        "切换到上一个输入法",
+        "日常操作",
+        "输入法",
+        "中英文",
+        "输入源",
+        "system previous input source"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-next-input-source",
+      "scope": "system",
+      "title": "Next input source",
+      "keys": [
+        "⌃",
+        "⌥",
+        "Space"
+      ],
+      "englishKeys": "Control + Option + Space",
+      "summary": "Select the next enabled input source.",
+      "section": "Everyday",
+      "prerequisite": "Enable multiple input sources and check their system shortcuts.",
+      "steps": [
+        "Enable multiple input sources and check their system shortcuts.",
+        "Press Control + Option + Space.",
+        "The input source indicator switches to the next available source."
+      ],
+      "expectedResult": "The input source indicator switches to the next available source.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar."
+      ],
+      "aliases": [
+        "切换到下一个输入法",
+        "日常操作",
+        "输入法",
+        "输入源",
+        "system next input source"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-copy",
+      "scope": "system",
+      "title": "Copy text",
+      "keys": [
+        "⌘",
+        "C"
+      ],
+      "englishKeys": "Command + C",
+      "summary": "Copy the selected text to the clipboard, keeping the original.",
+      "section": "Text Editing",
+      "prerequisite": "Select some text in the practice field.",
+      "steps": [
+        "Select some text in the practice field.",
+        "Press Command + C.",
+        "Pasting into the target field produces the same text as your selection."
+      ],
+      "expectedResult": "Pasting into the target field produces the same text as your selection.",
+      "windowsEquivalent": "Ctrl + C",
+      "practice": "textEditing",
+      "notes": [
+        "This action applies inside a text field. It behaves differently when focus is in a folder, list, or another app."
+      ],
+      "aliases": [
+        "复制文本",
+        "文本编辑",
+        "拷贝",
+        "剪贴板",
+        "system copy"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-paste",
+      "scope": "system",
+      "title": "Paste text",
+      "keys": [
+        "⌘",
+        "V"
+      ],
+      "englishKeys": "Command + V",
+      "summary": "Insert clipboard text at the current position.",
+      "section": "Text Editing",
+      "prerequisite": "Copy some practice text, then click the paste target field.",
+      "steps": [
+        "Copy some practice text, then click the paste target field.",
+        "Press Command + V.",
+        "The clipboard text appears in the target field."
+      ],
+      "expectedResult": "The clipboard text appears in the target field.",
+      "windowsEquivalent": "Ctrl + V",
+      "practice": "textEditing",
+      "notes": [
+        "This action applies inside a text field. It behaves differently when focus is in a folder, list, or another app."
+      ],
+      "aliases": [
+        "粘贴文本",
+        "文本编辑",
+        "粘贴",
+        "剪贴板",
+        "system paste"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-cut",
+      "scope": "system",
+      "title": "Cut text",
+      "keys": [
+        "⌘",
+        "X"
+      ],
+      "englishKeys": "Command + X",
+      "summary": "Move the selected text to the clipboard.",
+      "section": "Text Editing",
+      "prerequisite": "Select text in the practice field. Use the sample instead of an important document.",
+      "steps": [
+        "Select text in the practice field. Use the sample instead of an important document.",
+        "Press Command + X.",
+        "The selection is removed and can be pasted elsewhere."
+      ],
+      "expectedResult": "The selection is removed and can be pasted elsewhere.",
+      "windowsEquivalent": "Ctrl + X",
+      "practice": "textEditing",
+      "notes": [
+        "This action applies inside a text field. It behaves differently when focus is in a folder, list, or another app."
+      ],
+      "aliases": [
+        "剪切文本",
+        "文本编辑",
+        "剪切",
+        "移动文字",
+        "system cut"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-select-all",
+      "scope": "system",
+      "title": "Select all text",
+      "keys": [
+        "⌘",
+        "A"
+      ],
+      "englishKeys": "Command + A",
+      "summary": "Select all text in the current text field.",
+      "section": "Text Editing",
+      "prerequisite": "Click in the practice field to give it keyboard focus.",
+      "steps": [
+        "Click in the practice field to give it keyboard focus.",
+        "Press Command + A.",
+        "All text in the field is highlighted."
+      ],
+      "expectedResult": "All text in the field is highlighted.",
+      "windowsEquivalent": "Ctrl + A",
+      "practice": "textEditing",
+      "notes": [
+        "This action applies inside a text field. It behaves differently when focus is in a folder, list, or another app."
+      ],
+      "aliases": [
+        "全选文本",
+        "文本编辑",
+        "选择全部",
+        "system select all"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-undo",
+      "scope": "system",
+      "title": "Undo an edit",
+      "keys": [
+        "⌘",
+        "Z"
+      ],
+      "englishKeys": "Command + Z",
+      "summary": "Reverse the most recent undoable text edit.",
+      "section": "Text Editing",
+      "prerequisite": "Type a few characters or delete some text in the practice field.",
+      "steps": [
+        "Type a few characters or delete some text in the practice field.",
+        "Press Command + Z.",
+        "The last edit is undone and the previous text is restored."
+      ],
+      "expectedResult": "The last edit is undone and the previous text is restored.",
+      "windowsEquivalent": "Ctrl + Z",
+      "practice": "textEditing",
+      "notes": [
+        "This action applies inside a text field. It behaves differently when focus is in a folder, list, or another app."
+      ],
+      "aliases": [
+        "撤销上一步编辑",
+        "文本编辑",
+        "撤回",
+        "复原",
+        "system undo"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-redo",
+      "scope": "system",
+      "title": "Redo an edit",
+      "keys": [
+        "⇧",
+        "⌘",
+        "Z"
+      ],
+      "englishKeys": "Shift + Command + Z",
+      "summary": "Repeat the edit you just undid.",
+      "section": "Text Editing",
+      "prerequisite": "Edit the practice text, then press Command + Z once.",
+      "steps": [
+        "Edit the practice text, then press Command + Z once.",
+        "Press Shift + Command + Z.",
+        "The undone edit is applied again."
+      ],
+      "expectedResult": "The undone edit is applied again.",
+      "windowsEquivalent": null,
+      "practice": "textEditing",
+      "notes": [
+        "This action applies inside a text field. It behaves differently when focus is in a folder, list, or another app."
+      ],
+      "aliases": [
+        "重做上一步编辑",
+        "文本编辑",
+        "恢复撤销",
+        "重做",
+        "system redo"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-document-start",
+      "scope": "system",
+      "title": "Go to document beginning",
+      "keys": [
+        "⌘",
+        "↑"
+      ],
+      "englishKeys": "Command + Up Arrow",
+      "summary": "Move the cursor to the beginning of the document.",
+      "section": "Text Editing",
+      "prerequisite": "Click in the middle of the practice text so the cursor is visible.",
+      "steps": [
+        "Click in the middle of the practice text so the cursor is visible.",
+        "Press Command + Up Arrow.",
+        "The cursor moves to the very beginning of the text."
+      ],
+      "expectedResult": "The cursor moves to the very beginning of the text.",
+      "windowsEquivalent": null,
+      "practice": "textEditing",
+      "notes": [
+        "This action applies inside a text field. It behaves differently when focus is in a folder, list, or another app."
+      ],
+      "aliases": [
+        "光标移到文稿开头",
+        "文本编辑",
+        "文首",
+        "光标",
+        "开头",
+        "system document start"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-document-end",
+      "scope": "system",
+      "title": "Go to document end",
+      "keys": [
+        "⌘",
+        "↓"
+      ],
+      "englishKeys": "Command + Down Arrow",
+      "summary": "Move the cursor to the end of the document.",
+      "section": "Text Editing",
+      "prerequisite": "Click in the first half of the practice text.",
+      "steps": [
+        "Click in the first half of the practice text.",
+        "Press Command + Down Arrow.",
+        "The cursor moves to the end of the text."
+      ],
+      "expectedResult": "The cursor moves to the end of the text.",
+      "windowsEquivalent": null,
+      "practice": "textEditing",
+      "notes": [
+        "This action applies inside a text field. It behaves differently when focus is in a folder, list, or another app."
+      ],
+      "aliases": [
+        "光标移到文稿末尾",
+        "文本编辑",
+        "文末",
+        "光标",
+        "末尾",
+        "system document end"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-line-start",
+      "scope": "system",
+      "title": "Go to line beginning",
+      "keys": [
+        "⌘",
+        "←"
+      ],
+      "englishKeys": "Command + Left Arrow",
+      "summary": "Move the cursor to the beginning of the current visual line.",
+      "section": "Text Editing",
+      "prerequisite": "Click in the middle of a line in the practice text.",
+      "steps": [
+        "Click in the middle of a line in the practice text.",
+        "Press Command + Left Arrow.",
+        "The cursor moves to the beginning of the line."
+      ],
+      "expectedResult": "The cursor moves to the beginning of the line.",
+      "windowsEquivalent": null,
+      "practice": "textEditing",
+      "notes": [
+        "This action applies inside a text field. It behaves differently when focus is in a folder, list, or another app."
+      ],
+      "aliases": [
+        "光标移到行首",
+        "文本编辑",
+        "行首",
+        "光标",
+        "system line start"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-line-end",
+      "scope": "system",
+      "title": "Go to line end",
+      "keys": [
+        "⌘",
+        "→"
+      ],
+      "englishKeys": "Command + Right Arrow",
+      "summary": "Move the cursor to the end of the current visual line.",
+      "section": "Text Editing",
+      "prerequisite": "Click in the middle of a line in the practice text.",
+      "steps": [
+        "Click in the middle of a line in the practice text.",
+        "Press Command + Right Arrow.",
+        "The cursor moves to the end of the line."
+      ],
+      "expectedResult": "The cursor moves to the end of the line.",
+      "windowsEquivalent": null,
+      "practice": "textEditing",
+      "notes": [
+        "This action applies inside a text field. It behaves differently when focus is in a folder, list, or another app."
+      ],
+      "aliases": [
+        "光标移到行尾",
+        "文本编辑",
+        "行尾",
+        "光标",
+        "system line end"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-previous-word",
+      "scope": "system",
+      "title": "Move backward one word",
+      "keys": [
+        "⌥",
+        "←"
+      ],
+      "englishKeys": "Option + Left Arrow",
+      "summary": "Move the cursor backward by a word instead of a character.",
+      "section": "Text Editing",
+      "prerequisite": "Click just after a word in the English sample text.",
+      "steps": [
+        "Click just after a word in the English sample text.",
+        "Press Option + Left Arrow.",
+        "The cursor moves to the beginning of the previous word."
+      ],
+      "expectedResult": "The cursor moves to the beginning of the previous word.",
+      "windowsEquivalent": null,
+      "practice": "textEditing",
+      "notes": [
+        "This action applies inside a text field. It behaves differently when focus is in a folder, list, or another app.",
+        "Word movement can differ between Chinese text and space-separated English. Try the English sample first."
+      ],
+      "aliases": [
+        "光标向前移动一个词",
+        "文本编辑",
+        "上一个词",
+        "光标",
+        "单词",
+        "system previous word"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-next-word",
+      "scope": "system",
+      "title": "Move forward one word",
+      "keys": [
+        "⌥",
+        "→"
+      ],
+      "englishKeys": "Option + Right Arrow",
+      "summary": "Move the cursor forward by a word instead of a character.",
+      "section": "Text Editing",
+      "prerequisite": "Click just before a word in the English sample text.",
+      "steps": [
+        "Click just before a word in the English sample text.",
+        "Press Option + Right Arrow.",
+        "The cursor moves to the end of the next word."
+      ],
+      "expectedResult": "The cursor moves to the end of the next word.",
+      "windowsEquivalent": null,
+      "practice": "textEditing",
+      "notes": [
+        "This action applies inside a text field. It behaves differently when focus is in a folder, list, or another app.",
+        "Word movement can differ between Chinese text and space-separated English. Try the English sample first."
+      ],
+      "aliases": [
+        "光标向后移动一个词",
+        "文本编辑",
+        "下一个词",
+        "光标",
+        "单词",
+        "system next word"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-delete-word",
+      "scope": "system",
+      "title": "Delete the previous word",
+      "keys": [
+        "⌥",
+        "⌫"
+      ],
+      "englishKeys": "Option + Delete",
+      "summary": "Delete the word or word segment before the cursor.",
+      "section": "Text Editing",
+      "prerequisite": "Click just after a word in the English practice sentence.",
+      "steps": [
+        "Click just after a word in the English practice sentence.",
+        "Press Option + Delete.",
+        "Text before the cursor is deleted. Press Command + Z to restore it."
+      ],
+      "expectedResult": "Text before the cursor is deleted. Press Command + Z to restore it.",
+      "windowsEquivalent": null,
+      "practice": "textEditing",
+      "notes": [
+        "This action applies inside a text field. It behaves differently when focus is in a folder, list, or another app.",
+        "Word movement can differ between Chinese text and space-separated English. Try the English sample first."
+      ],
+      "aliases": [
+        "删除前一个词",
+        "文本编辑",
+        "删除单词",
+        "退格",
+        "system delete word"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-forward-delete",
+      "scope": "system",
+      "title": "Delete the next character",
+      "keys": [
+        "Fn",
+        "⌫"
+      ],
+      "englishKeys": "Fn + Delete",
+      "summary": "Delete the character after the cursor.",
+      "section": "Text Editing",
+      "prerequisite": "Place the cursor between two characters in the practice text.",
+      "steps": [
+        "Place the cursor between two characters in the practice text.",
+        "Press Fn + Delete.",
+        "The next character is deleted. Press Command + Z to restore it."
+      ],
+      "expectedResult": "The next character is deleted. Press Command + Z to restore it.",
+      "windowsEquivalent": null,
+      "practice": "textEditing",
+      "notes": [
+        "This action applies inside a text field. It behaves differently when focus is in a folder, list, or another app."
+      ],
+      "aliases": [
+        "向前删除字符",
+        "文本编辑",
+        "Delete",
+        "向右删除",
+        "system forward delete"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-select-to-line-end",
+      "scope": "system",
+      "title": "Select to end of line",
+      "keys": [
+        "⇧",
+        "⌘",
+        "→"
+      ],
+      "englishKeys": "Shift + Command + Right Arrow",
+      "summary": "Select text from the cursor to the end of the current line.",
+      "section": "Text Editing",
+      "prerequisite": "Click in the middle of a line in the practice text.",
+      "steps": [
+        "Click in the middle of a line in the practice text.",
+        "Press Shift + Command + Right Arrow.",
+        "Text from the cursor to the end of the line is highlighted."
+      ],
+      "expectedResult": "Text from the cursor to the end of the line is highlighted.",
+      "windowsEquivalent": null,
+      "practice": "textEditing",
+      "notes": [
+        "This action applies inside a text field. It behaves differently when focus is in a folder, list, or another app."
+      ],
+      "aliases": [
+        "选中到行尾",
+        "文本编辑",
+        "选择行尾",
+        "文本选区",
+        "system select to line end"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-find",
+      "scope": "system",
+      "title": "Find in a document",
+      "keys": [
+        "⌘",
+        "F"
+      ],
+      "englishKeys": "Command + F",
+      "summary": "Open Find in the current app or document.",
+      "section": "Documents",
+      "prerequisite": "Bring a document that supports Find to the front.",
+      "steps": [
+        "Bring a document that supports Find to the front.",
+        "Press Command + F.",
+        "A Find bar or panel appears for entering a search term."
+      ],
+      "expectedResult": "A Find bar or panel appears for entering a search term.",
+      "windowsEquivalent": "Ctrl + F",
+      "practice": "observation",
+      "notes": [
+        "Find is provided by the current app. A browser searches the page, while Finder searches files."
+      ],
+      "aliases": [
+        "查找当前文稿",
+        "通用文稿",
+        "system find"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-find-next",
+      "scope": "system",
+      "title": "Find next match",
+      "keys": [
+        "⌘",
+        "G"
+      ],
+      "englishKeys": "Command + G",
+      "summary": "Go to the next occurrence of the search term.",
+      "section": "Documents",
+      "prerequisite": "Search for a repeated word in a document that supports Find.",
+      "steps": [
+        "Search for a repeated word in a document that supports Find.",
+        "Press Command + G.",
+        "The next match is selected or scrolled into view."
+      ],
+      "expectedResult": "The next match is selected or scrolled into view.",
+      "windowsEquivalent": "Ctrl + G",
+      "practice": "observation",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar."
+      ],
+      "aliases": [
+        "查找下一个匹配项",
+        "通用文稿",
+        "system find next"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-find-previous",
+      "scope": "system",
+      "title": "Find previous match",
+      "keys": [
+        "⇧",
+        "⌘",
+        "G"
+      ],
+      "englishKeys": "Shift + Command + G",
+      "summary": "Go to the previous occurrence of the search term.",
+      "section": "Documents",
+      "prerequisite": "Search for a repeated word in a document that supports Find.",
+      "steps": [
+        "Search for a repeated word in a document that supports Find.",
+        "Press Shift + Command + G.",
+        "The previous match is selected or scrolled into view."
+      ],
+      "expectedResult": "The previous match is selected or scrolled into view.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar."
+      ],
+      "aliases": [
+        "查找上一个匹配项",
+        "通用文稿",
+        "system find previous"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-minimize",
+      "scope": "system",
+      "title": "Minimize a window",
+      "keys": [
+        "⌘",
+        "M"
+      ],
+      "englishKeys": "Command + M",
+      "summary": "Minimize the practice window to the Dock.",
+      "section": "Windows & Apps",
+      "prerequisite": "Open the separate practice window and bring it to the front.",
+      "steps": [
+        "Open the separate practice window and bring it to the front.",
+        "Press Command + M.",
+        "The window minimizes to the Dock. Click its thumbnail to restore it."
+      ],
+      "expectedResult": "The window minimizes to the Dock. Click its thumbnail to restore it.",
+      "windowsEquivalent": null,
+      "practice": "minimizeWindow",
+      "notes": [
+        "The main reference window stays open. Restore the practice window from its Dock thumbnail or an available restore control."
+      ],
+      "aliases": [
+        "最小化窗口",
+        "窗口与应用",
+        "system minimize"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-close-window",
+      "scope": "system",
+      "title": "Close a window",
+      "keys": [
+        "⌘",
+        "W"
+      ],
+      "englishKeys": "Command + W",
+      "summary": "Close the current window or tab.",
+      "section": "Windows & Apps",
+      "prerequisite": "Use the separate practice window and save any other documents first.",
+      "steps": [
+        "Use the separate practice window and save any other documents first.",
+        "Press Command + W.",
+        "The practice window closes; the main reference window remains open."
+      ],
+      "expectedResult": "The practice window closes; the main reference window remains open.",
+      "windowsEquivalent": null,
+      "practice": "closeWindow",
+      "notes": [
+        "Closing a window does not quit the app. Apps with tabs usually close the active tab first."
+      ],
+      "aliases": [
+        "关闭窗口",
+        "窗口与应用",
+        "system close window"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-hide",
+      "scope": "system",
+      "title": "Hide the current app",
+      "keys": [
+        "⌘",
+        "H"
+      ],
+      "englishKeys": "Command + H",
+      "summary": "Temporarily hide all windows of the current app.",
+      "section": "Windows & Apps",
+      "prerequisite": "Remember how to return: click QuickKey in the Dock.",
+      "steps": [
+        "Remember how to return: click QuickKey in the Dock.",
+        "Press Command + H.",
+        "The app's windows hide and reappear when you click its Dock icon."
+      ],
+      "expectedResult": "The app's windows hide and reappear when you click its Dock icon.",
+      "windowsEquivalent": null,
+      "practice": "hideApp",
+      "notes": [
+        "A hidden app keeps running. Click its icon in the Dock to return."
+      ],
+      "aliases": [
+        "隐藏当前应用",
+        "窗口与应用",
+        "system hide"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-hide-others",
+      "scope": "system",
+      "title": "Hide other apps",
+      "keys": [
+        "⌥",
+        "⌘",
+        "H"
+      ],
+      "englishKeys": "Option + Command + H",
+      "summary": "Keep the current app visible and hide other apps.",
+      "section": "Windows & Apps",
+      "prerequisite": "Open two apps and bring the one you want to keep visible to the front.",
+      "steps": [
+        "Open two apps and bring the one you want to keep visible to the front.",
+        "Press Option + Command + H.",
+        "Other apps' windows hide while the current app stays visible."
+      ],
+      "expectedResult": "Other apps' windows hide while the current app stays visible.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "Click another app's Dock icon to show its windows again."
+      ],
+      "aliases": [
+        "隐藏其他应用",
+        "窗口与应用",
+        "system hide others"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-quit",
+      "scope": "system",
+      "title": "Quit the current app",
+      "keys": [
+        "⌘",
+        "Q"
+      ],
+      "englishKeys": "Command + Q",
+      "summary": "Stop the current app.",
+      "section": "Windows & Apps",
+      "prerequisite": "Save your documents in the target app. Avoid quitting QuickKey during practice.",
+      "steps": [
+        "Save your documents in the target app. Avoid quitting QuickKey during practice.",
+        "Press Command + Q.",
+        "The target app quits. Reopen it from the Dock or Spotlight."
+      ],
+      "expectedResult": "The target app quits. Reopen it from the Dock or Spotlight.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "This quits the app rather than just closing a window. Do not practice on important unsaved documents."
+      ],
+      "aliases": [
+        "退出当前应用",
+        "窗口与应用",
+        "system quit"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-force-quit",
+      "scope": "system",
+      "title": "Open Force Quit",
+      "keys": [
+        "⌥",
+        "⌘",
+        "Esc"
+      ],
+      "englishKeys": "Option + Command + Escape",
+      "summary": "View running apps and handle an unresponsive app.",
+      "section": "Windows & Apps",
+      "prerequisite": "Inspect the panel without actually force-quitting an app.",
+      "steps": [
+        "Inspect the panel without actually force-quitting an app.",
+        "Press Option + Command + Escape.",
+        "The Force Quit Applications panel appears. Press Esc to close it."
+      ],
+      "expectedResult": "The Force Quit Applications panel appears. Press Esc to close it.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "Force Quit can lose unsaved changes. To learn the shortcut, open the panel and cancel."
+      ],
+      "aliases": [
+        "打开强制退出面板",
+        "窗口与应用",
+        "卡死",
+        "无响应",
+        "system force quit"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-save",
+      "scope": "system",
+      "title": "Save a document",
+      "keys": [
+        "⌘",
+        "S"
+      ],
+      "englishKeys": "Command + S",
+      "summary": "Write changes in the current document to disk.",
+      "section": "Documents",
+      "prerequisite": "Create a test document and bring its app to the front.",
+      "steps": [
+        "Create a test document and bring its app to the front.",
+        "Press Command + S.",
+        "The document is saved. Its first save may ask for a name and location."
+      ],
+      "expectedResult": "The document is saved. Its first save may ask for a name and location.",
+      "windowsEquivalent": "Ctrl + S",
+      "practice": "observation",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar."
+      ],
+      "aliases": [
+        "保存当前文稿",
+        "通用文稿",
+        "system save"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-print",
+      "scope": "system",
+      "title": "Open the Print dialog",
+      "keys": [
+        "⌘",
+        "P"
+      ],
+      "englishKeys": "Command + P",
+      "summary": "Inspect printing options for the current document.",
+      "section": "Documents",
+      "prerequisite": "Open a printable test document. You do not need a printer for practice.",
+      "steps": [
+        "Open a printable test document. You do not need a printer for practice.",
+        "Press Command + P.",
+        "The Print dialog appears. Cancel or press Esc to return without printing."
+      ],
+      "expectedResult": "The Print dialog appears. Cancel or press Esc to return without printing.",
+      "windowsEquivalent": "Ctrl + P",
+      "practice": "observation",
+      "notes": [
+        "The shortcut only opens print settings. You can cancel without sending a print job."
+      ],
+      "aliases": [
+        "打开打印面板",
+        "通用文稿",
+        "system print"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-bold",
+      "scope": "system",
+      "title": "Bold text",
+      "keys": [
+        "⌘",
+        "B"
+      ],
+      "englishKeys": "Command + B",
+      "summary": "Toggle bold formatting for the selected text.",
+      "section": "Text Formatting",
+      "prerequisite": "Select some text in the native practice field below.",
+      "steps": [
+        "Select some text in the native practice field below.",
+        "Press Command + B.",
+        "The selection becomes bold, or returns to regular weight if it was already bold."
+      ],
+      "expectedResult": "The selection becomes bold, or returns to regular weight if it was already bold.",
+      "windowsEquivalent": "Ctrl + B",
+      "practice": "textEditing",
+      "notes": [
+        "Select text in the practice field. Feedback checks actual changes to font or underline attributes."
+      ],
+      "aliases": [
+        "将文字设为粗体",
+        "文本格式",
+        "system bold"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-italic",
+      "scope": "system",
+      "title": "Italicize text",
+      "keys": [
+        "⌘",
+        "I"
+      ],
+      "englishKeys": "Command + I",
+      "summary": "Toggle italic formatting for the selected text.",
+      "section": "Text Formatting",
+      "prerequisite": "Select some text in the native practice field below.",
+      "steps": [
+        "Select some text in the native practice field below.",
+        "Press Command + I.",
+        "The selection becomes italic, or existing italic formatting is removed."
+      ],
+      "expectedResult": "The selection becomes italic, or existing italic formatting is removed.",
+      "windowsEquivalent": "Ctrl + I",
+      "practice": "textEditing",
+      "notes": [
+        "Select text in the practice field. Feedback checks actual changes to font or underline attributes.",
+        "Some fonts have no italic face, so the visual change may be subtle. Try a font that supports italics."
+      ],
+      "aliases": [
+        "将文字设为斜体",
+        "文本格式",
+        "system italic"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-underline",
+      "scope": "system",
+      "title": "Underline text",
+      "keys": [
+        "⌘",
+        "U"
+      ],
+      "englishKeys": "Command + U",
+      "summary": "Toggle underlining for the selected text.",
+      "section": "Text Formatting",
+      "prerequisite": "Select some text in the native practice field below.",
+      "steps": [
+        "Select some text in the native practice field below.",
+        "Press Command + U.",
+        "The selection is underlined, or existing underlining is removed."
+      ],
+      "expectedResult": "The selection is underlined, or existing underlining is removed.",
+      "windowsEquivalent": "Ctrl + U",
+      "practice": "textEditing",
+      "notes": [
+        "Select text in the practice field. Feedback checks actual changes to font or underline attributes."
+      ],
+      "aliases": [
+        "为文字添加下划线",
+        "文本格式",
+        "system underline"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "system-f1",
+      "scope": "system",
+      "title": "F1 · Decrease brightness",
+      "keys": [
+        "F1"
+      ],
+      "englishKeys": "F1",
+      "summary": "Lower brightness on a display that supports keyboard controls.",
+      "section": "Function Keys F1–F12",
+      "prerequisite": "Follow your keycap icon and Fn settings. With standard function keys enabled, media functions usually need Fn.",
+      "steps": [
+        "Follow your keycap icon and Fn settings. With standard function keys enabled, media functions usually need Fn.",
+        "Press F1 with Fn if your function-key settings require it.",
+        "Display brightness decreases or the brightness indicator appears."
+      ],
+      "expectedResult": "Display brightness decreases or the brightness indicator appears.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "Some external displays do not support this key. Use the display's own controls when needed.",
+        "System Settings → Keyboard → Keyboard Shortcuts → Function Keys lets you toggle “Use F1, F2, etc. keys as standard function keys.”",
+        "This page describes common top-row functions on Apple keyboards. Standard F-key behavior is set by the current app or custom bindings.",
+        "On Touch Bar Macs, hold Fn to show F1–F12. Third-party keyboards may use different icons or Fn-lock behavior."
+      ],
+      "aliases": [
+        "F1 · 调低屏幕亮度",
+        "功能键 F1–F12",
+        "f1",
+        "功能键1",
+        "调低屏幕亮度",
+        "Fn",
+        "媒体键",
+        "顶行按键",
+        "system f1"
+      ],
+      "sourceIDs": [
+        "apple-function-keys",
+        "apple-keyboard-current",
+        "apple-keyboard-legacy"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-f2",
+      "scope": "system",
+      "title": "F2 · Increase brightness",
+      "keys": [
+        "F2"
+      ],
+      "englishKeys": "F2",
+      "summary": "Raise brightness on a display that supports keyboard controls.",
+      "section": "Function Keys F1–F12",
+      "prerequisite": "Follow your keycap icon and Fn settings. With standard function keys enabled, media functions usually need Fn.",
+      "steps": [
+        "Follow your keycap icon and Fn settings. With standard function keys enabled, media functions usually need Fn.",
+        "Press F2 with Fn if your function-key settings require it.",
+        "Display brightness increases or the brightness indicator appears."
+      ],
+      "expectedResult": "Display brightness increases or the brightness indicator appears.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "Brightness cannot increase past its maximum. Some external displays do not support this key.",
+        "System Settings → Keyboard → Keyboard Shortcuts → Function Keys lets you toggle “Use F1, F2, etc. keys as standard function keys.”",
+        "This page describes common top-row functions on Apple keyboards. Standard F-key behavior is set by the current app or custom bindings.",
+        "On Touch Bar Macs, hold Fn to show F1–F12. Third-party keyboards may use different icons or Fn-lock behavior."
+      ],
+      "aliases": [
+        "F2 · 调高屏幕亮度",
+        "功能键 F1–F12",
+        "f2",
+        "功能键2",
+        "调高屏幕亮度",
+        "Fn",
+        "媒体键",
+        "顶行按键",
+        "system f2"
+      ],
+      "sourceIDs": [
+        "apple-function-keys",
+        "apple-keyboard-current",
+        "apple-keyboard-legacy"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-f3",
+      "scope": "system",
+      "title": "F3 · Mission Control",
+      "keys": [
+        "F3"
+      ],
+      "englishKeys": "F3",
+      "summary": "View open windows and desktop spaces.",
+      "section": "Function Keys F1–F12",
+      "prerequisite": "Follow your keycap icon and Fn settings. With standard function keys enabled, media functions usually need Fn.",
+      "steps": [
+        "Follow your keycap icon and Fn settings. With standard function keys enabled, media functions usually need Fn.",
+        "Press F3 with Fn if your function-key settings require it.",
+        "Mission Control appears. Press Esc or the same function key to return."
+      ],
+      "expectedResult": "Mission Control appears. Press Esc or the same function key to return.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "Change the Mission Control binding in System Settings → Keyboard → Keyboard Shortcuts.",
+        "System Settings → Keyboard → Keyboard Shortcuts → Function Keys lets you toggle “Use F1, F2, etc. keys as standard function keys.”",
+        "This page describes common top-row functions on Apple keyboards. Standard F-key behavior is set by the current app or custom bindings.",
+        "On Touch Bar Macs, hold Fn to show F1–F12. Third-party keyboards may use different icons or Fn-lock behavior."
+      ],
+      "aliases": [
+        "F3 · 打开调度中心",
+        "功能键 F1–F12",
+        "f3",
+        "功能键3",
+        "打开调度中心",
+        "Fn",
+        "媒体键",
+        "顶行按键",
+        "system f3"
+      ],
+      "sourceIDs": [
+        "apple-function-keys",
+        "apple-keyboard-current",
+        "apple-keyboard-legacy"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-f4",
+      "scope": "system",
+      "title": "F4 · Search or Launchpad",
+      "keys": [
+        "F4"
+      ],
+      "englishKeys": "F4",
+      "summary": "The magnifying-glass key on newer keyboards usually opens Spotlight.",
+      "section": "Function Keys F1–F12",
+      "prerequisite": "Follow your keycap icon and Fn settings. With standard function keys enabled, media functions usually need Fn.",
+      "steps": [
+        "Follow your keycap icon and Fn settings. With standard function keys enabled, media functions usually need Fn.",
+        "Press F4 with Fn if your function-key settings require it.",
+        "A magnifying-glass key opens search; an older grid-icon key may open Launchpad."
+      ],
+      "expectedResult": "A magnifying-glass key opens search; an older grid-icon key may open Launchpad.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "F4 on newer Apple keyboards often opens Spotlight; older F4 keys may open Launchpad. Follow the keycap icon.",
+        "System Settings → Keyboard → Keyboard Shortcuts → Function Keys lets you toggle “Use F1, F2, etc. keys as standard function keys.”",
+        "This page describes common top-row functions on Apple keyboards. Standard F-key behavior is set by the current app or custom bindings.",
+        "On Touch Bar Macs, hold Fn to show F1–F12. Third-party keyboards may use different icons or Fn-lock behavior."
+      ],
+      "aliases": [
+        "F4 · 搜索或启动台",
+        "功能键 F1–F12",
+        "f4",
+        "功能键4",
+        "搜索或启动台",
+        "Fn",
+        "媒体键",
+        "顶行按键",
+        "system f4"
+      ],
+      "sourceIDs": [
+        "apple-function-keys",
+        "apple-keyboard-current",
+        "apple-keyboard-legacy"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-f5",
+      "scope": "system",
+      "title": "F5 · Dictation or backlight",
+      "keys": [
+        "F5"
+      ],
+      "englishKeys": "F5",
+      "summary": "A microphone key usually starts Dictation; an older backlight key may dim keyboard lighting.",
+      "section": "Function Keys F1–F12",
+      "prerequisite": "Place the cursor in editable text. Whether the microphone key needs Fn depends on your function-key settings.",
+      "steps": [
+        "Place the cursor in editable text. Whether the microphone key needs Fn depends on your function-key settings.",
+        "Press F5 with Fn if your function-key settings require it.",
+        "A microphone key may open Dictation; an older backlight key may dim the keyboard."
+      ],
+      "expectedResult": "A microphone key may open Dictation; an older backlight key may dim the keyboard.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "Enable Dictation and place the cursor in editable text first. F5 on some older keyboards dims keyboard lighting. Holding the microphone key may behave differently with Siri and model settings.",
+        "System Settings → Keyboard → Keyboard Shortcuts → Function Keys lets you toggle “Use F1, F2, etc. keys as standard function keys.”",
+        "This page describes common top-row functions on Apple keyboards. Standard F-key behavior is set by the current app or custom bindings.",
+        "On Touch Bar Macs, hold Fn to show F1–F12. Third-party keyboards may use different icons or Fn-lock behavior."
+      ],
+      "aliases": [
+        "F5 · 听写或键盘背光",
+        "功能键 F1–F12",
+        "f5",
+        "功能键5",
+        "听写或键盘背光",
+        "Fn",
+        "媒体键",
+        "顶行按键",
+        "system f5"
+      ],
+      "sourceIDs": [
+        "apple-function-keys",
+        "apple-keyboard-current",
+        "apple-keyboard-legacy"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-f6",
+      "scope": "system",
+      "title": "F6 · Do Not Disturb or backlight",
+      "keys": [
+        "F6"
+      ],
+      "englishKeys": "F6",
+      "summary": "A moon key usually controls Do Not Disturb; an older backlight key may brighten keyboard lighting.",
+      "section": "Function Keys F1–F12",
+      "prerequisite": "Follow your keycap icon and Fn settings. With standard function keys enabled, media functions usually need Fn.",
+      "steps": [
+        "Follow your keycap icon and Fn settings. With standard function keys enabled, media functions usually need Fn.",
+        "Press F6 with Fn if your function-key settings require it.",
+        "A moon key toggles Do Not Disturb; an older backlight key may brighten the keyboard."
+      ],
+      "expectedResult": "A moon key toggles Do Not Disturb; an older backlight key may brighten the keyboard.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "F6 on some older keyboards brightens keyboard lighting. Check the keycap instead of assuming it always enables Do Not Disturb.",
+        "System Settings → Keyboard → Keyboard Shortcuts → Function Keys lets you toggle “Use F1, F2, etc. keys as standard function keys.”",
+        "This page describes common top-row functions on Apple keyboards. Standard F-key behavior is set by the current app or custom bindings.",
+        "On Touch Bar Macs, hold Fn to show F1–F12. Third-party keyboards may use different icons or Fn-lock behavior."
+      ],
+      "aliases": [
+        "F6 · 勿扰或键盘背光",
+        "功能键 F1–F12",
+        "f6",
+        "功能键6",
+        "勿扰或键盘背光",
+        "Fn",
+        "媒体键",
+        "顶行按键",
+        "system f6"
+      ],
+      "sourceIDs": [
+        "apple-function-keys",
+        "apple-keyboard-current",
+        "apple-keyboard-legacy"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-f7",
+      "scope": "system",
+      "title": "F7 · Previous or rewind",
+      "keys": [
+        "F7"
+      ],
+      "englishKeys": "F7",
+      "summary": "Control the previous item or rewind in the current media app.",
+      "section": "Function Keys F1–F12",
+      "prerequisite": "Prepare playable media. Whether media keys need Fn depends on your function-key settings.",
+      "steps": [
+        "Prepare playable media. Whether media keys need Fn depends on your function-key settings.",
+        "Press F7 with Fn if your function-key settings require it.",
+        "A supported player goes to the previous item or rewinds; behavior depends on the player."
+      ],
+      "expectedResult": "A supported player goes to the previous item or rewinds; behavior depends on the player.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "Open controllable audio, video, or a slideshow first. With no active player, this key may produce no visible response.",
+        "System Settings → Keyboard → Keyboard Shortcuts → Function Keys lets you toggle “Use F1, F2, etc. keys as standard function keys.”",
+        "This page describes common top-row functions on Apple keyboards. Standard F-key behavior is set by the current app or custom bindings.",
+        "On Touch Bar Macs, hold Fn to show F1–F12. Third-party keyboards may use different icons or Fn-lock behavior."
+      ],
+      "aliases": [
+        "F7 · 上一曲或倒回",
+        "功能键 F1–F12",
+        "f7",
+        "功能键7",
+        "上一曲或倒回",
+        "Fn",
+        "媒体键",
+        "顶行按键",
+        "system f7"
+      ],
+      "sourceIDs": [
+        "apple-function-keys",
+        "apple-keyboard-current",
+        "apple-keyboard-legacy"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-f8",
+      "scope": "system",
+      "title": "F8 · Play or pause",
+      "keys": [
+        "F8"
+      ],
+      "englishKeys": "F8",
+      "summary": "Toggle playback in the current media app.",
+      "section": "Function Keys F1–F12",
+      "prerequisite": "Prepare playable media. Whether media keys need Fn depends on your function-key settings.",
+      "steps": [
+        "Prepare playable media. Whether media keys need Fn depends on your function-key settings.",
+        "Press F8 with Fn if your function-key settings require it.",
+        "A supported player starts or pauses playback."
+      ],
+      "expectedResult": "A supported player starts or pauses playback.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "Controllable media must be available. The system and player determine which media target receives the key.",
+        "System Settings → Keyboard → Keyboard Shortcuts → Function Keys lets you toggle “Use F1, F2, etc. keys as standard function keys.”",
+        "This page describes common top-row functions on Apple keyboards. Standard F-key behavior is set by the current app or custom bindings.",
+        "On Touch Bar Macs, hold Fn to show F1–F12. Third-party keyboards may use different icons or Fn-lock behavior."
+      ],
+      "aliases": [
+        "F8 · 播放或暂停",
+        "功能键 F1–F12",
+        "f8",
+        "功能键8",
+        "播放或暂停",
+        "Fn",
+        "媒体键",
+        "顶行按键",
+        "system f8"
+      ],
+      "sourceIDs": [
+        "apple-function-keys",
+        "apple-keyboard-current",
+        "apple-keyboard-legacy"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-f9",
+      "scope": "system",
+      "title": "F9 · Next or fast-forward",
+      "keys": [
+        "F9"
+      ],
+      "englishKeys": "F9",
+      "summary": "Control the next item or fast-forward in the current media app.",
+      "section": "Function Keys F1–F12",
+      "prerequisite": "Prepare playable media. Whether media keys need Fn depends on your function-key settings.",
+      "steps": [
+        "Prepare playable media. Whether media keys need Fn depends on your function-key settings.",
+        "Press F9 with Fn if your function-key settings require it.",
+        "A supported player skips to the next item or fast-forwards; behavior depends on the player."
+      ],
+      "expectedResult": "A supported player skips to the next item or fast-forwards; behavior depends on the player.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "Prepare a playlist with multiple items. Pressing and holding may behave differently between players.",
+        "System Settings → Keyboard → Keyboard Shortcuts → Function Keys lets you toggle “Use F1, F2, etc. keys as standard function keys.”",
+        "This page describes common top-row functions on Apple keyboards. Standard F-key behavior is set by the current app or custom bindings.",
+        "On Touch Bar Macs, hold Fn to show F1–F12. Third-party keyboards may use different icons or Fn-lock behavior."
+      ],
+      "aliases": [
+        "F9 · 下一曲或快进",
+        "功能键 F1–F12",
+        "f9",
+        "功能键9",
+        "下一曲或快进",
+        "Fn",
+        "媒体键",
+        "顶行按键",
+        "system f9"
+      ],
+      "sourceIDs": [
+        "apple-function-keys",
+        "apple-keyboard-current",
+        "apple-keyboard-legacy"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-f10",
+      "scope": "system",
+      "title": "F10 · Mute or unmute",
+      "keys": [
+        "F10"
+      ],
+      "englishKeys": "F10",
+      "summary": "Toggle mute on a controllable audio output.",
+      "section": "Function Keys F1–F12",
+      "prerequisite": "Follow your keycap icon and Fn settings. With standard function keys enabled, media functions usually need Fn.",
+      "steps": [
+        "Follow your keycap icon and Fn settings. With standard function keys enabled, media functions usually need Fn.",
+        "Press F10 with Fn if your function-key settings require it.",
+        "Mute changes or the system volume indicator appears."
+      ],
+      "expectedResult": "Mute changes or the system volume indicator appears.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "Some digital audio devices, display speakers, and external interfaces do not support keyboard volume controls.",
+        "System Settings → Keyboard → Keyboard Shortcuts → Function Keys lets you toggle “Use F1, F2, etc. keys as standard function keys.”",
+        "This page describes common top-row functions on Apple keyboards. Standard F-key behavior is set by the current app or custom bindings.",
+        "On Touch Bar Macs, hold Fn to show F1–F12. Third-party keyboards may use different icons or Fn-lock behavior."
+      ],
+      "aliases": [
+        "F10 · 静音或取消静音",
+        "功能键 F1–F12",
+        "f10",
+        "功能键10",
+        "静音或取消静音",
+        "Fn",
+        "媒体键",
+        "顶行按键",
+        "system f10"
+      ],
+      "sourceIDs": [
+        "apple-function-keys",
+        "apple-keyboard-current",
+        "apple-keyboard-legacy"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-f11",
+      "scope": "system",
+      "title": "F11 · Decrease volume",
+      "keys": [
+        "F11"
+      ],
+      "englishKeys": "F11",
+      "summary": "Lower the current audio output volume in media-key mode.",
+      "section": "Function Keys F1–F12",
+      "prerequisite": "Follow your keycap icon and Fn settings. With standard function keys enabled, media functions usually need Fn.",
+      "steps": [
+        "Follow your keycap icon and Fn settings. With standard function keys enabled, media functions usually need Fn.",
+        "Press F11 with Fn if your function-key settings require it.",
+        "The controllable audio output volume decreases."
+      ],
+      "expectedResult": "The controllable audio output volume decreases.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "Standard F11 may also be bound to Show Desktop. That is separate from the speaker-icon volume function.",
+        "System Settings → Keyboard → Keyboard Shortcuts → Function Keys lets you toggle “Use F1, F2, etc. keys as standard function keys.”",
+        "This page describes common top-row functions on Apple keyboards. Standard F-key behavior is set by the current app or custom bindings.",
+        "On Touch Bar Macs, hold Fn to show F1–F12. Third-party keyboards may use different icons or Fn-lock behavior."
+      ],
+      "aliases": [
+        "F11 · 调低音量",
+        "功能键 F1–F12",
+        "f11",
+        "功能键11",
+        "调低音量",
+        "Fn",
+        "媒体键",
+        "顶行按键",
+        "system f11"
+      ],
+      "sourceIDs": [
+        "apple-function-keys",
+        "apple-keyboard-current",
+        "apple-keyboard-legacy"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "system-f12",
+      "scope": "system",
+      "title": "F12 · Increase volume",
+      "keys": [
+        "F12"
+      ],
+      "englishKeys": "F12",
+      "summary": "Raise the current audio output volume in media-key mode.",
+      "section": "Function Keys F1–F12",
+      "prerequisite": "Follow your keycap icon and Fn settings. With standard function keys enabled, media functions usually need Fn.",
+      "steps": [
+        "Follow your keycap icon and Fn settings. With standard function keys enabled, media functions usually need Fn.",
+        "Press F12 with Fn if your function-key settings require it.",
+        "The controllable audio output volume increases."
+      ],
+      "expectedResult": "The controllable audio output volume increases.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "Standard F12 behavior depends on system or app settings. It does not always increase volume.",
+        "System Settings → Keyboard → Keyboard Shortcuts → Function Keys lets you toggle “Use F1, F2, etc. keys as standard function keys.”",
+        "This page describes common top-row functions on Apple keyboards. Standard F-key behavior is set by the current app or custom bindings.",
+        "On Touch Bar Macs, hold Fn to show F1–F12. Third-party keyboards may use different icons or Fn-lock behavior."
+      ],
+      "aliases": [
+        "F12 · 调高音量",
+        "功能键 F1–F12",
+        "f12",
+        "功能键12",
+        "调高音量",
+        "Fn",
+        "媒体键",
+        "顶行按键",
+        "system f12"
+      ],
+      "sourceIDs": [
+        "apple-function-keys",
+        "apple-keyboard-current",
+        "apple-keyboard-legacy"
+      ],
+      "customizable": true
+    },
+    {
+      "id": "finder-new-folder",
+      "scope": "finder",
+      "title": "New folder",
+      "keys": [
+        "⇧",
+        "⌘",
+        "N"
+      ],
+      "englishKeys": "Shift + Command + N",
+      "summary": "Create an empty folder at the current Finder location.",
+      "section": "Files & Folders",
+      "prerequisite": "Open the dedicated practice folder and bring Finder to the front.",
+      "steps": [
+        "Open the dedicated practice folder and bring Finder to the front.",
+        "Press Shift + Command + N, enter a folder name, and press Return.",
+        "A new folder appears. Enter a name and press Return to confirm."
+      ],
+      "expectedResult": "A new folder appears. Enter a name and press Return to confirm.",
+      "windowsEquivalent": "Ctrl + Shift + N",
+      "practice": "newFolder",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar."
+      ],
+      "aliases": [
+        "新建文件夹",
+        "文件与文件夹",
+        "新建目录",
+        "创建文件夹",
+        "finder new folder"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-rename",
+      "scope": "finder",
+      "title": "Rename a file",
+      "keys": [
+        "↩"
+      ],
+      "englishKeys": "Return",
+      "summary": "Change the name of the selected file or folder.",
+      "section": "Files & Folders",
+      "prerequisite": "Single-click the sample file in the dedicated practice folder.",
+      "steps": [
+        "Single-click the sample file in the dedicated practice folder.",
+        "Press Return, edit the name without changing the extension, then press Return again.",
+        "The filename becomes editable. Confirming changes its actual name."
+      ],
+      "expectedResult": "The filename becomes editable. Confirming changes its actual name.",
+      "windowsEquivalent": "F2",
+      "practice": "renameFile",
+      "notes": [
+        "Keep the file extension unchanged. Single-click a file before pressing Return; double-clicking opens it."
+      ],
+      "aliases": [
+        "重命名文件",
+        "文件与文件夹",
+        "重新命名",
+        "文件名",
+        "改名",
+        "finder rename"
+      ],
+      "sourceIDs": [
+        "apple-rename"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-duplicate",
+      "scope": "finder",
+      "title": "Duplicate a file",
+      "keys": [
+        "⌘",
+        "D"
+      ],
+      "englishKeys": "Command + D",
+      "summary": "Copy the selected file in the same location.",
+      "section": "Files & Folders",
+      "prerequisite": "Select the sample file in the dedicated practice folder.",
+      "steps": [
+        "Select the sample file in the dedicated practice folder.",
+        "Press Command + D.",
+        "A duplicate appears in the same folder; the original stays in place."
+      ],
+      "expectedResult": "A duplicate appears in the same folder; the original stays in place.",
+      "windowsEquivalent": null,
+      "practice": "duplicateFile",
+      "notes": [
+        "Finder and the system language determine duplicate names, which may include “copy” or a numeric suffix."
+      ],
+      "aliases": [
+        "制作文件副本",
+        "文件与文件夹",
+        "复制文件",
+        "副本",
+        "finder duplicate"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-trash",
+      "scope": "finder",
+      "title": "Move to Trash",
+      "keys": [
+        "⌘",
+        "⌫"
+      ],
+      "englishKeys": "Command + Delete",
+      "summary": "Move the selected sample file to Trash.",
+      "section": "Files & Folders",
+      "prerequisite": "Select only the sample file supplied by QuickKey and check its name first.",
+      "steps": [
+        "Select only the sample file supplied by QuickKey and check its name first.",
+        "Press Command + Delete.",
+        "The sample disappears from the practice folder. Command + Z in Finder can undo the move."
+      ],
+      "expectedResult": "The sample disappears from the practice folder. Command + Z in Finder can undo the move.",
+      "windowsEquivalent": "Delete",
+      "practice": "trashFile",
+      "notes": [
+        "Use only sample files created by QuickKey. Do not empty Trash. Undo or Put Back can restore the sample."
+      ],
+      "aliases": [
+        "移到废纸篓",
+        "文件与文件夹",
+        "删除文件",
+        "废纸篓",
+        "垃圾桶",
+        "finder trash"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-quick-look",
+      "scope": "finder",
+      "title": "Quick Look",
+      "keys": [
+        "Space"
+      ],
+      "englishKeys": "Space",
+      "summary": "Preview the selected file without opening its app.",
+      "section": "Files & Folders",
+      "prerequisite": "Select the sample file supplied by QuickKey in Finder.",
+      "steps": [
+        "Select the sample file supplied by QuickKey in Finder.",
+        "Press Space.",
+        "A Quick Look window appears. Press Space or Esc to close it."
+      ],
+      "expectedResult": "A Quick Look window appears. Press Space or Esc to close it.",
+      "windowsEquivalent": null,
+      "practice": "quickLook",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar."
+      ],
+      "aliases": [
+        "快速查看文件",
+        "文件与文件夹",
+        "预览",
+        "空格",
+        "finder quick look"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-info",
+      "scope": "finder",
+      "title": "Get Info",
+      "keys": [
+        "⌘",
+        "I"
+      ],
+      "englishKeys": "Command + I",
+      "summary": "View the selected file's size, location, and kind.",
+      "section": "Files & Folders",
+      "prerequisite": "Select the sample file in the dedicated practice folder.",
+      "steps": [
+        "Select the sample file in the dedicated practice folder.",
+        "Press Command + I.",
+        "A Get Info window opens with details about the selected file."
+      ],
+      "expectedResult": "A Get Info window opens with details about the selected file.",
+      "windowsEquivalent": null,
+      "practice": "fileInfo",
+      "notes": [
+        "Get Info opens a separate window. Closing that window does not delete the file."
+      ],
+      "aliases": [
+        "显示文件简介",
+        "文件与文件夹",
+        "文件信息",
+        "显示简介",
+        "大小",
+        "finder info"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-open",
+      "scope": "finder",
+      "title": "Open selected file",
+      "keys": [
+        "⌘",
+        "↓"
+      ],
+      "englishKeys": "Command + Down Arrow",
+      "summary": "Open the selected item with its default app.",
+      "section": "Files & Folders",
+      "prerequisite": "Select the sample text file supplied by QuickKey in Finder.",
+      "steps": [
+        "Select the sample text file supplied by QuickKey in Finder.",
+        "Press Command + Down Arrow.",
+        "The default app opens the sample. Switch back to QuickKey when finished."
+      ],
+      "expectedResult": "The default app opens the sample. Switch back to QuickKey when finished.",
+      "windowsEquivalent": null,
+      "practice": "openFile",
+      "notes": [
+        "Return usually renames files in Finder. Use Command + Down Arrow or Command + O to open a file."
+      ],
+      "aliases": [
+        "打开所选文件",
+        "文件与文件夹",
+        "打开文件",
+        "finder open"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-copy",
+      "scope": "finder",
+      "title": "Copy selected files",
+      "keys": [
+        "⌘",
+        "C"
+      ],
+      "englishKeys": "Command + C",
+      "summary": "Copy file references to the clipboard, keeping the originals.",
+      "section": "Files & Folders",
+      "prerequisite": "Select the sample file in the dedicated practice folder.",
+      "steps": [
+        "Select the sample file in the dedicated practice folder.",
+        "Press Command + C.",
+        "Press Command + V in another practice subfolder to create a copy."
+      ],
+      "expectedResult": "Press Command + V in another practice subfolder to create a copy.",
+      "windowsEquivalent": "Ctrl + C",
+      "practice": "observation",
+      "notes": [
+        "This copies a file reference, not its text contents. Paste into the destination folder to create an actual copy."
+      ],
+      "aliases": [
+        "复制选中文件",
+        "文件与文件夹",
+        "finder copy"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-paste",
+      "scope": "finder",
+      "title": "Paste copied files",
+      "keys": [
+        "⌘",
+        "V"
+      ],
+      "englishKeys": "Command + V",
+      "summary": "Copy files from the clipboard into the current folder.",
+      "section": "Files & Folders",
+      "prerequisite": "Copy the sample file, then open another practice subfolder.",
+      "steps": [
+        "Copy the sample file, then open another practice subfolder.",
+        "Press Command + V.",
+        "A copy of the file appears in the destination folder."
+      ],
+      "expectedResult": "A copy of the file appears in the destination folder.",
+      "windowsEquivalent": "Ctrl + V",
+      "practice": "observation",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar."
+      ],
+      "aliases": [
+        "粘贴文件副本",
+        "文件与文件夹",
+        "finder paste"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-move-copied",
+      "scope": "finder",
+      "title": "Move copied files",
+      "keys": [
+        "⌥",
+        "⌘",
+        "V"
+      ],
+      "englishKeys": "Option + Command + V",
+      "summary": "Move copied files into the current folder.",
+      "section": "Files & Folders",
+      "prerequisite": "Copy the sample with Command + C, then open another practice subfolder.",
+      "steps": [
+        "Copy the sample with Command + C, then open another practice subfolder.",
+        "Press Option + Command + V.",
+        "The sample moves from its original location to the current folder."
+      ],
+      "expectedResult": "The sample moves from its original location to the current folder.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "Finder moves files by copying first, then using Option + Command + V. Command + X does not cut files in Finder."
+      ],
+      "aliases": [
+        "移动已复制的文件",
+        "文件与文件夹",
+        "剪切文件",
+        "移动文件",
+        "finder move copied"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-new-window",
+      "scope": "finder",
+      "title": "New Finder window",
+      "keys": [
+        "⌘",
+        "N"
+      ],
+      "englishKeys": "Command + N",
+      "summary": "Open another Finder window.",
+      "section": "Windows & Navigation",
+      "prerequisite": "Bring Finder to the front.",
+      "steps": [
+        "Bring Finder to the front.",
+        "Press Command + N.",
+        "A new Finder window appears; the original remains open."
+      ],
+      "expectedResult": "A new Finder window appears; the original remains open.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar."
+      ],
+      "aliases": [
+        "打开新的 Finder 窗口",
+        "窗口与导航",
+        "finder new window"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-search",
+      "scope": "finder",
+      "title": "Search for files",
+      "keys": [
+        "⌘",
+        "F"
+      ],
+      "englishKeys": "Command + F",
+      "summary": "Start a file search in Finder.",
+      "section": "Windows & Navigation",
+      "prerequisite": "Open the practice folder and bring Finder to the front.",
+      "steps": [
+        "Open the practice folder and bring Finder to the front.",
+        "Press Command + F.",
+        "Finder displays search input and search-scope options."
+      ],
+      "expectedResult": "Finder displays search input and search-scope options.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "Check the difference between searching This Mac and the current folder."
+      ],
+      "aliases": [
+        "查找文件",
+        "窗口与导航",
+        "搜索文件",
+        "聚焦",
+        "finder search"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-go-folder",
+      "scope": "finder",
+      "title": "Go to Folder",
+      "keys": [
+        "⇧",
+        "⌘",
+        "G"
+      ],
+      "englishKeys": "Shift + Command + G",
+      "summary": "Enter a path to navigate directly to a folder.",
+      "section": "Windows & Navigation",
+      "prerequisite": "Bring Finder to the front. You can use ~/Downloads as an example.",
+      "steps": [
+        "Bring Finder to the front. You can use ~/Downloads as an example.",
+        "Press Shift + Command + G.",
+        "A path panel appears. Enter a valid path and press Return to go there."
+      ],
+      "expectedResult": "A path panel appears. Enter a valid path and press Return to go there.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "The ~ symbol means your home folder. Press Esc to cancel entering a path."
+      ],
+      "aliases": [
+        "前往指定文件夹",
+        "窗口与导航",
+        "路径",
+        "前往文件夹",
+        "finder go folder"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-parent",
+      "scope": "finder",
+      "title": "Open enclosing folder",
+      "keys": [
+        "⌘",
+        "↑"
+      ],
+      "englishKeys": "Command + Up Arrow",
+      "summary": "Go to the current folder's parent.",
+      "section": "Windows & Navigation",
+      "prerequisite": "Open a practice subfolder in Finder.",
+      "steps": [
+        "Open a practice subfolder in Finder.",
+        "Press Command + Up Arrow.",
+        "Finder shows the folder that contains that subfolder."
+      ],
+      "expectedResult": "Finder shows the folder that contains that subfolder.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar."
+      ],
+      "aliases": [
+        "打开上一级文件夹",
+        "窗口与导航",
+        "父目录",
+        "上级目录",
+        "finder parent"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-back",
+      "scope": "finder",
+      "title": "Go back",
+      "keys": [
+        "⌘",
+        "["
+      ],
+      "englishKeys": "Command + [",
+      "summary": "Return to the previous location in the current Finder window.",
+      "section": "Windows & Navigation",
+      "prerequisite": "Visit two folders in the same Finder window.",
+      "steps": [
+        "Visit two folders in the same Finder window.",
+        "Press Command + [.",
+        "The window returns to the previously visited location."
+      ],
+      "expectedResult": "The window returns to the previously visited location.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar."
+      ],
+      "aliases": [
+        "返回上一个位置",
+        "窗口与导航",
+        "finder back"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-forward",
+      "scope": "finder",
+      "title": "Go forward",
+      "keys": [
+        "⌘",
+        "]"
+      ],
+      "englishKeys": "Command + ]",
+      "summary": "Revisit a location after going back.",
+      "section": "Windows & Navigation",
+      "prerequisite": "Visit two folders, then press Command + [ to go back once.",
+      "steps": [
+        "Visit two folders, then press Command + [ to go back once.",
+        "Press Command + ].",
+        "The window shows the location visited before you went back."
+      ],
+      "expectedResult": "The window shows the location visited before you went back.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar."
+      ],
+      "aliases": [
+        "前往下一个位置",
+        "窗口与导航",
+        "finder forward"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-icon-view",
+      "scope": "finder",
+      "title": "Use icon view",
+      "keys": [
+        "⌘",
+        "1"
+      ],
+      "englishKeys": "Command + 1",
+      "summary": "Change how the current Finder window displays files.",
+      "section": "Views & Display",
+      "prerequisite": "Open the dedicated practice folder in Finder.",
+      "steps": [
+        "Open the dedicated practice folder in Finder.",
+        "Press Command + 1.",
+        "Files are arranged as icons."
+      ],
+      "expectedResult": "Files are arranged as icons.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar."
+      ],
+      "aliases": [
+        "切换为图标视图",
+        "视图与显示",
+        "finder icon view"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-list-view",
+      "scope": "finder",
+      "title": "Use list view",
+      "keys": [
+        "⌘",
+        "2"
+      ],
+      "englishKeys": "Command + 2",
+      "summary": "Change how the current Finder window displays files.",
+      "section": "Views & Display",
+      "prerequisite": "Open the dedicated practice folder in Finder.",
+      "steps": [
+        "Open the dedicated practice folder in Finder.",
+        "Press Command + 2.",
+        "Files appear in a list with columns such as Name."
+      ],
+      "expectedResult": "Files appear in a list with columns such as Name.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar."
+      ],
+      "aliases": [
+        "切换为列表视图",
+        "视图与显示",
+        "finder list view"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-column-view",
+      "scope": "finder",
+      "title": "Use column view",
+      "keys": [
+        "⌘",
+        "3"
+      ],
+      "englishKeys": "Command + 3",
+      "summary": "Change how the current Finder window displays files.",
+      "section": "Views & Display",
+      "prerequisite": "Open the dedicated practice folder in Finder.",
+      "steps": [
+        "Open the dedicated practice folder in Finder.",
+        "Press Command + 3.",
+        "The folder hierarchy is displayed in columns."
+      ],
+      "expectedResult": "The folder hierarchy is displayed in columns.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar."
+      ],
+      "aliases": [
+        "切换为分栏视图",
+        "视图与显示",
+        "finder column view"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-gallery-view",
+      "scope": "finder",
+      "title": "Use gallery view",
+      "keys": [
+        "⌘",
+        "4"
+      ],
+      "englishKeys": "Command + 4",
+      "summary": "Change how the current Finder window displays files.",
+      "section": "Views & Display",
+      "prerequisite": "Open the dedicated practice folder in Finder.",
+      "steps": [
+        "Open the dedicated practice folder in Finder.",
+        "Press Command + 4.",
+        "The selected file appears as a large preview."
+      ],
+      "expectedResult": "The selected file appears as a large preview.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar."
+      ],
+      "aliases": [
+        "切换为画廊视图",
+        "视图与显示",
+        "finder gallery view"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-preview-panel",
+      "scope": "finder",
+      "title": "Show or hide Preview",
+      "keys": [
+        "⇧",
+        "⌘",
+        "P"
+      ],
+      "englishKeys": "Shift + Command + P",
+      "summary": "Preview the selected file in a side panel.",
+      "section": "Views & Display",
+      "prerequisite": "Bring a Finder window to the front.",
+      "steps": [
+        "Bring a Finder window to the front.",
+        "Press Shift + Command + P.",
+        "The preview area on the right appears or disappears."
+      ],
+      "expectedResult": "The preview area on the right appears or disappears.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "View settings change the current window's appearance. Press a toggle shortcut again to restore its earlier state."
+      ],
+      "aliases": [
+        "显示或隐藏预览面板",
+        "视图与显示",
+        "finder preview panel"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-path-bar",
+      "scope": "finder",
+      "title": "Show or hide the path bar",
+      "keys": [
+        "⌥",
+        "⌘",
+        "P"
+      ],
+      "englishKeys": "Option + Command + P",
+      "summary": "View the current folder path at the bottom of the window.",
+      "section": "Views & Display",
+      "prerequisite": "Bring a Finder window to the front.",
+      "steps": [
+        "Bring a Finder window to the front.",
+        "Press Option + Command + P.",
+        "The folder path at the bottom appears or disappears."
+      ],
+      "expectedResult": "The folder path at the bottom appears or disappears.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "View settings change the current window's appearance. Press a toggle shortcut again to restore its earlier state."
+      ],
+      "aliases": [
+        "显示或隐藏路径栏",
+        "视图与显示",
+        "finder path bar"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-sidebar",
+      "scope": "finder",
+      "title": "Show or hide the sidebar",
+      "keys": [
+        "⌥",
+        "⌘",
+        "S"
+      ],
+      "englishKeys": "Option + Command + S",
+      "summary": "Toggle Finder's sidebar of common locations.",
+      "section": "Views & Display",
+      "prerequisite": "Bring a Finder window to the front.",
+      "steps": [
+        "Bring a Finder window to the front.",
+        "Press Option + Command + S.",
+        "The left sidebar appears or disappears."
+      ],
+      "expectedResult": "The left sidebar appears or disappears.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "View settings change the current window's appearance. Press a toggle shortcut again to restore its earlier state."
+      ],
+      "aliases": [
+        "显示或隐藏边栏",
+        "视图与显示",
+        "finder sidebar"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-status-bar",
+      "scope": "finder",
+      "title": "Show or hide the status bar",
+      "keys": [
+        "⌘",
+        "/"
+      ],
+      "englishKeys": "Command + /",
+      "summary": "View information such as item counts at the bottom.",
+      "section": "Views & Display",
+      "prerequisite": "Bring a Finder window to the front.",
+      "steps": [
+        "Bring a Finder window to the front.",
+        "Press Command + /.",
+        "Status information at the bottom appears or disappears."
+      ],
+      "expectedResult": "Status information at the bottom appears or disappears.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "View settings change the current window's appearance. Press a toggle shortcut again to restore its earlier state."
+      ],
+      "aliases": [
+        "显示或隐藏状态栏",
+        "视图与显示",
+        "finder status bar"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-view-options",
+      "scope": "finder",
+      "title": "Show View Options",
+      "keys": [
+        "⌘",
+        "J"
+      ],
+      "englishKeys": "Command + J",
+      "summary": "Adjust icon, list, and other view settings for the current folder.",
+      "section": "Views & Display",
+      "prerequisite": "Bring a Finder window to the front.",
+      "steps": [
+        "Bring a Finder window to the front.",
+        "Press Command + J.",
+        "The View Options panel appears."
+      ],
+      "expectedResult": "The View Options panel appears.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "View settings change the current window's appearance. Press a toggle shortcut again to restore its earlier state."
+      ],
+      "aliases": [
+        "打开显示选项",
+        "视图与显示",
+        "finder view options"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-connect-server",
+      "scope": "finder",
+      "title": "Connect to Server",
+      "keys": [
+        "⌘",
+        "K"
+      ],
+      "englishKeys": "Command + K",
+      "summary": "Open the panel for entering a network server address.",
+      "section": "Windows & Navigation",
+      "prerequisite": "Bring Finder to the front. You can just inspect the panel.",
+      "steps": [
+        "Bring Finder to the front. You can just inspect the panel.",
+        "Press Command + K.",
+        "The Connect to Server panel appears. Press Esc or Cancel to close it."
+      ],
+      "expectedResult": "The Connect to Server panel appears. Press Esc or Cancel to close it.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "You can learn this shortcut without entering credentials or connecting to a real server."
+      ],
+      "aliases": [
+        "连接服务器",
+        "窗口与导航",
+        "finder connect server"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-home",
+      "scope": "finder",
+      "title": "Open Home",
+      "keys": [
+        "⇧",
+        "⌘",
+        "H"
+      ],
+      "englishKeys": "Shift + Command + H",
+      "summary": "Go to the current account's home folder.",
+      "section": "Common Locations",
+      "prerequisite": "Bring Finder to the front.",
+      "steps": [
+        "Bring Finder to the front.",
+        "Press Shift + Command + H.",
+        "Finder opens the current account's home folder."
+      ],
+      "expectedResult": "Finder opens the current account's home folder.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "This navigates to a location without changing its files. Some locations depend on iCloud, hardware, or system settings."
+      ],
+      "aliases": [
+        "打开个人文件夹",
+        "常用位置",
+        "finder home"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-desktop",
+      "scope": "finder",
+      "title": "Open Desktop",
+      "keys": [
+        "⇧",
+        "⌘",
+        "D"
+      ],
+      "englishKeys": "Shift + Command + D",
+      "summary": "Go directly to the Desktop folder.",
+      "section": "Common Locations",
+      "prerequisite": "Bring Finder to the front.",
+      "steps": [
+        "Bring Finder to the front.",
+        "Press Shift + Command + D.",
+        "Finder opens the Desktop folder."
+      ],
+      "expectedResult": "Finder opens the Desktop folder.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "This navigates to a location without changing its files. Some locations depend on iCloud, hardware, or system settings."
+      ],
+      "aliases": [
+        "打开桌面文件夹",
+        "常用位置",
+        "finder desktop"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-downloads",
+      "scope": "finder",
+      "title": "Open Downloads",
+      "keys": [
+        "⌥",
+        "⌘",
+        "L"
+      ],
+      "englishKeys": "Option + Command + L",
+      "summary": "Go directly to the Downloads folder.",
+      "section": "Common Locations",
+      "prerequisite": "Bring Finder to the front.",
+      "steps": [
+        "Bring Finder to the front.",
+        "Press Option + Command + L.",
+        "Finder opens the Downloads folder."
+      ],
+      "expectedResult": "Finder opens the Downloads folder.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "This navigates to a location without changing its files. Some locations depend on iCloud, hardware, or system settings."
+      ],
+      "aliases": [
+        "打开下载文件夹",
+        "常用位置",
+        "finder downloads"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-documents",
+      "scope": "finder",
+      "title": "Open Documents",
+      "keys": [
+        "⇧",
+        "⌘",
+        "O"
+      ],
+      "englishKeys": "Shift + Command + O",
+      "summary": "Go directly to the Documents folder.",
+      "section": "Common Locations",
+      "prerequisite": "Bring Finder to the front.",
+      "steps": [
+        "Bring Finder to the front.",
+        "Press Shift + Command + O.",
+        "Finder opens the Documents folder."
+      ],
+      "expectedResult": "Finder opens the Documents folder.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "This navigates to a location without changing its files. Some locations depend on iCloud, hardware, or system settings."
+      ],
+      "aliases": [
+        "打开文稿文件夹",
+        "常用位置",
+        "finder documents"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-utilities",
+      "scope": "finder",
+      "title": "Open Utilities",
+      "keys": [
+        "⇧",
+        "⌘",
+        "U"
+      ],
+      "englishKeys": "Shift + Command + U",
+      "summary": "Go to the Utilities folder inside Applications.",
+      "section": "Common Locations",
+      "prerequisite": "Bring Finder to the front.",
+      "steps": [
+        "Bring Finder to the front.",
+        "Press Shift + Command + U.",
+        "Finder opens Applications/Utilities."
+      ],
+      "expectedResult": "Finder opens Applications/Utilities.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "This navigates to a location without changing its files. Some locations depend on iCloud, hardware, or system settings."
+      ],
+      "aliases": [
+        "打开实用工具文件夹",
+        "常用位置",
+        "finder utilities"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-icloud",
+      "scope": "finder",
+      "title": "Open iCloud Drive",
+      "keys": [
+        "⇧",
+        "⌘",
+        "I"
+      ],
+      "englishKeys": "Shift + Command + I",
+      "summary": "Go directly to iCloud Drive.",
+      "section": "Common Locations",
+      "prerequisite": "Bring Finder to the front.",
+      "steps": [
+        "Bring Finder to the front.",
+        "Press Shift + Command + I.",
+        "Finder opens iCloud Drive."
+      ],
+      "expectedResult": "Finder opens iCloud Drive.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "This navigates to a location without changing its files. Some locations depend on iCloud, hardware, or system settings."
+      ],
+      "aliases": [
+        "打开 iCloud 云盘",
+        "常用位置",
+        "finder icloud"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-recents",
+      "scope": "finder",
+      "title": "Open Recents",
+      "keys": [
+        "⇧",
+        "⌘",
+        "F"
+      ],
+      "englishKeys": "Shift + Command + F",
+      "summary": "View recently accessed or modified items.",
+      "section": "Common Locations",
+      "prerequisite": "Bring Finder to the front.",
+      "steps": [
+        "Bring Finder to the front.",
+        "Press Shift + Command + F.",
+        "Finder shows the Recents collection."
+      ],
+      "expectedResult": "Finder shows the Recents collection.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "This navigates to a location without changing its files. Some locations depend on iCloud, hardware, or system settings."
+      ],
+      "aliases": [
+        "打开最近使用",
+        "常用位置",
+        "finder recents"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-computer",
+      "scope": "finder",
+      "title": "Open Computer",
+      "keys": [
+        "⇧",
+        "⌘",
+        "C"
+      ],
+      "englishKeys": "Shift + Command + C",
+      "summary": "View your computer and connected storage devices.",
+      "section": "Common Locations",
+      "prerequisite": "Bring Finder to the front.",
+      "steps": [
+        "Bring Finder to the front.",
+        "Press Shift + Command + C.",
+        "Finder shows your computer and connected storage devices."
+      ],
+      "expectedResult": "Finder shows your computer and connected storage devices.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "This navigates to a location without changing its files. Some locations depend on iCloud, hardware, or system settings."
+      ],
+      "aliases": [
+        "打开电脑位置",
+        "常用位置",
+        "finder computer"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-airdrop",
+      "scope": "finder",
+      "title": "Open AirDrop",
+      "keys": [
+        "⇧",
+        "⌘",
+        "R"
+      ],
+      "englishKeys": "Shift + Command + R",
+      "summary": "Go directly to AirDrop.",
+      "section": "Common Locations",
+      "prerequisite": "Bring Finder to the front.",
+      "steps": [
+        "Bring Finder to the front.",
+        "Press Shift + Command + R.",
+        "Finder opens AirDrop."
+      ],
+      "expectedResult": "Finder opens AirDrop.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "This navigates to a location without changing its files. Some locations depend on iCloud, hardware, or system settings."
+      ],
+      "aliases": [
+        "打开隔空投送",
+        "常用位置",
+        "finder airdrop"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-new-tab",
+      "scope": "finder",
+      "title": "New Finder tab",
+      "keys": [
+        "⌘",
+        "T"
+      ],
+      "englishKeys": "Command + T",
+      "summary": "Add a tab to the current Finder window.",
+      "section": "Windows & Navigation",
+      "prerequisite": "Bring a normal Finder folder window to the front.",
+      "steps": [
+        "Bring a normal Finder folder window to the front.",
+        "Press Command + T.",
+        "A new tab appears in the current Finder window."
+      ],
+      "expectedResult": "A new tab appears in the current Finder window.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "A new tab is different from a new window. If the binding differs, use the one shown in Finder's File menu."
+      ],
+      "aliases": [
+        "新建 Finder 标签页",
+        "窗口与导航",
+        "finder new tab"
+      ],
+      "sourceIDs": [
+        "apple-keyboard-intro"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-close-window",
+      "scope": "finder",
+      "title": "Close Finder window or tab",
+      "keys": [
+        "⌘",
+        "W"
+      ],
+      "englishKeys": "Command + W",
+      "summary": "Close the current Finder tab or window.",
+      "section": "Windows & Navigation",
+      "prerequisite": "Open the dedicated practice folder and confirm Finder is in front.",
+      "steps": [
+        "Open the dedicated practice folder and confirm Finder is in front.",
+        "Press Command + W.",
+        "The current tab closes. If it was the last tab, the window closes too."
+      ],
+      "expectedResult": "The current tab closes. If it was the last tab, the window closes too.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "This does not delete any files. Click Finder in the Dock to open a window again."
+      ],
+      "aliases": [
+        "关闭 Finder 窗口或标签页",
+        "窗口与导航",
+        "finder close window"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-select-all",
+      "scope": "finder",
+      "title": "Select all items",
+      "keys": [
+        "⌘",
+        "A"
+      ],
+      "englishKeys": "Command + A",
+      "summary": "Select all items shown in the current Finder location.",
+      "section": "Files & Folders",
+      "prerequisite": "Open the dedicated practice folder containing only sample files.",
+      "steps": [
+        "Open the dedicated practice folder containing only sample files.",
+        "Press Command + A.",
+        "All selectable items in the folder are selected."
+      ],
+      "expectedResult": "All selectable items in the folder are selected.",
+      "windowsEquivalent": "Ctrl + A",
+      "practice": "observation",
+      "notes": [
+        "Click the file area first so you do not select text in Search or a filename field. Selection alone does not move or delete files."
+      ],
+      "aliases": [
+        "全选当前目录中的项目",
+        "文件与文件夹",
+        "finder select all"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "finder-toolbar",
+      "scope": "finder",
+      "title": "Show or hide the toolbar",
+      "keys": [
+        "⌥",
+        "⌘",
+        "T"
+      ],
+      "englishKeys": "Option + Command + T",
+      "summary": "Toggle the toolbar at the top of a Finder window.",
+      "section": "Views & Display",
+      "prerequisite": "Bring a Finder window with only one tab to the front.",
+      "steps": [
+        "Bring a Finder window with only one tab to the front.",
+        "Press Option + Command + T.",
+        "The toolbar hides or reappears. Press the shortcut again to switch back."
+      ],
+      "expectedResult": "The toolbar hides or reappears. Press the shortcut again to switch back.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "The official reference limits this command to a Finder window with one tab. Check the View menu for its current availability."
+      ],
+      "aliases": [
+        "显示或隐藏工具栏",
+        "视图与显示",
+        "finder toolbar"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-address",
+      "scope": "safari",
+      "title": "Focus the address bar",
+      "keys": [
+        "⌘",
+        "L"
+      ],
+      "englishKeys": "Command + L",
+      "summary": "Select the address bar to enter a URL or search term.",
+      "section": "Web Browsing",
+      "prerequisite": "Open the supplied Safari sample tab and bring Safari to the front.",
+      "steps": [
+        "Open the supplied Safari sample tab and bring Safari to the front.",
+        "Press Command + L.",
+        "The address bar receives focus and the current address is selected."
+      ],
+      "expectedResult": "The address bar receives focus and the current address is selected.",
+      "windowsEquivalent": "Ctrl + L",
+      "practice": "browserAddress",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "聚焦地址栏",
+        "浏览网页",
+        "网址",
+        "URL",
+        "智能搜索栏",
+        "safari address"
+      ],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-new-tab",
+      "scope": "safari",
+      "title": "New tab",
+      "keys": [
+        "⌘",
+        "T"
+      ],
+      "englishKeys": "Command + T",
+      "summary": "Add a tab to the current Safari window.",
+      "section": "Tabs & Windows",
+      "prerequisite": "Open the supplied Safari sample tab.",
+      "steps": [
+        "Open the supplied Safari sample tab.",
+        "Press Command + T.",
+        "A new tab appears and becomes active."
+      ],
+      "expectedResult": "A new tab appears and becomes active.",
+      "windowsEquivalent": "Ctrl + T",
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "新建标签页",
+        "标签页与窗口",
+        "safari new tab"
+      ],
+      "sourceIDs": [
+        "apple-web"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-new-window",
+      "scope": "safari",
+      "title": "New browser window",
+      "keys": [
+        "⌘",
+        "N"
+      ],
+      "englishKeys": "Command + N",
+      "summary": "Open another Safari window.",
+      "section": "Tabs & Windows",
+      "prerequisite": "Bring Safari to the front.",
+      "steps": [
+        "Bring Safari to the front.",
+        "Press Command + N.",
+        "A new Safari window appears; the original remains open."
+      ],
+      "expectedResult": "A new Safari window appears; the original remains open.",
+      "windowsEquivalent": null,
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "新建浏览器窗口",
+        "标签页与窗口",
+        "safari new window"
+      ],
+      "sourceIDs": [
+        "apple-web"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-close-tab",
+      "scope": "safari",
+      "title": "Close the current tab",
+      "keys": [
+        "⌘",
+        "W"
+      ],
+      "englishKeys": "Command + W",
+      "summary": "Close the active tab.",
+      "section": "Tabs & Windows",
+      "prerequisite": "Create a dedicated Safari window and work only with sample or blank tabs.",
+      "steps": [
+        "Create a dedicated Safari window and work only with sample or blank tabs.",
+        "Press Command + W.",
+        "The active tab closes. Closing the last tab may also close the window."
+      ],
+      "expectedResult": "The active tab closes. Closing the last tab may also close the window.",
+      "windowsEquivalent": "Ctrl + W",
+      "practice": "observation",
+      "notes": [
+        "If you close a page by mistake, press Shift + Command + T to reopen it. QuickKey stays open."
+      ],
+      "aliases": [
+        "关闭当前标签页",
+        "标签页与窗口",
+        "safari close tab"
+      ],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-reopen-tab",
+      "scope": "safari",
+      "title": "Reopen a closed tab",
+      "keys": [
+        "⇧",
+        "⌘",
+        "T"
+      ],
+      "englishKeys": "Shift + Command + T",
+      "summary": "Restore the most recently closed tab.",
+      "section": "Tabs & Windows",
+      "prerequisite": "Create a dedicated Safari window, then open and close a sample tab in it.",
+      "steps": [
+        "Create a dedicated Safari window, then open and close a sample tab in it.",
+        "Press Shift + Command + T.",
+        "The recently closed tab reappears."
+      ],
+      "expectedResult": "The recently closed tab reappears.",
+      "windowsEquivalent": "Ctrl + Shift + T",
+      "practice": "browserPage",
+      "notes": [
+        "This may also restore closed windows. Closed tabs in private browsing may not be recoverable.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "重新打开关闭的标签页",
+        "标签页与窗口",
+        "safari reopen tab"
+      ],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-next-tab",
+      "scope": "safari",
+      "title": "Next tab",
+      "keys": [
+        "⌃",
+        "Tab"
+      ],
+      "englishKeys": "Control + Tab",
+      "summary": "Switch to the next tab in order.",
+      "section": "Tabs & Windows",
+      "prerequisite": "Open at least two tabs in the window containing your Safari sample tab.",
+      "steps": [
+        "Open at least two tabs in the window containing your Safari sample tab.",
+        "Press Control + Tab.",
+        "The active tab moves forward by one."
+      ],
+      "expectedResult": "The active tab moves forward by one.",
+      "windowsEquivalent": "Ctrl + Tab",
+      "practice": "browserPage",
+      "notes": [
+        "Safari also supports Shift + Command + ]. This catalog uses Control + Tab as the primary shortcut.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "切换到下一个标签页",
+        "标签页与窗口",
+        "safari next tab"
+      ],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-previous-tab",
+      "scope": "safari",
+      "title": "Previous tab",
+      "keys": [
+        "⌃",
+        "⇧",
+        "Tab"
+      ],
+      "englishKeys": "Control + Shift + Tab",
+      "summary": "Switch to the previous tab in order.",
+      "section": "Tabs & Windows",
+      "prerequisite": "Open at least two tabs in the window containing your Safari sample tab.",
+      "steps": [
+        "Open at least two tabs in the window containing your Safari sample tab.",
+        "Press Control + Shift + Tab.",
+        "The active tab moves backward by one."
+      ],
+      "expectedResult": "The active tab moves backward by one.",
+      "windowsEquivalent": "Ctrl + Shift + Tab",
+      "practice": "browserPage",
+      "notes": [
+        "Safari also supports Shift + Command + [.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "切换到上一个标签页",
+        "标签页与窗口",
+        "safari previous tab"
+      ],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-last-tab",
+      "scope": "safari",
+      "title": "Last tab",
+      "keys": [
+        "⌘",
+        "9"
+      ],
+      "englishKeys": "Command + 9",
+      "summary": "Jump directly to the rightmost tab.",
+      "section": "Tabs & Windows",
+      "prerequisite": "Open several tabs in the sample window and select a tab near the left.",
+      "steps": [
+        "Open several tabs in the sample window and select a tab near the left.",
+        "Press Command + 9.",
+        "The rightmost tab becomes active."
+      ],
+      "expectedResult": "The rightmost tab becomes active.",
+      "windowsEquivalent": "Ctrl + 9",
+      "practice": "browserPage",
+      "notes": [
+        "Command + 1 through Command + 8 select the first eight tabs; Command + 9 selects the last tab.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "切换到最后一个标签页",
+        "标签页与窗口",
+        "safari last tab"
+      ],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-tab-overview",
+      "scope": "safari",
+      "title": "Show tab overview",
+      "keys": [
+        "⇧",
+        "⌘",
+        "\\"
+      ],
+      "englishKeys": "Shift + Command + \\",
+      "summary": "See an overview of tabs in the current window.",
+      "section": "Tabs & Windows",
+      "prerequisite": "Open several tabs in the window containing your Safari sample tab.",
+      "steps": [
+        "Open several tabs in the window containing your Safari sample tab.",
+        "Press Shift + Command + \\.",
+        "Tabs appear in an overview. Click one to return to it."
+      ],
+      "expectedResult": "Tabs appear in an overview. Click one to return to it.",
+      "windowsEquivalent": null,
+      "practice": "browserPage",
+      "notes": [
+        "The final key is a backslash (\\). Its position varies by keyboard layout.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "显示标签页概览",
+        "标签页与窗口",
+        "safari tab overview"
+      ],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-back",
+      "scope": "safari",
+      "title": "Go back a page",
+      "keys": [
+        "⌘",
+        "["
+      ],
+      "englishKeys": "Command + [",
+      "summary": "Return to the previous page in this tab's history.",
+      "section": "Web Browsing",
+      "prerequisite": "Visit two pages in the same Safari practice tab.",
+      "steps": [
+        "Visit two pages in the same Safari practice tab.",
+        "Press Command + [.",
+        "The tab displays the previous page."
+      ],
+      "expectedResult": "The tab displays the previous page.",
+      "windowsEquivalent": "Alt + Left Arrow",
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "返回上一个网页",
+        "浏览网页",
+        "safari back"
+      ],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-forward",
+      "scope": "safari",
+      "title": "Go forward a page",
+      "keys": [
+        "⌘",
+        "]"
+      ],
+      "englishKeys": "Command + ]",
+      "summary": "Revisit a page after going back.",
+      "section": "Web Browsing",
+      "prerequisite": "Visit two pages, then go back once.",
+      "steps": [
+        "Visit two pages, then go back once.",
+        "Press Command + ].",
+        "The tab displays the page you visited before going back."
+      ],
+      "expectedResult": "The tab displays the page you visited before going back.",
+      "windowsEquivalent": "Alt + Right Arrow",
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "前往下一个网页",
+        "浏览网页",
+        "safari forward"
+      ],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-reload",
+      "scope": "safari",
+      "title": "Reload the page",
+      "keys": [
+        "⌘",
+        "R"
+      ],
+      "englishKeys": "Command + R",
+      "summary": "Fetch the current page again.",
+      "section": "Web Browsing",
+      "prerequisite": "Open the Safari sample practice page.",
+      "steps": [
+        "Open the Safari sample practice page.",
+        "Press Command + R.",
+        "The current page reloads."
+      ],
+      "expectedResult": "The current page reloads.",
+      "windowsEquivalent": "Ctrl + R",
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "重新载入网页",
+        "浏览网页",
+        "刷新",
+        "重新加载",
+        "safari reload"
+      ],
+      "sourceIDs": [
+        "apple-mac"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-find",
+      "scope": "safari",
+      "title": "Find on a page",
+      "keys": [
+        "⌘",
+        "F"
+      ],
+      "englishKeys": "Command + F",
+      "summary": "Search for words on the current page.",
+      "section": "Web Browsing",
+      "prerequisite": "Open a Safari practice page containing text.",
+      "steps": [
+        "Open a Safari practice page containing text.",
+        "Press Command + F.",
+        "The Find bar appears. Enter a term to highlight matches."
+      ],
+      "expectedResult": "The Find bar appears. Enter a term to highlight matches.",
+      "windowsEquivalent": "Ctrl + F",
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "查找网页内容",
+        "浏览网页",
+        "safari find"
+      ],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-zoom-in",
+      "scope": "safari",
+      "title": "Zoom in",
+      "keys": [
+        "⌘",
+        "+"
+      ],
+      "englishKeys": "Command + +",
+      "summary": "Increase the display scale of the current website.",
+      "section": "Web Browsing",
+      "prerequisite": "Open the Safari practice page and keep focus out of input fields.",
+      "steps": [
+        "Open the Safari practice page and keep focus out of input fields.",
+        "Press Command + +.",
+        "The page content appears larger."
+      ],
+      "expectedResult": "The page content appears larger.",
+      "windowsEquivalent": "Ctrl + +",
+      "practice": "browserPage",
+      "notes": [
+        "Plus often shares a key with equals. Whether Shift is needed depends on the keyboard layout; check the View menu.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "放大网页",
+        "浏览网页",
+        "safari zoom in"
+      ],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-zoom-out",
+      "scope": "safari",
+      "title": "Zoom out",
+      "keys": [
+        "⌘",
+        "-"
+      ],
+      "englishKeys": "Command + -",
+      "summary": "Decrease the display scale of the current website.",
+      "section": "Web Browsing",
+      "prerequisite": "Open the Safari practice page and keep focus out of input fields.",
+      "steps": [
+        "Open the Safari practice page and keep focus out of input fields.",
+        "Press Command + -.",
+        "The page content appears smaller."
+      ],
+      "expectedResult": "The page content appears smaller.",
+      "windowsEquivalent": "Ctrl + -",
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "缩小网页",
+        "浏览网页",
+        "safari zoom out"
+      ],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-page-down",
+      "scope": "safari",
+      "title": "Scroll down a page",
+      "keys": [
+        "Space"
+      ],
+      "englishKeys": "Space",
+      "summary": "Scroll down by about one screen.",
+      "section": "Scrolling & Reading",
+      "prerequisite": "Click a blank area of a long page so no input field has focus.",
+      "steps": [
+        "Click a blank area of a long page so no input field has focus.",
+        "Press Space.",
+        "The page moves down by about one screen."
+      ],
+      "expectedResult": "The page moves down by about one screen.",
+      "windowsEquivalent": "Space",
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "向下滚动一屏",
+        "滚动与阅读",
+        "空格",
+        "向下翻页",
+        "safari page down"
+      ],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-page-up",
+      "scope": "safari",
+      "title": "Scroll up a page",
+      "keys": [
+        "⇧",
+        "Space"
+      ],
+      "englishKeys": "Shift + Space",
+      "summary": "Scroll up by about one screen.",
+      "section": "Scrolling & Reading",
+      "prerequisite": "Scroll down a long page, then click a blank area.",
+      "steps": [
+        "Scroll down a long page, then click a blank area.",
+        "Press Shift + Space.",
+        "The page moves up by about one screen."
+      ],
+      "expectedResult": "The page moves up by about one screen.",
+      "windowsEquivalent": "Shift + Space",
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "向上滚动一屏",
+        "滚动与阅读",
+        "safari page up"
+      ],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-page-top",
+      "scope": "safari",
+      "title": "Go to top of page",
+      "keys": [
+        "⌘",
+        "↑"
+      ],
+      "englishKeys": "Command + Up Arrow",
+      "summary": "Scroll directly to the top of the page.",
+      "section": "Scrolling & Reading",
+      "prerequisite": "Scroll down the practice page and keep focus on the page content.",
+      "steps": [
+        "Scroll down the practice page and keep focus on the page content.",
+        "Press Command + Up Arrow.",
+        "The page returns to the top."
+      ],
+      "expectedResult": "The page returns to the top.",
+      "windowsEquivalent": null,
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "回到网页顶部",
+        "滚动与阅读",
+        "safari page top"
+      ],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-page-bottom",
+      "scope": "safari",
+      "title": "Go to bottom of page",
+      "keys": [
+        "⌘",
+        "↓"
+      ],
+      "englishKeys": "Command + Down Arrow",
+      "summary": "Scroll directly to the bottom of the page.",
+      "section": "Scrolling & Reading",
+      "prerequisite": "Open a long practice page and keep focus on the page content.",
+      "steps": [
+        "Open a long practice page and keep focus on the page content.",
+        "Press Command + Down Arrow.",
+        "The page scrolls to the bottom."
+      ],
+      "expectedResult": "The page scrolls to the bottom.",
+      "windowsEquivalent": null,
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "前往网页底部",
+        "滚动与阅读",
+        "safari page bottom"
+      ],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-reading-list",
+      "scope": "safari",
+      "title": "Show or hide Reading List",
+      "keys": [
+        "⌃",
+        "⌘",
+        "2"
+      ],
+      "englishKeys": "Control + Command + 2",
+      "summary": "Open the sidebar of pages saved to read later.",
+      "section": "Scrolling & Reading",
+      "prerequisite": "Bring the window containing the Safari sample tab to the front.",
+      "steps": [
+        "Bring the window containing the Safari sample tab to the front.",
+        "Press Control + Command + 2.",
+        "The Reading List sidebar appears or disappears."
+      ],
+      "expectedResult": "The Reading List sidebar appears or disappears.",
+      "windowsEquivalent": null,
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "显示或隐藏阅读列表",
+        "滚动与阅读",
+        "safari reading list"
+      ],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-add-reading-list",
+      "scope": "safari",
+      "title": "Add to Reading List",
+      "keys": [
+        "⇧",
+        "⌘",
+        "D"
+      ],
+      "englishKeys": "Shift + Command + D",
+      "summary": "Save the current page to read later.",
+      "section": "Scrolling & Reading",
+      "prerequisite": "Open a sample page you are willing to add to Reading List.",
+      "steps": [
+        "Open a sample page you are willing to add to Reading List.",
+        "Press Shift + Command + D.",
+        "The page appears in Reading List."
+      ],
+      "expectedResult": "The page appears in Reading List.",
+      "windowsEquivalent": null,
+      "practice": "browserPage",
+      "notes": [
+        "This changes Safari's Reading List. Remove the sample entry from the sidebar after practice if you wish.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "添加到阅读列表",
+        "滚动与阅读",
+        "safari add reading list"
+      ],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-reader",
+      "scope": "safari",
+      "title": "Show Reader",
+      "keys": [
+        "⇧",
+        "⌘",
+        "R"
+      ],
+      "englishKeys": "Shift + Command + R",
+      "summary": "Read a supported article with simplified formatting.",
+      "section": "Scrolling & Reading",
+      "prerequisite": "Open an article in Safari that supports Reader.",
+      "steps": [
+        "Open an article in Safari that supports Reader.",
+        "Press Shift + Command + R.",
+        "The page enters Reader. Press Esc to exit."
+      ],
+      "expectedResult": "The page enters Reader. Press Esc to exit.",
+      "windowsEquivalent": null,
+      "practice": "browserPage",
+      "notes": [
+        "Not every page supports Reader. If it is unavailable, try an article with a clear main text section.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "打开阅读器",
+        "滚动与阅读",
+        "safari reader"
+      ],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-bookmarks-sidebar",
+      "scope": "safari",
+      "title": "Show or hide bookmarks sidebar",
+      "keys": [
+        "⌃",
+        "⌘",
+        "1"
+      ],
+      "englishKeys": "Control + Command + 1",
+      "summary": "View saved Safari bookmarks.",
+      "section": "Bookmarks & Settings",
+      "prerequisite": "Bring Safari to the front.",
+      "steps": [
+        "Bring Safari to the front.",
+        "Press Control + Command + 1.",
+        "The bookmarks sidebar appears or disappears."
+      ],
+      "expectedResult": "The bookmarks sidebar appears or disappears.",
+      "windowsEquivalent": null,
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "显示或隐藏书签边栏",
+        "书签与设置",
+        "safari bookmarks sidebar"
+      ],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-settings",
+      "scope": "safari",
+      "title": "Open Safari Settings",
+      "keys": [
+        "⌘",
+        ","
+      ],
+      "englishKeys": "Command + ,",
+      "summary": "View Safari's browsing, tab, and other settings.",
+      "section": "Bookmarks & Settings",
+      "prerequisite": "Bring Safari to the front and just open the settings window.",
+      "steps": [
+        "Bring Safari to the front and just open the settings window.",
+        "Press Command + ,.",
+        "Safari Settings opens. Close it to return to the page."
+      ],
+      "expectedResult": "Safari Settings opens. Close it to return to the page.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "You do not need to change any settings to observe this action."
+      ],
+      "aliases": [
+        "打开 Safari 设置",
+        "书签与设置",
+        "safari settings"
+      ],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-print",
+      "scope": "safari",
+      "title": "Print a page",
+      "keys": [
+        "⌘",
+        "P"
+      ],
+      "englishKeys": "Command + P",
+      "summary": "Preview printing options for the current page.",
+      "section": "Bookmarks & Settings",
+      "prerequisite": "Open a Safari sample page.",
+      "steps": [
+        "Open a Safari sample page.",
+        "Press Command + P.",
+        "The Print dialog appears. Cancel to return without printing."
+      ],
+      "expectedResult": "The Print dialog appears. Cancel to return without printing.",
+      "windowsEquivalent": "Ctrl + P",
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "打开网页打印面板",
+        "书签与设置",
+        "safari print"
+      ],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-bookmark",
+      "scope": "safari",
+      "title": "Bookmark this page",
+      "keys": [
+        "⌘",
+        "D"
+      ],
+      "englishKeys": "Command + D",
+      "summary": "Open the panel for saving the current page as a bookmark.",
+      "section": "Bookmarks & Settings",
+      "prerequisite": "Open the supplied Safari sample tab.",
+      "steps": [
+        "Open the supplied Safari sample tab.",
+        "Press Command + D.",
+        "The bookmark panel appears. Edit the name, save, or cancel."
+      ],
+      "expectedResult": "The bookmark panel appears. Edit the name, save, or cancel.",
+      "windowsEquivalent": null,
+      "practice": "browserPage",
+      "notes": [
+        "Cancel to avoid saving a bookmark. Remove any saved sample from the bookmarks sidebar afterward if you wish.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "为当前网页添加书签",
+        "书签与设置",
+        "safari bookmark"
+      ],
+      "sourceIDs": [
+        "apple-web"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-homepage",
+      "scope": "safari",
+      "title": "Go to the homepage",
+      "keys": [
+        "⇧",
+        "⌘",
+        "H"
+      ],
+      "englishKeys": "Shift + Command + H",
+      "summary": "Open the homepage configured in Safari Settings.",
+      "section": "Web Browsing",
+      "prerequisite": "Bring the Safari sample tab to the front and check that a homepage is set.",
+      "steps": [
+        "Bring the Safari sample tab to the front and check that a homepage is set.",
+        "Press Shift + Command + H.",
+        "The current tab displays Safari's configured homepage."
+      ],
+      "expectedResult": "The current tab displays Safari's configured homepage.",
+      "windowsEquivalent": null,
+      "practice": "browserPage",
+      "notes": [
+        "Safari Settings determines the homepage. Check its Homepage field if the expected page is not configured.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "前往主页",
+        "浏览网页",
+        "safari homepage"
+      ],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-numbered-tab",
+      "scope": "safari",
+      "title": "Select a tab (1–8)",
+      "keys": [
+        "⌘",
+        "1–8"
+      ],
+      "englishKeys": "Command + 1 through Command + 8",
+      "summary": "Use a number to select one of the first eight tabs.",
+      "section": "Tabs & Windows",
+      "prerequisite": "Create a dedicated Safari window and open at least two sample tabs.",
+      "steps": [
+        "Create a dedicated Safari window and open at least two sample tabs.",
+        "Press Command + 1 through Command + 8.",
+        "The tab at the corresponding numbered position becomes active."
+      ],
+      "expectedResult": "The tab at the corresponding numbered position becomes active.",
+      "windowsEquivalent": "Ctrl + 1 至 Ctrl + 8",
+      "practice": "browserPage",
+      "notes": [
+        "Numbers refer to tab positions in the window, not numbers in webpage titles.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "切换到指定标签页（1–8）",
+        "标签页与窗口",
+        "Command + 1",
+        "Command + 2",
+        "Command + 3",
+        "Command + 4",
+        "Command + 5",
+        "Command + 6",
+        "Command + 7",
+        "Command + 8",
+        "safari numbered tab"
+      ],
+      "sourceIDs": [
+        "apple-safari"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "safari-downloads",
+      "scope": "safari",
+      "title": "Show Downloads",
+      "keys": [
+        "⌥",
+        "⌘",
+        "L"
+      ],
+      "englishKeys": "Option + Command + L",
+      "summary": "View Safari's list of downloads.",
+      "section": "Bookmarks & Settings",
+      "prerequisite": "Bring Safari to the front. The list is easier to inspect if it contains existing downloads.",
+      "steps": [
+        "Bring Safari to the front. The list is easier to inspect if it contains existing downloads.",
+        "Press Option + Command + L.",
+        "The Downloads list opens from Safari's toolbar."
+      ],
+      "expectedResult": "The Downloads list opens from Safari's toolbar.",
+      "windowsEquivalent": null,
+      "practice": "browserPage",
+      "notes": [
+        "Availability and appearance may differ when there are no downloads. You do not need to download a new file for practice.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "打开下载列表",
+        "书签与设置",
+        "safari downloads"
+      ],
+      "sourceIDs": [
+        "apple-download-apps"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-address",
+      "scope": "chrome",
+      "title": "Focus the address bar",
+      "keys": [
+        "⌘",
+        "L"
+      ],
+      "englishKeys": "Command + L",
+      "summary": "Select the address bar to enter a URL or search term.",
+      "section": "Web Browsing",
+      "prerequisite": "Open the supplied Chrome sample tab and bring Chrome to the front.",
+      "steps": [
+        "Open the supplied Chrome sample tab and bring Chrome to the front.",
+        "Press Command + L.",
+        "The address bar receives focus and the current address is selected."
+      ],
+      "expectedResult": "The address bar receives focus and the current address is selected.",
+      "windowsEquivalent": "Ctrl + L",
+      "practice": "browserAddress",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "聚焦地址栏",
+        "浏览网页",
+        "网址",
+        "URL",
+        "地址栏",
+        "chrome address"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-new-window",
+      "scope": "chrome",
+      "title": "New browser window",
+      "keys": [
+        "⌘",
+        "N"
+      ],
+      "englishKeys": "Command + N",
+      "summary": "Open another Chrome window.",
+      "section": "Tabs & Windows",
+      "prerequisite": "Bring Chrome to the front.",
+      "steps": [
+        "Bring Chrome to the front.",
+        "Press Command + N.",
+        "A new Chrome window appears; the original remains open."
+      ],
+      "expectedResult": "A new Chrome window appears; the original remains open.",
+      "windowsEquivalent": "Ctrl + N",
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "新建浏览器窗口",
+        "标签页与窗口",
+        "chrome new window"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-new-tab",
+      "scope": "chrome",
+      "title": "New tab",
+      "keys": [
+        "⌘",
+        "T"
+      ],
+      "englishKeys": "Command + T",
+      "summary": "Add a tab to the current Chrome window.",
+      "section": "Tabs & Windows",
+      "prerequisite": "Open the supplied Chrome sample tab.",
+      "steps": [
+        "Open the supplied Chrome sample tab.",
+        "Press Command + T.",
+        "A new tab appears and becomes active."
+      ],
+      "expectedResult": "A new tab appears and becomes active.",
+      "windowsEquivalent": "Ctrl + T",
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "新建标签页",
+        "标签页与窗口",
+        "chrome new tab"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-incognito",
+      "scope": "chrome",
+      "title": "New Incognito window",
+      "keys": [
+        "⇧",
+        "⌘",
+        "N"
+      ],
+      "englishKeys": "Shift + Command + N",
+      "summary": "Open an Incognito window that does not retain local session history after the session ends.",
+      "section": "Tabs & Windows",
+      "prerequisite": "Bring Chrome to the front and read the explanation in the Incognito window.",
+      "steps": [
+        "Bring Chrome to the front and read the explanation in the Incognito window.",
+        "Press Shift + Command + N.",
+        "A separate window with the Incognito indicator appears."
+      ],
+      "expectedResult": "A separate window with the Incognito indicator appears.",
+      "windowsEquivalent": "Ctrl + Shift + N",
+      "practice": "observation",
+      "notes": [
+        "Incognito does not make you anonymous on the network. Close the practice Incognito window to return to your normal window."
+      ],
+      "aliases": [
+        "新建无痕浏览窗口",
+        "标签页与窗口",
+        "chrome incognito"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-close-tab",
+      "scope": "chrome",
+      "title": "Close the current tab",
+      "keys": [
+        "⌘",
+        "W"
+      ],
+      "englishKeys": "Command + W",
+      "summary": "Close the active tab or popup.",
+      "section": "Tabs & Windows",
+      "prerequisite": "Create a dedicated Chrome window and close only sample or blank tabs.",
+      "steps": [
+        "Create a dedicated Chrome window and close only sample or blank tabs.",
+        "Press Command + W.",
+        "The tab closes. Shift + Command + T can reopen it."
+      ],
+      "expectedResult": "The tab closes. Shift + Command + T can reopen it.",
+      "windowsEquivalent": "Ctrl + W",
+      "practice": "observation",
+      "notes": [
+        "Closing the last tab also closes its window. The main reference window stays open."
+      ],
+      "aliases": [
+        "关闭当前标签页",
+        "标签页与窗口",
+        "chrome close tab"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-reopen-tab",
+      "scope": "chrome",
+      "title": "Reopen a closed tab",
+      "keys": [
+        "⇧",
+        "⌘",
+        "T"
+      ],
+      "englishKeys": "Shift + Command + T",
+      "summary": "Restore recently closed tabs in the order they were closed.",
+      "section": "Tabs & Windows",
+      "prerequisite": "Open and close a sample tab in your practice window.",
+      "steps": [
+        "Open and close a sample tab in your practice window.",
+        "Press Shift + Command + T.",
+        "The recently closed tab reappears."
+      ],
+      "expectedResult": "The recently closed tab reappears.",
+      "windowsEquivalent": "Ctrl + Shift + T",
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "重新打开关闭的标签页",
+        "标签页与窗口",
+        "chrome reopen tab"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-next-tab",
+      "scope": "chrome",
+      "title": "Next tab",
+      "keys": [
+        "⌥",
+        "⌘",
+        "→"
+      ],
+      "englishKeys": "Option + Command + Right Arrow",
+      "summary": "Switch to the next open tab.",
+      "section": "Tabs & Windows",
+      "prerequisite": "Open at least two tabs in the window containing the Chrome sample tab.",
+      "steps": [
+        "Open at least two tabs in the window containing the Chrome sample tab.",
+        "Press Option + Command + Right Arrow.",
+        "The next tab to the right becomes active."
+      ],
+      "expectedResult": "The next tab to the right becomes active.",
+      "windowsEquivalent": "Ctrl + Tab",
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "切换到下一个标签页",
+        "标签页与窗口",
+        "chrome next tab"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-previous-tab",
+      "scope": "chrome",
+      "title": "Previous tab",
+      "keys": [
+        "⌥",
+        "⌘",
+        "←"
+      ],
+      "englishKeys": "Option + Command + Left Arrow",
+      "summary": "Switch to the previous open tab.",
+      "section": "Tabs & Windows",
+      "prerequisite": "Open at least two tabs in the window containing the Chrome sample tab.",
+      "steps": [
+        "Open at least two tabs in the window containing the Chrome sample tab.",
+        "Press Option + Command + Left Arrow.",
+        "The previous tab to the left becomes active."
+      ],
+      "expectedResult": "The previous tab to the left becomes active.",
+      "windowsEquivalent": "Ctrl + Shift + Tab",
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "切换到上一个标签页",
+        "标签页与窗口",
+        "chrome previous tab"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-last-tab",
+      "scope": "chrome",
+      "title": "Last tab",
+      "keys": [
+        "⌘",
+        "9"
+      ],
+      "englishKeys": "Command + 9",
+      "summary": "Select the rightmost tab directly.",
+      "section": "Tabs & Windows",
+      "prerequisite": "Open several tabs in the sample window and select one near the left.",
+      "steps": [
+        "Open several tabs in the sample window and select one near the left.",
+        "Press Command + 9.",
+        "The rightmost tab becomes active."
+      ],
+      "expectedResult": "The rightmost tab becomes active.",
+      "windowsEquivalent": "Ctrl + 9",
+      "practice": "browserPage",
+      "notes": [
+        "Command + 1 through Command + 8 select the first eight tabs; Command + 9 always selects the last tab.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "切换到最后一个标签页",
+        "标签页与窗口",
+        "chrome last tab"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-back",
+      "scope": "chrome",
+      "title": "Go back a page",
+      "keys": [
+        "⌘",
+        "["
+      ],
+      "englishKeys": "Command + [",
+      "summary": "Return to the previous page in this tab's history.",
+      "section": "Web Browsing",
+      "prerequisite": "Visit two pages in the same Chrome tab.",
+      "steps": [
+        "Visit two pages in the same Chrome tab.",
+        "Press Command + [.",
+        "The tab displays the previous page."
+      ],
+      "expectedResult": "The tab displays the previous page.",
+      "windowsEquivalent": "Alt + Left Arrow",
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "返回上一个网页",
+        "浏览网页",
+        "chrome back"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-forward",
+      "scope": "chrome",
+      "title": "Go forward a page",
+      "keys": [
+        "⌘",
+        "]"
+      ],
+      "englishKeys": "Command + ]",
+      "summary": "Revisit a page after going back.",
+      "section": "Web Browsing",
+      "prerequisite": "Visit two pages, then go back once.",
+      "steps": [
+        "Visit two pages, then go back once.",
+        "Press Command + ].",
+        "The page visited before going back is displayed."
+      ],
+      "expectedResult": "The page visited before going back is displayed.",
+      "windowsEquivalent": "Alt + Right Arrow",
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "前往下一个网页",
+        "浏览网页",
+        "chrome forward"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-find",
+      "scope": "chrome",
+      "title": "Find on a page",
+      "keys": [
+        "⌘",
+        "F"
+      ],
+      "englishKeys": "Command + F",
+      "summary": "Open Find to locate words on the page.",
+      "section": "Web Browsing",
+      "prerequisite": "Open the Chrome practice page containing repeated words.",
+      "steps": [
+        "Open the Chrome practice page containing repeated words.",
+        "Press Command + F.",
+        "The Find bar appears and matches are highlighted."
+      ],
+      "expectedResult": "The Find bar appears and matches are highlighted.",
+      "windowsEquivalent": "Ctrl + F",
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "查找网页内容",
+        "浏览网页",
+        "chrome find"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-find-next",
+      "scope": "chrome",
+      "title": "Find next match",
+      "keys": [
+        "⌘",
+        "G"
+      ],
+      "englishKeys": "Command + G",
+      "summary": "Jump to the next result of a page search.",
+      "section": "Web Browsing",
+      "prerequisite": "Press Command + F and search for a repeated word.",
+      "steps": [
+        "Press Command + F and search for a repeated word.",
+        "Press Command + G.",
+        "The next match is selected."
+      ],
+      "expectedResult": "The next match is selected.",
+      "windowsEquivalent": "Ctrl + G",
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "查找下一个匹配项",
+        "浏览网页",
+        "chrome find next"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-find-previous",
+      "scope": "chrome",
+      "title": "Find previous match",
+      "keys": [
+        "⇧",
+        "⌘",
+        "G"
+      ],
+      "englishKeys": "Shift + Command + G",
+      "summary": "Jump to the previous result of a page search.",
+      "section": "Web Browsing",
+      "prerequisite": "Search the page for a repeated word.",
+      "steps": [
+        "Search the page for a repeated word.",
+        "Press Shift + Command + G.",
+        "The previous match is selected."
+      ],
+      "expectedResult": "The previous match is selected.",
+      "windowsEquivalent": "Ctrl + Shift + G",
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "查找上一个匹配项",
+        "浏览网页",
+        "chrome find previous"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-hard-reload",
+      "scope": "chrome",
+      "title": "Reload without cache",
+      "keys": [
+        "⇧",
+        "⌘",
+        "R"
+      ],
+      "englishKeys": "Shift + Command + R",
+      "summary": "Fetch the page again, ignoring cached content.",
+      "section": "Web Browsing",
+      "prerequisite": "Open the supplied sample tab in Chrome.",
+      "steps": [
+        "Open the supplied sample tab in Chrome.",
+        "Press Shift + Command + R.",
+        "The page starts a fresh load. A static page may look unchanged."
+      ],
+      "expectedResult": "The page starts a fresh load. A static page may look unchanged.",
+      "windowsEquivalent": "Ctrl + Shift + R",
+      "practice": "browserPage",
+      "notes": [
+        "An unchanged page can still have reloaded. Watch the loading indicator; QuickKey does not automatically judge this result.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "忽略缓存重新加载",
+        "浏览网页",
+        "强制刷新",
+        "刷新",
+        "重新加载",
+        "chrome hard reload"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-bookmark",
+      "scope": "chrome",
+      "title": "Bookmark this page",
+      "keys": [
+        "⌘",
+        "D"
+      ],
+      "englishKeys": "Command + D",
+      "summary": "Open the dialog for saving the current page as a bookmark.",
+      "section": "Bookmarks & Settings",
+      "prerequisite": "Open a sample page. You can cancel without saving.",
+      "steps": [
+        "Open a sample page. You can cancel without saving.",
+        "Press Command + D.",
+        "The bookmark dialog appears with name and location options."
+      ],
+      "expectedResult": "The bookmark dialog appears with name and location options.",
+      "windowsEquivalent": "Ctrl + D",
+      "practice": "browserPage",
+      "notes": [
+        "Cancel to avoid saving. You can remove any saved practice bookmark in Bookmark Manager afterward.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "为当前网页添加书签",
+        "书签与设置",
+        "chrome bookmark"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-bookmarks-bar",
+      "scope": "chrome",
+      "title": "Show or hide the bookmarks bar",
+      "keys": [
+        "⇧",
+        "⌘",
+        "B"
+      ],
+      "englishKeys": "Shift + Command + B",
+      "summary": "Toggle the bookmarks bar below the address bar.",
+      "section": "Bookmarks & Settings",
+      "prerequisite": "Bring the window containing the Chrome sample tab to the front.",
+      "steps": [
+        "Bring the window containing the Chrome sample tab to the front.",
+        "Press Shift + Command + B.",
+        "The bookmarks bar appears or disappears. Press again to switch back."
+      ],
+      "expectedResult": "The bookmarks bar appears or disappears. Press again to switch back.",
+      "windowsEquivalent": "Ctrl + Shift + B",
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "显示或隐藏书签栏",
+        "书签与设置",
+        "chrome bookmarks bar"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-bookmark-manager",
+      "scope": "chrome",
+      "title": "Open Bookmark Manager",
+      "keys": [
+        "⌥",
+        "⌘",
+        "B"
+      ],
+      "englishKeys": "Option + Command + B",
+      "summary": "View and organize bookmarks on a dedicated page.",
+      "section": "Bookmarks & Settings",
+      "prerequisite": "Bring Chrome to the front.",
+      "steps": [
+        "Bring Chrome to the front.",
+        "Press Option + Command + B.",
+        "Bookmark Manager opens in a tab."
+      ],
+      "expectedResult": "Bookmark Manager opens in a tab.",
+      "windowsEquivalent": "Ctrl + Shift + O",
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "打开书签管理器",
+        "书签与设置",
+        "chrome bookmark manager"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-history",
+      "scope": "chrome",
+      "title": "Open History",
+      "keys": [
+        "⌘",
+        "Y"
+      ],
+      "englishKeys": "Command + Y",
+      "summary": "View Chrome's browsing history.",
+      "section": "Bookmarks & Settings",
+      "prerequisite": "Bring Chrome to the front. You do not need to clear history.",
+      "steps": [
+        "Bring Chrome to the front. You do not need to clear history.",
+        "Press Command + Y.",
+        "The History tab opens."
+      ],
+      "expectedResult": "The History tab opens.",
+      "windowsEquivalent": "Ctrl + H",
+      "practice": "browserPage",
+      "notes": [
+        "This only opens History. It does not clear any browsing records.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "打开浏览历史",
+        "书签与设置",
+        "chrome history"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-downloads",
+      "scope": "chrome",
+      "title": "Open Downloads",
+      "keys": [
+        "⇧",
+        "⌘",
+        "J"
+      ],
+      "englishKeys": "Shift + Command + J",
+      "summary": "View downloads and their status.",
+      "section": "Bookmarks & Settings",
+      "prerequisite": "Bring Chrome to the front.",
+      "steps": [
+        "Bring Chrome to the front.",
+        "Press Shift + Command + J.",
+        "The Downloads tab opens."
+      ],
+      "expectedResult": "The Downloads tab opens.",
+      "windowsEquivalent": "Ctrl + J",
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "打开下载记录",
+        "书签与设置",
+        "chrome downloads"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-settings",
+      "scope": "chrome",
+      "title": "Open Chrome Settings",
+      "keys": [
+        "⌘",
+        ","
+      ],
+      "englishKeys": "Command + ,",
+      "summary": "Open browser settings in a tab.",
+      "section": "Bookmarks & Settings",
+      "prerequisite": "Bring Chrome to the front and just inspect the settings page.",
+      "steps": [
+        "Bring Chrome to the front and just inspect the settings page.",
+        "Press Command + ,.",
+        "The Settings tab opens."
+      ],
+      "expectedResult": "The Settings tab opens.",
+      "windowsEquivalent": null,
+      "practice": "observation",
+      "notes": [
+        "You do not need to change account, privacy, or sync settings for this exercise."
+      ],
+      "aliases": [
+        "打开 Chrome 设置",
+        "书签与设置",
+        "chrome settings"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-print",
+      "scope": "chrome",
+      "title": "Print a page",
+      "keys": [
+        "⌘",
+        "P"
+      ],
+      "englishKeys": "Command + P",
+      "summary": "View print preview and options for the current page.",
+      "section": "Web Browsing",
+      "prerequisite": "Open a Chrome sample page.",
+      "steps": [
+        "Open a Chrome sample page.",
+        "Press Command + P.",
+        "Print preview appears. Cancel to return without printing."
+      ],
+      "expectedResult": "Print preview appears. Cancel to return without printing.",
+      "windowsEquivalent": "Ctrl + P",
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "打开网页打印面板",
+        "浏览网页",
+        "chrome print"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-save-page",
+      "scope": "chrome",
+      "title": "Save the page",
+      "keys": [
+        "⌘",
+        "S"
+      ],
+      "englishKeys": "Command + S",
+      "summary": "Open the dialog for saving the current page locally.",
+      "section": "Web Browsing",
+      "prerequisite": "Open the Chrome practice page and use the dedicated practice folder as the save location.",
+      "steps": [
+        "Open the Chrome practice page and use the dedicated practice folder as the save location.",
+        "Press Command + S.",
+        "The Save dialog appears. Confirm or cancel."
+      ],
+      "expectedResult": "The Save dialog appears. Confirm or cancel.",
+      "windowsEquivalent": "Ctrl + S",
+      "practice": "browserPage",
+      "notes": [
+        "The page is saved only after you confirm the dialog. Canceling is enough to observe this shortcut.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "保存网页",
+        "浏览网页",
+        "chrome save page"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-zoom-in",
+      "scope": "chrome",
+      "title": "Zoom in",
+      "keys": [
+        "⌘",
+        "+"
+      ],
+      "englishKeys": "Command + +",
+      "summary": "Increase the display scale of the current page.",
+      "section": "Zoom & Scroll",
+      "prerequisite": "Click a blank area of the practice page so no input field has focus.",
+      "steps": [
+        "Click a blank area of the practice page so no input field has focus.",
+        "Press Command + +.",
+        "The page appears larger."
+      ],
+      "expectedResult": "The page appears larger.",
+      "windowsEquivalent": "Ctrl + +",
+      "practice": "browserPage",
+      "notes": [
+        "The plus key may need Shift, depending on the keyboard layout. Check Chrome's menu for the actual binding.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "放大网页",
+        "缩放与滚动",
+        "chrome zoom in"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-zoom-out",
+      "scope": "chrome",
+      "title": "Zoom out",
+      "keys": [
+        "⌘",
+        "-"
+      ],
+      "englishKeys": "Command + -",
+      "summary": "Decrease the display scale of the current page.",
+      "section": "Zoom & Scroll",
+      "prerequisite": "Bring the Chrome practice page to the front.",
+      "steps": [
+        "Bring the Chrome practice page to the front.",
+        "Press Command + -.",
+        "The page appears smaller."
+      ],
+      "expectedResult": "The page appears smaller.",
+      "windowsEquivalent": "Ctrl + -",
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "缩小网页",
+        "缩放与滚动",
+        "chrome zoom out"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-zoom-reset",
+      "scope": "chrome",
+      "title": "Reset zoom",
+      "keys": [
+        "⌘",
+        "0"
+      ],
+      "englishKeys": "Command + 0",
+      "summary": "Restore the website's default display scale.",
+      "section": "Zoom & Scroll",
+      "prerequisite": "Zoom in or out on the Chrome practice page first.",
+      "steps": [
+        "Zoom in or out on the Chrome practice page first.",
+        "Press Command + 0.",
+        "The page returns to its default zoom level."
+      ],
+      "expectedResult": "The page returns to its default zoom level.",
+      "windowsEquivalent": "Ctrl + 0",
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "恢复默认缩放",
+        "缩放与滚动",
+        "chrome zoom reset"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-page-down",
+      "scope": "chrome",
+      "title": "Scroll down a page",
+      "keys": [
+        "Space"
+      ],
+      "englishKeys": "Space",
+      "summary": "Browse down by about one screen.",
+      "section": "Zoom & Scroll",
+      "prerequisite": "Open a long practice page and click a blank area.",
+      "steps": [
+        "Open a long practice page and click a blank area.",
+        "Press Space.",
+        "The page moves down by about one screen."
+      ],
+      "expectedResult": "The page moves down by about one screen.",
+      "windowsEquivalent": "Space",
+      "practice": "browserPage",
+      "notes": [
+        "Space types a space when an input field has focus. Click the page body or a blank area first.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "向下滚动一屏",
+        "缩放与滚动",
+        "chrome page down"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-page-up",
+      "scope": "chrome",
+      "title": "Scroll up a page",
+      "keys": [
+        "⇧",
+        "Space"
+      ],
+      "englishKeys": "Shift + Space",
+      "summary": "Browse up by about one screen.",
+      "section": "Zoom & Scroll",
+      "prerequisite": "Scroll down a long practice page and keep focus out of input fields.",
+      "steps": [
+        "Scroll down a long practice page and keep focus out of input fields.",
+        "Press Shift + Space.",
+        "The page moves up by about one screen."
+      ],
+      "expectedResult": "The page moves up by about one screen.",
+      "windowsEquivalent": "Shift + Space",
+      "practice": "browserPage",
+      "notes": [
+        "If the expected result does not appear, check the active app and keyboard focus, then inspect the shortcut shown in its menu bar.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "向上滚动一屏",
+        "缩放与滚动",
+        "chrome page up"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-reload",
+      "scope": "chrome",
+      "title": "Reload the page",
+      "keys": [
+        "⌘",
+        "R"
+      ],
+      "englishKeys": "Command + R",
+      "summary": "Read the page in the current tab again.",
+      "section": "Web Browsing",
+      "prerequisite": "Open the supplied sample tab in Chrome.",
+      "steps": [
+        "Open the supplied sample tab in Chrome.",
+        "Press Command + R.",
+        "The page reloads; a loading indicator may briefly appear."
+      ],
+      "expectedResult": "The page reloads; a loading indicator may briefly appear.",
+      "windowsEquivalent": "Ctrl + R",
+      "practice": "browserPage",
+      "notes": [
+        "A static page may look unchanged after reloading. Observe the tab's actual loading state.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "重新加载网页",
+        "浏览网页",
+        "刷新",
+        "重新载入",
+        "chrome reload"
+      ],
+      "sourceIDs": [
+        "google-devtools"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-developer-tools",
+      "scope": "chrome",
+      "title": "Open Developer Tools",
+      "keys": [
+        "⌥",
+        "⌘",
+        "I"
+      ],
+      "englishKeys": "Option + Command + I",
+      "summary": "Open the browser's page inspection tools.",
+      "section": "Development",
+      "prerequisite": "Open the Chrome practice page and just inspect the panel.",
+      "steps": [
+        "Open the Chrome practice page and just inspect the panel.",
+        "Press Option + Command + I.",
+        "Developer Tools appears. Use its close button to dismiss it."
+      ],
+      "expectedResult": "Developer Tools appears. Use its close button to dismiss it.",
+      "windowsEquivalent": "Ctrl + Shift + I 或 F12",
+      "practice": "browserPage",
+      "notes": [
+        "This opens the last-used Developer Tools panel. You do not need to enter or run code in its console.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "打开开发者工具",
+        "开发与检查",
+        "chrome developer tools"
+      ],
+      "sourceIDs": [
+        "google-devtools"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-close-window",
+      "scope": "chrome",
+      "title": "Close the Chrome window",
+      "keys": [
+        "⇧",
+        "⌘",
+        "W"
+      ],
+      "englishKeys": "Shift + Command + W",
+      "summary": "Close the current Chrome window and its tabs.",
+      "section": "Tabs & Windows",
+      "prerequisite": "Create a dedicated Chrome window containing only blank or sample tabs.",
+      "steps": [
+        "Create a dedicated Chrome window containing only blank or sample tabs.",
+        "Press Shift + Command + W.",
+        "That window closes; other windows and QuickKey remain open."
+      ],
+      "expectedResult": "That window closes; other windows and QuickKey remain open.",
+      "windowsEquivalent": "Ctrl + Shift + W",
+      "practice": "observation",
+      "notes": [
+        "Check the window's tabs before closing it so you do not close your working pages. Click Chrome in the Dock to return afterward."
+      ],
+      "aliases": [
+        "关闭当前 Chrome 窗口",
+        "标签页与窗口",
+        "chrome close window"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    },
+    {
+      "id": "chrome-numbered-tab",
+      "scope": "chrome",
+      "title": "Select a tab (1–8)",
+      "keys": [
+        "⌘",
+        "1–8"
+      ],
+      "englishKeys": "Command + 1 through Command + 8",
+      "summary": "Use a number to select one of the first eight open tabs.",
+      "section": "Tabs & Windows",
+      "prerequisite": "Create a dedicated Chrome window and open at least two sample tabs.",
+      "steps": [
+        "Create a dedicated Chrome window and open at least two sample tabs.",
+        "Press Command + 1 through Command + 8.",
+        "The tab at the corresponding numbered position becomes active."
+      ],
+      "expectedResult": "The tab at the corresponding numbered position becomes active.",
+      "windowsEquivalent": "Ctrl + 1 至 Ctrl + 8",
+      "practice": "browserPage",
+      "notes": [
+        "Count tab positions starting from the leftmost tab in the window.",
+        "The browser may open the sample tab in an existing window. Create a dedicated browser window manually to isolate practice."
+      ],
+      "aliases": [
+        "切换到指定标签页（1–8）",
+        "标签页与窗口",
+        "Command + 1",
+        "Command + 2",
+        "Command + 3",
+        "Command + 4",
+        "Command + 5",
+        "Command + 6",
+        "Command + 7",
+        "Command + 8",
+        "chrome numbered tab"
+      ],
+      "sourceIDs": [
+        "google-chrome"
+      ],
+      "customizable": false
+    }
+  ]
+}

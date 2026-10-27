@@ -18,7 +18,8 @@ def main():
         resources.mkdir(parents=True)
         with (bundle / "Contents" / "Info.plist").open("wb") as file:
             plistlib.dump({"CFBundleIdentifier": "local.quickkey.corechecks", "CFBundlePackageType": "BNDL"}, file)
-        shutil.copyfile(project / "Sources/ShortcutCore/Resources/shortcuts.json", resources / "shortcuts.json")
+        for resource in (project / "Sources/ShortcutCore/Resources").glob("*.json"):
+            shutil.copyfile(resource, resources / resource.name)
         shim = work / "ResourceBundle.swift"
         shim.write_text('''import Foundation
 extension Bundle {

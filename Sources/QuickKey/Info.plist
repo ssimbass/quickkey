@@ -3,13 +3,15 @@
 <plist version="1.0">
 <dict>
     <key>CFBundleName</key><string>QuickKey</string>
-    <key>CFBundleDisplayName</key><string>快捷</string>
+    <key>CFBundleDisplayName</key><string>QuickKey</string>
     <key>CFBundleIdentifier</key><string>local.quickkey.app</string>
     <key>CFBundleExecutable</key><string>QuickKey</string>
     <key>CFBundlePackageType</key><string>APPL</string>
     <key>CFBundleIconFile</key><string>QuickKey.icns</string>
-    <key>CFBundleShortVersionString</key><string>0.3.0</string>
-    <key>CFBundleVersion</key><string>3</string>
+    <key>CFBundleShortVersionString</key><string>0.4.0</string>
+    <key>CFBundleVersion</key><string>4</string>
+    <key>CFBundleDevelopmentRegion</key><string>en</string>
+    <key>CFBundleLocalizations</key><array><string>en</string><string>zh-Hans</string></array>
     <key>LSMinimumSystemVersion</key><string>14.0</string>
     <key>NSHighResolutionCapable</key><true/>
     <key>NSSupportsAutomaticTermination</key><false/>

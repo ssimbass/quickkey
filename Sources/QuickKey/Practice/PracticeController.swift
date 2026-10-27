@@ -12,7 +12,7 @@ enum PracticeStatus: Equatable {
 
     var message: String {
         switch self {
-        case .idle: "准备好环境后，再开始动手练习。"
+        case .idle: L10n.text("准备好环境后，再开始动手练习。")
         case let .ready(message), let .success(message), let .failure(message): message
         }
     }
@@ -78,7 +78,7 @@ final class PracticeController: NSObject, ObservableObject, NSWindowDelegate {
             switch shortcut.practice {
             case .textEditing:
                 isPrepared = true
-                status = .ready("等待文本操作。")
+                status = .ready(L10n.text("等待文本操作。"))
             case .minimizeWindow, .closeWindow, .hideApp:
                 preparePracticeWindow(for: shortcut)
             case .newFolder, .renameFile, .duplicateFile, .trashFile, .quickLook, .fileInfo, .openFile:
@@ -92,7 +92,7 @@ final class PracticeController: NSObject, ObservableObject, NSWindowDelegate {
                     try prepareBrowser(for: shortcut)
                 } else {
                     isPrepared = true
-                    status = .ready("观察系统或目标应用的响应。")
+                    status = .ready(L10n.text("观察系统或目标应用的响应。"))
                 }
             }
             let opensBrowser = shortcut.practice == .browserAddress || shortcut.practice == .browserPage
@@ -103,7 +103,7 @@ final class PracticeController: NSObject, ObservableObject, NSWindowDelegate {
         } catch {
             isPreparing = false
             isPrepared = false
-            status = .failure("准备练习失败：\(error.localizedDescription)")
+            status = .failure(L10n.format("准备练习失败：{0}", String(describing: error.localizedDescription)))
         }
     }
 
@@ -139,10 +139,10 @@ final class PracticeController: NSObject, ObservableObject, NSWindowDelegate {
 
     func confirmObservation(_ shortcut: Shortcut) {
         guard activeShortcutID == shortcut.id else {
-            status = .failure("请先为当前快捷键准备练习环境。")
+            status = .failure(L10n.text("请先为当前快捷键准备练习环境。"))
             return
         }
-        status = .success("已由你确认「\(shortcut.title)」的实际效果；此结果采用手动确认。")
+        status = .success(L10n.format("已由你确认「{0}」的实际效果；此结果采用手动确认。", String(describing: shortcut.title)))
     }
 
     func reportTextResult(_ message: String, success: Bool) {
@@ -218,14 +218,14 @@ final class PracticeController: NSObject, ObservableObject, NSWindowDelegate {
     private func prepareFinder(for shortcut: Shortcut) throws {
         let directory = try makeSessionDirectory()
         try FileManager.default.createDirectory(
-            at: directory.appendingPathComponent("目标文件夹", isDirectory: true),
+            at: directory.appendingPathComponent(L10n.text("目标文件夹"), isDirectory: true),
             withIntermediateDirectories: false
         )
-        let sample = directory.appendingPathComponent("练习笔记.txt")
-        try "这是快捷键练习样例。可以在本目录中重命名、制作副本或移到废纸篓。\n原有练习内容会保留，重新准备会新建独立目录。\n"
+        let sample = directory.appendingPathComponent(L10n.text("练习笔记.txt"))
+        try L10n.text("这是快捷键练习样例。可以在本目录中重命名、制作副本或移到废纸篓。\n原有练习内容会保留，重新准备会新建独立目录。\n")
             .write(to: sample, atomically: true, encoding: .utf8)
-        try "周末计划\n1. 学会一个常用快捷键\n2. 在真实 Finder 中亲手操作\n"
-            .write(to: directory.appendingPathComponent("周末计划.txt"), atomically: true, encoding: .utf8)
+        try L10n.text("周末计划\n1. 学会一个常用快捷键\n2. 在真实 Finder 中亲手操作\n")
+            .write(to: directory.appendingPathComponent(L10n.text("周末计划.txt")), atomically: true, encoding: .utf8)
         sampleURL = sample
         sampleBookmark = try? sample.bookmarkData(options: .minimalBookmark, includingResourceValuesForKeys: nil, relativeTo: nil)
         baseline = try FileSnapshot.read(directory)
@@ -236,24 +236,24 @@ final class PracticeController: NSObject, ObservableObject, NSWindowDelegate {
                 NSWorkspace.shared.activateFileViewerSelecting([sample])
             } else {
                 guard NSWorkspace.shared.open(directory) else {
-                    throw PracticeError.cannotOpen("Finder 练习目录")
+                    throw PracticeError.cannotOpen(L10n.text("Finder 练习目录"))
                 }
             }
         }
         switch shortcut.practice {
         case .newFolder:
-            status = .ready("等待练习目录出现新文件夹。")
+            status = .ready(L10n.text("等待练习目录出现新文件夹。"))
         case .renameFile:
-            status = .ready("等待「练习笔记.txt」名称改变。")
+            status = .ready(L10n.text("等待「练习笔记.txt」名称改变。"))
         case .duplicateFile:
-            status = .ready("等待样例文件出现副本。")
+            status = .ready(L10n.text("等待样例文件出现副本。"))
         case .trashFile:
-            status = .ready("样例文件已选中。")
+            status = .ready(L10n.text("样例文件已选中。"))
         default:
-            status = .ready("练习文件已选中。")
+            status = .ready(L10n.text("练习文件已选中。"))
         }
         if !opensExternalApplications {
-            status = .ready("已创建真实练习目录与样例；集成检查模式未启动 Finder，文件监视已就绪。")
+            status = .ready(L10n.text("已创建真实练习目录与样例；集成检查模式未启动 Finder，文件监视已就绪。"))
         }
         if [.newFolder, .renameFile, .duplicateFile, .trashFile].contains(shortcut.practice) {
             startDirectoryMonitor(for: shortcut, directory: directory)
@@ -270,7 +270,7 @@ final class PracticeController: NSObject, ObservableObject, NSWindowDelegate {
                     let current = try FileSnapshot.read(directory)
                     self.inspectChanges(current, for: shortcut)
                 } catch {
-                    self.status = .failure("练习目录暂时无法读取：\(error.localizedDescription)。原练习内容已保留，可以重新准备。")
+                    self.status = .failure(L10n.format("练习目录暂时无法读取：{0}。原练习内容已保留，可以重新准备。", String(describing: error.localizedDescription)))
                     return
                 }
             }
@@ -285,17 +285,17 @@ final class PracticeController: NSObject, ObservableObject, NSWindowDelegate {
             let target = folders.first(where: { $0.fileID == detectedFileID }) ?? folders.first
             if let target {
                 detectedFileID = target.fileID
-                status = .success("已在真实练习目录中检测到新文件夹「\(target.name)」。")
+                status = .success(L10n.format("已在真实练习目录中检测到新文件夹「{0}」。", String(describing: target.name)))
             }
         case .renameFile:
             guard let original = baseline.first(where: { $0.name == sampleURL?.lastPathComponent }),
                   let renamed = current.first(where: { $0.fileID == original.fileID }), renamed.name != original.name else { return }
-            status = .success("已检测到样例文件从「\(original.name)」重命名为「\(renamed.name)」。")
+            status = .success(L10n.format("已检测到样例文件从「{0}」重命名为「{1}」。", String(describing: original.name), String(describing: renamed.name)))
         case .duplicateFile:
             guard let sampleURL, let originalData = try? Data(contentsOf: sampleURL) else { return }
             let addedFiles = current.filter { !$0.isDirectory && !originalIDs.contains($0.fileID) }
             if let duplicate = addedFiles.first(where: { (try? Data(contentsOf: $0.url)) == originalData }) {
-                status = .success("已在真实练习目录中检测到内容相同的副本「\(duplicate.name)」。")
+                status = .success(L10n.format("已在真实练习目录中检测到内容相同的副本「{0}」。", String(describing: duplicate.name)))
             }
         case .trashFile:
             guard let sampleURL,
@@ -310,12 +310,12 @@ final class PracticeController: NSObject, ObservableObject, NSWindowDelegate {
                                           options: [.withoutUI, .withoutMounting], relativeTo: nil,
                                           bookmarkDataIsStale: &stale),
                    resolved.pathComponents.contains(where: { $0 == ".Trash" || $0 == ".Trashes" }) {
-                    status = .success("已检测到专用样例文件移入废纸篓。可以在废纸篓中找到「\(resolved.lastPathComponent)」。")
+                    status = .success(L10n.format("已检测到专用样例文件移入废纸篓。可以在废纸篓中找到「{0}」。", String(describing: resolved.lastPathComponent)))
                     return
                 }
             }
             if !status.isSuccess {
-                status = .ready("样例文件已离开练习目录；请查看废纸篓。")
+                status = .ready(L10n.text("样例文件已离开练习目录；请查看废纸篓。"))
             }
         default: break
         }
@@ -327,7 +327,7 @@ final class PracticeController: NSObject, ObservableObject, NSWindowDelegate {
             styleMask: [.titled, .closable, .miniaturizable, .resizable], backing: .buffered, defer: false
         )
         window.identifier = NSUserInterfaceItemIdentifier("QuickKey.PracticeWindow")
-        window.title = "快捷 · 独立练习窗口"
+        window.title = L10n.text("快捷 · 独立练习窗口")
         window.isReleasedWhenClosed = false
         window.delegate = self
         window.contentView = NSHostingView(rootView: PracticeWindowView(shortcut: shortcut))
@@ -335,8 +335,8 @@ final class PracticeController: NSObject, ObservableObject, NSWindowDelegate {
         practiceWindow = window
         isPrepared = true
         status = .ready(shortcut.practice == .hideApp
-            ? "练习窗口已打开。隐藏会同时隐藏本应用的教学窗口；点击 Dock 中的“快捷”图标可以返回。"
-            : "独立练习窗口已打开。请亲手按 \(shortcut.englishKeys)，教学主窗口会保留。")
+            ? L10n.text("练习窗口已打开。隐藏会同时隐藏本应用的教学窗口；点击 Dock 中的“快捷”图标可以返回。")
+            : L10n.format("独立练习窗口已打开。请亲手按 {0}，教学主窗口会保留。", String(describing: shortcut.englishKeys)))
         if shortcut.practice == .hideApp {
             let session = generation
             hideObserver = NotificationCenter.default.addObserver(
@@ -344,7 +344,7 @@ final class PracticeController: NSObject, ObservableObject, NSWindowDelegate {
             ) { [weak self] _ in
                 MainActor.assumeIsolated {
                     guard let self, self.generation == session else { return }
-                    self.status = .success("已检测到“快捷”应用实际隐藏。点击 Dock 中的应用图标即可返回教学页。")
+                    self.status = .success(L10n.text("已检测到“快捷”应用实际隐藏。点击 Dock 中的应用图标即可返回教学页。"))
                 }
             }
         }
@@ -356,21 +356,21 @@ final class PracticeController: NSObject, ObservableObject, NSWindowDelegate {
         guard !suppressWindowEvents,
               notification.object as? NSWindow === practiceWindow,
               activeShortcut?.practice == .minimizeWindow else { return }
-        status = .success("已检测到独立练习窗口实际最小化。点击 Dock 中的窗口缩略图可以恢复，教学主窗口会保留。")
+        status = .success(L10n.text("已检测到独立练习窗口实际最小化。点击 Dock 中的窗口缩略图可以恢复，教学主窗口会保留。"))
     }
 
     func windowDidDeminiaturize(_ notification: Notification) {
         guard !suppressWindowEvents,
               notification.object as? NSWindow === practiceWindow,
               activeShortcut?.practice == .minimizeWindow else { return }
-        status = .success("已检测到练习窗口从 Dock 恢复。")
+        status = .success(L10n.text("已检测到练习窗口从 Dock 恢复。"))
     }
 
     func windowWillClose(_ notification: Notification) {
         guard !suppressWindowEvents,
               notification.object as? NSWindow === practiceWindow,
               activeShortcut?.practice == .closeWindow else { return }
-        status = .success("已检测到独立练习窗口实际关闭，教学主窗口已保留。")
+        status = .success(L10n.text("已检测到独立练习窗口实际关闭，教学主窗口已保留。"))
         let session = generation
         DispatchQueue.main.async { [weak self] in
             guard let self, self.generation == session else { return }
@@ -382,13 +382,13 @@ final class PracticeController: NSObject, ObservableObject, NSWindowDelegate {
     private func prepareBrowser(for shortcut: Shortcut) throws {
         let scope: AppScope = shortcut.scope == .chrome ? .chrome : .safari
         let directory = try makeSessionDirectory()
-        let pageURL = directory.appendingPathComponent("快捷键练习.html")
+        let pageURL = directory.appendingPathComponent(L10n.text("快捷键练习.html"))
         try BrowserPracticePage.main.write(to: pageURL, atomically: true, encoding: .utf8)
-        try BrowserPracticePage.next.write(to: directory.appendingPathComponent("下一页.html"), atomically: true, encoding: .utf8)
+        try BrowserPracticePage.next.write(to: directory.appendingPathComponent(L10n.text("下一页.html")), atomically: true, encoding: .utf8)
         guard opensExternalApplications else {
             isPreparing = false
             isPrepared = true
-            status = .ready("本地练习网页已准备；集成检查模式未启动外部浏览器，也未判断浏览器操作结果。")
+            status = .ready(L10n.text("本地练习网页已准备；集成检查模式未启动外部浏览器，也未判断浏览器操作结果。"))
             return
         }
         guard let bundleID = scope.bundleIdentifier,
@@ -404,10 +404,10 @@ final class PracticeController: NSObject, ObservableObject, NSWindowDelegate {
                 self.isPreparing = false
                 if let error {
                     self.isPrepared = false
-                    self.status = .failure("无法打开 \(scope.title) 练习网页：\(error.localizedDescription)")
+                    self.status = .failure(L10n.format("无法打开 {0} 练习网页：{1}", String(describing: scope.title), String(describing: error.localizedDescription)))
                 } else {
                     self.isPrepared = true
-                    self.status = .ready("练习页已在 \(scope.title) 打开。")
+                    self.status = .ready(L10n.format("练习页已在 {0} 打开。", String(describing: scope.title)))
                 }
             }
         }
@@ -456,9 +456,9 @@ private enum PracticeError: LocalizedError {
     case cannotReadFileIdentity
     var errorDescription: String? {
         switch self {
-        case let .missingApplication(name): "没有找到 \(name)。请先安装该应用，再准备练习。"
-        case let .cannotOpen(name): "无法打开 \(name)。练习文件已保留，可点击目录路径手动打开。"
-        case .cannotReadFileIdentity: "无法读取练习样例的文件标识。"
+        case let .missingApplication(name): L10n.format("没有找到 {0}。请先安装该应用，再准备练习。", String(describing: name))
+        case let .cannotOpen(name): L10n.format("无法打开 {0}。练习文件已保留，可点击目录路径手动打开。", String(describing: name))
+        case .cannotReadFileIdentity: L10n.text("无法读取练习样例的文件标识。")
         }
     }
 }

@@ -39,26 +39,26 @@ struct ShortcutDetailView: View {
             Text(shortcut.summary).font(.system(size: 13)).padding(.top, 21)
             Text(shortcut.prerequisite).font(.system(size: 12)).foregroundStyle(.secondary).padding(.top, 7)
             if showWindowsEquivalent, let equivalent = shortcut.windowsEquivalent {
-                Text("Windows：\(equivalent)").font(.system(size: 11)).foregroundStyle(.secondary).padding(.top, 11)
+                Text("Windows: \(equivalent)").font(.system(size: 11)).foregroundStyle(.secondary).padding(.top, 11)
             }
             Divider().padding(.vertical, 24)
             practiceSection
             Divider().padding(.top, 24).padding(.bottom, 15)
-            DisclosureGroup("使用提示", isExpanded: $showQuestions) {
+            DisclosureGroup(L10n.text("使用提示"), isExpanded: $showQuestions) {
                 VStack(alignment: .leading, spacing: 8) {
                     if shortcut.customizable {
-                        Text("此处显示默认绑定，修改过快捷键时请使用系统或应用当前的设置。")
+                        Text(L10n.text("此处显示默认绑定，修改过快捷键时请使用系统或应用当前的设置。"))
                     }
                     ForEach(Array(shortcut.notes.enumerated()), id: \.offset) { _, note in Text(note) }
                     if let directory = practice.practiceDirectory, active {
-                        Text("练习文件保存在独立目录中。重新准备会新建目录，保留旧文件。")
-                        Button("在 Finder 中显示练习目录") { NSWorkspace.shared.open(directory) }.buttonStyle(.link)
+                        Text(L10n.text("练习文件保存在独立目录中。重新准备会新建目录，保留旧文件。"))
+                        Button(L10n.text("在 Finder 中显示练习目录")) { NSWorkspace.shared.open(directory) }.buttonStyle(.link)
                     }
                 }
                 .font(.system(size: 11)).foregroundStyle(.secondary)
                 .frame(maxWidth: .infinity, alignment: .leading).padding(.top, 9)
             }.font(.system(size: 11)).foregroundStyle(.secondary)
-            DisclosureGroup("官方来源", isExpanded: $showReferences) {
+            DisclosureGroup(L10n.text("官方来源"), isExpanded: $showReferences) {
                 VStack(alignment: .leading, spacing: 7) {
                     ForEach(catalog.sources.filter { shortcut.sourceIDs.contains($0.id) }) { source in
                         Link(destination: source.url) { Label(source.title, systemImage: "arrow.up.right.square") }
@@ -72,14 +72,14 @@ struct ShortcutDetailView: View {
     private var practiceSection: some View {
         VStack(alignment: .leading, spacing: 14) {
             HStack(spacing: 9) {
-                Text(automatic ? "练习" : "试一下").font(.system(size: 14, weight: .medium))
+                Text(automatic ? L10n.text("练习") : L10n.text("试一下")).font(.system(size: 14, weight: .medium))
                 if automatic {
-                    Label("自动检测", systemImage: "checkmark.circle")
+                    Label(L10n.text("自动检测"), systemImage: "checkmark.circle")
                         .font(.system(size: 10)).foregroundStyle(.secondary)
                 }
                 Spacer()
                 if !isText {
-                    Button(practice.hasFloatingHint ? "收起提示" : "悬浮提示", systemImage: "rectangle.topthird.inset.filled") {
+                    Button(practice.hasFloatingHint ? L10n.text("收起提示") : L10n.text("悬浮提示"), systemImage: "rectangle.topthird.inset.filled") {
                         if practice.hasFloatingHint { practice.hideFloatingHint() } else { showHint() }
                     }.buttonStyle(.plain).font(.system(size: 11)).foregroundStyle(.secondary)
                 }
@@ -93,7 +93,7 @@ struct ShortcutDetailView: View {
                         feedback(success: false, message: practice.status.message)
                     }
                     Spacer(minLength: 5)
-                    Button("重置", systemImage: "arrow.counterclockwise") {
+                    Button(L10n.text("重置"), systemImage: "arrow.counterclockwise") {
                         textVersion = UUID(); practice.reset(shortcut)
                     }.buttonStyle(.plain).font(.system(size: 11)).foregroundStyle(.secondary)
                 }
@@ -110,13 +110,13 @@ struct ShortcutDetailView: View {
                             practice.prepare(shortcut)
                             if !practice.status.isFailure { showHint() }
                         } label: {
-                            Label(prepared ? "重新准备" : prepareTitle, systemImage: prepared ? "arrow.counterclockwise" : prepareSymbol)
+                            Label(prepared ? L10n.text("重新准备") : prepareTitle, systemImage: prepared ? "arrow.counterclockwise" : prepareSymbol)
                         }
                         .buttonStyle(.borderedProminent).controlSize(.regular)
                         .disabled(practice.isPreparing)
                         if practice.isPreparing { ProgressView().controlSize(.small) }
                         if prepared && !automatic {
-                            Text("样例已准备").font(.system(size: 11)).foregroundStyle(.secondary)
+                            Text(L10n.text("样例已准备")).font(.system(size: 11)).foregroundStyle(.secondary)
                         }
                     }
                 }
@@ -142,37 +142,37 @@ struct ShortcutDetailView: View {
 
     private var waitingMessage: String {
         switch shortcut.practice {
-        case .newFolder: "等待练习目录中出现新文件夹…"
-        case .renameFile: "等待「练习笔记.txt」的名称改变…"
-        case .duplicateFile: "等待练习目录中出现文件副本…"
-        case .minimizeWindow: "等待独立练习窗口最小化…"
-        case .closeWindow: "等待独立练习窗口关闭…"
-        case .hideApp: "等待应用隐藏；点击 Dock 中的“快捷”即可返回。"
-        default: "等待实际操作结果…"
+        case .newFolder: L10n.text("等待练习目录中出现新文件夹…")
+        case .renameFile: L10n.text("等待「练习笔记.txt」的名称改变…")
+        case .duplicateFile: L10n.text("等待练习目录中出现文件副本…")
+        case .minimizeWindow: L10n.text("等待独立练习窗口最小化…")
+        case .closeWindow: L10n.text("等待独立练习窗口关闭…")
+        case .hideApp: L10n.text("等待应用隐藏；点击 Dock 中的“快捷”即可返回。")
+        default: L10n.text("等待实际操作结果…")
         }
     }
 
     private var preparationHint: String? {
         switch shortcut.id {
-        case "finder-rename": "按 Return，输入新名称，再按 Return 确认。"
-        case "finder-new-folder": "在练习目录中创建文件夹，输入名称后按 Return。"
-        case "finder-move-copied": "先复制样例文件，再打开“目标文件夹”进行移动。"
+        case "finder-rename": L10n.text("按 Return，输入新名称，再按 Return 确认。")
+        case "finder-new-folder": L10n.text("在练习目录中创建文件夹，输入名称后按 Return。")
+        case "finder-move-copied": L10n.text("先复制样例文件，再打开“目标文件夹”进行移动。")
         case "safari-next-tab", "safari-previous-tab", "safari-last-tab", "safari-numbered-tab", "safari-tab-overview",
-             "chrome-next-tab", "chrome-previous-tab", "chrome-last-tab", "chrome-numbered-tab": "打开练习页后，再按 ⌘ T 新建一个标签页。"
-        case "safari-back", "chrome-back": "先点击练习页中的“下一页”，再尝试后退。"
-        case "safari-forward", "chrome-forward": "先进入练习“下一页”并后退一次，再尝试前进。"
-        case "safari-reopen-tab", "chrome-reopen-tab": "先关闭工具打开的样例标签页，再尝试恢复。"
+             "chrome-next-tab", "chrome-previous-tab", "chrome-last-tab", "chrome-numbered-tab": L10n.text("打开练习页后，再按 ⌘ T 新建一个标签页。")
+        case "safari-back", "chrome-back": L10n.text("先点击练习页中的“下一页”，再尝试后退。")
+        case "safari-forward", "chrome-forward": L10n.text("先进入练习“下一页”并后退一次，再尝试前进。")
+        case "safari-reopen-tab", "chrome-reopen-tab": L10n.text("先关闭工具打开的样例标签页，再尝试恢复。")
         default: nil
         }
     }
 
     private var prepareTitle: String {
         switch shortcut.practice {
-        case .newFolder: "打开练习文件夹"
-        case .renameFile, .duplicateFile, .trashFile, .quickLook, .fileInfo, .openFile: "打开样例文件"
-        case .minimizeWindow, .closeWindow, .hideApp: "打开练习窗口"
-        case .browserAddress, .browserPage: "打开 \(shortcut.scope.title) 练习页"
-        default: shortcut.scope == .finder ? "打开练习文件夹" : "打开 \(shortcut.scope.title) 练习页"
+        case .newFolder: L10n.text("打开练习文件夹")
+        case .renameFile, .duplicateFile, .trashFile, .quickLook, .fileInfo, .openFile: L10n.text("打开样例文件")
+        case .minimizeWindow, .closeWindow, .hideApp: L10n.text("打开练习窗口")
+        case .browserAddress, .browserPage: L10n.format("打开 {0} 练习页", String(describing: shortcut.scope.title))
+        default: shortcut.scope == .finder ? L10n.text("打开练习文件夹") : L10n.format("打开 {0} 练习页", String(describing: shortcut.scope.title))
         }
     }
 

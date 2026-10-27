@@ -23,6 +23,9 @@ mkdir -p "$task_staging/Contents/MacOS" "$task_staging/Contents/Resources"
 cp "$task_bin_dir/QuickKey" "$task_staging/Contents/MacOS/QuickKey"
 cp "$task_root/Sources/QuickKey/Info.plist" "$task_staging/Contents/Info.plist"
 cp "$task_root/Assets/QuickKey.icns" "$task_staging/Contents/Resources/QuickKey.icns"
+for task_localization in "$task_root"/Assets/Localization/*.lproj; do
+    cp -R "$task_localization" "$task_staging/Contents/Resources/"
+done
 
 # ShortcutCatalog checks the app's Resources directory before SwiftPM's CLI accessor.
 shopt -s nullglob

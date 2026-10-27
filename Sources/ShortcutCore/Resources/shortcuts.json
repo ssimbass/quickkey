@@ -103,7 +103,10 @@
         "聚焦",
         "搜索",
         "启动应用",
-        "空格"
+        "空格",
+        "Open Spotlight",
+        "Everyday",
+        "system spotlight"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -135,7 +138,10 @@
       ],
       "aliases": [
         "程序切换",
-        "应用切换"
+        "应用切换",
+        "Switch apps",
+        "Everyday",
+        "system switch app"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -167,7 +173,10 @@
       ],
       "aliases": [
         "窗口切换",
-        "反引号"
+        "反引号",
+        "Switch windows in an app",
+        "Everyday",
+        "system switch window"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -201,7 +210,10 @@
       "aliases": [
         "全屏截图",
         "截屏",
-        "截图"
+        "截图",
+        "Capture the entire screen",
+        "Screenshots & Search",
+        "system screenshot full"
       ],
       "sourceIDs": [
         "apple-screenshot"
@@ -235,7 +247,10 @@
       "aliases": [
         "区域截图",
         "部分截屏",
-        "截图"
+        "截图",
+        "Capture a selected area",
+        "Screenshots & Search",
+        "system screenshot region"
       ],
       "sourceIDs": [
         "apple-screenshot"
@@ -269,7 +284,10 @@
       "aliases": [
         "截图",
         "录屏",
-        "屏幕录制"
+        "屏幕录制",
+        "Open Screenshot tools",
+        "Screenshots & Search",
+        "system screenshot tools"
       ],
       "sourceIDs": [
         "apple-screenshot"
@@ -301,7 +319,10 @@
         "此操作会暂时离开教学页。使用账户密码或 Touch ID 解锁后继续。"
       ],
       "aliases": [
-        "锁屏"
+        "锁屏",
+        "Lock the screen",
+        "Windows & Apps",
+        "system lock screen"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -333,7 +354,10 @@
       ],
       "aliases": [
         "Mission Control",
-        "窗口总览"
+        "窗口总览",
+        "Open Mission Control",
+        "Windows & Apps",
+        "system mission control"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -365,7 +389,10 @@
       ],
       "aliases": [
         "App Exposé",
-        "应用窗口"
+        "应用窗口",
+        "Show an app's windows",
+        "Windows & Apps",
+        "system app windows"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -398,7 +425,10 @@
       ],
       "aliases": [
         "程序坞",
-        "隐藏Dock"
+        "隐藏Dock",
+        "Show or hide the Dock",
+        "Windows & Apps",
+        "system toggle dock"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -429,7 +459,11 @@
       "notes": [
         "并非所有窗口都支持全屏。也可将指针移到顶部，使用绿色窗口按钮退出。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Enter or exit full screen",
+        "Windows & Apps",
+        "system full screen"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -463,7 +497,10 @@
         "Emoji",
         "字符检视器",
         "表情符号",
-        "空格"
+        "空格",
+        "Open Emoji & Symbols",
+        "Everyday",
+        "system emoji"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -496,7 +533,10 @@
       "aliases": [
         "输入法",
         "中英文",
-        "输入源"
+        "输入源",
+        "Previous input source",
+        "Everyday",
+        "system previous input source"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -529,7 +569,10 @@
       ],
       "aliases": [
         "输入法",
-        "输入源"
+        "输入源",
+        "Next input source",
+        "Everyday",
+        "system next input source"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -561,7 +604,10 @@
       ],
       "aliases": [
         "拷贝",
-        "剪贴板"
+        "剪贴板",
+        "Copy text",
+        "Text Editing",
+        "system copy"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -593,7 +639,10 @@
       ],
       "aliases": [
         "粘贴",
-        "剪贴板"
+        "剪贴板",
+        "Paste text",
+        "Text Editing",
+        "system paste"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -625,7 +674,10 @@
       ],
       "aliases": [
         "剪切",
-        "移动文字"
+        "移动文字",
+        "Cut text",
+        "Text Editing",
+        "system cut"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -656,7 +708,10 @@
         "这是文本框中的操作；如果焦点在目录、列表或其他应用，行为会不同。"
       ],
       "aliases": [
-        "选择全部"
+        "选择全部",
+        "Select all text",
+        "Text Editing",
+        "system select all"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -688,7 +743,10 @@
       ],
       "aliases": [
         "撤回",
-        "复原"
+        "复原",
+        "Undo an edit",
+        "Text Editing",
+        "system undo"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -721,7 +779,10 @@
       ],
       "aliases": [
         "恢复撤销",
-        "重做"
+        "重做",
+        "Redo an edit",
+        "Text Editing",
+        "system redo"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -754,7 +815,10 @@
       "aliases": [
         "文首",
         "光标",
-        "开头"
+        "开头",
+        "Go to document beginning",
+        "Text Editing",
+        "system document start"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -787,7 +851,10 @@
       "aliases": [
         "文末",
         "光标",
-        "末尾"
+        "末尾",
+        "Go to document end",
+        "Text Editing",
+        "system document end"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -819,7 +886,10 @@
       ],
       "aliases": [
         "行首",
-        "光标"
+        "光标",
+        "Go to line beginning",
+        "Text Editing",
+        "system line start"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -851,7 +921,10 @@
       ],
       "aliases": [
         "行尾",
-        "光标"
+        "光标",
+        "Go to line end",
+        "Text Editing",
+        "system line end"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -885,7 +958,10 @@
       "aliases": [
         "上一个词",
         "光标",
-        "单词"
+        "单词",
+        "Move backward one word",
+        "Text Editing",
+        "system previous word"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -919,7 +995,10 @@
       "aliases": [
         "下一个词",
         "光标",
-        "单词"
+        "单词",
+        "Move forward one word",
+        "Text Editing",
+        "system next word"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -952,7 +1031,10 @@
       ],
       "aliases": [
         "删除单词",
-        "退格"
+        "退格",
+        "Delete the previous word",
+        "Text Editing",
+        "system delete word"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -984,7 +1066,10 @@
       ],
       "aliases": [
         "Delete",
-        "向右删除"
+        "向右删除",
+        "Delete the next character",
+        "Text Editing",
+        "system forward delete"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -1017,7 +1102,10 @@
       ],
       "aliases": [
         "选择行尾",
-        "文本选区"
+        "文本选区",
+        "Select to end of line",
+        "Text Editing",
+        "system select to line end"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -1047,7 +1135,11 @@
       "notes": [
         "查找功能由当前应用提供。在浏览器中会搜索当前网页，在 Finder 中会搜索文件。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Find in a document",
+        "Documents",
+        "system find"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -1076,7 +1168,11 @@
       "notes": [
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Find next match",
+        "Documents",
+        "system find next"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -1106,7 +1202,11 @@
       "notes": [
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Find previous match",
+        "Documents",
+        "system find previous"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -1135,7 +1235,11 @@
       "notes": [
         "教学主窗口会保留。可以点击 Dock 中的练习窗口缩略图恢复，或使用页面中的恢复入口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Minimize a window",
+        "Windows & Apps",
+        "system minimize"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -1164,7 +1268,11 @@
       "notes": [
         "窗口关闭不等于退出应用。在多标签应用中，通常先关闭当前标签页。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Close a window",
+        "Windows & Apps",
+        "system close window"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -1193,7 +1301,11 @@
       "notes": [
         "隐藏后应用仍然运行。点击 Dock 中的应用图标即可返回。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Hide the current app",
+        "Windows & Apps",
+        "system hide"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -1223,7 +1335,11 @@
       "notes": [
         "点击 Dock 中其他应用的图标即可重新显示它们。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Hide other apps",
+        "Windows & Apps",
+        "system hide others"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -1252,7 +1368,11 @@
       "notes": [
         "这是退出应用，不只是关闭窗口。不要用未保存的重要文稿练习。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Quit the current app",
+        "Windows & Apps",
+        "system quit"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -1284,7 +1404,10 @@
       ],
       "aliases": [
         "卡死",
-        "无响应"
+        "无响应",
+        "Open Force Quit",
+        "Windows & Apps",
+        "system force quit"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -1314,7 +1437,11 @@
       "notes": [
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Save a document",
+        "Documents",
+        "system save"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -1343,7 +1470,11 @@
       "notes": [
         "快捷键只打开打印设置。可以取消，不需要提交打印任务。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Open the Print dialog",
+        "Documents",
+        "system print"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -1372,7 +1503,11 @@
       "notes": [
         "选区需要位于练习文本框中。页面会根据实际字体或下划线属性变化反馈结果。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Bold text",
+        "Text Formatting",
+        "system bold"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -1402,7 +1537,11 @@
         "选区需要位于练习文本框中。页面会根据实际字体或下划线属性变化反馈结果。",
         "所用字体没有斜体字形时，视觉变化可能不明显，可换用支持斜体的字体观察。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Italicize text",
+        "Text Formatting",
+        "system italic"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -1431,7 +1570,11 @@
       "notes": [
         "选区需要位于练习文本框中。页面会根据实际字体或下划线属性变化反馈结果。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Underline text",
+        "Text Formatting",
+        "system underline"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -1468,7 +1611,10 @@
         "调低屏幕亮度",
         "Fn",
         "媒体键",
-        "顶行按键"
+        "顶行按键",
+        "F1 · Decrease brightness",
+        "Function Keys F1–F12",
+        "system f1"
       ],
       "sourceIDs": [
         "apple-function-keys",
@@ -1508,7 +1654,10 @@
         "调高屏幕亮度",
         "Fn",
         "媒体键",
-        "顶行按键"
+        "顶行按键",
+        "F2 · Increase brightness",
+        "Function Keys F1–F12",
+        "system f2"
       ],
       "sourceIDs": [
         "apple-function-keys",
@@ -1548,7 +1697,10 @@
         "打开调度中心",
         "Fn",
         "媒体键",
-        "顶行按键"
+        "顶行按键",
+        "F3 · Mission Control",
+        "Function Keys F1–F12",
+        "system f3"
       ],
       "sourceIDs": [
         "apple-function-keys",
@@ -1588,7 +1740,10 @@
         "搜索或启动台",
         "Fn",
         "媒体键",
-        "顶行按键"
+        "顶行按键",
+        "F4 · Search or Launchpad",
+        "Function Keys F1–F12",
+        "system f4"
       ],
       "sourceIDs": [
         "apple-function-keys",
@@ -1628,7 +1783,10 @@
         "听写或键盘背光",
         "Fn",
         "媒体键",
-        "顶行按键"
+        "顶行按键",
+        "F5 · Dictation or backlight",
+        "Function Keys F1–F12",
+        "system f5"
       ],
       "sourceIDs": [
         "apple-function-keys",
@@ -1668,7 +1826,10 @@
         "勿扰或键盘背光",
         "Fn",
         "媒体键",
-        "顶行按键"
+        "顶行按键",
+        "F6 · Do Not Disturb or backlight",
+        "Function Keys F1–F12",
+        "system f6"
       ],
       "sourceIDs": [
         "apple-function-keys",
@@ -1708,7 +1869,10 @@
         "上一曲或倒回",
         "Fn",
         "媒体键",
-        "顶行按键"
+        "顶行按键",
+        "F7 · Previous or rewind",
+        "Function Keys F1–F12",
+        "system f7"
       ],
       "sourceIDs": [
         "apple-function-keys",
@@ -1748,7 +1912,10 @@
         "播放或暂停",
         "Fn",
         "媒体键",
-        "顶行按键"
+        "顶行按键",
+        "F8 · Play or pause",
+        "Function Keys F1–F12",
+        "system f8"
       ],
       "sourceIDs": [
         "apple-function-keys",
@@ -1788,7 +1955,10 @@
         "下一曲或快进",
         "Fn",
         "媒体键",
-        "顶行按键"
+        "顶行按键",
+        "F9 · Next or fast-forward",
+        "Function Keys F1–F12",
+        "system f9"
       ],
       "sourceIDs": [
         "apple-function-keys",
@@ -1828,7 +1998,10 @@
         "静音或取消静音",
         "Fn",
         "媒体键",
-        "顶行按键"
+        "顶行按键",
+        "F10 · Mute or unmute",
+        "Function Keys F1–F12",
+        "system f10"
       ],
       "sourceIDs": [
         "apple-function-keys",
@@ -1868,7 +2041,10 @@
         "调低音量",
         "Fn",
         "媒体键",
-        "顶行按键"
+        "顶行按键",
+        "F11 · Decrease volume",
+        "Function Keys F1–F12",
+        "system f11"
       ],
       "sourceIDs": [
         "apple-function-keys",
@@ -1908,7 +2084,10 @@
         "调高音量",
         "Fn",
         "媒体键",
-        "顶行按键"
+        "顶行按键",
+        "F12 · Increase volume",
+        "Function Keys F1–F12",
+        "system f12"
       ],
       "sourceIDs": [
         "apple-function-keys",
@@ -1943,7 +2122,10 @@
       ],
       "aliases": [
         "新建目录",
-        "创建文件夹"
+        "创建文件夹",
+        "New folder",
+        "Files & Folders",
+        "finder new folder"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -1975,7 +2157,10 @@
       "aliases": [
         "重新命名",
         "文件名",
-        "改名"
+        "改名",
+        "Rename a file",
+        "Files & Folders",
+        "finder rename"
       ],
       "sourceIDs": [
         "apple-rename"
@@ -2007,7 +2192,10 @@
       ],
       "aliases": [
         "复制文件",
-        "副本"
+        "副本",
+        "Duplicate a file",
+        "Files & Folders",
+        "finder duplicate"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -2040,7 +2228,10 @@
       "aliases": [
         "删除文件",
         "废纸篓",
-        "垃圾桶"
+        "垃圾桶",
+        "Move to Trash",
+        "Files & Folders",
+        "finder trash"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -2071,7 +2262,10 @@
       ],
       "aliases": [
         "预览",
-        "空格"
+        "空格",
+        "Quick Look",
+        "Files & Folders",
+        "finder quick look"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -2104,7 +2298,10 @@
       "aliases": [
         "文件信息",
         "显示简介",
-        "大小"
+        "大小",
+        "Get Info",
+        "Files & Folders",
+        "finder info"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -2135,7 +2332,10 @@
         "Return 在 Finder 中通常用于重命名。打开文件可使用 Command + 下箭头或 Command + O。"
       ],
       "aliases": [
-        "打开文件"
+        "打开文件",
+        "Open selected file",
+        "Files & Folders",
+        "finder open"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -2165,7 +2365,11 @@
       "notes": [
         "这不是复制文件内容的文字。复制文件后需要到目标目录粘贴，才会创建实际副本。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Copy selected files",
+        "Files & Folders",
+        "finder copy"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -2194,7 +2398,11 @@
       "notes": [
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Paste copied files",
+        "Files & Folders",
+        "finder paste"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -2226,7 +2434,10 @@
       ],
       "aliases": [
         "剪切文件",
-        "移动文件"
+        "移动文件",
+        "Move copied files",
+        "Files & Folders",
+        "finder move copied"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -2256,7 +2467,11 @@
       "notes": [
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
       ],
-      "aliases": [],
+      "aliases": [
+        "New Finder window",
+        "Windows & Navigation",
+        "finder new window"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -2287,7 +2502,10 @@
       ],
       "aliases": [
         "搜索文件",
-        "聚焦"
+        "聚焦",
+        "Search for files",
+        "Windows & Navigation",
+        "finder search"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -2320,7 +2538,10 @@
       ],
       "aliases": [
         "路径",
-        "前往文件夹"
+        "前往文件夹",
+        "Go to Folder",
+        "Windows & Navigation",
+        "finder go folder"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -2352,7 +2573,10 @@
       ],
       "aliases": [
         "父目录",
-        "上级目录"
+        "上级目录",
+        "Open enclosing folder",
+        "Windows & Navigation",
+        "finder parent"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -2382,7 +2606,11 @@
       "notes": [
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Go back",
+        "Windows & Navigation",
+        "finder back"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -2411,7 +2639,11 @@
       "notes": [
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Go forward",
+        "Windows & Navigation",
+        "finder forward"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -2440,7 +2672,11 @@
       "notes": [
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Use icon view",
+        "Views & Display",
+        "finder icon view"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -2469,7 +2705,11 @@
       "notes": [
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Use list view",
+        "Views & Display",
+        "finder list view"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -2498,7 +2738,11 @@
       "notes": [
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Use column view",
+        "Views & Display",
+        "finder column view"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -2527,7 +2771,11 @@
       "notes": [
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Use gallery view",
+        "Views & Display",
+        "finder gallery view"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -2557,7 +2805,11 @@
       "notes": [
         "显示方式会影响当前窗口的外观；对可切换的显示项，再按同一组合键即可恢复。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Show or hide Preview",
+        "Views & Display",
+        "finder preview panel"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -2587,7 +2839,11 @@
       "notes": [
         "显示方式会影响当前窗口的外观；对可切换的显示项，再按同一组合键即可恢复。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Show or hide the path bar",
+        "Views & Display",
+        "finder path bar"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -2617,7 +2873,11 @@
       "notes": [
         "显示方式会影响当前窗口的外观；对可切换的显示项，再按同一组合键即可恢复。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Show or hide the sidebar",
+        "Views & Display",
+        "finder sidebar"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -2646,7 +2906,11 @@
       "notes": [
         "显示方式会影响当前窗口的外观；对可切换的显示项，再按同一组合键即可恢复。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Show or hide the status bar",
+        "Views & Display",
+        "finder status bar"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -2675,7 +2939,11 @@
       "notes": [
         "显示方式会影响当前窗口的外观；对可切换的显示项，再按同一组合键即可恢复。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Show View Options",
+        "Views & Display",
+        "finder view options"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -2704,7 +2972,11 @@
       "notes": [
         "不需要输入凭据或连接真实服务器即可学习这个快捷键。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Connect to Server",
+        "Windows & Navigation",
+        "finder connect server"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -2734,7 +3006,11 @@
       "notes": [
         "这是位置导航，不会更改其中的文件。个别位置取决于 iCloud 登录、硬件或系统设置。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Open Home",
+        "Common Locations",
+        "finder home"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -2764,7 +3040,11 @@
       "notes": [
         "这是位置导航，不会更改其中的文件。个别位置取决于 iCloud 登录、硬件或系统设置。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Open Desktop",
+        "Common Locations",
+        "finder desktop"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -2794,7 +3074,11 @@
       "notes": [
         "这是位置导航，不会更改其中的文件。个别位置取决于 iCloud 登录、硬件或系统设置。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Open Downloads",
+        "Common Locations",
+        "finder downloads"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -2824,7 +3108,11 @@
       "notes": [
         "这是位置导航，不会更改其中的文件。个别位置取决于 iCloud 登录、硬件或系统设置。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Open Documents",
+        "Common Locations",
+        "finder documents"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -2854,7 +3142,11 @@
       "notes": [
         "这是位置导航，不会更改其中的文件。个别位置取决于 iCloud 登录、硬件或系统设置。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Open Utilities",
+        "Common Locations",
+        "finder utilities"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -2884,7 +3176,11 @@
       "notes": [
         "这是位置导航，不会更改其中的文件。个别位置取决于 iCloud 登录、硬件或系统设置。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Open iCloud Drive",
+        "Common Locations",
+        "finder icloud"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -2914,7 +3210,11 @@
       "notes": [
         "这是位置导航，不会更改其中的文件。个别位置取决于 iCloud 登录、硬件或系统设置。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Open Recents",
+        "Common Locations",
+        "finder recents"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -2944,7 +3244,11 @@
       "notes": [
         "这是位置导航，不会更改其中的文件。个别位置取决于 iCloud 登录、硬件或系统设置。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Open Computer",
+        "Common Locations",
+        "finder computer"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -2974,7 +3278,11 @@
       "notes": [
         "这是位置导航，不会更改其中的文件。个别位置取决于 iCloud 登录、硬件或系统设置。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Open AirDrop",
+        "Common Locations",
+        "finder airdrop"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -3003,7 +3311,11 @@
       "notes": [
         "新标签页与新窗口不同。若本机菜单显示其他绑定，请以 Finder 的“文件”菜单为准。"
       ],
-      "aliases": [],
+      "aliases": [
+        "New Finder tab",
+        "Windows & Navigation",
+        "finder new tab"
+      ],
       "sourceIDs": [
         "apple-keyboard-intro"
       ],
@@ -3032,7 +3344,11 @@
       "notes": [
         "这不会删除目录中的文件。点击 Dock 中的 Finder 图标可以重新打开窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Close Finder window or tab",
+        "Windows & Navigation",
+        "finder close window"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -3061,7 +3377,11 @@
       "notes": [
         "先点击文件区域，避免在搜索框或名称编辑框中全选文字。只选择，不会删除或移动文件。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Select all items",
+        "Files & Folders",
+        "finder select all"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -3091,7 +3411,11 @@
       "notes": [
         "官方参考将此命令的前提限定为只有一个标签页的 Finder 窗口。实际可用状态以“显示”菜单为准。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Show or hide the toolbar",
+        "Views & Display",
+        "finder toolbar"
+      ],
       "sourceIDs": [
         "apple-mac"
       ],
@@ -3124,7 +3448,10 @@
       "aliases": [
         "网址",
         "URL",
-        "智能搜索栏"
+        "智能搜索栏",
+        "Focus the address bar",
+        "Web Browsing",
+        "safari address"
       ],
       "sourceIDs": [
         "apple-safari"
@@ -3155,7 +3482,11 @@
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "New tab",
+        "Tabs & Windows",
+        "safari new tab"
+      ],
       "sourceIDs": [
         "apple-web"
       ],
@@ -3185,7 +3516,11 @@
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "New browser window",
+        "Tabs & Windows",
+        "safari new window"
+      ],
       "sourceIDs": [
         "apple-web"
       ],
@@ -3214,7 +3549,11 @@
       "notes": [
         "如误关页面，可按 Shift + Command + T 重新打开。教学应用窗口会保留。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Close the current tab",
+        "Tabs & Windows",
+        "safari close tab"
+      ],
       "sourceIDs": [
         "apple-safari"
       ],
@@ -3245,7 +3584,11 @@
         "关闭的窗口也可能通过此命令恢复。无痕浏览中的关闭记录不一定可恢复。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Reopen a closed tab",
+        "Tabs & Windows",
+        "safari reopen tab"
+      ],
       "sourceIDs": [
         "apple-safari"
       ],
@@ -3275,7 +3618,11 @@
         "Safari 也支持 Shift + Command + ]；此页使用 Control + Tab 作为主要组合键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Next tab",
+        "Tabs & Windows",
+        "safari next tab"
+      ],
       "sourceIDs": [
         "apple-safari"
       ],
@@ -3306,7 +3653,11 @@
         "Safari 也支持 Shift + Command + [。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Previous tab",
+        "Tabs & Windows",
+        "safari previous tab"
+      ],
       "sourceIDs": [
         "apple-safari"
       ],
@@ -3336,7 +3687,11 @@
         "Command + 1 至 Command + 8 可选择前八个标签页；Command + 9 表示最后一个。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Last tab",
+        "Tabs & Windows",
+        "safari last tab"
+      ],
       "sourceIDs": [
         "apple-safari"
       ],
@@ -3367,7 +3722,11 @@
         "最后一个按键是反斜杠 \\，不同键盘布局的位置可能不同。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Show tab overview",
+        "Tabs & Windows",
+        "safari tab overview"
+      ],
       "sourceIDs": [
         "apple-safari"
       ],
@@ -3397,7 +3756,11 @@
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Go back a page",
+        "Web Browsing",
+        "safari back"
+      ],
       "sourceIDs": [
         "apple-safari"
       ],
@@ -3427,7 +3790,11 @@
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Go forward a page",
+        "Web Browsing",
+        "safari forward"
+      ],
       "sourceIDs": [
         "apple-safari"
       ],
@@ -3459,7 +3826,10 @@
       ],
       "aliases": [
         "刷新",
-        "重新加载"
+        "重新加载",
+        "Reload the page",
+        "Web Browsing",
+        "safari reload"
       ],
       "sourceIDs": [
         "apple-mac"
@@ -3490,7 +3860,11 @@
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Find on a page",
+        "Web Browsing",
+        "safari find"
+      ],
       "sourceIDs": [
         "apple-safari"
       ],
@@ -3520,7 +3894,11 @@
         "加号通常与等号共用按键，是否需要 Shift 取决于键盘布局。可用“显示”菜单核对。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Zoom in",
+        "Web Browsing",
+        "safari zoom in"
+      ],
       "sourceIDs": [
         "apple-safari"
       ],
@@ -3550,7 +3928,11 @@
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Zoom out",
+        "Web Browsing",
+        "safari zoom out"
+      ],
       "sourceIDs": [
         "apple-safari"
       ],
@@ -3581,7 +3963,10 @@
       ],
       "aliases": [
         "空格",
-        "向下翻页"
+        "向下翻页",
+        "Scroll down a page",
+        "Scrolling & Reading",
+        "safari page down"
       ],
       "sourceIDs": [
         "apple-safari"
@@ -3612,7 +3997,11 @@
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Scroll up a page",
+        "Scrolling & Reading",
+        "safari page up"
+      ],
       "sourceIDs": [
         "apple-safari"
       ],
@@ -3642,7 +4031,11 @@
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Go to top of page",
+        "Scrolling & Reading",
+        "safari page top"
+      ],
       "sourceIDs": [
         "apple-safari"
       ],
@@ -3672,7 +4065,11 @@
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Go to bottom of page",
+        "Scrolling & Reading",
+        "safari page bottom"
+      ],
       "sourceIDs": [
         "apple-safari"
       ],
@@ -3703,7 +4100,11 @@
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Show or hide Reading List",
+        "Scrolling & Reading",
+        "safari reading list"
+      ],
       "sourceIDs": [
         "apple-safari"
       ],
@@ -3734,7 +4135,11 @@
         "这会修改 Safari 的阅读列表。练习后可在边栏中移除该样例条目。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Add to Reading List",
+        "Scrolling & Reading",
+        "safari add reading list"
+      ],
       "sourceIDs": [
         "apple-safari"
       ],
@@ -3765,7 +4170,11 @@
         "并非所有网页都支持阅读器。若按钮不可用，请换一篇正文内容清晰的文章。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Show Reader",
+        "Scrolling & Reading",
+        "safari reader"
+      ],
       "sourceIDs": [
         "apple-safari"
       ],
@@ -3796,7 +4205,11 @@
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Show or hide bookmarks sidebar",
+        "Bookmarks & Settings",
+        "safari bookmarks sidebar"
+      ],
       "sourceIDs": [
         "apple-safari"
       ],
@@ -3825,7 +4238,11 @@
       "notes": [
         "不需要修改任何设置即可完成观察。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Open Safari Settings",
+        "Bookmarks & Settings",
+        "safari settings"
+      ],
       "sourceIDs": [
         "apple-safari"
       ],
@@ -3855,7 +4272,11 @@
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Print a page",
+        "Bookmarks & Settings",
+        "safari print"
+      ],
       "sourceIDs": [
         "apple-safari"
       ],
@@ -3885,7 +4306,11 @@
         "按取消可不保存书签。若保存了样例条目，之后可在书签边栏中移除。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Bookmark this page",
+        "Bookmarks & Settings",
+        "safari bookmark"
+      ],
       "sourceIDs": [
         "apple-web"
       ],
@@ -3916,7 +4341,11 @@
         "主页由 Safari 设置决定。如果没有配置预期主页，请先在 Safari 设置中查看“主页”字段。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Go to the homepage",
+        "Web Browsing",
+        "safari homepage"
+      ],
       "sourceIDs": [
         "apple-safari"
       ],
@@ -3954,7 +4383,10 @@
         "Command + 5",
         "Command + 6",
         "Command + 7",
-        "Command + 8"
+        "Command + 8",
+        "Select a tab (1–8)",
+        "Tabs & Windows",
+        "safari numbered tab"
       ],
       "sourceIDs": [
         "apple-safari"
@@ -3986,7 +4418,11 @@
         "没有下载记录时，可用状态和显示方式可能不同。无需为练习下载新的文件。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Show Downloads",
+        "Bookmarks & Settings",
+        "safari downloads"
+      ],
       "sourceIDs": [
         "apple-download-apps"
       ],
@@ -4019,7 +4455,10 @@
       "aliases": [
         "网址",
         "URL",
-        "地址栏"
+        "地址栏",
+        "Focus the address bar",
+        "Web Browsing",
+        "chrome address"
       ],
       "sourceIDs": [
         "google-chrome"
@@ -4050,7 +4489,11 @@
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "New browser window",
+        "Tabs & Windows",
+        "chrome new window"
+      ],
       "sourceIDs": [
         "google-chrome"
       ],
@@ -4080,7 +4523,11 @@
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "New tab",
+        "Tabs & Windows",
+        "chrome new tab"
+      ],
       "sourceIDs": [
         "google-chrome"
       ],
@@ -4110,7 +4557,11 @@
       "notes": [
         "无痕浏览不提供网络匿名性。关闭该练习无痕窗口后即可回到原来的普通窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "New Incognito window",
+        "Tabs & Windows",
+        "chrome incognito"
+      ],
       "sourceIDs": [
         "google-chrome"
       ],
@@ -4139,7 +4590,11 @@
       "notes": [
         "关闭最后一个标签页时，当前窗口也会关闭。教学主窗口会保留。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Close the current tab",
+        "Tabs & Windows",
+        "chrome close tab"
+      ],
       "sourceIDs": [
         "google-chrome"
       ],
@@ -4170,7 +4625,11 @@
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Reopen a closed tab",
+        "Tabs & Windows",
+        "chrome reopen tab"
+      ],
       "sourceIDs": [
         "google-chrome"
       ],
@@ -4201,7 +4660,11 @@
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Next tab",
+        "Tabs & Windows",
+        "chrome next tab"
+      ],
       "sourceIDs": [
         "google-chrome"
       ],
@@ -4232,7 +4695,11 @@
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Previous tab",
+        "Tabs & Windows",
+        "chrome previous tab"
+      ],
       "sourceIDs": [
         "google-chrome"
       ],
@@ -4262,7 +4729,11 @@
         "Command + 1 至 Command + 8 选择前八个标签页，Command + 9 总是选择最后一个。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Last tab",
+        "Tabs & Windows",
+        "chrome last tab"
+      ],
       "sourceIDs": [
         "google-chrome"
       ],
@@ -4292,7 +4763,11 @@
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Go back a page",
+        "Web Browsing",
+        "chrome back"
+      ],
       "sourceIDs": [
         "google-chrome"
       ],
@@ -4322,7 +4797,11 @@
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Go forward a page",
+        "Web Browsing",
+        "chrome forward"
+      ],
       "sourceIDs": [
         "google-chrome"
       ],
@@ -4352,7 +4831,11 @@
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Find on a page",
+        "Web Browsing",
+        "chrome find"
+      ],
       "sourceIDs": [
         "google-chrome"
       ],
@@ -4382,7 +4865,11 @@
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Find next match",
+        "Web Browsing",
+        "chrome find next"
+      ],
       "sourceIDs": [
         "google-chrome"
       ],
@@ -4413,7 +4900,11 @@
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Find previous match",
+        "Web Browsing",
+        "chrome find previous"
+      ],
       "sourceIDs": [
         "google-chrome"
       ],
@@ -4447,7 +4938,10 @@
       "aliases": [
         "强制刷新",
         "刷新",
-        "重新加载"
+        "重新加载",
+        "Reload without cache",
+        "Web Browsing",
+        "chrome hard reload"
       ],
       "sourceIDs": [
         "google-chrome"
@@ -4478,7 +4972,11 @@
         "点取消可以不保存。若保存了练习书签，之后可在书签管理器中删除。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Bookmark this page",
+        "Bookmarks & Settings",
+        "chrome bookmark"
+      ],
       "sourceIDs": [
         "google-chrome"
       ],
@@ -4509,7 +5007,11 @@
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Show or hide the bookmarks bar",
+        "Bookmarks & Settings",
+        "chrome bookmarks bar"
+      ],
       "sourceIDs": [
         "google-chrome"
       ],
@@ -4540,7 +5042,11 @@
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Open Bookmark Manager",
+        "Bookmarks & Settings",
+        "chrome bookmark manager"
+      ],
       "sourceIDs": [
         "google-chrome"
       ],
@@ -4570,7 +5076,11 @@
         "这只打开历史记录页面；不会清除任何记录。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Open History",
+        "Bookmarks & Settings",
+        "chrome history"
+      ],
       "sourceIDs": [
         "google-chrome"
       ],
@@ -4601,7 +5111,11 @@
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Open Downloads",
+        "Bookmarks & Settings",
+        "chrome downloads"
+      ],
       "sourceIDs": [
         "google-chrome"
       ],
@@ -4630,7 +5144,11 @@
       "notes": [
         "不需要修改账号、隐私或同步设置即可完成练习。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Open Chrome Settings",
+        "Bookmarks & Settings",
+        "chrome settings"
+      ],
       "sourceIDs": [
         "google-chrome"
       ],
@@ -4660,7 +5178,11 @@
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Print a page",
+        "Web Browsing",
+        "chrome print"
+      ],
       "sourceIDs": [
         "google-chrome"
       ],
@@ -4690,7 +5212,11 @@
         "实际保存只会在你确认对话框后进行。可取消对话框来完成观察。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Save the page",
+        "Web Browsing",
+        "chrome save page"
+      ],
       "sourceIDs": [
         "google-chrome"
       ],
@@ -4720,7 +5246,11 @@
         "加号键可能需要配合 Shift，取决于键盘布局；可查看 Chrome 菜单中的实际绑定。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Zoom in",
+        "Zoom & Scroll",
+        "chrome zoom in"
+      ],
       "sourceIDs": [
         "google-chrome"
       ],
@@ -4750,7 +5280,11 @@
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Zoom out",
+        "Zoom & Scroll",
+        "chrome zoom out"
+      ],
       "sourceIDs": [
         "google-chrome"
       ],
@@ -4780,7 +5314,11 @@
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Reset zoom",
+        "Zoom & Scroll",
+        "chrome zoom reset"
+      ],
       "sourceIDs": [
         "google-chrome"
       ],
@@ -4809,7 +5347,11 @@
         "焦点在输入框时会输入空格。请先点击网页正文或空白处。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Scroll down a page",
+        "Zoom & Scroll",
+        "chrome page down"
+      ],
       "sourceIDs": [
         "google-chrome"
       ],
@@ -4839,7 +5381,11 @@
         "如果没有出现预期效果，先确认当前应用和键盘焦点，再查看菜单栏中显示的实际快捷键。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Scroll up a page",
+        "Zoom & Scroll",
+        "chrome page up"
+      ],
       "sourceIDs": [
         "google-chrome"
       ],
@@ -4871,7 +5417,10 @@
       ],
       "aliases": [
         "刷新",
-        "重新载入"
+        "重新载入",
+        "Reload the page",
+        "Web Browsing",
+        "chrome reload"
       ],
       "sourceIDs": [
         "google-devtools"
@@ -4903,7 +5452,11 @@
         "此组合键打开上次使用的开发者工具面板。本练习不需要在控制台输入或执行代码。",
         "工具打开的是样例标签页，浏览器可能将它放入已有窗口。要隔离练习，请先手动新建一个专用浏览器窗口。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Open Developer Tools",
+        "Development",
+        "chrome developer tools"
+      ],
       "sourceIDs": [
         "google-devtools"
       ],
@@ -4933,7 +5486,11 @@
       "notes": [
         "先核对当前窗口中的标签页，避免关闭自己正在使用的页面。关闭后可点击 Dock 中的 Chrome 图标返回。"
       ],
-      "aliases": [],
+      "aliases": [
+        "Close the Chrome window",
+        "Tabs & Windows",
+        "chrome close window"
+      ],
       "sourceIDs": [
         "google-chrome"
       ],
@@ -4971,7 +5528,10 @@
         "Command + 5",
         "Command + 6",
         "Command + 7",
-        "Command + 8"
+        "Command + 8",
+        "Select a tab (1–8)",
+        "Tabs & Windows",
+        "chrome numbered tab"
       ],
       "sourceIDs": [
         "google-chrome"

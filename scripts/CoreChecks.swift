@@ -10,7 +10,7 @@ struct CoreChecks {
         }
 
         checks.run("目录加载、来源和教学信息") {
-            let catalog = try ShortcutCatalog.load()
+            let catalog = try ShortcutCatalog.load(language: .simplifiedChinese)
             try catalog.validate()
             checks.expect(!catalog.shortcuts.isEmpty, "目录不为空")
             checks.expect(Set(catalog.shortcuts.map(\.scope)) == Set(AppScope.allCases), "包含全部四类目录")
@@ -35,7 +35,7 @@ struct CoreChecks {
         }
 
         checks.run("拒绝重复ID、未知来源和不支持的目录版本") {
-            let catalog = try ShortcutCatalog.load()
+            let catalog = try ShortcutCatalog.load(language: .simplifiedChinese)
             guard let item = catalog.shortcuts.first else { throw CheckFailure("目录为空") }
             let encoder = JSONEncoder()
             var object = try JSONSerialization.jsonObject(with: encoder.encode(catalog)) as! [String: Any]
@@ -105,13 +105,51 @@ struct CoreChecks {
             checks.expect(SoftwarePicker.needsOverflow(many), "新增分类进入更多菜单")
             checks.expect(SoftwarePicker.visibleIDs(in: many, selectedID: "mail") == ["system", "finder", "mail"], "更多菜单选中分类保持可见")
             checks.expect(SoftwarePicker.visibleIDs(in: many, selectedID: "system").count == 3, "为更多菜单预留固定槽位")
-            let catalog = try ShortcutCatalog.load()
+            let catalog = try ShortcutCatalog.load(language: .simplifiedChinese)
             for number in 1...12 {
                 let matches = ShortcutSearch.results(in: catalog.shortcuts, query: "F\(number)", scope: .system)
                 checks.expect(matches.contains { $0.id == "system-f\(number)" }, "F\(number) 可精确找到")
                 checks.expect(matches.allSatisfy { $0.keys.contains("F\(number)") }, "F\(number) 不混淆其他功能键")
             }
             checks.expect(catalog.shortcuts.filter { $0.section == "功能键 F1–F12" }.count == 12, "12个功能键均已收录")
+        }
+
+        checks.run("中英文目录完整性、搜索和语言选择") {
+            let chinese = try ShortcutCatalog.load(language: .simplifiedChinese)
+            let english = try ShortcutCatalog.load(language: .english)
+            checks.expect(chinese.shortcuts.map(\.id) == english.shortcuts.map(\.id), "两种语言包含相同且有序的操作")
+            checks.expect(chinese.sources.map(\.id) == english.sources.map(\.id), "两种语言引用相同来源")
+            for (zh, en) in zip(chinese.shortcuts, english.shortcuts) {
+                checks.expect(zh.keys == en.keys && zh.englishKeys == en.englishKeys, "语言不改变按键：\(en.id)")
+                checks.expect(zh.practice == en.practice && zh.scope == en.scope && zh.sourceIDs == en.sourceIDs,
+                              "语言不改变练习行为和来源：\(en.id)")
+                let displayed = [en.title, en.summary, en.section, en.prerequisite, en.expectedResult] + en.steps + en.notes
+                checks.expect(displayed.allSatisfy { !$0.isEmpty && $0.range(of: "[\u{4E00}-\u{9FFF}]", options: .regularExpression) == nil },
+                              "英文教学文案无漏翻：\(en.id)")
+                checks.expect(en.steps.count == 3 && !en.notes.isEmpty, "英文包含完整步骤和提示：\(en.id)")
+                checks.expect(ShortcutSearch.results(in: english.shortcuts, query: zh.title).contains { $0.id == en.id },
+                              "英文界面可搜中文标题：\(en.id)")
+                checks.expect(ShortcutSearch.results(in: chinese.shortcuts, query: en.title).contains { $0.id == zh.id },
+                              "中文界面可搜英文标题：\(zh.id)")
+            }
+            checks.expect(AppLanguage.resolve("system", preferredLanguages: ["en-US", "zh-Hans"]) == .english, "跟随英语系统")
+            checks.expect(AppLanguage.resolve("system", preferredLanguages: ["zh-CN", "en"]) == .simplifiedChinese, "跟随中文系统")
+            checks.expect(AppLanguage.resolve("en", preferredLanguages: ["zh-Hans"]) == .english, "显式英语优先")
+            checks.expect(AppLanguage.resolve("zh-Hans", preferredLanguages: ["en-US"]) == .simplifiedChinese, "显式中文优先")
+            checks.expect(AppLanguage.resolve("system", preferredLanguages: ["fr-FR"]) == .english, "不支持的系统语言回退英语")
+            checks.expect(L10n.text("练习", language: .english) == "Practice", "英文界面资源加载")
+            checks.expect(L10n.text("练习", language: .simplifiedChinese) == "练习", "中文界面文案保留")
+            let resources = L10n.resourceBundle
+            guard let uiURL = resources.url(forResource: "ui.en", withExtension: "json") else { throw CheckFailure("缺少英文 UI 资源") }
+            let strings = try JSONDecoder().decode([String: String].self, from: Data(contentsOf: uiURL))
+            for (key, value) in strings {
+                checks.expect(!value.isEmpty && value.range(of: "[\u{4E00}-\u{9FFF}]", options: .regularExpression) == nil, "英文 UI 无漏翻：\(key)")
+                func placeholders(_ text: String) -> [String] {
+                    text.components(separatedBy: "{").dropFirst().compactMap { $0.split(separator: "}").first.map(String.init) }.filter { Int($0) != nil }.sorted()
+                }
+                checks.expect(placeholders(key) == placeholders(value), "插值参数完整：\(key)")
+            }
+            checks.expect(L10n.format("快捷键 {0} 的教学信息或来源不完整", "{1}").contains("{1}"), "用户文本中的占位符保持原样")
         }
 
         print("\n核心检查：\(checks.assertions) 个断言，\(checks.groups) 组，\(checks.failures) 处失败。")

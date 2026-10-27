@@ -29,7 +29,7 @@ enum PracticeIntegrationChecks {
 
         let folderShortcut = try item(.newFolder)
         let initialDirectory = try preparedDirectory(folderShortcut)
-        try require(files.fileExists(atPath: initialDirectory.appendingPathComponent("目标文件夹").path),
+        try require(files.fileExists(atPath: initialDirectory.appendingPathComponent(L10n.text("目标文件夹")).path),
                     "初始目标文件夹未生成。")
         try await Task.sleep(for: .milliseconds(650))
         try require(!controller.status.isSuccess, "初始目标文件夹被误判为用户新建。")
@@ -51,7 +51,7 @@ enum PracticeIntegrationChecks {
 
         let renameDirectory = try preparedDirectory(item(.renameFile))
         let renamedFile = renameDirectory.appendingPathComponent("集成检查重命名.txt")
-        try files.moveItem(at: renameDirectory.appendingPathComponent("练习笔记.txt"), to: renamedFile)
+        try files.moveItem(at: renameDirectory.appendingPathComponent(L10n.text("练习笔记.txt")), to: renamedFile)
         try await waitUntil("文件重命名实际反馈") {
             controller.status.isSuccess && controller.status.message.contains(renamedFile.lastPathComponent)
         }
@@ -59,17 +59,17 @@ enum PracticeIntegrationChecks {
 
         let duplicateDirectory = try preparedDirectory(item(.duplicateFile))
         let duplicate = duplicateDirectory.appendingPathComponent("集成检查副本.txt")
-        try files.copyItem(at: duplicateDirectory.appendingPathComponent("练习笔记.txt"), to: duplicate)
+        try files.copyItem(at: duplicateDirectory.appendingPathComponent(L10n.text("练习笔记.txt")), to: duplicate)
         try await waitUntil("文件副本实际反馈") {
             controller.status.isSuccess && controller.status.message.contains(duplicate.lastPathComponent)
         }
         passed.append("真实文件副本反馈")
 
         let trashDirectory = try preparedDirectory(item(.trashFile))
-        let movedFile = trashDirectory.appendingPathComponent("目标文件夹/练习笔记.txt")
-        try files.moveItem(at: trashDirectory.appendingPathComponent("练习笔记.txt"), to: movedFile)
+        let movedFile = trashDirectory.appendingPathComponent(L10n.text("目标文件夹")).appendingPathComponent(L10n.text("练习笔记.txt"))
+        try files.moveItem(at: trashDirectory.appendingPathComponent(L10n.text("练习笔记.txt")), to: movedFile)
         try await waitUntil("移动样例离开顶层目录反馈") {
-            controller.status.message.contains("离开练习目录")
+            controller.status.message == L10n.text("样例文件已离开练习目录；请查看废纸篓。")
         }
         try await Task.sleep(for: .milliseconds(650))
         try require(!controller.status.isSuccess, "移动到普通子目录被误判为移入废纸篓。")
@@ -103,6 +103,21 @@ enum PracticeIntegrationChecks {
         try require(files.fileExists(atPath: newDirectory.path), "停止练习删除了练习目录。")
         passed.append("停止释放监视并保留练习目录")
 
+        if let browser = catalog.shortcuts.first(where: { $0.practice == .browserPage }) {
+            let directory = try preparedDirectory(browser)
+            let page = directory.appendingPathComponent(L10n.text("快捷键练习.html"))
+            let next = directory.appendingPathComponent(L10n.text("下一页.html"))
+            let html = try String(contentsOf: page, encoding: .utf8)
+            let nextHTML = try String(contentsOf: next, encoding: .utf8)
+            let language = AppLanguage.current == .english ? "en" : "zh-CN"
+            try require(html.contains("lang=\"\(language)\"") && nextHTML.contains("lang=\"\(language)\""),
+                        "浏览器练习网页语言不匹配。")
+            try require(html.contains("href=\"\(next.lastPathComponent)\"")
+                        && nextHTML.contains("href=\"\(page.lastPathComponent)\""),
+                        "浏览器练习网页链接与本地文件名不匹配。")
+            passed.append("浏览器练习网页语言和双向链接")
+        }
+
         let minimizeShortcut = try item(.minimizeWindow)
         controller.prepare(minimizeShortcut)
         let minimizingWindow = try practiceWindow()
@@ -114,7 +129,7 @@ enum PracticeIntegrationChecks {
         passed.append("真实NSWindow最小化事件")
         minimizingWindow.deminiaturize(nil)
         try await waitUntil("原生窗口恢复事件") {
-            !minimizingWindow.isMiniaturized && controller.status.message.contains("恢复")
+            !minimizingWindow.isMiniaturized && controller.status.message == L10n.text("已检测到练习窗口从 Dock 恢复。")
         }
         passed.append("真实NSWindow恢复事件")
 

@@ -19,8 +19,8 @@ struct NativeTextPractice: View {
         switch id {
         case "system-previous-word", "system-next-word", "system-delete-word": "Mac shortcuts make work easier."
         case "system-document-start", "system-document-end", "system-line-start", "system-line-end", "system-select-to-line-end":
-            "先把光标放在这里。\n再试试移动到开头或末尾。"
-        default: "把快捷键，用在真正的操作里。"
+            L10n.text("先把光标放在这里。\n再试试移动到开头或末尾。")
+        default: L10n.text("把快捷键，用在真正的操作里。")
         }
     }
 
@@ -30,7 +30,7 @@ struct NativeTextPractice: View {
     }
     private var sourceSelection: NSRange {
         let sample = Self.sample(for: shortcut.id) as NSString
-        if selectsSample { return NSRange(location: 0, length: min(8, sample.length)) }
+        if selectsSample { return NSRange(location: 0, length: min(AppLanguage.current == .english ? 13 : 8, sample.length)) }
         if ["system-previous-word", "system-next-word", "system-delete-word"].contains(shortcut.id) {
             return NSRange(location: min(13, sample.length), length: 0)
         }
@@ -38,25 +38,25 @@ struct NativeTextPractice: View {
     }
     private var hint: String {
         switch shortcut.id {
-        case "system-copy": "复制选中的文字，再在下方粘贴查看。"
-        case "system-paste": "先复制上方文字，再在下方粘贴。"
-        case "system-undo": "先改动文字，再撤销。"
-        case "system-redo": "先改动文字并撤销，再重做。"
-        case "system-bold", "system-italic", "system-underline": "对选中的文字使用快捷键。"
-        case "system-delete-word", "system-forward-delete": "将光标放在文字中间后操作。"
-        default: "点击文本放置光标，再使用快捷键。"
+        case "system-copy": L10n.text("复制选中的文字，再在下方粘贴查看。")
+        case "system-paste": L10n.text("先复制上方文字，再在下方粘贴。")
+        case "system-undo": L10n.text("先改动文字，再撤销。")
+        case "system-redo": L10n.text("先改动文字并撤销，再重做。")
+        case "system-bold", "system-italic", "system-underline": L10n.text("对选中的文字使用快捷键。")
+        case "system-delete-word", "system-forward-delete": L10n.text("将光标放在文字中间后操作。")
+        default: L10n.text("点击文本放置光标，再使用快捷键。")
         }
     }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text(hint).font(.system(size: 11)).foregroundStyle(.secondary)
-            PracticeTextEditor(text: $source, initialSelection: sourceSelection, label: "练习文本", onResult: report)
+            PracticeTextEditor(text: $source, initialSelection: sourceSelection, label: L10n.text("练习文本"), onResult: report)
                 .frame(height: 75)
                 .id(shortcut.id + "-source")
                 .overlay(RoundedRectangle(cornerRadius: 6).strokeBorder(.primary.opacity(0.14)))
             if hasPasteTarget {
-                PracticeTextEditor(text: $target, initialSelection: NSRange(location: 0, length: 0), label: "粘贴区域", onResult: report)
+                PracticeTextEditor(text: $target, initialSelection: NSRange(location: 0, length: 0), label: L10n.text("粘贴区域"), onResult: report)
                     .frame(height: 53)
                     .id(shortcut.id + "-target")
                     .overlay(RoundedRectangle(cornerRadius: 6).strokeBorder(.primary.opacity(0.14)))
@@ -181,9 +181,9 @@ final class ResultTextView: NSTextView, NSTextViewDelegate, @preconcurrency NSTe
         onTextChange?(string)
         guard changed, !performingCommand else { return }
         if undoManager?.isUndoing == true {
-            onResult?(.undo, "文本已撤销。")
+            onResult?(.undo, L10n.text("文本已撤销。"))
         } else if undoManager?.isRedoing == true {
-            onResult?(.redo, "文本已重做。")
+            onResult?(.redo, L10n.text("文本已重做。"))
         }
     }
 
@@ -194,17 +194,17 @@ final class ResultTextView: NSTextView, NSTextViewDelegate, @preconcurrency NSTe
         attributedSnapshot = current
         if !current.isEqual(to: previous) {
             if undoManager?.isUndoing == true {
-                onResult?(.undo, "文本已撤销。")
+                onResult?(.undo, L10n.text("文本已撤销。"))
             } else if undoManager?.isRedoing == true {
-                onResult?(.redo, "文本已重做。")
+                onResult?(.redo, L10n.text("文本已重做。"))
             }
         }
         let range = selectedRange()
         guard editedMask.contains(.editedAttributes), previous.string == current.string,
               range.length > 0, NSMaxRange(range) <= current.length, NSMaxRange(range) <= previous.length else { return }
         for (trait, action, message) in [
-            (NSFontTraitMask.boldFontMask, TextResultAction.bold, "选中文字已设为粗体。"),
-            (NSFontTraitMask.italicFontMask, TextResultAction.italic, "选中文字已设为斜体。")
+            (NSFontTraitMask.boldFontMask, TextResultAction.bold, L10n.text("选中文字已设为粗体。")),
+            (NSFontTraitMask.italicFontMask, TextResultAction.italic, L10n.text("选中文字已设为斜体。"))
         ] {
             if allCharacters(in: current, range: range, have: trait)
                 && !allCharacters(in: previous, range: range, have: trait) {
@@ -212,7 +212,7 @@ final class ResultTextView: NSTextView, NSTextViewDelegate, @preconcurrency NSTe
             }
         }
         if allUnderlined(current, range: range) && !allUnderlined(previous, range: range) {
-            onResult?(.underline, "选中文字已添加下划线。")
+            onResult?(.underline, L10n.text("选中文字已添加下划线。"))
         }
     }
 
@@ -242,7 +242,7 @@ final class ResultTextView: NSTextView, NSTextViewDelegate, @preconcurrency NSTe
         super.copy(sender)
         if NSPasteboard.general.changeCount != clipboardVersion,
            NSPasteboard.general.string(forType: .string) == selected {
-            onResult?(.copy, "选中文字已复制到剪贴板。")
+            onResult?(.copy, L10n.text("选中文字已复制到剪贴板。"))
         }
     }
 
@@ -258,7 +258,7 @@ final class ResultTextView: NSTextView, NSTextViewDelegate, @preconcurrency NSTe
         if string == previous.replacingCharacters(in: range, with: ""),
            NSPasteboard.general.changeCount != clipboardVersion,
            NSPasteboard.general.string(forType: .string) == selected {
-            onResult?(.cut, "选中文字已剪切到剪贴板。")
+            onResult?(.cut, L10n.text("选中文字已剪切到剪贴板。"))
         }
     }
 
@@ -271,39 +271,39 @@ final class ResultTextView: NSTextView, NSTextViewDelegate, @preconcurrency NSTe
         performingCommand = true
         operation()
         performingCommand = false
-        if string != previous { onResult?(.paste, "剪贴板内容已粘贴到文本框。") }
+        if string != previous { onResult?(.paste, L10n.text("剪贴板内容已粘贴到文本框。")) }
     }
 
     override func selectAll(_ sender: Any?) {
         super.selectAll(sender)
         if !string.isEmpty, selectedRange() == NSRange(location: 0, length: (string as NSString).length) {
-            onResult?(.selectAll, "已选中全部文字。")
+            onResult?(.selectAll, L10n.text("已选中全部文字。"))
         }
     }
 
     override func moveToBeginningOfDocument(_ sender: Any?) {
         let before = selectedRange(); super.moveToBeginningOfDocument(sender)
-        reportMovement(before: before, target: 0, action: .documentStart, message: "光标已移到文稿开头。")
+        reportMovement(before: before, target: 0, action: .documentStart, message: L10n.text("光标已移到文稿开头。"))
     }
     override func moveToEndOfDocument(_ sender: Any?) {
         let before = selectedRange(); super.moveToEndOfDocument(sender)
-        reportMovement(before: before, target: (string as NSString).length, action: .documentEnd, message: "光标已移到文稿末尾。")
+        reportMovement(before: before, target: (string as NSString).length, action: .documentEnd, message: L10n.text("光标已移到文稿末尾。"))
     }
     override func moveToBeginningOfLine(_ sender: Any?) {
         let before = selectedRange(), target = visualLineRange().location; super.moveToBeginningOfLine(sender)
-        reportMovement(before: before, target: target, action: .lineStart, message: "光标已移到行首。")
+        reportMovement(before: before, target: target, action: .lineStart, message: L10n.text("光标已移到行首。"))
     }
     override func moveToLeftEndOfLine(_ sender: Any?) {
         let before = selectedRange(), target = visualLineRange().location; super.moveToLeftEndOfLine(sender)
-        reportMovement(before: before, target: target, action: .lineStart, message: "光标已移到行首。")
+        reportMovement(before: before, target: target, action: .lineStart, message: L10n.text("光标已移到行首。"))
     }
     override func moveToEndOfLine(_ sender: Any?) {
         let before = selectedRange(), target = NSMaxRange(visualLineRange()); super.moveToEndOfLine(sender)
-        reportMovement(before: before, target: target, action: .lineEnd, message: "光标已移到行尾。")
+        reportMovement(before: before, target: target, action: .lineEnd, message: L10n.text("光标已移到行尾。"))
     }
     override func moveToRightEndOfLine(_ sender: Any?) {
         let before = selectedRange(), target = NSMaxRange(visualLineRange()); super.moveToRightEndOfLine(sender)
-        reportMovement(before: before, target: target, action: .lineEnd, message: "光标已移到行尾。")
+        reportMovement(before: before, target: target, action: .lineEnd, message: L10n.text("光标已移到行尾。"))
     }
     override func moveWordLeft(_ sender: Any?) {
         let before = selectedRange(); super.moveWordLeft(sender); reportWordMovement(before: before, forward: false)
@@ -332,7 +332,7 @@ final class ResultTextView: NSTextView, NSTextViewDelegate, @preconcurrency NSTe
         if before.length == 0, removed > 0, after.length == 0,
            after.location + removed == before.location,
            previous.replacingCharacters(in: NSRange(location: after.location, length: removed), with: "") == string {
-            onResult?(.deleteWord, "光标前的词已删除。")
+            onResult?(.deleteWord, L10n.text("光标前的词已删除。"))
         }
     }
     override func deleteForward(_ sender: Any?) {
@@ -341,7 +341,7 @@ final class ResultTextView: NSTextView, NSTextViewDelegate, @preconcurrency NSTe
         guard before.length == 0, before.location < previous.length else { return }
         let character = previous.rangeOfComposedCharacterSequence(at: before.location)
         if selectedRange() == before, previous.replacingCharacters(in: character, with: "") == string {
-            onResult?(.forwardDelete, "光标后的字符已删除。")
+            onResult?(.forwardDelete, L10n.text("光标后的字符已删除。"))
         }
     }
 
@@ -352,12 +352,12 @@ final class ResultTextView: NSTextView, NSTextViewDelegate, @preconcurrency NSTe
         let after = selectedRange()
         guard before.length == 0, after.length == 0,
               forward ? after.location > before.location : after.location < before.location else { return }
-        onResult?(forward ? .nextWord : .previousWord, forward ? "光标已向后移动一个词。" : "光标已向前移动一个词。")
+        onResult?(forward ? .nextWord : .previousWord, forward ? L10n.text("光标已向后移动一个词。") : L10n.text("光标已向前移动一个词。"))
     }
     private func reportLineSelection(before: NSRange, end: Int) {
         guard before.length == 0, end > before.location,
               selectedRange() == NSRange(location: before.location, length: end - before.location) else { return }
-        onResult?(.selectToLineEnd, "已选中光标到行尾的文字。")
+        onResult?(.selectToLineEnd, L10n.text("已选中光标到行尾的文字。"))
     }
     private func visualLineRange() -> NSRange {
         let text = string as NSString, position = min(selectedRange().location, text.length)

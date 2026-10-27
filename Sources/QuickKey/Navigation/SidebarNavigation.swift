@@ -31,25 +31,25 @@ struct SidebarNavigation: View {
                 Image(nsImage: NSImage(named: NSImage.applicationIconName) ?? NSImage())
                     .resizable().frame(width: 37, height: 37)
                 VStack(alignment: .leading, spacing: 2) {
-                    Text("快捷").font(.system(size: 18, weight: .medium))
-                    Text("Mac 快捷键手册").font(.system(size: 11)).foregroundStyle(.secondary)
+                    Text(L10n.text("快捷")).font(.system(size: 18, weight: .medium))
+                    Text(L10n.text("Mac 快捷键手册")).font(.system(size: 11)).foregroundStyle(.secondary)
                 }
                 Spacer()
             }.padding(.horizontal, 20).padding(.top, 22).padding(.bottom, 18)
             searchField.padding(.horizontal, 16).padding(.bottom, 15)
             softwarePicker.padding(.horizontal, 16).padding(.bottom, 16)
             HStack {
-                Text(searching ? "\(entries.count) 个搜索结果" : label(for: scope) + " 快捷键")
+                Text(searching ? L10n.format("{0} 个搜索结果", String(describing: entries.count)) : label(for: scope) + L10n.text(" 快捷键"))
                 Spacer()
                 if searching {
-                    Button("清除") { query = "" }.buttonStyle(.plain)
+                    Button(L10n.text("清除")) { query = "" }.buttonStyle(.plain)
                 }
             }.font(.system(size: 11)).foregroundStyle(.secondary)
                 .padding(.horizontal, 23).padding(.bottom, 8)
             StableScrollView {
                 VStack(alignment: .leading, spacing: 7) {
                     if entries.isEmpty {
-                        Text("没有匹配项，试试“截图”或“F12”。")
+                        Text(L10n.text("没有匹配项，试试“截图”或“F12”。"))
                             .font(.system(size: 12)).foregroundStyle(.secondary).padding(18)
                     } else if searching {
                         ForEach(scopes) { app in
@@ -75,8 +75,8 @@ struct SidebarNavigation: View {
             Divider().padding(.horizontal, 18)
             HStack(spacing: 13) {
                 Button(action: onShowSymbols) { Image(systemName: "keyboard") }
-                    .buttonStyle(.plain).help("认识键盘符号").accessibilityLabel("认识键盘符号")
-                Button("\(catalog.shortcuts.count) 个操作 · 来源", action: onShowSources).buttonStyle(.plain)
+                    .buttonStyle(.plain).help(L10n.text("认识键盘符号")).accessibilityLabel(L10n.text("认识键盘符号"))
+                Button(L10n.format("{0} 个操作 · 来源", String(describing: catalog.shortcuts.count)), action: onShowSources).buttonStyle(.plain)
                 Spacer(minLength: 0)
             }.font(.system(size: 11)).foregroundStyle(.secondary)
                 .padding(.horizontal, 22).padding(.vertical, 15)
@@ -90,11 +90,11 @@ struct SidebarNavigation: View {
     private var searchField: some View {
         HStack(spacing: 8) {
             Image(systemName: "magnifyingglass").foregroundStyle(.secondary)
-            TextField("搜索操作或快捷键", text: $query).textFieldStyle(.plain)
-                .accessibilityLabel("搜索操作、软件或快捷键")
+            TextField(L10n.text("搜索操作或快捷键"), text: $query).textFieldStyle(.plain)
+                .accessibilityLabel(L10n.text("搜索操作、软件或快捷键"))
             if !query.isEmpty {
                 Button { query = "" } label: { Image(systemName: "xmark.circle.fill").foregroundStyle(.tertiary) }
-                    .buttonStyle(.plain).accessibilityLabel("清空搜索")
+                    .buttonStyle(.plain).accessibilityLabel(L10n.text("清空搜索"))
             }
         }.font(.system(size: 12)).padding(.horizontal, 11).padding(.vertical, 10)
             .background(.background, in: RoundedRectangle(cornerRadius: 10))
@@ -127,9 +127,9 @@ struct SidebarNavigation: View {
                             else { Text(label(for: app)) }
                         }
                     }
-                } label: { softwareLabel(title: "更多", symbol: "ellipsis") }
+                } label: { softwareLabel(title: L10n.text("更多"), symbol: "ellipsis") }
                 .menuStyle(.borderlessButton).menuIndicator(.hidden)
-                .help("选择更多软件")
+                .help(L10n.text("选择更多软件"))
             }
         }
         .animation(spring, value: scope)
@@ -241,7 +241,7 @@ private struct DrawerHeader: View {
             .contentShape(RoundedRectangle(cornerRadius: 12))
         }
         .buttonStyle(NavigationPressStyle()).onHover { hovered = $0 }
-        .accessibilityLabel(title).accessibilityValue(expanded ? "已展开" : "已收起")
+        .accessibilityLabel(title).accessibilityValue(expanded ? L10n.text("已展开") : L10n.text("已收起"))
     }
 }
 

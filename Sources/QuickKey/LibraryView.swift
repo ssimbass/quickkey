@@ -32,7 +32,7 @@ struct LibraryView: View {
         .popover(isPresented: $showSources) { SourcesView(catalog: catalog) }
         .popover(isPresented: $showSymbols) {
             VStack(alignment: .leading, spacing: 13) {
-                Text("键盘符号").font(.headline)
+                Text(L10n.text("键盘符号")).font(.headline)
                 ForEach([("⌘", "Command"), ("⌥", "Option"), ("⇧", "Shift"), ("⌃", "Control"), ("↩", "Return"), ("Fn", "Function")], id: \.0) { pair in
                     HStack(spacing: 10) { KeyCaps(keys: [pair.0]); Text(pair.1).font(.system(size: 12)) }
                 }
@@ -86,11 +86,11 @@ struct SourcesView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             HStack {
-                Text("目录来源").font(.title2.weight(.medium))
+                Text(L10n.text("目录来源")).font(.title2.weight(.medium))
                 Spacer()
-                Button("完成") { dismiss() }.keyboardShortcut(.defaultAction)
+                Button(L10n.text("完成")) { dismiss() }.keyboardShortcut(.defaultAction)
             }
-            Text("\(catalog.shortcuts.count) 个操作 · 核对日期 \(catalog.verifiedAt)").foregroundStyle(.secondary)
+            Text(L10n.format("{0} 个操作 · 核对日期 {1}", String(describing: catalog.shortcuts.count), String(describing: catalog.verifiedAt))).foregroundStyle(.secondary)
             HStack(spacing: 22) {
                 ForEach(AppScope.allCases) { scope in
                     VStack(alignment: .leading, spacing: 4) {
@@ -104,7 +104,7 @@ struct SourcesView: View {
                 Link(destination: source.url) { Label(source.title, systemImage: "arrow.up.right.square") }
                     .font(.system(size: 12))
             }
-            Text("收录官方默认绑定。实际组合键可能随软件版本、键盘布局和个人设置变化，请以当前应用菜单为准。")
+            Text(L10n.text("收录官方默认绑定。实际组合键可能随软件版本、键盘布局和个人设置变化，请以当前应用菜单为准。"))
                 .font(.caption).foregroundStyle(.secondary)
         }.padding(24).frame(width: 560)
     }

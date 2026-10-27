@@ -22,12 +22,12 @@ struct FloatingHintView: View {
             VStack(alignment: .leading, spacing: 3) {
                 Text("\(shortcut.scope.title) · \(shortcut.title)")
                     .font(.system(size: 11)).foregroundStyle(.secondary)
-                Text("请按 " + shortcut.keys.joined(separator: " "))
+                Text(L10n.text("请按 ") + shortcut.keys.joined(separator: " "))
                     .font(.system(size: 17, weight: .medium))
             }
             Spacer(minLength: 10)
             Button(action: onReturn) {
-                Label("返回教学页", systemImage: "arrow.up.right")
+                Label(L10n.text("返回教学页"), systemImage: "arrow.up.right")
                     .font(.system(size: 11))
             }
             .buttonStyle(.bordered)
@@ -51,10 +51,10 @@ struct PracticeWindowView: View {
             Text(shortcut.keys.joined(separator: "  "))
                 .font(.system(size: 27, weight: .medium))
             Text(shortcut.practice == .hideApp
-                 ? "隐藏后，点击 Dock 中的“快捷”图标返回。"
+                 ? L10n.text("隐藏后，点击 Dock 中的“快捷”图标返回。")
                  : shortcut.practice == .minimizeWindow
-                 ? "最小化后，点击 Dock 中的窗口缩略图恢复。"
-                 : "关闭这个练习窗口后，教学主窗口会保留。")
+                 ? L10n.text("最小化后，点击 Dock 中的窗口缩略图恢复。")
+                 : L10n.text("关闭这个练习窗口后，教学主窗口会保留。"))
                 .font(.system(size: 12)).foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
         }
@@ -65,7 +65,34 @@ struct PracticeWindowView: View {
 }
 
 enum BrowserPracticePage {
-    static let main = """
+    static var main: String { AppLanguage.current == .english ? mainEnglish : mainChinese }
+    static var next: String { AppLanguage.current == .english ? nextEnglish : nextChinese }
+
+    private static let mainEnglish = """
+    <!doctype html>
+    <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>QuickKey · Browser Practice</title><style>
+    :root{color-scheme:light dark}body{font:16px/1.8 -apple-system,BlinkMacSystemFont,sans-serif;max-width:740px;margin:72px auto;padding:0 24px;color:light-dark(#252831,#eee);background:light-dark(#fafbfc,#202126)}
+    h1{font-size:32px;font-weight:500}h2{font-size:21px;font-weight:500;margin-top:42px}p{color:light-dark(#626877,#aab0bc)}a{color:light-dark(#176ee0,#7bb3ff)}input,textarea{font:inherit;width:100%;box-sizing:border-box;padding:12px;border:1px solid light-dark(#d8dce5,#4b4f59);border-radius:8px;background:light-dark(white,#2b2d34);color:inherit}
+    .mark{font-size:12px;color:light-dark(#748091,#a4adba)}section{margin:40px 0}footer{margin-top:80px;font-size:13px;color:light-dark(#748091,#a4adba)}
+    </style></head><body>
+    <span class="mark">QuickKey / Real browser practice</span><h1>Let your keyboard take the next step.</h1>
+    <p>This local practice page does not run shortcuts automatically. Press the keys yourself and observe your browser's response.</p>
+    <section><h2>Address bar and Find</h2><p>Press ⌘ L to focus the address bar, or ⌘ F to find “shortcut practice”. You can also try zooming, print preview, and saving the page.</p>
+    <p>Search target: shortcut practice. Another occurrence: shortcut practice.</p></section>
+    <section><h2>Navigation and tabs</h2><p><a href="Next Page.html">Next page</a>: follow this link, then try your browser's Back and Forward shortcuts. Press ⌘ T for a new tab. Return to QuickKey after closing the practice tab.</p></section>
+    <section><h2>Text and focus</h2><label>Selectable practice text<textarea rows="3">Put shortcuts to work in real tasks. Select this text and try copying or cutting it yourself.</textarea></label><p><label>Paste area<input placeholder="Click here, then press ⌘ V"></label></p></section>
+    <section><h2>Reading and scrolling</h2><p>Use this long page to practice scrolling. Press Space to scroll down and Shift + Space to scroll up. Try Command + Up Arrow or Down Arrow to go to the top or bottom.</p></section>
+    <section><h2>Finish practice</h2><p>Shortcut practice. Observe the expected result, then click Back to reference on the floating hint or select QuickKey in the Dock.</p></section>
+    <footer>QuickKey creates this page in a dedicated practice folder. Preparing again creates a new folder and keeps earlier files. You press every shortcut yourself.</footer>
+    </body></html>
+    """
+
+    private static let nextEnglish = """
+    <!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>QuickKey · Next Page</title><style>:root{color-scheme:light dark}body{font:17px/1.8 -apple-system,BlinkMacSystemFont,sans-serif;max-width:700px;margin:100px auto;padding:24px}h1{font-weight:500}a{color:light-dark(#176ee0,#7bb3ff)}</style></head><body><h1>You opened the next page.</h1><p>Use your browser's Back shortcut and watch the previous practice page reappear.</p><p><a href="Shortcut Practice.html">Return to practice home</a></p></body></html>
+    """
+
+    static let mainChinese = """
     <!doctype html>
     <html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
     <title>快捷 · 浏览器练习页</title><style>
@@ -85,7 +112,7 @@ enum BrowserPracticePage {
     </body></html>
     """
 
-    static let next = """
+    static let nextChinese = """
     <!doctype html><html lang="zh-CN"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>快捷 · 练习下一页</title><style>:root{color-scheme:light dark}body{font:17px/1.8 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;max-width:700px;margin:100px auto;padding:24px}h1{font-weight:500}a{color:light-dark(#176ee0,#7bb3ff)}</style><h1>你已经打开了下一页。</h1><p>现在亲手使用浏览器的后退快捷键，观察上一张练习网页出现。</p><p><a href="快捷键练习.html">返回练习首页</a></p></html>
     """
 }
