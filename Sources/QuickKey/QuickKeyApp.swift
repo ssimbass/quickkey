@@ -14,6 +14,8 @@ struct QuickKeyApp: App {
     @ViewState private var focusSearchTrigger = 0
     @ViewState private var requestedScope: AppScope?
     @AppStorage("appLanguage") private var languagePreference = "system"
+    @StateObject private var menuBarModel = MenuBarShortcutModel()
+    @StateObject private var menuBarController = MenuBarController()
 
     var body: some Scene {
         WindowGroup(L10n.text("快捷 · Mac 快捷键手册"), id: "main") {
@@ -50,6 +52,13 @@ struct QuickKeyApp: App {
                     state?.markPracticed(id)
                 }
             }
+            .background(
+                MenuBarBridgeView(
+                    library: library,
+                    model: menuBarModel,
+                    controller: menuBarController
+                )
+            )
             .onChange(of: languagePreference) { _, _ in
                 practice.stop()
                 library.load()
@@ -88,6 +97,28 @@ struct QuickKeyApp: App {
     }
 }
 
+/// Connects SwiftUI scene actions (`openWindow`, `openSettings`) to the AppKit menu bar controller.
+private struct MenuBarBridgeView: View {
+    let library: LibraryModel
+    let model: MenuBarShortcutModel
+    let controller: MenuBarController
+    @Environment(\.openWindow) private var openWindow
+    @Environment(\.openSettings) private var openSettings
+
+    var body: some View {
+        Color.clear
+            .frame(width: 0, height: 0)
+            .onAppear {
+                controller.configure(
+                    library: library,
+                    model: model,
+                    openMainWindow: { openWindow(id: "main") },
+                    openSettings: { openSettings() }
+                )
+            }
+    }
+}
+
 private extension KeyEquivalent {
     static func digit(_ number: Int) -> KeyEquivalent? {
         guard (1...9).contains(number), let character = String(number).first else { return nil }
@@ -122,8 +153,14 @@ final class UserLibraryState: ObservableObject {
 final class QuickKeyAppDelegate: NSObject, NSApplicationDelegate {
     private var checkingLastWindowClose = false
 
+    static var isTestRun: Bool {
+        let arguments = ProcessInfo.processInfo.arguments
+        return arguments.contains("--smoke-test") || arguments.contains("--integration-test")
+    }
+
+    /// With the menu bar panel enabled, closing the last window keeps QuickKey running in the menu bar.
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
-        true
+        Self.isTestRun || !MenuBarPreference.isEnabled
     }
 
     func applicationWillTerminate(_ notification: Notification) {
@@ -201,9 +238,16 @@ final class LibraryModel: ObservableObject {
     }
 }
 
+enum MenuBarPreference {
+    static let key = "showMenuBarExtra"
+    static let defaultValue = true
+    static var isEnabled: Bool { UserDefaults.standard.object(forKey: key) as? Bool ?? defaultValue }
+}
+
 struct SettingsView: View {
     @ObservedObject var practice: PracticeController
     @AppStorage("showWindowsEquivalent") private var showWindowsEquivalent = true
+    @AppStorage(MenuBarPreference.key) private var showMenuBarExtra = MenuBarPreference.defaultValue
     @AppStorage("appLanguage") private var languagePreference = "system"
     @ViewState private var folderCount = 0
     @ViewState private var folderBytes: Int64 = 0
@@ -217,6 +261,10 @@ struct SettingsView: View {
                 Text("简体中文").tag("zh-Hans")
             }
             Toggle(L10n.text("显示 Windows 对照"), isOn: $showWindowsEquivalent)
+            Toggle(isOn: $showMenuBarExtra) {
+                Text(L10n.text("在菜单栏显示快捷键面板"))
+                Text(L10n.text("点击菜单栏图标查看当前应用的快捷键，点击即可执行。"))
+            }
             LabeledContent(L10n.text("练习方式"), value: L10n.text("准备真实环境，亲手按下快捷键"))
             LabeledContent(L10n.text("练习目录")) {
                 HStack(spacing: 10) {
@@ -239,7 +287,7 @@ struct SettingsView: View {
                 .font(.caption).foregroundStyle(.secondary)
         }
         .formStyle(.grouped)
-        .frame(width: 560, height: 320)
+        .frame(width: 560, height: 380)
         .padding(12)
         .onAppear(perform: refreshPracticeSummary)
     }

@@ -19,7 +19,8 @@ A native macOS keyboard shortcut reference with hands-on practice. Built with Sw
 - English and Simplified Chinese. Follows your system language; switch in Settings.
 - Browse shortcuts for macOS, Finder, Safari, and Chrome by category, with `⌘F` search, in-app key-combination lookup, and local favorites.
 - Practice text editing, file operations, and window controls with automatic result feedback where supported.
-- Works offline. No third-party runtime dependencies or Accessibility permission required.
+- Optional menu bar shortcut panel (toggleable in Settings): view the frontmost app's menu shortcuts and system shortcuts in a compact Liquid Glass floating panel (on macOS 26+), and click any item to trigger it.
+- Works offline with no third-party runtime dependencies. Core browsing and practice require no Accessibility permission; Accessibility access is only needed if you use the menu bar panel to read arbitrary apps' menus and trigger shortcuts on click.
 
 ## Download & Install
 
