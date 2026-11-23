@@ -31,16 +31,26 @@ enum PracticeStatus: Equatable {
 /// Prepares real, isolated practice environments. It never synthesizes keyboard events.
 @MainActor
 final class PracticeController: NSObject, ObservableObject, NSWindowDelegate {
-    @Published private(set) var status: PracticeStatus = .idle
+    @Published private(set) var status: PracticeStatus = .idle {
+        didSet {
+            if status.isSuccess, let id = activeShortcutID {
+                onVerified?(id)
+            }
+        }
+    }
     @Published private(set) var isPrepared = false
     @Published private(set) var practiceDirectory: URL?
     @Published private(set) var activeShortcutID: String?
     @Published private(set) var isPreparing = false
     @Published private(set) var hasFloatingHint = false
 
+    var onVerified: ((String) -> Void)?
+
     private var activeShortcut: Shortcut?
     private var generation = UUID()
     private var monitor: Task<Void, Never>?
+    private var directorySource: DispatchSourceFileSystemObject?
+    private var trashRecheckTask: Task<Void, Never>?
     private var practiceWindow: NSWindow?
     private var hintPanel: NSPanel?
     private weak var teachingWindow: NSWindow?
@@ -60,7 +70,7 @@ final class PracticeController: NSObject, ObservableObject, NSWindowDelegate {
 
     static func automaticallyVerifies(_ shortcut: Shortcut) -> Bool {
         switch shortcut.practice {
-        case .newFolder, .renameFile, .duplicateFile, .minimizeWindow, .closeWindow, .hideApp: true
+        case .newFolder, .renameFile, .duplicateFile, .trashFile, .minimizeWindow, .closeWindow, .hideApp: true
         case .textEditing: TextResultAction.expected(for: shortcut.id) != nil
         default: false
         }
@@ -114,6 +124,10 @@ final class PracticeController: NSObject, ObservableObject, NSWindowDelegate {
         generation = UUID()
         monitor?.cancel()
         monitor = nil
+        trashRecheckTask?.cancel()
+        trashRecheckTask = nil
+        directorySource?.cancel()
+        directorySource = nil
         if let hideObserver {
             NotificationCenter.default.removeObserver(hideObserver)
             self.hideObserver = nil
@@ -135,14 +149,6 @@ final class PracticeController: NSObject, ObservableObject, NSWindowDelegate {
         isPrepared = false
         isPreparing = false
         status = .idle
-    }
-
-    func confirmObservation(_ shortcut: Shortcut) {
-        guard activeShortcutID == shortcut.id else {
-            status = .failure(L10n.text("请先为当前快捷键准备练习环境。"))
-            return
-        }
-        status = .success(L10n.format("已由你确认「{0}」的实际效果；此结果采用手动确认。", String(describing: shortcut.title)))
     }
 
     func reportTextResult(_ message: String, success: Bool) {
@@ -203,12 +209,59 @@ final class PracticeController: NSObject, ObservableObject, NSWindowDelegate {
         }
     }
 
-    private func makeSessionDirectory() throws -> URL {
+    static func practiceRootDirectory(create: Bool = false) throws -> URL {
         let support = try FileManager.default.url(
             for: .applicationSupportDirectory, in: .userDomainMask,
-            appropriateFor: nil, create: true
+            appropriateFor: nil, create: create
         )
-        let directory = support.appendingPathComponent("QuickKey/Practice", isDirectory: true)
+        let root = support.appendingPathComponent("QuickKey/Practice", isDirectory: true)
+        if create {
+            try FileManager.default.createDirectory(at: root, withIntermediateDirectories: true)
+        }
+        return root
+    }
+
+    static func practiceFolderSummary() -> (count: Int, bytes: Int64) {
+        guard let root = try? practiceRootDirectory(create: false),
+              let entries = try? FileManager.default.contentsOfDirectory(
+                at: root, includingPropertiesForKeys: [.isDirectoryKey], options: [.skipsHiddenFiles]
+              ) else {
+            return (0, 0)
+        }
+        let folders = entries.filter { (try? $0.resourceValues(forKeys: [.isDirectoryKey]).isDirectory) == true }
+        var totalBytes: Int64 = 0
+        for folder in folders {
+            if let enumerator = FileManager.default.enumerator(
+                at: folder, includingPropertiesForKeys: [.totalFileAllocatedSizeKey, .fileSizeKey], options: []
+            ) {
+                for case let fileURL as URL in enumerator {
+                    let values = try? fileURL.resourceValues(forKeys: [.totalFileAllocatedSizeKey, .fileSizeKey])
+                    totalBytes += Int64(values?.totalFileAllocatedSize ?? values?.fileSize ?? 0)
+                }
+            }
+        }
+        return (folders.count, totalBytes)
+    }
+
+    @discardableResult
+    static func trashInactivePracticeFolders(excluding activeDirectory: URL?) throws -> Int {
+        let root = try practiceRootDirectory(create: false)
+        guard FileManager.default.fileExists(atPath: root.path) else { return 0 }
+        let entries = try FileManager.default.contentsOfDirectory(
+            at: root, includingPropertiesForKeys: [.isDirectoryKey], options: [.skipsHiddenFiles]
+        )
+        let activePath = activeDirectory?.standardizedFileURL.path
+        var trashed = 0
+        for entry in entries {
+            if entry.standardizedFileURL.path == activePath { continue }
+            try FileManager.default.trashItem(at: entry, resultingItemURL: nil)
+            trashed += 1
+        }
+        return trashed
+    }
+
+    private func makeSessionDirectory() throws -> URL {
+        let directory = try Self.practiceRootDirectory(create: true)
             .appendingPathComponent(UUID().uuidString, isDirectory: true)
         try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
         practiceDirectory = directory
@@ -262,22 +315,54 @@ final class PracticeController: NSObject, ObservableObject, NSWindowDelegate {
 
     private func startDirectoryMonitor(for shortcut: Shortcut, directory: URL) {
         let session = generation
+        let descriptor = open(directory.path, O_EVTONLY)
+        if descriptor >= 0 {
+            let source = DispatchSource.makeFileSystemObjectSource(
+                fileDescriptor: descriptor,
+                eventMask: [.write, .rename, .delete, .attrib],
+                queue: .main
+            )
+            source.setEventHandler { [weak self] in
+                MainActor.assumeIsolated {
+                    guard let self, self.generation == session else { return }
+                    self.pollDirectoryOnce(directory: directory, shortcut: shortcut, session: session)
+                }
+            }
+            source.setCancelHandler {
+                close(descriptor)
+            }
+            directorySource = source
+            source.resume()
+            return
+        }
+
+        // Fallback if the OS refuses an O_EVTONLY descriptor.
         monitor = Task { @MainActor [weak self] in
             while !Task.isCancelled {
                 do { try await Task.sleep(for: .milliseconds(450)) } catch { return }
                 guard let self, self.generation == session else { return }
-                do {
-                    let current = try FileSnapshot.read(directory)
-                    self.inspectChanges(current, for: shortcut)
-                } catch {
-                    self.status = .failure(L10n.format("练习目录暂时无法读取：{0}。原练习内容已保留，可以重新准备。", String(describing: error.localizedDescription)))
+                if !self.pollDirectoryOnce(directory: directory, shortcut: shortcut, session: session) {
                     return
                 }
             }
         }
     }
 
-    private func inspectChanges(_ current: [FileSnapshot], for shortcut: Shortcut) {
+    @discardableResult
+    private func pollDirectoryOnce(directory: URL, shortcut: Shortcut, session: UUID) -> Bool {
+        do {
+            let current = try FileSnapshot.read(directory)
+            inspectChanges(current, for: shortcut, directory: directory, session: session)
+            return true
+        } catch {
+            directorySource?.cancel()
+            directorySource = nil
+            status = .failure(L10n.format("练习目录暂时无法读取：{0}。原练习内容已保留，可以重新准备。", String(describing: error.localizedDescription)))
+            return false
+        }
+    }
+
+    private func inspectChanges(_ current: [FileSnapshot], for shortcut: Shortcut, directory: URL, session: UUID) {
         let originalIDs = Set(baseline.map(\.fileID))
         switch shortcut.practice {
         case .newFolder:
@@ -302,22 +387,38 @@ final class PracticeController: NSObject, ObservableObject, NSWindowDelegate {
                   let original = baseline.first(where: { $0.name == sampleURL.lastPathComponent }),
                   !current.contains(where: { $0.fileID == original.fileID }) else { return }
             // A missing file alone does not prove it was moved to Trash.
-            guard Date().timeIntervalSince(lastTrashCheck) > 1.5 else { return }
+            guard Date().timeIntervalSince(lastTrashCheck) > 0.2 else { return }
             lastTrashCheck = Date()
-            if let sampleBookmark {
-                var stale = false
-                if let resolved = try? URL(resolvingBookmarkData: sampleBookmark,
-                                          options: [.withoutUI, .withoutMounting], relativeTo: nil,
-                                          bookmarkDataIsStale: &stale),
-                   resolved.pathComponents.contains(where: { $0 == ".Trash" || $0 == ".Trashes" }) {
-                    status = .success(L10n.format("已检测到专用样例文件移入废纸篓。可以在废纸篓中找到「{0}」。", String(describing: resolved.lastPathComponent)))
-                    return
-                }
-            }
+            if resolveSampleInTrash() { return }
             if !status.isSuccess {
                 status = .ready(L10n.text("样例文件已离开练习目录；请查看废纸篓。"))
+                scheduleTrashRecheck(session: session)
             }
         default: break
+        }
+    }
+
+    private func resolveSampleInTrash() -> Bool {
+        guard let sampleBookmark else { return false }
+        var stale = false
+        guard let resolved = try? URL(resolvingBookmarkData: sampleBookmark,
+                                      options: [.withoutUI, .withoutMounting], relativeTo: nil,
+                                      bookmarkDataIsStale: &stale),
+              resolved.pathComponents.contains(where: { $0 == ".Trash" || $0 == ".Trashes" }) else {
+            return false
+        }
+        status = .success(L10n.format("已检测到专用样例文件移入废纸篓。可以在废纸篓中找到「{0}」。", String(describing: resolved.lastPathComponent)))
+        return true
+    }
+
+    private func scheduleTrashRecheck(session: UUID) {
+        trashRecheckTask?.cancel()
+        trashRecheckTask = Task { @MainActor [weak self] in
+            for delay in [250, 700] {
+                do { try await Task.sleep(for: .milliseconds(delay)) } catch { return }
+                guard let self, self.generation == session, !self.status.isSuccess else { return }
+                if self.resolveSampleInTrash() { return }
+            }
         }
     }
 

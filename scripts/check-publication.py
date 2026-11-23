@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Check the explicit source distribution without reading files outside this project."""
+import json
 from pathlib import Path
 import re
 import subprocess
@@ -8,6 +9,7 @@ import sys
 ROOT = Path(__file__).resolve().parent.parent
 TOP_FILES = {"Package.swift", "README.md", "README.zh-CN.md", "LICENSE", "CONTRIBUTING.md", "SECURITY.md", "CHANGELOG.md", ".gitignore"}
 PUBLIC_DIRS = {"Sources", "Tests", "scripts", "Assets", "docs", ".github"}
+L10N_CALL = re.compile(r'L10n\.(?:text|format)\("((?:\\.|[^"\\])*)"')
 PATTERNS = {
     "private key": re.compile(r"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----"),
     "GitHub token": re.compile(r"\b(?:gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{40,})\b"),
@@ -15,6 +17,23 @@ PATTERNS = {
     "API secret": re.compile(r"\bsk-[A-Za-z0-9]{32,}\b"),
     "local user path": re.compile(r"/(?:Users|home)/[A-Za-z0-9_.-]+/"),
 }
+
+
+def check_l10n_coverage():
+    ui_path = ROOT / "Sources/ShortcutCore/Resources/ui.en.json"
+    ui_keys = set(json.loads(ui_path.read_text(encoding="utf-8")).keys())
+    used_keys = set()
+    for swift_file in sorted((ROOT / "Sources").rglob("*.swift")):
+        content = swift_file.read_text(encoding="utf-8")
+        for match in L10N_CALL.finditer(content):
+            decoded = json.loads(f'"{match.group(1)}"')
+            used_keys.add(decoded)
+    errors = []
+    for key in sorted(used_keys - ui_keys):
+        errors.append((ui_path.relative_to(ROOT), f"missing English UI translation for: {key}"))
+    for key in sorted(ui_keys - used_keys):
+        errors.append((ui_path.relative_to(ROOT), f"unused English UI translation key: {key}"))
+    return errors
 
 
 def source_files():
@@ -54,6 +73,7 @@ def main():
         for label, pattern in PATTERNS.items():
             if pattern.search(text):
                 failures.append((path, label))
+    failures.extend(check_l10n_coverage())
     for path, reason in failures:
         print(f"FAIL: {path}: {reason}")
     if failures:

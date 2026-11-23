@@ -11,42 +11,17 @@ struct NativeTextPractice: View {
     init(shortcut: Shortcut, onResult: @escaping (String, Bool) -> Void) {
         self.shortcut = shortcut
         self.onResult = onResult
-        _source = ViewState(initialValue: Self.sample(for: shortcut.id))
+        _source = ViewState(initialValue: PracticeConfiguration.textRecipe(for: shortcut.id)?.sample ?? L10n.text("把快捷键，用在真正的操作里。"))
         _target = ViewState(initialValue: "")
     }
 
-    private static func sample(for id: String) -> String {
-        switch id {
-        case "system-previous-word", "system-next-word", "system-delete-word": "Mac shortcuts make work easier."
-        case "system-document-start", "system-document-end", "system-line-start", "system-line-end", "system-select-to-line-end":
-            L10n.text("先把光标放在这里。\n再试试移动到开头或末尾。")
-        default: L10n.text("把快捷键，用在真正的操作里。")
-        }
+    private var recipe: PracticeConfiguration.TextPracticeRecipe? {
+        PracticeConfiguration.textRecipe(for: shortcut.id)
     }
 
-    private var hasPasteTarget: Bool { ["system-copy", "system-paste"].contains(shortcut.id) }
-    private var selectsSample: Bool {
-        ["system-copy", "system-cut", "system-bold", "system-italic", "system-underline"].contains(shortcut.id)
-    }
-    private var sourceSelection: NSRange {
-        let sample = Self.sample(for: shortcut.id) as NSString
-        if selectsSample { return NSRange(location: 0, length: min(AppLanguage.current == .english ? 13 : 8, sample.length)) }
-        if ["system-previous-word", "system-next-word", "system-delete-word"].contains(shortcut.id) {
-            return NSRange(location: min(13, sample.length), length: 0)
-        }
-        return NSRange(location: sample.length / 2, length: 0)
-    }
-    private var hint: String {
-        switch shortcut.id {
-        case "system-copy": L10n.text("复制选中的文字，再在下方粘贴查看。")
-        case "system-paste": L10n.text("先复制上方文字，再在下方粘贴。")
-        case "system-undo": L10n.text("先改动文字，再撤销。")
-        case "system-redo": L10n.text("先改动文字并撤销，再重做。")
-        case "system-bold", "system-italic", "system-underline": L10n.text("对选中的文字使用快捷键。")
-        case "system-delete-word", "system-forward-delete": L10n.text("将光标放在文字中间后操作。")
-        default: L10n.text("点击文本放置光标，再使用快捷键。")
-        }
-    }
+    private var hasPasteTarget: Bool { recipe?.hasPasteTarget ?? false }
+    private var sourceSelection: NSRange { recipe?.initialSelection ?? NSRange(location: 0, length: 0) }
+    private var hint: String { recipe?.hint ?? L10n.text("点击文本放置光标，再使用快捷键。") }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
@@ -62,7 +37,10 @@ struct NativeTextPractice: View {
                     .overlay(RoundedRectangle(cornerRadius: 6).strokeBorder(.primary.opacity(0.14)))
             }
         }
-        .onChange(of: shortcut.id) { _, _ in source = Self.sample(for: shortcut.id); target = "" }
+        .onChange(of: shortcut.id) { _, _ in
+            source = PracticeConfiguration.textRecipe(for: shortcut.id)?.sample ?? L10n.text("把快捷键，用在真正的操作里。")
+            target = ""
+        }
     }
 
     private func report(_ action: TextResultAction, _ detail: String) {
@@ -72,32 +50,12 @@ struct NativeTextPractice: View {
 }
 
 enum TextResultAction: Equatable {
-    case copy, paste, cut, selectAll, undo, redo, changed
+    case copy, paste, cut, selectAll, undo, redo
     case documentStart, documentEnd, lineStart, lineEnd, previousWord, nextWord
     case deleteWord, forwardDelete, selectToLineEnd, bold, italic, underline
 
     static func expected(for shortcutID: String) -> Self? {
-        switch shortcutID {
-        case "system-copy": .copy
-        case "system-paste": .paste
-        case "system-cut": .cut
-        case "system-select-all": .selectAll
-        case "system-undo": .undo
-        case "system-redo": .redo
-        case "system-document-start": .documentStart
-        case "system-document-end": .documentEnd
-        case "system-line-start": .lineStart
-        case "system-line-end": .lineEnd
-        case "system-previous-word": .previousWord
-        case "system-next-word": .nextWord
-        case "system-delete-word": .deleteWord
-        case "system-forward-delete": .forwardDelete
-        case "system-select-to-line-end": .selectToLineEnd
-        case "system-bold": .bold
-        case "system-italic": .italic
-        case "system-underline": .underline
-        default: nil
-        }
+        PracticeConfiguration.textActionByShortcutID[shortcutID]
     }
 }
 

@@ -160,6 +160,14 @@ enum PracticeIntegrationChecks {
         try require(!controller.hasFloatingHint && !hint.isVisible, "悬浮提示条未关闭。")
         passed.append("非激活悬浮提示条保留键盘焦点")
 
+        let catalogIDs = Set(catalog.shortcuts.map(\.id))
+        let unknownConfiguredIDs = PracticeConfiguration.referencedShortcutIDs.subtracting(catalogIDs)
+        try require(unknownConfiguredIDs.isEmpty,
+                    "PracticeConfiguration 引用了目录中不存在的快捷键 ID：\(unknownConfiguredIDs.sorted().joined(separator: ", "))")
+        try require(PracticeController.automaticallyVerifies(try item(.trashFile)),
+                    "移到废纸篓练习应纳入自动检测声明。")
+        passed.append("练习配置引用与废纸篓自动检测声明一致")
+
         controller.stop()
         passed.append(contentsOf: try checkNativeTextResults(catalog: catalog))
         return "练习集成检查通过 \(passed.count) 项：\n" + passed.map { "✓ " + $0 }.joined(separator: "\n")

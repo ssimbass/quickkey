@@ -3,19 +3,33 @@ set -euo pipefail
 
 task_root="$(cd "$(dirname "$0")/.." && pwd)"
 task_configuration="release"
-if [[ "${1:-}" == "--debug" ]]; then
-    task_configuration="debug"
-    shift
-fi
-if [[ $# -ne 0 ]]; then
-    printf '用法：%s [--debug]\n' "$0" >&2
-    exit 2
-fi
+task_universal=false
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        --debug)
+            task_configuration="debug"
+            shift
+            ;;
+        --universal)
+            task_universal=true
+            shift
+            ;;
+        *)
+            printf '用法：%s [--debug] [--universal]\n' "$0" >&2
+            exit 2
+            ;;
+    esac
+done
 
 cd "$task_root"
 swift "$task_root/scripts/generate-icon.swift" "$task_root/Assets"
-swift build --configuration "$task_configuration" --product QuickKey
-task_bin_dir="$(swift build --configuration "$task_configuration" --show-bin-path)"
+if [[ "$task_universal" == true ]]; then
+    swift build --configuration "$task_configuration" --arch arm64 --arch x86_64 --product QuickKey
+    task_bin_dir="$(swift build --configuration "$task_configuration" --arch arm64 --arch x86_64 --show-bin-path)"
+else
+    swift build --configuration "$task_configuration" --product QuickKey
+    task_bin_dir="$(swift build --configuration "$task_configuration" --show-bin-path)"
+fi
 task_app="$task_root/dist/QuickKey.app"
 task_staging="$task_root/dist/.QuickKey-$$.app"
 trap 'rm -rf "$task_staging"' EXIT

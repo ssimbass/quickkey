@@ -150,6 +150,32 @@ struct CoreChecks {
                 checks.expect(placeholders(key) == placeholders(value), "插值参数完整：\(key)")
             }
             checks.expect(L10n.format("快捷键 {0} 的教学信息或来源不完整", "{1}").contains("{1}"), "用户文本中的占位符保持原样")
+            checks.expect(L10n.searchResultCount(1, language: .english) == "1 search result", "英文搜索结果单数形式")
+            checks.expect(L10n.searchResultCount(2, language: .english) == "2 search results", "英文搜索结果复数形式")
+            checks.expect(L10n.searchResultCount(1, language: .simplifiedChinese) == "1 个搜索结果", "中文搜索结果计数")
+            let tabResults = ShortcutSearch.results(in: english.shortcuts, query: "tab")
+            checks.expect(tabResults.contains { $0.id == "safari-new-tab" } && tabResults.contains { $0.id == "finder-new-tab" },
+                          "单词键名 tab 同时匹配标签页文本条目")
+            let homeResults = ShortcutSearch.results(in: english.shortcuts, query: "home")
+            checks.expect(homeResults.contains { $0.id == "safari-homepage" } && homeResults.contains { $0.id == "finder-home" },
+                          "单词键名 home 同时匹配主页与个人文件夹")
+        }
+
+        checks.run("本地收藏与自动练习记录存储") {
+            let suiteName = "local.quickkey.corechecks.\(UUID().uuidString)"
+            guard let defaults = UserDefaults(suiteName: suiteName) else { throw CheckFailure("无法创建临时 UserDefaults") }
+            defer { defaults.removePersistentDomain(forName: suiteName) }
+            var store = UserLibraryStore.load(from: defaults)
+            checks.expect(store.favorites.isEmpty && store.practiced.isEmpty, "初始记录为空")
+            checks.expect(store.toggleFavorite("system-spotlight") == true, "添加收藏返回 true")
+            checks.expect(store.isFavorite("system-spotlight"), "收藏状态生效")
+            checks.expect(store.markPracticed("system-copy") == true, "首次记录已练习返回 true")
+            checks.expect(store.markPracticed("system-copy") == false, "重复记录已练习返回 false")
+            store.save(to: defaults)
+            var reloaded = UserLibraryStore.load(from: defaults)
+            checks.expect(reloaded.isFavorite("system-spotlight") && reloaded.isPracticed("system-copy"), "重启后保留收藏与练习记录")
+            checks.expect(reloaded.toggleFavorite("system-spotlight") == false, "取消收藏返回 false")
+            checks.expect(!reloaded.isFavorite("system-spotlight"), "取消收藏生效")
         }
 
         print("\n核心检查：\(checks.assertions) 个断言，\(checks.groups) 组，\(checks.failures) 处失败。")

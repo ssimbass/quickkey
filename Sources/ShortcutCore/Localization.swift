@@ -47,13 +47,25 @@ public enum L10n {
     }
 
     public static func format(_ key: String, _ arguments: String...) -> String {
+        format(key, arguments: arguments, language: .current)
+    }
+
+    public static func format(_ key: String, arguments: [String], language: AppLanguage = .current) -> String {
         // Split before substitution so user-supplied text containing markers stays literal.
-        let template = text(key)
+        let template = text(key, language: language)
         return template.components(separatedBy: "{").enumerated().map { index, part in
             guard index > 0 else { return part }
             guard let end = part.firstIndex(of: "}"), let number = Int(part[..<end]),
                   arguments.indices.contains(number) else { return "{" + part }
             return arguments[number] + part[part.index(after: end)...]
         }.joined()
+    }
+
+    public static func searchResultCount(_ count: Int, language: AppLanguage = .current) -> String {
+        let resolved = language == .system ? AppLanguage.current : language
+        if resolved == .english, count == 1 {
+            return L10n.format("{0} 个搜索结果（单数）", arguments: [String(count)], language: resolved)
+        }
+        return L10n.format("{0} 个搜索结果", arguments: [String(count)], language: resolved)
     }
 }

@@ -2,16 +2,33 @@ import SwiftUI
 import ShortcutCore
 import AppKit
 
+private struct RowFramesPreferenceKey: PreferenceKey {
+    static let defaultValue: [String: CGRect] = [:]
+    static func reduce(value: inout [String: CGRect], nextValue: () -> [String: CGRect]) {
+        value.merge(nextValue(), uniquingKeysWith: { _, new in new })
+    }
+}
+
 struct SidebarNavigation: View {
     let catalog: ShortcutCatalog
+    @ObservedObject var userState: UserLibraryState
     let selectedID: String?
+    let focusSearchTrigger: Int
+    let requestedScope: AppScope?
+    let onHandledScopeRequest: () -> Void
     let onSelect: (String) -> Void
     let onShowSymbols: () -> Void
     let onShowSources: () -> Void
+
     @ViewState private var scope: AppScope = .system
     @ViewState private var query = ""
+    @ViewState private var showFavoritesOnly = false
     @ViewState private var expanded: Set<String> = []
     @ViewState private var remembered: [AppScope: String] = [:]
+    @ViewState private var rowFrames: [String: CGRect] = [:]
+    @ViewState private var scrollTrigger = 0
+    @FocusState private var searchFocused: Bool
+    @StateObject private var keyCapture = KeyCaptureSession()
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @Namespace private var selectionAnimation
 
@@ -21,7 +38,10 @@ struct SidebarNavigation: View {
     }
     private var searching: Bool { !query.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
     private var entries: [Shortcut] {
-        ShortcutSearch.results(in: catalog.shortcuts, query: query, scope: searching ? nil : scope)
+        let base = showFavoritesOnly
+            ? catalog.shortcuts.filter { userState.isFavorite($0.id) }
+            : catalog.shortcuts
+        return ShortcutSearch.results(in: base, query: query, scope: (searching || showFavoritesOnly) ? nil : scope)
     }
     private var spring: Animation? { reduceMotion ? nil : .spring(response: 0.30, dampingFraction: 0.78) }
 
@@ -39,19 +59,23 @@ struct SidebarNavigation: View {
             searchField.padding(.horizontal, 16).padding(.bottom, 15)
             softwarePicker.padding(.horizontal, 16).padding(.bottom, 16)
             HStack {
-                Text(searching ? L10n.format("{0} 个搜索结果", String(describing: entries.count)) : label(for: scope) + L10n.text(" 快捷键"))
+                Text(headerTitle)
                 Spacer()
                 if searching {
                     Button(L10n.text("清除")) { query = "" }.buttonStyle(.plain)
+                } else if showFavoritesOnly {
+                    Button(L10n.text("显示全部")) { showFavoritesOnly = false }.buttonStyle(.plain)
                 }
             }.font(.system(size: 11)).foregroundStyle(.secondary)
                 .padding(.horizontal, 23).padding(.bottom, 8)
-            StableScrollView {
+            StableScrollView(scrollToRect: selectedID.flatMap { rowFrames[$0] }, scrollTrigger: scrollTrigger) {
                 VStack(alignment: .leading, spacing: 7) {
                     if entries.isEmpty {
-                        Text(L10n.text("没有匹配项，试试“截图”或“F12”。"))
+                        Text(showFavoritesOnly && !searching
+                             ? L10n.text("还没有收藏的快捷键。点击详情页右上角的星标即可收藏。")
+                             : L10n.text("没有匹配项，试试“截图”或“F12”。"))
                             .font(.system(size: 12)).foregroundStyle(.secondary).padding(18)
-                    } else if searching {
+                    } else if searching || showFavoritesOnly {
                         ForEach(scopes) { app in
                             let matches = entries.filter { $0.scope == app }
                             if !matches.isEmpty {
@@ -68,14 +92,25 @@ struct SidebarNavigation: View {
                 }
                 .padding(.horizontal, 12).padding(.top, 2).padding(.bottom, 16)
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .coordinateSpace(name: "sidebar-scroll")
+                .onPreferenceChange(RowFramesPreferenceKey.self) { rowFrames = $0 }
                 .onKeyPress(.downArrow) { moveSelection(1); return .handled }
                 .onKeyPress(.upArrow) { moveSelection(-1); return .handled }
             }
-            .id(scope.rawValue + (searching ? "-search" : "-browse"))
+            .id(scope.rawValue + (searching ? "-search" : showFavoritesOnly ? "-favorites" : "-browse"))
             Divider().padding(.horizontal, 18)
             HStack(spacing: 13) {
                 Button(action: onShowSymbols) { Image(systemName: "keyboard") }
                     .buttonStyle(.plain).help(L10n.text("认识键盘符号")).accessibilityLabel(L10n.text("认识键盘符号"))
+                Button {
+                    withAnimation(spring) { showFavoritesOnly.toggle() }
+                } label: {
+                    Image(systemName: showFavoritesOnly ? "star.fill" : "star")
+                        .foregroundStyle(showFavoritesOnly ? Color.accentColor : Color.secondary)
+                }
+                .buttonStyle(.plain)
+                .help(showFavoritesOnly ? L10n.text("显示全部") : L10n.text("仅显示收藏"))
+                .accessibilityLabel(showFavoritesOnly ? L10n.text("显示全部") : L10n.text("仅显示收藏"))
                 Button(L10n.format("{0} 个操作 · 来源", String(describing: catalog.shortcuts.count)), action: onShowSources).buttonStyle(.plain)
                 Spacer(minLength: 0)
             }.font(.system(size: 11)).foregroundStyle(.secondary)
@@ -83,32 +118,84 @@ struct SidebarNavigation: View {
         }
         .background(Color(nsColor: .windowBackgroundColor))
         .onChange(of: selectedID) { _, _ in revealSelection() }
+        .onChange(of: focusSearchTrigger) { _, _ in
+            keyCapture.stop()
+            searchFocused = true
+        }
+        .onChange(of: requestedScope) { _, target in
+            guard let target else { return }
+            selectScope(target)
+            onHandledScopeRequest()
+        }
         .onAppear(perform: revealSelection)
+        .onDisappear { keyCapture.stop() }
         .accessibilityIdentifier("shortcut-navigation")
+    }
+
+    private var headerTitle: String {
+        if searching {
+            return L10n.searchResultCount(entries.count)
+        }
+        if showFavoritesOnly {
+            return L10n.text("收藏")
+        }
+        return label(for: scope) + L10n.text(" 快捷键")
     }
 
     private var searchField: some View {
         HStack(spacing: 8) {
-            Image(systemName: "magnifyingglass").foregroundStyle(.secondary)
-            TextField(L10n.text("搜索操作或快捷键"), text: $query).textFieldStyle(.plain)
+            Image(systemName: keyCapture.isRecording ? "record.circle.fill" : "magnifyingglass")
+                .foregroundStyle(keyCapture.isRecording ? Color.accentColor : Color.secondary)
+            TextField(keyCapture.isRecording ? L10n.text("正在监听按键… 按 Esc 取消") : L10n.text("搜索操作或快捷键"), text: $query)
+                .textFieldStyle(.plain)
+                .focused($searchFocused)
+                .onKeyPress(.escape) {
+                    if keyCapture.isRecording {
+                        keyCapture.stop()
+                        return .handled
+                    }
+                    if !query.isEmpty {
+                        query = ""
+                        return .handled
+                    }
+                    searchFocused = false
+                    return .handled
+                }
+                .onKeyPress(.downArrow) { moveSelection(1); return .handled }
+                .onKeyPress(.upArrow) { moveSelection(-1); return .handled }
                 .accessibilityLabel(L10n.text("搜索操作、软件或快捷键"))
             if !query.isEmpty {
                 Button { query = "" } label: { Image(systemName: "xmark.circle.fill").foregroundStyle(.tertiary) }
                     .buttonStyle(.plain).accessibilityLabel(L10n.text("清空搜索"))
             }
+            Button {
+                searchFocused = false
+                keyCapture.toggle { captured in
+                    query = captured
+                }
+            } label: {
+                Image(systemName: keyCapture.isRecording ? "keyboard.fill" : "command")
+                    .font(.system(size: 11, weight: .medium))
+                    .foregroundStyle(keyCapture.isRecording ? Color.accentColor : Color.secondary)
+            }
+            .buttonStyle(.plain)
+            .help(keyCapture.isRecording ? L10n.text("取消按键录制") : L10n.text("按组合键搜索"))
+            .accessibilityLabel(keyCapture.isRecording ? L10n.text("取消按键录制") : L10n.text("按组合键搜索"))
         }.font(.system(size: 12)).padding(.horizontal, 11).padding(.vertical, 10)
             .background(.background, in: RoundedRectangle(cornerRadius: 10))
-            .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(.primary.opacity(0.06)))
+            .overlay(RoundedRectangle(cornerRadius: 10)
+                .strokeBorder(keyCapture.isRecording ? Color.accentColor.opacity(0.6) : .primary.opacity(0.06)))
     }
 
     private var softwarePicker: some View {
         HStack(spacing: 4) {
             ForEach(visibleScopes) { app in
+                let isSelected = !showFavoritesOnly && scope == app
                 Button { selectScope(app) } label: {
                     softwareLabel(title: label(for: app), symbol: app.symbol)
-                        .foregroundStyle(scope == app ? Color.accentColor : Color.primary)
+                        .foregroundStyle(isSelected ? Color.accentColor : Color.primary)
                         .background {
-                            if scope == app {
+                            if isSelected {
                                 RoundedRectangle(cornerRadius: 14).fill(.background)
                                     .shadow(color: .black.opacity(0.045), radius: 6, y: 3)
                                     .matchedGeometryEffect(id: "software-selection", in: selectionAnimation)
@@ -116,14 +203,14 @@ struct SidebarNavigation: View {
                         }
                 }
                 .buttonStyle(NavigationPressStyle())
-                .accessibilityAddTraits(scope == app ? .isSelected : [])
+                .accessibilityAddTraits(isSelected ? .isSelected : [])
                 .accessibilityIdentifier("software-" + app.id)
             }
             if SoftwarePicker.needsOverflow(scopes.map(\.id)) {
                 Menu {
                     ForEach(scopes) { app in
                         Button { selectScope(app) } label: {
-                            if app == scope { Label(label(for: app), systemImage: "checkmark") }
+                            if !showFavoritesOnly && app == scope { Label(label(for: app), systemImage: "checkmark") }
                             else { Text(label(for: app)) }
                         }
                     }
@@ -164,30 +251,55 @@ struct SidebarNavigation: View {
     }
 
     private func shortcutButton(_ shortcut: Shortcut) -> some View {
-        Button {
+        let isSelected = selectedID == shortcut.id
+        let isPracticed = userState.isPracticed(shortcut.id)
+        let isFavorite = userState.isFavorite(shortcut.id)
+        let separator = AppLanguage.current == .english ? ", " : "，"
+        return Button {
             withAnimation(spring) { onSelect(shortcut.id) }
         } label: {
             HStack(spacing: 8) {
-                Text(shortcut.title).font(.system(size: 12, weight: selectedID == shortcut.id ? .medium : .regular))
-                    .lineLimit(1).frame(maxWidth: .infinity, alignment: .leading)
+                HStack(spacing: 5) {
+                    Text(shortcut.title).font(.system(size: 12, weight: isSelected ? .medium : .regular))
+                        .lineLimit(1)
+                    if isFavorite {
+                        Image(systemName: "star.fill")
+                            .font(.system(size: 8))
+                            .foregroundStyle(.orange.opacity(0.85))
+                            .accessibilityHidden(true)
+                    }
+                    if isPracticed {
+                        Image(systemName: "checkmark.circle.fill")
+                            .font(.system(size: 9))
+                            .foregroundStyle(.green.opacity(0.85))
+                            .accessibilityHidden(true)
+                    }
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
                 Text(shortcut.keys.joined(separator: " ")).font(.system(size: 11))
-                    .foregroundStyle(selectedID == shortcut.id ? Color.accentColor : Color.secondary)
+                    .foregroundStyle(isSelected ? Color.accentColor : Color.secondary)
                     .frame(width: 80, alignment: .trailing).lineLimit(1)
             }
-            .foregroundStyle(selectedID == shortcut.id ? Color.accentColor : Color.primary)
+            .foregroundStyle(isSelected ? Color.accentColor : Color.primary)
             .padding(.horizontal, 12).frame(maxWidth: .infinity).frame(height: 48)
             .background {
-                if selectedID == shortcut.id {
+                if isSelected {
                     RoundedRectangle(cornerRadius: 12).fill(Color.accentColor.opacity(0.12))
                         .matchedGeometryEffect(id: "shortcut-selection", in: selectionAnimation)
                 }
             }
+            .background(GeometryReader { proxy in
+                Color.clear.preference(
+                    key: RowFramesPreferenceKey.self,
+                    value: [shortcut.id: proxy.frame(in: .named("sidebar-scroll"))]
+                )
+            })
             .contentShape(RoundedRectangle(cornerRadius: 12))
         }
         .buttonStyle(NavigationPressStyle())
         .help(shortcut.title + " · " + shortcut.englishKeys)
-        .accessibilityLabel(shortcut.title + "，" + shortcut.englishKeys)
-        .accessibilityAddTraits(selectedID == shortcut.id ? .isSelected : [])
+        .accessibilityLabel(shortcut.title + separator + shortcut.englishKeys)
+        .accessibilityAddTraits(isSelected ? .isSelected : [])
         .accessibilityIdentifier("shortcut-" + shortcut.id)
     }
 
@@ -197,6 +309,8 @@ struct SidebarNavigation: View {
     }
 
     private func selectScope(_ app: AppScope) {
+        keyCapture.stop()
+        showFavoritesOnly = false
         query = ""
         let item = remembered[app].flatMap { id in catalog.shortcuts.first { $0.id == id } }
             ?? catalog.shortcuts.first { $0.scope == app }
@@ -205,17 +319,20 @@ struct SidebarNavigation: View {
 
     private func revealSelection() {
         guard let item = catalog.shortcuts.first(where: { $0.id == selectedID }) else { return }
-        scope = item.scope
+        if !showFavoritesOnly {
+            scope = item.scope
+        }
         remembered[item.scope] = item.id
         expanded.insert(item.scope.id + "::" + item.section)
     }
 
     private func moveSelection(_ delta: Int) {
-        let visible = entries.filter { searching || expanded.contains($0.scope.id + "::" + $0.section) }
+        let visible = entries.filter { searching || showFavoritesOnly || expanded.contains($0.scope.id + "::" + $0.section) }
         guard !visible.isEmpty else { return }
         let index = visible.firstIndex { $0.id == selectedID } ?? 0
         let next = min(visible.count - 1, max(0, index + delta))
         withAnimation(spring) { onSelect(visible[next].id) }
+        scrollTrigger += 1
     }
 
     private func label(for app: AppScope) -> String { app == .system ? "macOS" : app.title }

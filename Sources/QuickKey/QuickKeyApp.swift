@@ -10,13 +10,23 @@ struct QuickKeyApp: App {
     @NSApplicationDelegateAdaptor(QuickKeyAppDelegate.self) private var delegate
     @StateObject private var library = LibraryModel()
     @StateObject private var practice = PracticeController()
+    @StateObject private var userState = UserLibraryState()
+    @ViewState private var focusSearchTrigger = 0
+    @ViewState private var requestedScope: AppScope?
     @AppStorage("appLanguage") private var languagePreference = "system"
 
     var body: some Scene {
         WindowGroup(L10n.text("快捷 · Mac 快捷键手册"), id: "main") {
             Group {
                 if let catalog = library.catalog {
-                    LibraryView(catalog: catalog, practice: practice)
+                    LibraryView(
+                        catalog: catalog,
+                        practice: practice,
+                        userState: userState,
+                        focusSearchTrigger: focusSearchTrigger,
+                        requestedScope: requestedScope,
+                        onHandledScopeRequest: { requestedScope = nil }
+                    )
                 } else {
                     ContentUnavailableView {
                         Label(L10n.text("目录暂时无法打开"), systemImage: "exclamationmark.triangle")
@@ -32,6 +42,14 @@ struct QuickKeyApp: App {
             .tint(.blue)
             .id(languagePreference)
             .environment(\.locale, Locale(identifier: AppLanguage.current.rawValue))
+            .onAppear {
+                let isTestRun = ProcessInfo.processInfo.arguments.contains("--smoke-test")
+                    || ProcessInfo.processInfo.arguments.contains("--integration-test")
+                let state = userState
+                practice.onVerified = isTestRun ? nil : { [weak state] id in
+                    state?.markPracticed(id)
+                }
+            }
             .onChange(of: languagePreference) { _, _ in
                 practice.stop()
                 library.load()
@@ -42,6 +60,21 @@ struct QuickKeyApp: App {
             CommandGroup(replacing: .newItem) { }
             TextEditingCommands()
             TextFormattingCommands()
+            CommandMenu(L10n.text("导航")) {
+                Button(L10n.text("搜索快捷键")) {
+                    focusSearchTrigger += 1
+                }
+                .keyboardShortcut("f", modifiers: .command)
+                Divider()
+                ForEach(Array(AppScope.allCases.enumerated()), id: \.element.id) { index, scope in
+                    if let key = KeyEquivalent.digit(index + 1) {
+                        Button(scope == .system ? "macOS" : scope.title) {
+                            requestedScope = scope
+                        }
+                        .keyboardShortcut(key, modifiers: .command)
+                    }
+                }
+            }
             CommandGroup(after: .help) {
                 Button(L10n.text("打开快捷键官方来源")) {
                     let locale = AppLanguage.current == .english ? "en-us" : "zh-cn"
@@ -50,7 +83,37 @@ struct QuickKeyApp: App {
             }
         }
         Settings {
-            SettingsView()
+            SettingsView(practice: practice)
+        }
+    }
+}
+
+private extension KeyEquivalent {
+    static func digit(_ number: Int) -> KeyEquivalent? {
+        guard (1...9).contains(number), let character = String(number).first else { return nil }
+        return KeyEquivalent(character)
+    }
+}
+
+@MainActor
+final class UserLibraryState: ObservableObject {
+    @Published private(set) var store: UserLibraryStore
+
+    init() {
+        self.store = UserLibraryStore.load()
+    }
+
+    func isFavorite(_ id: String) -> Bool { store.isFavorite(id) }
+    func isPracticed(_ id: String) -> Bool { store.isPracticed(id) }
+
+    func toggleFavorite(_ id: String) {
+        store.toggleFavorite(id)
+        store.save()
+    }
+
+    func markPracticed(_ id: String) {
+        if store.markPracticed(id) {
+            store.save()
         }
     }
 }
@@ -139,8 +202,12 @@ final class LibraryModel: ObservableObject {
 }
 
 struct SettingsView: View {
+    @ObservedObject var practice: PracticeController
     @AppStorage("showWindowsEquivalent") private var showWindowsEquivalent = true
     @AppStorage("appLanguage") private var languagePreference = "system"
+    @ViewState private var folderCount = 0
+    @ViewState private var folderBytes: Int64 = 0
+    @ViewState private var cleanupMessage: String?
 
     var body: some View {
         Form {
@@ -151,11 +218,60 @@ struct SettingsView: View {
             }
             Toggle(L10n.text("显示 Windows 对照"), isOn: $showWindowsEquivalent)
             LabeledContent(L10n.text("练习方式"), value: L10n.text("准备真实环境，亲手按下快捷键"))
+            LabeledContent(L10n.text("练习目录")) {
+                HStack(spacing: 10) {
+                    Text(folderSummaryText).foregroundStyle(.secondary)
+                    Button(L10n.text("在 Finder 中打开")) {
+                        if let root = try? PracticeController.practiceRootDirectory(create: true) {
+                            NSWorkspace.shared.open(root)
+                        }
+                    }
+                    Button(L10n.text("将历史目录移到废纸篓")) {
+                        moveInactiveFoldersToTrash()
+                    }
+                    .disabled(folderCount == 0)
+                }
+            }
+            if let cleanupMessage {
+                Text(cleanupMessage).font(.caption).foregroundStyle(.secondary)
+            }
             Text(L10n.text("文件练习使用应用创建的专用目录。基础练习无需辅助功能或全局键盘监听。"))
                 .font(.caption).foregroundStyle(.secondary)
         }
         .formStyle(.grouped)
-        .frame(width: 500, height: 260)
+        .frame(width: 560, height: 320)
         .padding(12)
+        .onAppear(perform: refreshPracticeSummary)
+    }
+
+    private var folderSummaryText: String {
+        guard folderCount > 0 else { return L10n.text("暂无历史练习文件") }
+        let formattedSize = ByteCountFormatter.string(fromByteCount: folderBytes, countStyle: .file)
+        if folderCount == 1 {
+            return L10n.format("1 个目录（{0}）", formattedSize)
+        }
+        return L10n.format("{0} 个目录（{1}）", String(folderCount), formattedSize)
+    }
+
+    private func refreshPracticeSummary() {
+        let summary = PracticeController.practiceFolderSummary()
+        folderCount = summary.count
+        folderBytes = summary.bytes
+    }
+
+    private func moveInactiveFoldersToTrash() {
+        do {
+            let trashed = try PracticeController.trashInactivePracticeFolders(excluding: practice.practiceDirectory)
+            if trashed == 0 {
+                cleanupMessage = L10n.text("当前没有可清理的历史练习目录。")
+            } else if trashed == 1 {
+                cleanupMessage = L10n.text("已将 1 个历史练习目录移到废纸篓。")
+            } else {
+                cleanupMessage = L10n.format("已将 {0} 个历史练习目录移到废纸篓。", String(trashed))
+            }
+        } catch {
+            cleanupMessage = L10n.format("清理失败：{0}", error.localizedDescription)
+        }
+        refreshPracticeSummary()
     }
 }

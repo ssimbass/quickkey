@@ -3,23 +3,35 @@ import SwiftUI
 
 /// A persistent scroller lane keeps the document width identical with short and long content.
 struct StableScrollView<Content: View>: NSViewRepresentable {
+    let scrollToRect: CGRect?
+    let scrollTrigger: Int
     let content: Content
-    init(@ViewBuilder content: () -> Content) { self.content = content() }
+
+    init(scrollToRect: CGRect? = nil, scrollTrigger: Int = 0, @ViewBuilder content: () -> Content) {
+        self.scrollToRect = scrollToRect
+        self.scrollTrigger = scrollTrigger
+        self.content = content()
+    }
 
     func makeNSView(context: Context) -> NSScrollView {
         let scroll = FixedGutterScrollView()
         scroll.configureGutter()
         scroll.setContent(content, transaction: context.transaction)
+        scroll.scrollToVisibleIfNeeded(scrollToRect, trigger: scrollTrigger)
         return scroll
     }
 
     func updateNSView(_ scroll: NSScrollView, context: Context) {
-        (scroll as? FixedGutterScrollView)?.setContent(content, transaction: context.transaction)
+        guard let fixed = scroll as? FixedGutterScrollView else { return }
+        fixed.setContent(content, transaction: context.transaction)
+        fixed.scrollToVisibleIfNeeded(scrollToRect, trigger: scrollTrigger)
     }
 }
 
 @MainActor
 final class FixedGutterScrollView: NSScrollView {
+    private var lastScrollTrigger = 0
+
     func setContent<Content: View>(_ content: Content, transaction: Transaction = Transaction()) {
         let root = AnyView(content.frame(maxWidth: .infinity, alignment: .topLeading)
             .fixedSize(horizontal: false, vertical: true).transaction { $0 = transaction })
@@ -35,6 +47,14 @@ final class FixedGutterScrollView: NSScrollView {
                 host.topAnchor.constraint(equalTo: contentView.topAnchor),
                 host.widthAnchor.constraint(equalTo: contentView.widthAnchor)
             ])
+        }
+    }
+
+    func scrollToVisibleIfNeeded(_ rect: CGRect?, trigger: Int) {
+        guard trigger != lastScrollTrigger, let rect, let documentView else { return }
+        lastScrollTrigger = trigger
+        DispatchQueue.main.async {
+            documentView.scrollToVisible(rect.insetBy(dx: 0, dy: -8))
         }
     }
 

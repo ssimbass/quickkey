@@ -6,8 +6,10 @@ struct ShortcutDetailView: View {
     let shortcut: Shortcut
     let catalog: ShortcutCatalog
     @ObservedObject var practice: PracticeController
+    @ObservedObject var userState: UserLibraryState
     @AppStorage("showWindowsEquivalent") private var showWindowsEquivalent = true
     @ViewState private var textVersion = UUID()
+    @ViewState private var showSteps = false
     @ViewState private var showQuestions = false
     @ViewState private var showReferences = false
 
@@ -15,24 +17,32 @@ struct ShortcutDetailView: View {
     private var automatic: Bool { PracticeController.automaticallyVerifies(shortcut) }
     private var active: Bool { practice.activeShortcutID == shortcut.id }
     private var prepared: Bool { active && practice.isPrepared }
-    private var needsEnvironment: Bool {
-        guard !isText else { return false }
-        if [.safari, .chrome].contains(shortcut.scope) {
-            let usesExistingContext: Set<String> = [
-                "safari-reader", "safari-add-reading-list", "safari-homepage", "safari-settings",
-                "safari-reading-list", "safari-bookmarks-sidebar", "safari-downloads",
-                "chrome-settings", "chrome-incognito", "chrome-history", "chrome-downloads",
-                "chrome-bookmark-manager", "chrome-bookmarks-bar"
-            ]
-            return !usesExistingContext.contains(shortcut.id)
-        }
-        return automatic || shortcut.scope == .finder || shortcut.practice == .trashFile
-    }
+    private var needsEnvironment: Bool { PracticeConfiguration.needsEnvironment(for: shortcut) }
+    private var isFavorite: Bool { userState.isFavorite(shortcut.id) }
+    private var isPracticed: Bool { userState.isPracticed(shortcut.id) }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Label(shortcut.scope.title + " / " + shortcut.section, systemImage: shortcut.scope.symbol)
-                .font(.system(size: 11)).foregroundStyle(.secondary).padding(.bottom, 14)
+            HStack(spacing: 10) {
+                Label(shortcut.scope.title + " / " + shortcut.section, systemImage: shortcut.scope.symbol)
+                    .font(.system(size: 11)).foregroundStyle(.secondary)
+                if isPracticed {
+                    Label(L10n.text("已练习"), systemImage: "checkmark.circle.fill")
+                        .font(.system(size: 10)).foregroundStyle(.green)
+                }
+                Spacer()
+                Button {
+                    userState.toggleFavorite(shortcut.id)
+                } label: {
+                    Image(systemName: isFavorite ? "star.fill" : "star")
+                        .font(.system(size: 13))
+                        .foregroundStyle(isFavorite ? Color.orange : Color.secondary)
+                }
+                .buttonStyle(.plain)
+                .help(isFavorite ? L10n.text("取消收藏") : L10n.text("收藏快捷键"))
+                .accessibilityLabel(isFavorite ? L10n.text("取消收藏") : L10n.text("收藏快捷键"))
+            }
+            .padding(.bottom, 14)
             Text(shortcut.title).font(.system(size: 27, weight: .medium)).padding(.bottom, 18)
             KeyCaps(keys: shortcut.keys, large: true).padding(.bottom, 11)
             Text(shortcut.englishKeys).font(.system(size: 11)).foregroundStyle(.secondary)
@@ -44,6 +54,20 @@ struct ShortcutDetailView: View {
             Divider().padding(.vertical, 24)
             practiceSection
             Divider().padding(.top, 24).padding(.bottom, 15)
+            DisclosureGroup(L10n.text("操作步骤"), isExpanded: $showSteps) {
+                VStack(alignment: .leading, spacing: 8) {
+                    ForEach(Array(shortcut.steps.enumerated()), id: \.offset) { index, step in
+                        HStack(alignment: .top, spacing: 8) {
+                            Text("\(index + 1).")
+                                .monospacedDigit()
+                                .foregroundStyle(.tertiary)
+                            Text(step)
+                        }
+                    }
+                }
+                .font(.system(size: 11)).foregroundStyle(.secondary)
+                .frame(maxWidth: .infinity, alignment: .leading).padding(.top, 9)
+            }.font(.system(size: 11)).foregroundStyle(.secondary)
             DisclosureGroup(L10n.text("使用提示"), isExpanded: $showQuestions) {
                 VStack(alignment: .leading, spacing: 8) {
                     if shortcut.customizable {
@@ -102,7 +126,7 @@ struct ShortcutDetailView: View {
                 if !automatic {
                     Text(shortcut.expectedResult).font(.system(size: 13)).foregroundStyle(.secondary)
                 }
-                if let hint = preparationHint {
+                if let hint = PracticeConfiguration.preparationHint(for: shortcut.id) {
                     Text(hint).font(.system(size: 12)).foregroundStyle(.secondary)
                 }
                 if needsEnvironment {
@@ -126,7 +150,7 @@ struct ShortcutDetailView: View {
                 } else if prepared && practice.status.isSuccess {
                     feedback(success: true, message: practice.status.message)
                 } else if automatic && prepared {
-                    Label(waitingMessage, systemImage: "circle.dashed")
+                    Label(liveWaitingMessage, systemImage: "circle.dashed")
                         .font(.system(size: 12)).foregroundStyle(.secondary)
                 }
             }
@@ -141,29 +165,24 @@ struct ShortcutDetailView: View {
             .accessibilityElement(children: .combine)
     }
 
+    private var liveWaitingMessage: String {
+        if shortcut.practice == .trashFile,
+           practice.status.message == L10n.text("样例文件已离开练习目录；请查看废纸篓。") {
+            return practice.status.message
+        }
+        return waitingMessage
+    }
+
     private var waitingMessage: String {
         switch shortcut.practice {
         case .newFolder: L10n.text("等待练习目录中出现新文件夹…")
         case .renameFile: L10n.text("等待「练习笔记.txt」的名称改变…")
         case .duplicateFile: L10n.text("等待练习目录中出现文件副本…")
+        case .trashFile: L10n.text("等待样例文件移入废纸篓…")
         case .minimizeWindow: L10n.text("等待独立练习窗口最小化…")
         case .closeWindow: L10n.text("等待独立练习窗口关闭…")
         case .hideApp: L10n.text("等待应用隐藏；点击 Dock 中的“快捷”即可返回。")
         default: L10n.text("等待实际操作结果…")
-        }
-    }
-
-    private var preparationHint: String? {
-        switch shortcut.id {
-        case "finder-rename": L10n.text("按 Return，输入新名称，再按 Return 确认。")
-        case "finder-new-folder": L10n.text("在练习目录中创建文件夹，输入名称后按 Return。")
-        case "finder-move-copied": L10n.text("先复制样例文件，再打开“目标文件夹”进行移动。")
-        case "safari-next-tab", "safari-previous-tab", "safari-last-tab", "safari-numbered-tab", "safari-tab-overview",
-             "chrome-next-tab", "chrome-previous-tab", "chrome-last-tab", "chrome-numbered-tab": L10n.text("打开练习页后，再按 ⌘ T 新建一个标签页。")
-        case "safari-back", "chrome-back": L10n.text("先点击练习页中的“下一页”，再尝试后退。")
-        case "safari-forward", "chrome-forward": L10n.text("先进入练习“下一页”并后退一次，再尝试前进。")
-        case "safari-reopen-tab", "chrome-reopen-tab": L10n.text("先关闭工具打开的样例标签页，再尝试恢复。")
-        default: nil
         }
     }
 

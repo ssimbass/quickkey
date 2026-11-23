@@ -92,4 +92,33 @@ final class ShortcutSearchTests: XCTestCase {
         XCTAssertEqual(ids("sPoTlIgHt"), ["spotlight"])
         XCTAssertEqual(ids("Ｃｍｄ Ｌ"), ["address", "chrome-address"])
     }
+
+    func testWordKeyQueriesAlsoIncludeTextMatches() throws {
+        let english = try ShortcutCatalog.load(language: .english)
+        let tabResults = ShortcutSearch.results(in: english.shortcuts, query: "tab")
+        XCTAssertTrue(tabResults.contains { $0.id == "safari-new-tab" })
+        XCTAssertTrue(tabResults.contains { $0.id == "finder-new-tab" })
+        let homeResults = ShortcutSearch.results(in: english.shortcuts, query: "home")
+        XCTAssertTrue(homeResults.contains { $0.id == "safari-homepage" })
+        XCTAssertTrue(homeResults.contains { $0.id == "finder-home" })
+    }
+
+    func testPluralizationAndUserLibraryStore() throws {
+        XCTAssertEqual(L10n.searchResultCount(1, language: .english), "1 search result")
+        XCTAssertEqual(L10n.searchResultCount(3, language: .english), "3 search results")
+        XCTAssertEqual(L10n.searchResultCount(1, language: .simplifiedChinese), "1 个搜索结果")
+
+        let suiteName = "local.quickkey.tests.\(UUID().uuidString)"
+        let defaults = try XCTUnwrap(UserDefaults(suiteName: suiteName))
+        defer { defaults.removePersistentDomain(forName: suiteName) }
+        var store = UserLibraryStore.load(from: defaults)
+        XCTAssertTrue(store.toggleFavorite("system-copy"))
+        XCTAssertTrue(store.markPracticed("system-copy"))
+        XCTAssertFalse(store.markPracticed("system-copy"))
+        store.save(to: defaults)
+
+        let reloaded = UserLibraryStore.load(from: defaults)
+        XCTAssertTrue(reloaded.isFavorite("system-copy"))
+        XCTAssertTrue(reloaded.isPracticed("system-copy"))
+    }
 }

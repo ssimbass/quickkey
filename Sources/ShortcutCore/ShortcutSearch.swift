@@ -8,9 +8,17 @@ public enum ShortcutSearch {
         guard !query.isEmpty else { return candidates }
 
         if let combination = KeyQuery(query) {
-            return candidates.filter { combination.matches($0.keys) }
+            let keyMatches = candidates.filter { combination.matches($0.keys) }
+            guard combination.mergesTextResults else { return keyMatches }
+            let matchedIDs = Set(keyMatches.map(\.id))
+            let extraTextMatches = textMatches(in: candidates, query: query).filter { !matchedIDs.contains($0.id) }
+            return keyMatches + extraTextMatches
         }
 
+        return textMatches(in: candidates, query: query)
+    }
+
+    private static func textMatches(in candidates: [Shortcut], query: String) -> [Shortcut] {
         let terms = query.split(whereSeparator: { $0.isWhitespace || $0 == "+" || $0 == "＋" })
             .map { compact(String($0)) }.filter { !$0.isEmpty }
         return candidates.filter { shortcut in
@@ -32,6 +40,7 @@ public enum ShortcutSearch {
     private struct KeyQuery {
         let modifiers: Set<String>
         let keys: [String]
+        let mergesTextResults: Bool
 
         init?(_ query: String) {
             var remainder = query
@@ -64,6 +73,10 @@ public enum ShortcutSearch {
             guard !found.isEmpty || !base.isEmpty else { return nil }
             self.modifiers = found
             self.keys = base
+            let compactRemainder = compact(remainder)
+            let isFunctionKey = compactRemainder.range(of: #"^f(?:[1-9]|1[0-9]|2[0-4])$"#, options: .regularExpression) != nil
+            let isWord = compactRemainder.count >= 2 && compactRemainder.unicodeScalars.allSatisfy(CharacterSet.letters.contains)
+            self.mergesTextResults = found.isEmpty && plusCount == 0 && base.count == 1 && isWord && !isFunctionKey
         }
 
         func matches(_ symbols: [String]) -> Bool {

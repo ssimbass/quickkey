@@ -1,0 +1,46 @@
+name: Release DMG
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: macos-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Public source checks
+        run: ./scripts/check-publication.py
+      - name: Core catalog and search checks
+        run: ./scripts/check-core.sh
+      - name: Unit tests
+        run: swift test
+      - name: Build universal app
+        run: ./scripts/build-app.sh --universal
+      - name: Package release DMG
+        run: ./scripts/build-dmg.sh --skip-build
+      - name: Upload artifact
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: QuickKey-Universal-macOS
+          path: |
+            dist/QuickKey-*.dmg
+            dist/QuickKey-*.dmg.sha256
+          if-no-files-found: error
+          retention-days: 14
+      - name: Publish GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="${GITHUB_REF#refs/tags/}"
+          gh release create "$TAG" dist/QuickKey-*.dmg dist/QuickKey-*.dmg.sha256 \
+            --title "QuickKey $TAG" \
+            --generate-notes

@@ -5,6 +5,10 @@ import ShortcutCore
 struct LibraryView: View {
     let catalog: ShortcutCatalog
     @ObservedObject var practice: PracticeController
+    @ObservedObject var userState: UserLibraryState
+    let focusSearchTrigger: Int
+    let requestedScope: AppScope?
+    let onHandledScopeRequest: () -> Void
     @ViewState private var selectedID: String?
     @ViewState private var showSymbols = false
     @ViewState private var showSources = false
@@ -13,13 +17,22 @@ struct LibraryView: View {
 
     var body: some View {
         HStack(spacing: 0) {
-            SidebarNavigation(catalog: catalog, selectedID: selectedID, onSelect: choose,
-                              onShowSymbols: { showSymbols.toggle() }, onShowSources: { showSources.toggle() })
+            SidebarNavigation(
+                catalog: catalog,
+                userState: userState,
+                selectedID: selectedID,
+                focusSearchTrigger: focusSearchTrigger,
+                requestedScope: requestedScope,
+                onHandledScopeRequest: onHandledScopeRequest,
+                onSelect: choose,
+                onShowSymbols: { showSymbols.toggle() },
+                onShowSources: { showSources.toggle() }
+            )
                 .frame(width: 320)
             Divider()
             ScrollView {
                 if let selected {
-                    ShortcutDetailView(shortcut: selected, catalog: catalog, practice: practice)
+                    ShortcutDetailView(shortcut: selected, catalog: catalog, practice: practice, userState: userState)
                         .id(selected.id)
                         .frame(maxWidth: 760, alignment: .leading)
                         .frame(maxWidth: .infinity, alignment: .leading).padding(30)
