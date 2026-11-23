@@ -17,13 +17,13 @@ A native macOS keyboard shortcut reference with hands-on practice. Built with Sw
 ## Features
 
 - English and Simplified Chinese. Follows your system language; switch in Settings.
-- Browse shortcuts for macOS, Finder, Safari, and Chrome by category.
-- Practice text editing, file operations, and window controls with feedback where supported.
+- Browse shortcuts for macOS, Finder, Safari, and Chrome by category, with `⌘F` search, in-app key-combination lookup, and local favorites.
+- Practice text editing, file operations, and window controls with automatic result feedback where supported.
 - Works offline. No third-party runtime dependencies or Accessibility permission required.
 
 ## Download & Install
 
-Requires **macOS 14 or later**. The prebuilt release supports **Apple Silicon (arm64)**.
+Requires **macOS 14 or later**. The prebuilt release is a **Universal Binary (Apple Silicon & Intel)**.
 
 1. Download the `.dmg` from [Releases](https://github.com/ssimbass/quickkey/releases/latest).
 2. Open it and drag **QuickKey** to **Applications**.

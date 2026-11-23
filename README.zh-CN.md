@@ -17,13 +17,13 @@
 ## 功能
 
 - 支持简体中文和英语，默认跟随系统语言，也可在设置中切换。
-- 按分类查阅 macOS、Finder、Safari 和 Chrome 快捷键。
-- 练习文本编辑、文件操作和窗口控制，支持的操作提供结果反馈。
+- 按分类查阅 macOS、Finder、Safari 和 Chrome 快捷键，支持 `⌘F` 搜索、应用内按键反查与本地收藏。
+- 练习文本编辑、文件操作和窗口控制，支持的操作提供真实结果反馈。
 - 离线使用，无第三方运行时依赖，无需辅助功能权限。
 
 ## 下载与安装
 
-需要 **macOS 14 或更新版本**。预编译版本支持 **Apple Silicon（arm64）**。
+需要 **macOS 14 或更新版本**。预编译版本为 **通用二进制（支持 Apple Silicon 与 Intel）**。
 
 1. 从 [Releases](https://github.com/ssimbass/quickkey/releases/latest) 下载 `.dmg`。
 2. 打开后将 **QuickKey** 拖到 **Applications（应用程序）**。

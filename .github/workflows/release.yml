@@ -41,6 +41,10 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           TAG="${GITHUB_REF#refs/tags/}"
-          gh release create "$TAG" dist/QuickKey-*.dmg dist/QuickKey-*.dmg.sha256 \
-            --title "QuickKey $TAG" \
-            --generate-notes
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" dist/QuickKey-*.dmg dist/QuickKey-*.dmg.sha256 --clobber
+          else
+            gh release create "$TAG" dist/QuickKey-*.dmg dist/QuickKey-*.dmg.sha256 \
+              --title "QuickKey ${TAG#v}" \
+              --generate-notes
+          fi
