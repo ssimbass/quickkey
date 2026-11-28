@@ -286,9 +286,7 @@ struct MenuBarPanel: View {
         case .system:
             return model.catalogItems(catalog, scope: .system)
         case .app:
-            if usesMenuItems { return model.appItems }
-            guard let scope = model.targetScope else { return [] }
-            return model.catalogItems(catalog, scope: scope)
+            return model.mergedAppItems(catalog: catalog)
         }
     }
 
@@ -297,6 +295,7 @@ struct MenuBarPanel: View {
         let filtered = needle.isEmpty ? currentItems : currentItems.filter {
             $0.title.lowercased().contains(needle) || $0.group.lowercased().contains(needle)
                 || $0.keys.joined().lowercased().contains(needle)
+                || $0.searchTerms.contains { $0.lowercased().contains(needle) }
         }
         var order: [String] = []
         var buckets: [String: [MenuBarShortcutItem]] = [:]

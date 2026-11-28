@@ -178,6 +178,7 @@
   "QuickKey 收录的系统快捷键": "System shortcuts from the QuickKey catalog",
   "从菜单栏读取到 {0} 个快捷键": "{0} shortcuts read from the menu bar",
   "QuickKey 收录的快捷键": "Shortcuts from the QuickKey catalog",
+  "QuickKey 补充": "More from QuickKey",
   "授予权限后可读取该应用的全部菜单快捷键": "Grant access to read all of this app's menu shortcuts",
   "没有匹配的快捷键": "No matching shortcuts",
   "正在读取菜单…": "Reading menus…",

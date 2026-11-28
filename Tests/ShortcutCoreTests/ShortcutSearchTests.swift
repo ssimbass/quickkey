@@ -103,6 +103,21 @@ final class ShortcutSearchTests: XCTestCase {
         XCTAssertTrue(homeResults.contains { $0.id == "finder-home" })
     }
 
+    func testExpandedCatalogCoverageAndDiscoverability() throws {
+        let chinese = try ShortcutCatalog.load(language: .simplifiedChinese)
+        let english = try ShortcutCatalog.load(language: .english)
+        XCTAssertTrue(ShortcutSearch.results(in: chinese.shortcuts, query: "访达 剪切").contains { $0.id == "finder-move-copied" })
+        XCTAssertTrue(ShortcutSearch.results(in: english.shortcuts, query: "访达 剪切").contains { $0.id == "finder-move-copied" })
+        XCTAssertTrue(ShortcutSearch.results(in: chinese.shortcuts, query: "访达").contains { $0.scope == .finder })
+        for query in ["⇧⌘.", "Command + Shift + Period", "隐藏文件"] {
+            XCTAssertTrue(ShortcutSearch.results(in: chinese.shortcuts, query: query).contains { $0.id == "finder-hidden-files" }, query)
+        }
+        XCTAssertTrue(ShortcutSearch.results(in: chinese.shortcuts, query: "⇧⌘A", scope: .finder).contains { $0.id == "finder-applications" })
+        XCTAssertTrue(ShortcutSearch.results(in: chinese.shortcuts, query: "⇧⌘A", scope: .chrome).contains { $0.id == "chrome-search-tabs" })
+        XCTAssertTrue(ShortcutSearch.results(in: chinese.shortcuts, query: "⌥⇧⌘V").contains { $0.id == "system-paste-match-style" })
+        XCTAssertTrue(ShortcutSearch.results(in: chinese.shortcuts, query: "⌃⇧⌘4").contains { $0.id == "system-screenshot-region-clipboard" })
+    }
+
     func testPluralizationAndUserLibraryStore() throws {
         XCTAssertEqual(L10n.searchResultCount(1, language: .english), "1 search result")
         XCTAssertEqual(L10n.searchResultCount(3, language: .english), "3 search results")

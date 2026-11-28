@@ -159,6 +159,24 @@ struct CoreChecks {
             let homeResults = ShortcutSearch.results(in: english.shortcuts, query: "home")
             checks.expect(homeResults.contains { $0.id == "safari-homepage" } && homeResults.contains { $0.id == "finder-home" },
                           "单词键名 home 同时匹配主页与个人文件夹")
+            checks.expect(ShortcutSearch.results(in: chinese.shortcuts, query: "访达 剪切").contains { $0.id == "finder-move-copied" },
+                          "访达 剪切 可搜到剪切并移动文件")
+            checks.expect(ShortcutSearch.results(in: english.shortcuts, query: "访达 剪切").contains { $0.id == "finder-move-copied" },
+                          "英文目录同样支持搜 访达 剪切")
+            checks.expect(ShortcutSearch.results(in: chinese.shortcuts, query: "访达").contains { $0.scope == .finder },
+                          "中文 访达 可匹配 Finder 目录")
+            for query in ["⇧⌘.", "Command + Shift + Period", "隐藏文件"] {
+                checks.expect(ShortcutSearch.results(in: chinese.shortcuts, query: query).contains { $0.id == "finder-hidden-files" },
+                              "隐藏文件搜索匹配：\(query)")
+            }
+            checks.expect(ShortcutSearch.results(in: chinese.shortcuts, query: "⇧⌘A", scope: .finder).contains { $0.id == "finder-applications" },
+                          "Finder 中 ⇧⌘A 匹配应用程序文件夹")
+            checks.expect(ShortcutSearch.results(in: chinese.shortcuts, query: "⇧⌘A", scope: .chrome).contains { $0.id == "chrome-search-tabs" },
+                          "Chrome 中 ⇧⌘A 匹配搜索已打开的标签页")
+            checks.expect(ShortcutSearch.results(in: chinese.shortcuts, query: "⌥⇧⌘V").contains { $0.id == "system-paste-match-style" },
+                          "⌥⇧⌘V 匹配粘贴并匹配样式")
+            checks.expect(ShortcutSearch.results(in: chinese.shortcuts, query: "⌃⇧⌘4").contains { $0.id == "system-screenshot-region-clipboard" },
+                          "⌃⇧⌘4 匹配截取选区到剪贴板")
         }
 
         checks.run("本地收藏与自动练习记录存储") {

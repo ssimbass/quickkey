@@ -18,8 +18,42 @@ struct MenuBarShortcutItem: Identifiable, Sendable {
     let title: String
     let group: String
     let keys: [String]
+    let searchTerms: [String]
     let isEnabled: Bool
     let action: Action
+
+    init(
+        id: String,
+        title: String,
+        group: String,
+        keys: [String],
+        searchTerms: [String] = [],
+        isEnabled: Bool,
+        action: Action
+    ) {
+        self.id = id
+        self.title = title
+        self.group = group
+        self.keys = keys
+        self.searchTerms = searchTerms
+        self.isEnabled = isEnabled
+        self.action = action
+    }
+
+    var normalizedKeySignature: String {
+        let modifierOrder = ["⌃", "⌥", "⇧", "⌘", "Fn"]
+        var modifiers: [String] = []
+        var base: [String] = []
+        for key in keys {
+            if modifierOrder.contains(key) {
+                modifiers.append(key)
+            } else {
+                base.append(key.uppercased())
+            }
+        }
+        let sortedModifiers = modifierOrder.filter { modifiers.contains($0) }
+        return (sortedModifiers + base).joined(separator: "+")
+    }
 
     var isTriggerable: Bool {
         if case .none = action { return false }
@@ -124,10 +158,33 @@ final class MenuBarShortcutModel: ObservableObject {
                 title: shortcut.title,
                 group: shortcut.section,
                 keys: shortcut.keys,
+                searchTerms: shortcut.aliases + [shortcut.englishKeys],
                 isEnabled: true,
                 action: KeyStroke(keys: shortcut.keys) == nil ? .none : .sendKeys(shortcut.keys)
             )
         }
+    }
+
+    func mergedAppItems(catalog: ShortcutCatalog?) -> [MenuBarShortcutItem] {
+        if isTrusted && !appItems.isEmpty {
+            guard let scope = targetScope else { return appItems }
+            let existingSignatures = Set(appItems.map(\.normalizedKeySignature))
+            let supplement = catalogItems(catalog, scope: scope).compactMap { item -> MenuBarShortcutItem? in
+                guard !existingSignatures.contains(item.normalizedKeySignature) else { return nil }
+                return MenuBarShortcutItem(
+                    id: "supplement-\(item.id)",
+                    title: item.title,
+                    group: L10n.text("QuickKey 补充"),
+                    keys: item.keys,
+                    searchTerms: item.searchTerms,
+                    isEnabled: item.isEnabled,
+                    action: item.action
+                )
+            }
+            return appItems + supplement
+        }
+        guard let scope = targetScope else { return [] }
+        return catalogItems(catalog, scope: scope)
     }
 
     /// Returns false when the click only armed a confirmation.
@@ -220,6 +277,7 @@ enum MenuShortcutReader {
     private static func shortcutKeys(of item: AXUIElement) -> [String]? {
         let glyph = (attribute(item, "AXMenuItemCmdGlyph") as NSNumber?)?.intValue ?? 0
         let character: String? = attribute(item, "AXMenuItemCmdChar")
+        let virtualKey = (attribute(item, "AXMenuItemCmdVirtualKey") as NSNumber?)?.intValue
         let key: String
         if glyph != 0, let name = glyphNames[glyph] {
             key = name
@@ -227,10 +285,16 @@ enum MenuShortcutReader {
             if let name = specialCharacters[scalar.value] {
                 key = name
             } else if scalar.properties.isWhitespace || scalar.value < 0x20 || (0xF700...0xF8FF).contains(scalar.value) {
-                return nil
+                if let virtualKey, let name = virtualKeyNames[virtualKey] {
+                    key = name
+                } else {
+                    return nil
+                }
             } else {
                 key = character.uppercased()
             }
+        } else if let virtualKey, let name = virtualKeyNames[virtualKey] {
+            key = name
         } else {
             return nil
         }
@@ -257,6 +321,28 @@ enum MenuShortcutReader {
         0x6B: "⇟", 0x66: "↖", 0x69: "↘", 0x6F: "F1", 0x70: "F2", 0x71: "F3", 0x72: "F4", 0x73: "F5",
         0x74: "F6", 0x75: "F7", 0x76: "F8", 0x77: "F9", 0x78: "F10", 0x79: "F11", 0x7A: "F12",
         0x87: "F13", 0x88: "F14", 0x89: "F15", 0x8C: "⏏"
+    ]
+
+    /// Virtual key codes for menu items without a printable command character or glyph.
+    private static let virtualKeyNames: [Int: String] = [
+        kVK_ANSI_A: "A", kVK_ANSI_B: "B", kVK_ANSI_C: "C", kVK_ANSI_D: "D", kVK_ANSI_E: "E",
+        kVK_ANSI_F: "F", kVK_ANSI_G: "G", kVK_ANSI_H: "H", kVK_ANSI_I: "I", kVK_ANSI_J: "J",
+        kVK_ANSI_K: "K", kVK_ANSI_L: "L", kVK_ANSI_M: "M", kVK_ANSI_N: "N", kVK_ANSI_O: "O",
+        kVK_ANSI_P: "P", kVK_ANSI_Q: "Q", kVK_ANSI_R: "R", kVK_ANSI_S: "S", kVK_ANSI_T: "T",
+        kVK_ANSI_U: "U", kVK_ANSI_V: "V", kVK_ANSI_W: "W", kVK_ANSI_X: "X", kVK_ANSI_Y: "Y",
+        kVK_ANSI_Z: "Z",
+        kVK_ANSI_0: "0", kVK_ANSI_1: "1", kVK_ANSI_2: "2", kVK_ANSI_3: "3", kVK_ANSI_4: "4",
+        kVK_ANSI_5: "5", kVK_ANSI_6: "6", kVK_ANSI_7: "7", kVK_ANSI_8: "8", kVK_ANSI_9: "9",
+        kVK_ANSI_Grave: "`", kVK_ANSI_Minus: "-", kVK_ANSI_Equal: "=",
+        kVK_ANSI_LeftBracket: "[", kVK_ANSI_RightBracket: "]", kVK_ANSI_Backslash: "\\",
+        kVK_ANSI_Semicolon: ";", kVK_ANSI_Quote: "'", kVK_ANSI_Comma: ",",
+        kVK_ANSI_Period: ".", kVK_ANSI_Slash: "/",
+        kVK_Space: "Space", kVK_Tab: "Tab", kVK_Return: "↩", kVK_ANSI_KeypadEnter: "⌤",
+        kVK_Escape: "Esc", kVK_Delete: "⌫", kVK_ForwardDelete: "⌦",
+        kVK_LeftArrow: "←", kVK_RightArrow: "→", kVK_UpArrow: "↑", kVK_DownArrow: "↓",
+        kVK_PageUp: "⇞", kVK_PageDown: "⇟", kVK_Home: "↖", kVK_End: "↘",
+        kVK_F1: "F1", kVK_F2: "F2", kVK_F3: "F3", kVK_F4: "F4", kVK_F5: "F5", kVK_F6: "F6",
+        kVK_F7: "F7", kVK_F8: "F8", kVK_F9: "F9", kVK_F10: "F10", kVK_F11: "F11", kVK_F12: "F12"
     ]
 
     /// Control characters and NSEvent function-key code points some apps report as the command character.

@@ -15,8 +15,10 @@ enum PracticeConfiguration {
     static let usesExistingBrowserContext: Set<String> = [
         "safari-reader", "safari-add-reading-list", "safari-homepage", "safari-settings",
         "safari-reading-list", "safari-bookmarks-sidebar", "safari-downloads",
+        "safari-private-window", "safari-history",
         "chrome-settings", "chrome-incognito", "chrome-history", "chrome-downloads",
-        "chrome-bookmark-manager", "chrome-bookmarks-bar"
+        "chrome-bookmark-manager", "chrome-bookmarks-bar",
+        "chrome-search-tabs", "chrome-minimize-window", "chrome-clear-browsing-data", "chrome-switch-profile"
     ]
 
     static let preparationHintIDs: Set<String> = [

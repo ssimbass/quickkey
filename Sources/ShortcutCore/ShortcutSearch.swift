@@ -23,7 +23,8 @@ public enum ShortcutSearch {
             .map { compact(String($0)) }.filter { !$0.isEmpty }
         return candidates.filter { shortcut in
             let fields = [shortcut.title, shortcut.summary, shortcut.section, shortcut.scope.title,
-                          shortcut.scope.rawValue, shortcut.englishKeys, shortcut.keys.joined()] + shortcut.aliases
+                          shortcut.scope.rawValue, shortcut.englishKeys, shortcut.keys.joined()]
+                + shortcut.scope.searchAliases + shortcut.aliases
             let text = compact(fields.joined(separator: " "))
             return terms.allSatisfy(text.contains)
         }
@@ -131,6 +132,16 @@ public enum ShortcutSearch {
             case "end", "↘": return "end"
             case "1…8", "1–8", "1-8", "1...8", "1至8": return "1...8"
             case "plus", "加号": return "+"
+            case "period", "dot", "句号", "句点": return "."
+            case "comma", "逗号": return ","
+            case "slash", "斜杠": return "/"
+            case "backslash", "反斜杠": return "\\"
+            case "minus", "hyphen", "减号": return "-"
+            case "equal", "equals", "等号": return "="
+            case "semicolon", "分号": return ";"
+            case "grave", "backtick", "反引号", "重音符": return "`"
+            case "leftbracket", "左方括号": return "["
+            case "rightbracket", "右方括号": return "]"
             case "+", "-", "=", "[", "]", "\\", "/", ".", ",", "`", ";", "'": return value
             default:
                 if value.count == 1, let scalar = value.unicodeScalars.first,

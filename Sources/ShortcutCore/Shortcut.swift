@@ -12,6 +12,14 @@ public enum AppScope: String, Codable, CaseIterable, Identifiable, Sendable {
     public var bundleIdentifier: String? {
         switch self { case .system: nil; case .finder: "com.apple.finder"; case .safari: "com.apple.Safari"; case .chrome: "com.google.Chrome" }
     }
+    public var searchAliases: [String] {
+        switch self {
+        case .system: ["macOS", "系统", "通用", "Mac"]
+        case .finder: ["访达", "文件管理", "资源管理器"]
+        case .safari: ["Safari 浏览器", "浏览器"]
+        case .chrome: ["谷歌浏览器", "Google Chrome", "浏览器"]
+        }
+    }
 }
 
 public enum PracticeKind: String, Codable, CaseIterable, Sendable {
